@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>頁首頁尾</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="./header.css">
+
+    <style>
+        /* 頁首區 */
+
+        #topbar {
+            display: flex;
+            align-items: center;
+            /* 主軸方向齊頭 */
+            justify-content: space-between;
+            /* 內距 */
+            padding: 0px;
+            /* 外距 */
+            margin-top: 40px;
+            margin-left: 50px;
+            margin-right: 50px;
+        }
+
+        #topbar ul {
+            display: flex;
+            /* 主軸方向齊尾 */
+            justify-content: flex-end;
+            /* 副軸對齊頂部 */
+            align-items: flex-start
+        }
+
+        .logo {
+            padding-bottom: 58px;
+        }
+
+        .float-nav {
+            float: left;
+            /* 去掉點 */
+            list-style-type: none;
+            height: 116px;
+            padding-top: 29px;
+
+        }
+
+
+        .btn-go {
+            text-decoration: none;
+            font-family: Arial;
+            color: black;
+            font-size: 20px;
+            /* 間距 */
+            margin-top: 50px;
+            margin-right: 50px;
+            border-top: 20px;
+        }
+
+        .btn-contact {
+            text-decoration: none;
+            font-family: Arial;
+            color: black;
+            font-size: 20px;
+            /* 間距 */
+            margin-top: 35px;
+            margin-left: 25px;
+            margin-right: 25px;
+            /* 底線 */
+            box-shadow: 0 1.5px;
+            /* 底線間距 */
+            padding-bottom: 2px;
+        }
+
+        .icon {
+            /* 去掉點 */
+            list-style-type: none;
+            max-height: 0;
+
+            transition: .2s;
+            /* 動畫秒數 */
+        }
+
+        .menu {
+            clear: both;
+            background: #fff;
+            max-height: 100;
+            overflow: hidden;
+        }
+
+
+        .menu li {
+            text-align: center;
+            border-bottom: 1px solid #efefef;
+        }
+
+        .menu a {
+            display: block;
+            padding: 10px 0;
+            font-size: 18px;
+            color: #5d5d5d;
+        }
+
+        .menu a:hover {
+            background: #5d5d5d;
+            color: #fff;
+        }
+
+        .icon:hover {
+            /* :hover 代表滑鼠移到元素上時的狀態 */
+            transform: scale(1.05);
+        }
+
+        .icon:active {
+            transform: scale(1);
+
+        }
+
+        input:checked~.menu {
+            max-height: 300px;
+        }
+
+        /* NavBar */
+        nav {
+            background: #ffffff;
+            box-shadow: 0px 1px 3px #ffffff88;
+        }
+
+        nav:after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        /* 隱藏 checkbox */
+        input {
+            display: none;
+        }
+
+        input:checked~.menu {
+            max-height: 600px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 頁首區 -->
+    <header id="topbar">
+        <h1 class="logo">
+            <a href="index.html">
+                <img src="./images/FORMOLUX TRAVEL.png" alt="formoluxLogo">
+            </a>
+        </h1>
+
+        <nav>
+            <ul class="float-nav">
+                <li><a href="#" class="btn-go" alt="travelStyle">GO!</a></li>
+                <li><a href="#" class="btn-contact" alt="contactUs">CONTACT</a></li>
+            </ul>
+            <ul class="icon">
+                <!-- 漢堡按鈕圖示 -->
+                <label for="switch"><img src="./images/btn-menu.png" alt="連結至menu"></label>
+                <!-- 選單開關 -->
+                <input type="checkbox" id="switch">
+                <!-- 選單內容 -->
+                <ul class="menu">
+                    <li><a href="#">TRAVEL STYLE</a></li>
+                    <li><a href="#">ABOUT TAIWAN</a></li>
+                    <li><a href="#">ABOUT US</a></li>
+                    <li><a href="#">CONTACT US</a></li>
+                </ul>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 內容區 -->
+
+
+    <!-- 頁尾區 -->
+    <p>test</p>
+
+
+</body>
+
+</html>
