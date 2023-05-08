@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css?family=Cutive+Mono');
+
+/* 重置默認邊距和填充 */
+html,
+body,
+header,
+main,
+nav,
+footer {
+    margin: 0;
+    padding: 0;
+    /* 這將使邊框和填充包含在元素的寬度和高度內 */
+    box-sizing: border-box;
+}
+
+
+
+html {
+    font-size: 18px;
+}
+
+body {
+    font-family: "Cutive Mono", serif;
+    font-size: 1.2em;
+    line-height: 1.6;
+    /* 網頁背景色 */
+    background: #eaeaea;
+    overflow-x: hidden;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    /* 確保 body 充滿整個 viewport */
+    min-height: 100vh;
+}
+
+main {
+    /* 允許 main 元素在需要時自動填充剩餘空間 */
+    flex-grow: 1;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    /* margin-bottom: 1em; */
+    display: block;
+    color: #000;
+    text-decoration: none;
+}
+
+/* 頁首區 */
+
+#topbar {
+    display: flex;
+    align-items: flex-start;
+    /* 主軸方向齊頭 */
+    justify-content: space-between;
+    /* 內距 */
+    padding: 0px;
+    /* 外距 */
+    margin-top: 40px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+/* 選單排版 */
+#topbar ul {
+    display: flex;
+    /* 主軸方向齊尾 */
+    justify-content: flex-end;
+    /* 副軸對齊頂部 */
+    align-items: flex-start;
+}
+
+.logo {
+    /*padding-left: ;*/
+    padding-bottom: 58px;
+    z-index: 1000;
+}
+
+
+.contactBtn {
+    text-decoration: none;
+    font-family: Arial;
+    color: black;
+    width: 300px;
+    /* 上方邊界 */
+    margin-top: 25px;
+    /* 去掉點 */
+    z-index: 990;
+}
