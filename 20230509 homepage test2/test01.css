@@ -35,8 +35,9 @@ body {
     background-color: rgba(0, 0, 0, .3);
 }
 
+
 .background:first-child {
-    background-image: url(https://i.postimg.cc/kXq9Qmnj/bgd1.jpg);
+    background-image: url(./images/home-BG-1.png);
     /* 第一個元素的起始位置 */
     transform: translateY(0vh);
 }
@@ -49,29 +50,56 @@ body {
     background-image: url(https://i.postimg.cc/W14vywqg/photo-1424746219973-8fe3bd07d8e3.jpg);
 }
 
-.background:nth-child(3) {
+/* .background:nth-child(3) {
     background-image: url(https://i.postimg.cc/TY0xQ41T/photo-1433840496881-cbd845929862.jpg);
 }
+ */
 
 .content-wrapper {
     height: 100vh;
     display: flex;
-    justify-content: center;
-    text-align: center;
+    justify-content: flex-end;
+    text-align: right;
     flex-flow: column nowrap;
     color: #fff;
-    font-family: Montserrat;
-    text-transform: uppercase;
+    font-family: Arial;
+    /* 強制大寫 */
+    /* text-transform: uppercase; */
     transform: translateY(40vh);
     will-change: transform;
     backface-visibility: hidden;
     transition: all 1.7s cubic-bezier(0.22, 0.44, 0, 1);
+    margin-bottom: 50px;
+    margin-right: 180px;
 }
 
+/* 標題樣式 */
 .content-title {
-    font-size: 12vh;
+    color: #FFFCEB;
+    font-family: DM Serif Display;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 24vh;
     line-height: 1.4;
+    /* identical to box height */
+    letter-spacing: -0.02em;
+    margin-bottom: 0px;
 }
+
+/* 副標題樣式 */
+.content-subtitle {
+    color: #FFFCEB;
+    font-family: DM Serif Display;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 4vh;
+    line-height: 1.4;
+    /* identical to box height */
+    letter-spacing: -0.02em;
+    margin-top: 0px;
+    margin-bottom: 300px;
+}
+
 
 .background.up-scroll {
     transform: translate3d(0, 0, 0);
