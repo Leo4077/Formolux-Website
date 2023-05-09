@@ -1,0 +1,190 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+/* ------------- VARIABLES ------------- */
+:root {
+    --parallax-offset: 30vh;
+    --content-offset: 40vh;
+    --transition-speed: 1.2s;
+    --slide-number: 3;
+}
+
+html,
+body {
+    overflow: hidden;
+}
+
+.background {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    overflow: hidden;
+    will-change: transform;
+    backface-visibility: hidden;
+    height: calc(100vh + var(--parallax-offset));
+    position: fixed;
+    width: 100%;
+    transform: translateY(var(--parallax-offset));
+    transition: all var(--transition-speed) cubic-bezier(0.22, 0.44, 0, 1);
+}
+
+.background:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .3);
+}
+
+.background:first-child {
+    background-image: url(https://i.postimg.cc/kXq9Qmnj/bgd1.jpg);
+    transform: translateY(calc(-1 * var(--parallax-offset) / 2));
+}
+
+.background:first-child .content-wrapper {
+    transform: translateY(calc(var(--parallax-offset) / 2));
+}
+
+.background:nth-child(2) {
+    background-image: url(https://i.postimg.cc/W14vywqg/photo-1424746219973-8fe3bd07d8e3.jpg);
+}
+
+.background:nth-child(3) {
+    background-image: url(https://i.postimg.cc/TY0xQ41T/photo-1433840496881-cbd845929862.jpg);
+}
+
+/* Set stacking context of slides */
+.background:nth-child(1) {
+    z-index: 2;
+}
+
+.background:nth-child(2) {
+    z-index: 1;
+}
+
+.background:nth-child(3) {
+    z-index: 0;
+}
+
+.content-wrapper {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-flow: column nowrap;
+    color: #fff;
+    font-family: Montserrat;
+    text-transform: uppercase;
+    transform: translateY(var(--content-offset));
+    will-change: transform;
+    backface-visibility: hidden;
+    transition: calc(var(--transition-speed) + .5s) all cubic-bezier(0.22, 0.44, 0, 1);
+}
+
+.content-title {
+    font-size: 12vh;
+    line-height: 1.4;
+}
+
+.background.up-scroll {
+    transform: translate3d(0, calc(-1 * var(--parallax-offset) / 2), 0);
+}
+
+.background.up-scroll .content-wrapper {
+    transform: translateY(calc(var(--parallax-offset) / 2));
+}
+
+.background.up-scroll+.background {
+    transform: translate3d(0, var(--parallax-offset), 0);
+}
+
+.background.up-scroll+.background .content-wrapper {
+    transform: translateY(var(--parallax-offset));
+}
+
+.background.down-scroll {
+    transform: translate3d(0, calc(-1 * (100vh + var(--parallax-offset))), 0);
+}
+
+.background.down-scroll .content-wrapper {
+    transform: translateY(var(--content-offset));
+}
+
+.background.down-scroll+.background:not(.down-scroll) {
+    transform: translate3d(0, calc(-1 * var(--parallax-offset) / 2), 0);
+}
+
+.background.down-scroll+.background:not(.down-scroll) .content-wrapper {
+    transform: translateY(calc(var(--parallax-offset) / 2));
+}
+
+/* Button styles */
+.button {
+    display: inline-block;
+    background-color: #ff7f50;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.2em;
+    padding: 0.5em 1em;
+    border-radius: 3px;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #ff6347;
+}
+
+/* Customer review styles */
+.customer-reviews {
+    display: flex;
+    justify-content: space-between;
+    padding: 2em 0;
+}
+
+.review {
+    width: 30%;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 1em;
+    border-radius: 5px;
+}
+
+.review-title {
+    font-size: 1.4em;
+    margin-bottom: 0.5em;
+}
+
+.review-text {
+    font-size: 1em;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* News section styles */
+.news-section {
+    padding: 2em 0;
+    text-align: center;
+}
+
+.news-section h2 {
+    font-size: 1.8em;
+    margin-bottom: 1em;
+}
+
+.news-logo {
+    display: inline-block;
+    width: 100px;
+    height: auto;
+    margin: 0 1em;
+}
+
+/* Footer styles */
+.footer {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1em 0;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9em;
+}
