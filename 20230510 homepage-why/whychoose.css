@@ -1,8 +1,15 @@
+/* 主要內容 */
+#homepage-content{
+    display: flex;
+    flex-direction: column;
+
+}
+
 /* 區段一 */
 #homepage-topsection {
-
     background-color: rgb(255, 255, 255);
-    height: 160vh
+    height: 160vh;
+    z-index: 2;
 }
 
 /* 大圖 */
@@ -40,5 +47,48 @@
 /* 區段二 */
 #homepage-bottomsection {
     background-color: #000537;
-    height: 146vh
+    height: 146vh;
+    display: flex;
+    /* 水平置中 */
+    align-items: center;
+    flex-direction: column;
+    padding-top: 10vh;
+}
+
+/* 標語 */
+.homepage-slogan {
+    display: flex;
+    /* 水平置中 */
+    justify-content: center;
+    align-items:baseline;
+
+    font-size: 3rem;
+    color: rgb(255, 255, 255);
+    background-color: #000537;
+    height: 10vh;
+    /* 底部間距 */
+    margin-bottom: 12vh;
+}
+
+/* 左 */
+#homepage-slogan-element-1 {
+    padding-left: 2vh;
+    padding-right: 2vh;
+    font-family: DM Serif Display;
+    font-weight: 300;
+}
+/* 中 */
+#homepage-slogan-element-2 {
+    font-family:'Tangerine', cursive;
+    font-size: 12rem;
+    color: #47BFD9;
+    padding-left: 2vh;
+    padding-right: 2vh;
+}
+/* 右 */
+#homepage-slogan-element-3 {
+    padding-left: 2vh;
+    padding-right: 2vh;
+    font-family: DM Serif Display;
+    font-weight: 300;
 }
