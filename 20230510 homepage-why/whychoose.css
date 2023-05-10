@@ -1,0 +1,35 @@
+
+
+/* 區段一 */
+#homepage-topsection{
+
+    background-color: rgb(197, 197, 197);
+    height:100vh
+}
+
+/* 大圖 */
+#homepage-bigimage{
+    display: flex;
+    /* 水平置中 */
+    justify-content: center;   
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 區段二 */
+#homepage-bottomsection{
+    background-color: rgb(120, 120, 120);
+    height:100vh
+}
