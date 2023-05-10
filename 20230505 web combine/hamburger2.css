@@ -268,15 +268,15 @@ ul {
 }
 
 .icon-fb {
-  background-image: url(./images/icon_FB.svg);
+  background-image: url(../images/icon_FB.svg);
 }
 
 .icon-ig {
-  background-image: url(./images/icon_IG.svg);
+  background-image: url(../images/icon_IG.svg);
 }
 
 .icon-email {
-  background-image: url(./images/icon_email.svg);
+  background-image: url(../images/icon_email.svg);
 }
 
 .menu-wrap .menu>div {
@@ -297,7 +297,7 @@ ul {
 /* 整個按鈕區 */
 
 .menu>div {
-  background-image: url(./images/Hamburger_bg.jpg);
+  background-image: url(../images/Hamburger_bg.jpg);
   /* 圖片填滿背景 */
   background-size: cover;
   /* 縮放圖片依然置中 */
@@ -311,24 +311,24 @@ ul {
 
 /* 懸停 travelStyle 時改變背景圖片 */
 #travelStyle:hover~.menu>div {
-  background-image: url(./images/travel_bg.jpg);
+  background-image: url(../images/travel_bg.jpg);
 }
 
 /* 懸停 aboutTaiwan 時改變背景圖片 */
 #aboutTaiwan:hover~.menu>div {
-  background-image: url(./images/Taiwan_bg.jpg);
+  background-image: url(../images/Taiwan_bg.jpg);
 
 }
 
 /* 懸停 aboutUs 時改變背景圖片 */
 #aboutus:hover~.menu>div {
-  background-image: url(./images/BG-3.jpg);
+  background-image: url(../images/BG-3.jpg);
 
 }
 
 /* 懸停 contactUs 時改變背景圖片 */
 #contactUs:hover~.menu>div {
-  background-image: url(./images/BG-4.jpg);
+  background-image: url(../images/BG-4.jpg);
 
 }
 
