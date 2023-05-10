@@ -30,13 +30,7 @@ footer {
 }
 
 /* 選單排版 */
-#topbar ul {
-    display: flex;
-    /* 主軸方向齊尾 */
-    justify-content: flex-end;
-    /* 副軸對齊頂部 */
-    align-items: flex-start;
-}
+
 
 .headerLogo {
 
