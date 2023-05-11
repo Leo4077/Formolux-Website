@@ -1,178 +1,112 @@
-.col-centered {
-    float: none;
-    margin: 0 auto;
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+:root {
+    --slider-width: 400px;
+    --slider-height: 200px;
 }
 
-.carousel-control {
-    width: 8%;
-    width: 0px;
+* {
+    box-sizing: border-box;
 }
 
-.carousel-control.left,
-.carousel-control.right {
-    margin-right: 40px;
-    margin-left: 32px;
-    background-image: none;
-    opacity: 1;
+/* body {
+    height: 100%;
+    background-color: #7656d6;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    letter-spacing: 0.15em;
+    font-size: 22px;
+} */
+
+.slider {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: var(--slider-height);
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, .2);
 }
 
-.carousel-control>a>span {
-    color: white;
-    font-size: 29px !important;
-}
-
-.carousel-col {
+.wrapper {
+    overflow: hidden;
     position: relative;
-    min-height: 1px;
-    padding: 5px;
-    float: left;
+    width: 100%;
+    height: var(--slider-height);
+    z-index: 1;
 }
 
-.active>div {
-    display: none;
+.slides {
+    display: flex;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 10000px;
 }
 
-.active>div:first-child {
-    display: block;
+.slides.shifting {
+    transition: left .2s ease-out;
 }
 
-/*xs*/
-@media (max-width: 767px) {
-    .carousel-inner .active.left {
-        left: -50%;
-    }
-
-    .carousel-inner .active.right {
-        left: 50%;
-    }
-
-    .carousel-inner .next {
-        left: 50%;
-    }
-
-    .carousel-inner .prev {
-        left: -50%;
-    }
-
-    .carousel-col {
-        width: 50%;
-    }
-
-    .active>div:first-child+div {
-        display: block;
-    }
+.slide {
+    width: var(--slider-width);
+    height: var(--slider-height);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: all 1s;
+    position: relative;
+/*     background: #FFCF47; */
+    border-radius: 2px;
 }
 
-/*sm*/
-@media (min-width: 768px) and (max-width: 991px) {
-    .carousel-inner .active.left {
-        left: -50%;
-    }
+.slider.loaded {}
 
-    .carousel-inner .active.right {
-        left: 50%;
-    }
-
-    .carousel-inner .next {
-        left: 50%;
-    }
-
-    .carousel-inner .prev {
-        left: -50%;
-    }
-
-    .carousel-col {
-        width: 50%;
-    }
-
-    .active>div:first-child+div {
-        display: block;
-    }
+.control {
+    position: absolute;
+    top: 50%;
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, .2);
+    border: 2px solid white;
+    border-radius: 50px;
+    margin-top: -20px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
+    z-index: 2;
 }
 
-/*md*/
-@media (min-width: 992px) and (max-width: 1199px) {
-    .carousel-inner .active.left {
-        left: -33%;
-    }
-
-    .carousel-inner .active.right {
-        left: 33%;
-    }
-
-    .carousel-inner .next {
-        left: 33%;
-    }
-
-    .carousel-inner .prev {
-        left: -33%;
-    }
-
-    .carousel-col {
-        width: 33%;
-    }
-
-    .active>div:first-child+div {
-        display: block;
-    }
-
-    .active>div:first-child+div+div {
-        display: block;
-    }
+.prev,
+.next {
+    background-size: 22px;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
 }
 
-/*lg*/
-@media (min-width: 1200px) {
-    .carousel-inner .active.left {
-        left: -25%;
-    }
-
-    .carousel-inner .active.right {
-        left: 25%;
-    }
-
-    .carousel-inner .next {
-        left: 25%;
-    }
-
-    .carousel-inner .prev {
-        left: -25%;
-    }
-
-    .carousel-col {
-        width: 25%;
-    }
-
-    .active>div:first-child+div {
-        display: block;
-    }
-
-    .active>div:first-child+div+div {
-        display: block;
-    }
-
-    .active>div:first-child+div+div+div {
-        display: block;
-    }
+.prev {
+    background-image: url(../images/arrow-left.png);
+    left: 20px;
 }
 
-.block {
-    width: 306px;
-    height: 230px;
+.next {
+    background-image: url(../images/arrow-right.png);
+    right: 20px;
 }
 
-.red {
-    background: red;
+.prev:active,
+.next:active {
+    transform: scale(.8);
 }
 
-.blue {
-    background: blue;
+.dots i {
+    display: inline-block;
+    width: 20px;
+    height: 5px;
+    background: rgb(174, 174, 174);
 }
 
-.green {
-    background: green;
-}
-
-.yellow {
-    background: yellow;
+.dots i.active {
+    background: white;
 }
