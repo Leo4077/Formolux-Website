@@ -1,0 +1,63 @@
+body {
+    padding-top: 20px;
+}
+
+.carousel {
+    /*     width: 100vw; */
+
+/*     align-items: baseline; */
+}
+
+.slide-box {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .slide-box img {
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .slide-box img {
+        -ms-flex: 0 0 33.3333%;
+        flex: 0 0 33.3333%;
+        max-width: 33.3333%;
+    }
+}
+
+@media (min-width: 992px) {
+    .slide-box img {
+        -ms-flex: 0 0 25%;
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+}
+
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: .5rem;
+}
+
+/* 按鈕樣式 */
+.carousel-control-prev,
+.carousel-control-next {
+    margin-top: 80px;
+
+    background-color: rgba(192, 192, 192, 0.5);
+    color: white;
+    border-radius: 99em;
+    width: 20px;
+    /* 修改按鈕寬度 */
+    height: 40px;
+    /* 修改按鈕高度 */
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}

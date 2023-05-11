@@ -9,6 +9,7 @@
 #homepage-topsection {
     background-color: rgb(255, 255, 255);
     height: 160vh;
+    width: auto;
     z-index: 2;
 }
 
@@ -26,12 +27,14 @@
 
 /* 圖片區母容器 */
 #homepage-introbox {
+
     display: flex;
     /* 水平置中 */
     justify-content: center;
 }
 
 .homepage-introimage {
+
     margin-top: 480px;
     /* 橫向間距 */
     margin-left: 30px;
@@ -47,7 +50,7 @@
 /* 區段二 */
 #homepage-bottomsection {
     background-color: #000537;
-    height: 85rem;
+    height: 90rem;
     display: flex;
     /* 水平置中 */
     align-items: center;
@@ -234,9 +237,92 @@
 }
 
 /* 評論區 */
-.homepage-commentbox{
-    margin-top: 3rem;
-    margin-bottom: 3rem;
+.homepage-comment-box {
+    display: flex;
+    flex-direction: row;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
+/* 評論標題區 */
+#homepage-comment-titlebox {
+    position: relative;
+    display: flex;
+    padding-right: 5.6rem;
+}
+
+/* 逗號 */
+#homepage-comment-icon {
+    position: absolute;
+    top: -1.5rem;
+    left: -0.5rem;
+    z-index: 10;
+}
+
+/* 文字 */
+#homepage-comment-word {
+    border: 1px solid #47BFD9;
+    padding-top: 1.5rem;
+    padding-bottom: 0.1rem;
+    padding-left: 2.8rem;
+    padding-right: 2.8rem;
+    height:11.5rem;
+}
+
+/* 標題 */
+#homepage-comment-title {
+    color: white;
+    font-family: DM Serif Display;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2.2rem;
+    line-height: 3rem;
+    letter-spacing: 0.02em;
+    text-align: center;
+}
+
+/* 副標題 */
+#homepage-comment-subtitle {
+    color: white;
+    font-family: DM Serif Display;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 3.625rem;
+    line-height: 3rem;
+    letter-spacing: 0.02em;
+    text-align: center;
+}
+
+/* 評論內容區 */
+.homepage-comment-contentbox {
+    display: flex;
+    flex-direction: column;
+    width: 18rem;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}
+
+/* 評論內容上區 */
+.homepage-comment-contentbox1 {
+    display: flex;
+    flex-direction: row;
+    font-family: DM Serif Display;
+    font-style: normal;
+    font-weight: 400;
+    color: white;
+    border-bottom: 1px solid white;
+    padding-bottom: 0.6rem;
+}
+/* 評論內容下區 */
+.homepage-comment-comment {
+    padding-top: 0.6rem;
+    font-family: Arial;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1rem;
+    text-align: justify;
+    letter-spacing: 0.065em;
+    color: white;
 }
 
 /* 聯絡按鈕 */
@@ -245,6 +331,7 @@
     height: 9rem;
     background-color: #47BFD9;
     padding: 0px;
+    /*     margin-top: 12rem; */
 }
 
 /* 按鈕字樣 */
@@ -267,7 +354,7 @@
 }
 
 /* 媒體報導 */
-.homepage-mediabox{
+.homepage-mediabox {
     margin-top: 7rem;
 }
 
