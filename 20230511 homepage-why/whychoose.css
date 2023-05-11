@@ -303,16 +303,36 @@
 }
 
 /* 評論內容上區 */
-.homepage-comment-contentbox1 {
+.homepage-comment-upbox{
+    display: flex;
+    justify-content:space-between;
+    flex-direction: row;
+    border-bottom: 1px solid white;
+    padding-bottom: 0.6rem;
+}
+/* 分數星星 */
+#homepage-comment-contentbox1 {
     display: flex;
     flex-direction: row;
     font-family: DM Serif Display;
     font-style: normal;
     font-weight: 400;
     color: white;
-    border-bottom: 1px solid white;
-    padding-bottom: 0.6rem;
+
 }
+
+/* 人物 */
+#homepage-comment-contentbox2 {
+    display: flex;
+    flex-direction: row;
+    font-family: DM Serif Display;
+    font-style: normal;
+    font-weight: 400;
+    color: white;
+
+}
+
+
 /* 評論內容下區 */
 .homepage-comment-comment {
     padding-top: 0.6rem;
