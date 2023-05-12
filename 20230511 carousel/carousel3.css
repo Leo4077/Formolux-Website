@@ -9,9 +9,17 @@
     box-sizing: border-box;
 }
 
+#homepage-slider{
+        display: flex;
+        justify-content: center;
+        align-items: baseline;
+/*         border: 2px  solid red;
+        background-color: aqua; */
+}
 
 .slider {
     position: absolute;
+    justify-content: center;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -91,10 +99,20 @@
     transform: scale(.8);
 }
 
+.dots{
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    margin-top: 0.5rem;
+}
+
 .dots i {
     display: inline-block;
+    justify-content: center;
+    align-items: baseline;
     width: 20px;
-    height: 5px;
+    /* 指示器高度 */
+    height: 3px;
     background: rgb(174, 174, 174);
 }
 
