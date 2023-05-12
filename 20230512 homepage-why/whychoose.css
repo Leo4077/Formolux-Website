@@ -1,5 +1,6 @@
 body {
     padding: 0px;
+    overflow-x: hidden;
 }
 
 /* 主要內容 */
@@ -12,7 +13,7 @@ body {
 /* 區段一 */
 #homepage-topsection {
     background-color: rgb(255, 255, 255);
-    height: 160vh;
+    height: 100rem;
     width: auto;
     z-index: 2;
 }
@@ -618,6 +619,7 @@ body {
 /* 媒體報導 */
 .homepage-mediabox {
     margin-top: 7rem;
+    height: 14.375rem;
 }
 
 #homepage-mediatitle {
