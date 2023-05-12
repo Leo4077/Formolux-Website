@@ -1,3 +1,8 @@
+body {
+    padding: 0px;
+    overflow-x: hidden;
+}
+
 /* 主要內容 */
 #homepage-content {
     display: flex;
@@ -8,7 +13,7 @@
 /* 區段一 */
 #homepage-topsection {
     background-color: rgb(255, 255, 255);
-    height: 160vh;
+    height: 100rem;
     width: auto;
     z-index: 2;
 }
@@ -51,6 +56,7 @@
 .homepage-bottomsection {
     background-color: #000537;
     height: 90rem;
+    width: 100vw;
     display: flex;
     /* 水平置中 */
     align-items: center;
@@ -106,9 +112,125 @@
 }
 
 /* 左右滑圖片區 */
+
 :root {
-    --slider-width: 100vw;
+    --slider-width: 400px;
     --slider-height: 200px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+#homepage-slider {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    /*         border: 2px  solid red;
+        background-color: aqua; */
+}
+
+.slider {
+    position: absolute;
+    justify-content: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: var(--slider-height);
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, .2);
+}
+
+.wrapper {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: var(--slider-height);
+    z-index: 1;
+}
+
+.slides {
+    display: flex;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 10000px;
+}
+
+.slides.shifting {
+    transition: left .2s ease-out;
+}
+
+.slide {
+    width: var(--slider-width);
+    height: var(--slider-height);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: all 1s;
+    position: relative;
+    /*     background: #FFCF47; */
+    border-radius: 2px;
+}
+
+.slider.loaded {}
+
+.control {
+    position: absolute;
+    top: 50%;
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, .2);
+    border: 2px solid white;
+    border-radius: 50px;
+    margin-top: -20px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
+    z-index: 2;
+}
+
+.prev,
+.next {
+    background-size: 22px;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.prev {
+    background-image: url(../images/arrow-left.png);
+    left: 20px;
+}
+
+.next {
+    background-image: url(../images/arrow-right.png);
+    right: 20px;
+}
+
+.prev:active,
+.next:active {
+    transform: scale(.8);
+}
+
+.dots {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    margin-top: 0.5rem;
+}
+
+.dots i {
+    display: inline-block;
+    justify-content: center;
+    align-items: baseline;
+    width: 20px;
+    /* 指示器高度 */
+    height: 3px;
+    background: rgb(174, 174, 174);
+}
+
+.dots i.active {
+    background: white;
 }
 
 * {
@@ -122,7 +244,7 @@
     height: 20rem;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, .2);
     margin-top: 2rem;
-    margin-bottom: 10rem;
+    margin-bottom: 0rem;
 }
 
 .wrapper {
@@ -163,7 +285,7 @@
 .control {
     display: flex;
     position: relative;
-    top: 9rem;
+    top: 7.5rem;
     width: 50px;
     height: 50px;
     background: rgba(255, 255, 255, .2);
@@ -182,15 +304,24 @@
     cursor: pointer;
 }
 
+.slider-controls {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* 左按鈕 */
 .prev {
+    position: absolute;
     background-image: url(../images/arrow-left.png);
     left: 5rem;
 }
 
+/* 右按鈕 */
 .next {
+    position: absolute;
     background-image: url(../images/arrow-right.png);
-    margin-right: 5rem;
-    right:5rem;
+    right: 5rem;
 }
 
 .prev:active,
@@ -198,10 +329,19 @@
     transform: scale(.8);
 }
 
+/* 指示器 */
+.dots {
+    position: relative;
+    margin-top: 16rem;
+}
+
 .dots i {
     display: inline-block;
-    width: 20px;
-    height: 5px;
+    justify-content: center;
+    align-items: baseline;
+    width: 1rem;
+    /* 指示器高度 */
+    height: 0rem;
     background: rgb(174, 174, 174);
 }
 
@@ -215,7 +355,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-top: 5rem;
+    margin-top: 1rem;
     margin-bottom: 6rem;
 }
 
@@ -340,19 +480,69 @@
     color: white;
 }
 
-/* 聯絡按鈕 */
+/* 聯絡按鈕區 */
+/* 按鈕樣式 */
 #homepage-contactbtn {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    cursor: pointer;
     width: 91rem;
     height: 9rem;
     background-color: #47BFD9;
-    padding: 0px;
     /*     margin-top: 12rem; */
+    animation: btnin 0.5s;
+}
+
+#homepage-contactbtn-box a {
+    text-decoration: none;
+}
+
+
+/* hover按鈕樣式 */
+#homepage-contactbtn:hover {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 91rem;
+    height: 9rem;
+    border: 1px solid #47BFD9;
+    background-color: #000537;
+    /*     margin-top: 12rem; */
+    animation: btnin 0.5s;
 }
 
 /* 按鈕字樣 */
-#homepage-contactbtn a {
-    width: 91rem;
+#homepage-contactbtn span {
+    display: flex;
+    align-items: center;
+    /*     width: 91rem; */
     height: 9rem;
+    font-size: 2.75rem;
+    font-family: DM Serif Display;
+    font-style: normal;
+    font-weight: 400;
+    text-decoration: none;
+
+    line-height: 3.75rem;
+    letter-spacing: 0.155em;
+    color: #ffffff;
+
+    margin-left: 20rem;
+    margin-right: 20rem;
+
+    animation: btnin 0.5s;
+
+}
+
+/* hover按鈕字樣 */
+#homepage-contactbtn:hover span {
+    display: none;
+    animation: btnout 0.5s;
+}
+
+#homepage-contactbtn:hover:before {
+    content: "OK! Here We GO!";
     font-size: 2.75rem;
     font-family: DM Serif Display;
     font-style: normal;
@@ -360,17 +550,76 @@
     text-decoration: none;
     line-height: 3.75rem;
     letter-spacing: 0.155em;
-    color: #ffffff;
-    /* 連結範圍 */
-    padding-top: 2.68rem;
-    padding-bottom: 2.68rem;
-    padding-left: 25.3rem;
-    padding-right: 25.3rem;
+    color: #47BFD9;
+
+    margin-left: 40rem;
+    margin-right: 0rem;
+
+    animation: btnin 0.5s;
 }
+
+/* arrow */
+#homepage-contactbtn img {
+    padding-left: 0rem;
+    animation: imgback 0.5s forwards;
+}
+
+/* hover arrow */
+#homepage-contactbtn:hover img {
+    padding-left: 0rem;
+    filter: invert(52%) sepia(100%) saturate(288%) hue-rotate(143deg) brightness(107%) contrast(85%);
+    animation: imggo 0.5s forwards;
+}
+
+/* 箭頭移動 */
+@keyframes imggo {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(10rem, 0);
+
+    }
+}
+
+@keyframes imgback {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(-10rem, 0);
+
+    }
+}
+
+/* 淡入淡出 */
+@keyframes btnin {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes btnout {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
 
 /* 媒體報導 */
 .homepage-mediabox {
     margin-top: 7rem;
+    height: 14.375rem;
 }
 
 #homepage-mediatitle {
