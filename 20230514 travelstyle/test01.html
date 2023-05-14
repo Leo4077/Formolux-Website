@@ -6,12 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Travel Style</title>
+
+     <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="../mainstyle.css">
     <link rel="stylesheet" href="../20230505 web combine/hamburger2.css">
     <link rel="stylesheet" href="../20230505 web combine/header+footer01.css">
     <link rel="stylesheet" href="./test01.css">
-
-</head>
 
 <body>
 
@@ -153,79 +154,98 @@
             </div>
         </div>
 
-       
-        <!-- 下半部分全區域 -->
-        <div id="styleContainer">
-            <!-- 左邊一整個文字區 -->
-            <div class="sumtext">
-                <div class="smallStar">
-                    <img src="../images/smallstar.svg" alt="">
-                </div>
-                <h4>2 people</h4>
-                <h2>HONEY<br>MOON</h2>
-                <h3># romantic # sweet #night view</h3>
-                <p>
-                    Experience a luxurious and laid-back honeymoon trip, unwind and create unforgettable memories with
-                    your loved one.
-                </p>
-                <a href="#" class="more">Learn more</a>
-            </div>
-            <!-- 右邊一整個卡片區 -->
-            <div class="styleCard">
-                <!-- 左右按鈕鍵 -->
-                <div class="sliderBtn">
-                    <a href="#" class="styleprev"></a>
-                    <a href="#" class="stylenext"></a>
-                </div>
-                <!-- 純卡片區 -->
-                <div class="bigCards">
-                    <div class="eachCard" id="soloCard">
-                        <img src="../images/solotravel.png" alt="">
-                        <div class="cardtext">
-                            <h2></h2>
-                            <p></p>
-                        </div>
-                    </div>
-                    <div class="onlyCard">
-                    <div class="eachCard" id="familyCard">
-                        <img src="../images/familytravel.png" alt="">
-                        <div class="cardtext">
-                            <h2></h2>
-                            <p></p>
-                        </div>
-                    </div>
-                    <div class="eachCard" id="bestiesCard">
-                        <img src="../images/bestiestravel.png" alt="">
-                        <div class="cardtext">
-                            <h2></h2>
-                            <p></p>
-                        </div>
-                    </div>
-                    <div class="eachCard" id="partyCard">
-                        <img src="../images/partyTravel.png" alt="">
-                        <div class="cardtext">
-                            <h2></h2>
-                            <p></p>
-                        </div>
-                    </div>
-                    <div class="eachCard" id="bespokeCard">
-                        <img src="../images/bespokeTravel.png" alt="">
-                        <div class="cardtext">
-                            <h2></h2>
-                            <p></p>
-                        </div>
-                    </div>
-                    <div class="eachCard" id="pilgrimCard">
-                        <img src="../images/pilgramTravel.png" alt="">
-                        <div class="cardtext">
-                            <h2></h2>
-                            <p></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    </body>
+        <section id="slider-2">
+            <!-- 左右按鈕 -->
+            <div class="swiper-custom-nav">
+                <img src="../images/style_prev.png" alt="" id="stylenav-left">
+                <img src="../images/style_next.png" alt="" id="stylenav-right">            
+            </div> 
+            <div class="container wide">
+                <div class="swiper" id="swiper-2">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="#" id="solo">
+                                <figure>
+                                    <img src="../images/solotravel.png" alt="Marbella, Spain" />
+                                    <figcaption>
+                                        <h2>Solo <br>
+                                            Travel</h2>
+                                        <p>suitable for one person</p>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </div>  <!-- end swiper-slide -->
+                        <div class="swiper-slide">
+                            <a href="#" id="family">
+                                <figure>
+                                    <img src="../images/familytravel.png" alt="Sevilla, Spain" />
+                                    <figcaption>
+                                        <h2>Family <br>
+                                            Trip</h2>
+                                        <p>suitable for 2-5 people</p>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </div>  <!-- end swiper-slide -->
+                        <div class="swiper-slide">
+                            <a href="#" id="besties">
+                                <figure>
+                                    <img src="../images/bestiestravel.png" alt="Fornalutx, Mallorca, Spain" />
+                                    <figcaption>
+                                        <h2>Besties <br>
+                                            Trip</h2>
+                                        <p>suitable for 3-4 people</p>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </div>  <!-- end swiper-slide -->
+                        <div class="swiper-slide">
+                            <a href="#" id="party">
+                                <figure>
+                                    <img src="../images/partyTravel.png" alt="Calle Niño de Guevara, 1, 29008 Málaga, Spain" />
+                                    <figcaption>
+                                        <h2>Party <br>
+                                            Trip</h2>
+                                        <p>Coming soon...</p>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </div>  <!-- end swiper-slide -->
+                        <div class="swiper-slide">
+                            <a href="#" id="bespoke">
+                                <figure>
+                                    <img src="../images/bespokeTravel.png" alt="Valldemossa, Spain" />
+                                    <figcaption>
+                                        <h2>Bespoke <br>
+                                            Travel</h2>
+                                        <p>Coming soon...</p>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </div>  <!-- end swiper-slide -->
+                        <div class="swiper-slide">
+                            <a href="#" id="pilgram">
+                            <figure>
+                                <img src="../images/pilgramTravel.png" alt="Cala S'Almunia in Mallorca, Spain" />
+                                    <figcaption>
+                                        <h2>Pilgrim <br>
+                                            Travel</h2>
+                                        <p>Coming soon...</p>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </div>  <!-- end swiper-slide -->
+                    </div> <!-- end swiper-wrapper -->
+                </div> <!-- end swiper -->
+            </div> <!-- end container -->
+        </section>
+
+
+        
+<!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="./test01.js"></script>
+</body>
+
 
 </html>
