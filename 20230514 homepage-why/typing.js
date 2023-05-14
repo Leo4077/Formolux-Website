@@ -28,7 +28,7 @@ $(document).ready(function () {
             setTimeout(type, 300);
         } else if (lineCount < strings.length) {
             /* 打字後延遲擦除時間 */
-            setTimeout(erase, 1000);
+            setTimeout(erase, 800);
             /* erase(); */
         }
         /* 這段代表最後會在子標題重複一次最後一段文字 */
