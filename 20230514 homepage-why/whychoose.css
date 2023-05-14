@@ -47,12 +47,13 @@ body {
     position: relative;
     justify-content: center;
     /*     width: 33.75rem */
-    
+
     height: 64.6rem;
     /* 橫向間距 */
     margin-left: 30px;
     margin-right: 30px;
 
+    overflow: hidden;
 }
 
 #homepage-introimage2 {
@@ -64,22 +65,51 @@ body {
 .homepage-introimage-content {
     display: flex;
     position: absolute;
-    justify-content:flex-end;
+    justify-content: flex-end;
     width: 33.75rem;
-    height:64.6rem;
+    height: 64.6rem;
     padding-bottom: 5rem;
 
     z-index: 20;
     flex-direction: column;
     align-items: center;
-/*     padding-right: 0.5rem; */
+    /* padding-right: 0.5rem; */
 
+    /* 背景漸層嵌入 */
     background-image: url(../images/introimage-bg.png);
     background-repeat: no-repeat;
-/*     background-attachment: fixed; */
+    /* background-attachment: fixed; */
     background-position: center;
     background-size: cover;
+
+    /* 初始樣式 */
+    opacity: 0.5;
+    transform: translateY(64.6rem);
 }
+
+/* 關鍵幀動畫 */
+.showIntrocontent {
+    animation: showIntrocontent 1s forwards;
+}
+
+.hideIntrocontent {
+    animation: hideIntrocontent 1s forwards;
+}
+
+@keyframes showIntrocontent {
+    100% {
+        opacity: 1;
+        transform: translateY(0rem);
+    }
+}
+
+@keyframes hideIntrocontent {
+    100% {
+        opacity: 0;
+        transform: translateY(64.6rem);
+    }
+}
+
 
 /* 標題 */
 .homepage-introimage-content1 {
@@ -588,6 +618,8 @@ body {
     width: 91rem;
     height: 9rem;
     background-color: #47BFD9;
+    /* 去除邊框 */
+    border: 0;
     /*     margin-top: 12rem; */
     animation: btnin 0.5s;
 }
