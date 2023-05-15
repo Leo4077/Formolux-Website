@@ -513,11 +513,14 @@ li:hover .line {
     /* 主軸方向齊頭 */
     justify-content: space-between;
     align-items: center;
+
+    height:25rem;
     /* 內距 */
-    padding-left: 100px;
-    padding-right: 100px;
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-left: 10rem;
+    padding-right: 10rem;
+
+/*     padding-top: 100px;
+    padding-bottom: 100px; */
     background-color: #000537;
 }
 
@@ -529,7 +532,7 @@ li:hover .line {
 
 
 .footerLogo {
-    width: 380px;
+    width: 23.75rem;
 }
 
 .footerMenu {
@@ -538,15 +541,15 @@ li:hover .line {
     list-style: none;
     border-top: 1.5px solid white;
     border-bottom: 1.5px solid white;
-    margin-left: 80px;
-    margin-right: 80px;
+    margin-left: 5rem;
+    margin-right: 5rem;
 }
 
 .footerMenu a {
     display: block;
     position: relative;
     font-family: Arial;
-    font-size: 19px;
+    font-size: 1.1875rem;
     font-weight: 150;
 
     /* 不換行 */
@@ -556,11 +559,11 @@ li:hover .line {
     /* 修改瀏覽器預設的字色 */
     color: rgb(255, 255, 255);
     /* 每一個按鈕的間距 */
-    margin-left: 65px;
-    margin-right: 65px;
+    margin-left: 4rem;
+    margin-right: 4rem;
     /* 上下邊界距離 */
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding-top: 3.75rem;
+    padding-bottom: 3.75rem;
     text-align: center;
 
 }
