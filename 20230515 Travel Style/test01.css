@@ -119,6 +119,7 @@
 
 figcaption h2{
   text-align: left;
+  text-transform: uppercase;
   font-size: 4rem;
   font-family: var(--second-font);
   font-weight: 400;
@@ -203,6 +204,7 @@ figcaption p{
         font-weight: 400;
         letter-spacing: -0.01em;
         line-height: 92.6%;
+        
       }
       .sumtext h3{
         font-family: var(--main-font);
