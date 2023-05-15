@@ -1,123 +1,132 @@
-#pageStyle{
-    height: 95vh;
-    width: auto;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+#pageStyle {
+  height: 95vh;
+  width: auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.styleFront {
+  width: auto;
+  height: 83vh;
+  display: flex;
+  justify-content: center;
+  margin-top: -90px;
+
+}
+
+#styleImage {
+  z-index: 3;
+  margin-right: 80px;
+}
+
+#longImage {
+
+  width: 100%;
+  margin-top: -50px;
+  position: relative;
+  z-index: 1;
+
+}
+
+/* 跑馬燈區域 */
+
+.marquee {
+  width: 100%;
+  height: 90px;
+  overflow: hidden;
+  margin-top: 16px;
+  padding-bottom: 20px;
+}
+
+.marquee li {
+  font-size: 1.75rem;
+  font-family: var(--second-font);
+  color: var(--main-darkBlue);
+}
+
+.marquee__content {
+  display: flex;
+  align-items: center;
+  animation: scrolling 20s linear infinite;
+
+}
+
+.marquee__item {
+  flex-shrink: 0;
+}
+
+@keyframes scrolling {
+  0% {
+    transform: translateX(0)
   }
-  
-  .styleFront{
-    width: auto;
-    height: 83vh;
-    display: flex;
-    justify-content: center;
-    margin-top: -90px;
-  
+
+  100% {
+    transform: translateX(-100%)
   }
-  
-  #styleImage {
-    z-index: 3;
-    margin-right:80px;
-    }
-  #longImage{
-      
-      width:100%;
-      margin-top: -50px;
-      position: relative;
-      z-index: 1;
-     
-  }
+}
 
-  /* 跑馬燈區域 */
-    
-    .marquee {
-      width: 100%;
-      height: 90px;
-      overflow: hidden;
-      margin-top: 16px;
-      padding-bottom: 20px;
-    }
-    
-    .marquee li {
-    font-size:  1.75rem;
-    font-family: var(--second-font);
-    color: var(--main-darkBlue);
-    }
-    
-    .marquee__content {
-      display: flex;
-      align-items: center;
-      animation: scrolling 20s linear infinite;
-      
-    }
-    
-    .marquee__item {
-      flex-shrink: 0; 
-    }
-    
-    @keyframes scrolling {
-      0% { transform: translateX(0) }
-      100% { transform: translateX(-100%) }
-    }
-    
-    /* 跑馬燈中的橫線 */
+/* 跑馬燈中的橫線 */
 
-    .marquee hr {
-      display: inline-block;
-      height: 0px;
-      border: 1px solid black; /*橫線加粗*/
-      border-left: 50px solid black; /*橫線加長*/
-      margin: 10px 6px 5px 15px; /* 添加間距 */
-    }
+.marquee hr {
+  display: inline-block;
+  height: 0px;
+  border: 1px solid black;
+  /*橫線加粗*/
+  border-left: 50px solid black;
+  /*橫線加長*/
+  margin: 10px 6px 5px 15px;
+  /* 添加間距 */
+}
 
-    /* 第二部分 */
-    
-    #slider-2{
-      height: 100vh;
-      background-image: url(../images/travelstyle_BG.png);
-      background-size: cover;
-      background-position: center;
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-    }
+/* 第二部分 */
 
-    .container.wide {
-    max-width: 68%;
-    transform: translateY(20%);
-    padding: 0;
-    position: relative;
+#slider-2 {
+  height: 100vh;
+  background-image: url(../images/travelstyle_BG.png);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.container.wide {
+  max-width: 68%;
+  transform: translateY(20%);
+  padding: 0;
+  position: relative;
 }
 
 
 /* Swiper */
 .swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .swiper-slide figure {
-    position: relative;
-    margin: 0;
-    overflow: hidden;
+  position: relative;
+  margin: 0;
+  overflow: hidden;
 }
 
 .swiper-slide figcaption {
-    position: absolute;
-    bottom: 0;
-    color: var(--main-yellow);
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 3.8rem;
+  position: absolute;
+  bottom: 0;
+  color: var(--main-yellow);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 3.8rem;
 }
 
-figcaption h2{
+figcaption h2 {
   text-align: left;
   font-size: 4rem;
   font-family: var(--second-font);
@@ -128,7 +137,8 @@ figcaption h2{
   display: inline-block;
   margin-bottom: 0.8rem;
 }
-figcaption p{
+
+figcaption p {
   text-align: left;
   font-family: var(--main-font);
   font-weight: 400;
@@ -138,148 +148,158 @@ figcaption p{
 }
 
 /* .swiper-slide-active figcaption { 左右滑動時的動作， */
-    /* transform: translate3d(-50%, 0, 0);
+/* transform: translate3d(-50%, 0, 0);
     opacity: 1;
 } */
 
 .swiper-slide figcaption img {
-    width: auto;
-    height: auto;
-    object-fit: contain;
+  width: auto;
+  height: auto;
+  object-fit: contain;
 }
 
+/* 左右按鈕 */
 .swiper-custom-nav {
-    /*background-color: #E36262;*/
-    position: absolute;
-    display: flex;
-    justify-content: flex-end;
-    transform: translateY(-130%);
-    cursor: pointer;
-    width: 200px;
+  /*background-color: #E36262;*/
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  transform: translateY(-130%);
+  cursor: pointer;
+  width: 200px;
 }
-  /* #stylenav-left{
-  background-color: black;
-  width: 75px;
-  height: 75px;
-  overflow: hidden;
 
-}  */
+.stylenav{
+  position: absolute;
+  right:9rem;
+  background-color: black;
+  width: 4.5rem;
+  height: 4.5rem;
+/*   overflow: hidden; */
+}
+
+#stylenav-left{
+  left: 1rem;
+}
+
+#stylenav-right{
+  right: 1rem;
+}
+
 
 /*響應式*/
 @media screen and (max-width: 800px) {
-    .swiper-slide img {
-        height: 20rem;
-        border-radius: 45;
-    }
+  .swiper-slide img {
+    height: 20rem;
+    border-radius: 45;
+  }
 
-    .swiper-slide figcaption {
-        left: 0;
-        transform: none;
-        width: 100%;
-        border-radius: 0;
-        background-color: var(--black-90);
-    }
+  .swiper-slide figcaption {
+    left: 0;
+    transform: none;
+    width: 100%;
+    border-radius: 0;
+    background-color: var(--black-90);
+  }
 
-    .swiper-custom-nav {
-        display: none;
-    }
+  .swiper-custom-nav {
+    display: none;
+  }
 }
 
-    /* 第二部分Travel style卡片區 */
+/* 第二部分Travel style卡片區 */
 
-    #styleContainer{
-        min-height: 100vh;
-        background-image: url(../images/travelstyle_BG.png);
-        background-size: cover;
-        background-position: center;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-    #styleContainer>*{
-      box-sizing: border-box;
-    }
+#styleContainer {
+  min-height: 100vh;
+  background-image: url(../images/travelstyle_BG.png);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-    .sumtext h4{
-        font-family: var(--main-font);
-        font-size: 1.4rem;
-        color: var(--main-yellow);
-        font-weight: 700;
-        line-height: 25px;
-        letter-spacing: 0.075em;
-        margin: 8px 0;
-      
-      }
-      .sumtext h2{
-        font-family: var(--second-font);
-        font-size:7.1rem;
-        color: var(--main-yellow);
-        font-weight: 400;
-        letter-spacing: -0.01em;
-        line-height: 92.6%;
-      }
-      .sumtext h3{
-        font-family: var(--main-font);
-        font-weight: 700;
-        font-size: 1.4rem;
-        line-height: 25px;
-        letter-spacing: 0.015em;
-        color:#FFFFFF;
-        margin:16px 0;
-      }
-    
-      .sumtext p{
-        font-family: var(--main-font);
-        font-weight: 400;
-        font-size: 1rem;
-        line-height: 20px;
-        letter-spacing: 0.005em;
-        color:#FFFFFF;
-        margin-bottom: 15px;
-    
-      }
-      .sumtext a{
-        display: inline-block;
-        text-decoration: none;
-        color: var(--main-blue);
-        font-weight: 400;
-        font-size: 1.4rem;
-        line-height: 25px;
-        letter-spacing: 0.075em;
-        border: 2px solid var(--main-blue);
-        padding:15px 32px;
-    
-      }
+#styleContainer>* {
+  box-sizing: border-box;
+}
 
-      .styleCard{
-        display: flex;
-        flex-direction: column;
-        
-      }
-      .bigCards{
-        border: 2px solid red;
-        display:flex;
-        flex-direction: row;
-        align-items: center;
-        flex-wrap: nowrap;
-        overflow: hidden;
-        box-sizing: border-box;
-        height: 30%;
-        width: 70%;
-        /*scroll-snap-type: x mandatory;*/
-      }
+.sumtext h4 {
+  font-family: var(--main-font);
+  font-size: 1.4rem;
+  color: var(--main-yellow);
+  font-weight: 700;
+  line-height: 25px;
+  letter-spacing: 0.075em;
+  margin: 8px 0;
 
-      .onlyCard{
-        /*flex-shrink: 0;*/
-       /* scroll-snap-align: start;*/
-        
-       width: 60%;
+}
 
-      }
+.sumtext h2 {
+  font-family: var(--second-font);
+  font-size: 7.1rem;
+  color: var(--main-yellow);
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  line-height: 92.6%;
+}
 
+.sumtext h3 {
+  font-family: var(--main-font);
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 25px;
+  letter-spacing: 0.015em;
+  color: #FFFFFF;
+  margin: 16px 0;
+}
 
+.sumtext p {
+  font-family: var(--main-font);
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 20px;
+  letter-spacing: 0.005em;
+  color: #FFFFFF;
+  margin-bottom: 15px;
 
+}
 
+.sumtext a {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--main-blue);
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 25px;
+  letter-spacing: 0.075em;
+  border: 2px solid var(--main-blue);
+  padding: 15px 32px;
 
+}
 
+.styleCard {
+  display: flex;
+  flex-direction: column;
 
+}
+
+.bigCards {
+  border: 2px solid red;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  box-sizing: border-box;
+  height: 30%;
+  width: 70%;
+  /*scroll-snap-type: x mandatory;*/
+}
+
+.onlyCard {
+  /*flex-shrink: 0;*/
+  /* scroll-snap-align: start;*/
+
+  width: 60%;
+
+}
