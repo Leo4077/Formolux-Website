@@ -1,105 +1,3 @@
-@charset "UTF-8";
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Dancing+Script&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Cutive+Mono');
-
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
-    box-sizing: border-box;
-    /*不累加邊框與內距,RWD*/
-    /*所以只要算margin跟width*/
-}
-
-body {
-    font-family: Arial;
-    line-height: 1.4;
-}
-
-
 /* 重置默認邊距和填充 */
 html,
 body,
@@ -117,15 +15,18 @@ footer {
     position: fixed;
     top: 0px;
     height: 10rem;
-    width: 67.5rem;
+    width: 100vw;
+    z-index: 100;
+/*     background-color: #ffffff; */
 }
 
 /* 頁首區 */
 .topbar {
     display: flex;
     align-items: center;
+/*     position: absolute; */
     /* 主軸方向齊頭 */
-    justify-content: space-between;
+    /*     justify-content: space-between; */
     width: 67.5rem;
     height: 10rem;
 }
@@ -143,6 +44,8 @@ footer {
 }
 
 .contactBtn {
+    position: absolute;
+
     color: #000537;
     /* 上方邊界 */
     /*     margin-top: 25px; */
@@ -150,7 +53,8 @@ footer {
     font-size: 1.25rem;
     /* 間距 */
     margin-left: 1.5rem;
-    margin-right: 11.25rem;
+    top:4.125rem;
+    right: 13rem;
 }
 
 .btn-contact {
@@ -184,7 +88,7 @@ footer {
 .menu-wrap {
     position: absolute;
     top: 1.69rem;
-    right: 2.66rem;
+    right: 3.5rem;
     z-index: 10;
 }
 
@@ -572,4 +476,3 @@ li:hover .line {
     padding-bottom: 3.75rem;
     text-align: center;
 }
-
