@@ -1,5 +1,8 @@
+html{
+  scroll-behavior: smooth;
+} 
 #pageStyle{
-    height: 95vh;
+    height: 84vh;
     width: auto;
     position: relative;
     display: flex;
