@@ -424,6 +424,7 @@ li:hover .line {
     justify-content: space-between;
     align-items: center;
 
+    width: 100vw;
     height: 25rem;
     /* 內距 */
     padding-left: 10rem;
