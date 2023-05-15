@@ -149,23 +149,14 @@ figcaption p{
 }
 
 .swiper-custom-nav {
-    /*background-color: #E36262;*/
     position: absolute;
     display: flex;
-    justify-content: flex-end;
-    transform: translateY(-130%);
+    justify-content: space-between;
+    transform: translate(-60%,-330%);
     cursor: pointer;
-    width: 200px;
+    width: 190px;
 }
 
-
-   /* #stylenav-right{
-  background-color: black;
-  width: 75px;
-  height: 75px;
-  overflow: hidden;
-
-}  */
 
 /*響應式*/
 @media screen and (max-width: 800px) {
@@ -190,7 +181,9 @@ figcaption p{
     /* 第二部分Travel style卡片區 */
 
     .sumtext{
-      transform: translateX(20%);
+
+      transform: translate(-13%,16%);
+      width: 21%;
     }
 
     .sumtext h4{
@@ -231,46 +224,49 @@ figcaption p{
         margin-bottom: 15px;
     
       }
-      .sumtext a{
+      .more{
+        
         display: inline-block;
         text-decoration: none;
         color: var(--main-blue);
+        font-family: var(--main-font);
         font-weight: 400;
         font-size: 1.4rem;
-        line-height: 25px;
         letter-spacing: 0.075em;
         border: 2px solid var(--main-blue);
         padding:15px 32px;
-    
-      }
-
-      .styleCard{
-        display: flex;
-        flex-direction: column;
-        
-      }
-      .bigCards{
-        border: 2px solid red;
-        display:flex;
-        flex-direction: row;
-        align-items: center;
-        flex-wrap: nowrap;
+        transition: all 0.3s;
+        position: relative;
         overflow: hidden;
-        box-sizing: border-box;
-        height: 30%;
-        width: 70%;
-        /*scroll-snap-type: x mandatory;*/
+        z-index: 1;
       }
 
-      .onlyCard{
-        /*flex-shrink: 0;*/
-       /* scroll-snap-align: start;*/
-        
-       width: 60%;
-
+      .more:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -2;
       }
-
-
+      .more:before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0%;
+        height: 100%;
+        background-color: var(--main-blue);
+        transition: all 0.3s;
+        z-index: -1;
+      }
+      .more:hover {
+        color: #fff;
+      }
+      .more:hover:before {
+        width: 100%;
+      }
 
 
 
