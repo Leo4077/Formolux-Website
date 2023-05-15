@@ -2,7 +2,7 @@ html{
   scroll-behavior: smooth;
 } 
 #pageStyle{
-    height: 84vh;
+    height: 100vh;
     width: auto;
     position: relative;
     display: flex;
@@ -13,15 +13,14 @@ html{
   
   .styleFront{
     width: auto;
-    height: 83vh;
+    height: 85vh;
     display: flex;
     justify-content: center;
-    margin-top: -90px;
-  
+    margin-top: 80px;
   }
   
   #styleImage {
-    z-index: 3;
+    z-index: 6;
     margin-right:80px;
     }
   #longImage{

@@ -10,15 +10,16 @@
      <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="../mainstyle.css">
-    <link rel="stylesheet" href="../20230505 web combine/hamburger2.css">
-    <link rel="stylesheet" href="../20230505 web combine/header+footer01.css">
+    <link rel="stylesheet" href="../combine/combine.css">
     <link rel="stylesheet" href="./test01.css">
+    
 
 <body>
 
     <body>
         <!-- 頁首區 -->
-        <header id="topbar">
+    <header class="header1">
+        <div class="topbar">
             <!-- 頁首Logo -->
             <h1 class="headerLogo">
                 <a href="index.html">
@@ -26,6 +27,7 @@
                 </a>
             </h1>
 
+            <!-- 按鈕區 -->
             <div>
                 <nav class="contactBtn">
                     <!-- 頁首聯絡按鈕 -->
@@ -36,10 +38,12 @@
 
                 <!-- Hamburger menu選單 -->
                 <div class="menu-wrap">
+                    <!-- Hamburger -->
                     <input type="checkbox" class="toggler">
                     <div class="hamburger">
                         <div></div>
                     </div>
+                    <!-- 選單 -->
                     <div class="menu">
                         <div>
                             <div>
@@ -74,7 +78,6 @@
                                     </li>
                                 </ul>
 
-
                                 <!-- 關閉按鈕 -->
                                 <span class="close">CLOSE</span>
                                 <div class="menu_logo">FORMOLUX TRAVEL</div>
@@ -94,7 +97,8 @@
                     </div>
                 </div>
             </div>
-        </header>
+        </div>
+    </header>
         <section id="pageStyle">
             <!-- banner區 -->
             <div class="styleFront">
@@ -279,6 +283,7 @@
         
 <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="../combine/combine.js"></script>
     <script src="./test01.js"></script>
 </body>
 

@@ -21,7 +21,7 @@ window.addEventListener('scroll', function() {
   var sliderPosition = slider.getBoundingClientRect().top;
   var windowHeight = window.innerHeight;
 
-  if (!isScrolling && sliderPosition - 500 <= 0) {
+  if (!isScrolling && sliderPosition - 950 <= 0) {
     isScrolling = true;
     slider.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });
     setTimeout(function() {
