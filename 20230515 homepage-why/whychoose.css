@@ -90,10 +90,14 @@ body {
 /* 關鍵幀動畫 */
 .showIntrocontent {
     animation: showIntrocontent 1s forwards;
+    /* 動畫的速度變化 */
+    animation-timing-function:ease-out;
 }
 
 .hideIntrocontent {
     animation: hideIntrocontent 1s forwards;
+        /* 動畫的速度變化 */
+        animation-timing-function:ease-out;
 }
 
 @keyframes showIntrocontent {
@@ -101,9 +105,17 @@ body {
         opacity: 1;
         transform: translateY(0rem);
     }
+    0% {
+        opacity: 0;
+        transform: translateY(64.6rem);
+    }
 }
 
 @keyframes hideIntrocontent {
+    0% {
+        opacity: 1;
+        transform: translateY(0rem);
+    }
     100% {
         opacity: 0;
         transform: translateY(64.6rem);

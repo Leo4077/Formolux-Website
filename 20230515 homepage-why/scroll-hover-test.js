@@ -9,12 +9,11 @@ function scrollAppear() {
             item.classList.add('showIntrocontent');
             item.classList.remove('hideIntrocontent');
         } else {
+            item.classList.remove('showIntrocontent')
             item.classList.add('hideIntrocontent');
-            item.classList.remove('showIntrocontent');
         }
     });
 }
-
 window.addEventListener('scroll', scrollAppear);
 
 
