@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css?family=Cutive+Mono');
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 18px;
+}
+
+body {
+    font-family: "Cutive Mono", serif;
+    font-size: 1.2em;
+    line-height: 1.6;
+    background: #CCC;
+    overflow-x: hidden;
+}
+
+.menu {
+    position: absolute;
+    right: -100px;
+    top: -100px;
+    z-index: 100;
+    width: 200px;
+    height: 200px;
+    background: #FFF;
+    border-radius: 50% 50% 50% 50%;
+    transition: .5s ease-in-out;
+    box-shadow: 0 0 0 0 #FFF, 0 0 0 0 #FFF;
+    cursor: pointer;
+}
+
+.hamburger {
+    position: absolute;
+    top: 135px;
+    left: 50px;
+    width: 30px;
+    height: 2px;
+    background: #000;
+    display: block;
+    transform-origin: center;
+    transition: .5s ease-in-out;
+}
+
+.hamburger:after,
+.hamburger:before {
+    transition: .5s ease-in-out;
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: #000;
+}
+
+.hamburger:before {
+    top: -10px;
+}
+
+.hamburger:after {
+    bottom: -10px;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+input[type="checkbox"]:checked ~ .menu {
+    box-shadow: 0 0 0 100vw #FFF, 0 0 0 100vh #FFF;
+    border-radius: 0;
+}
+
+input[type="checkbox"]:checked ~ .menu .hamburger {
+    transform: rotate(45deg);
+}
+
+input[type="checkbox"]:checked ~ .menu .hamburger:after {
+    transform: rotate(90deg);
+    bottom: 0;
+}
+
+input[type="checkbox"]:checked ~ .menu .hamburger:before {
+    transform: rotate(90deg);
+    top: 0;
+}
+
+input[type="checkbox"]:checked ~ ul {
+    opacity: 1;
+}
+
+ul {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    list-style-type: none;
+    background-color: #dcdcdc;
+    z-index: 200;
+    position: relative;
+    padding: 600px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    opacity: 0;
+    transition: .25s 0s ease-in-out;
+}
+
+a {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-family: DM Serif Display;
+    text-align: center;
+    width: 270px;
+    height: 600px;
+    margin: 20px;
+    border: 1px solid red;
+    padding:10px 20px 20

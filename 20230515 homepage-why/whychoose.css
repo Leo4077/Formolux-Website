@@ -627,6 +627,7 @@ body {
     align-items: center;
     justify-content: flex-start;
     cursor: pointer;
+
     width: 91rem;
     height: 9rem;
     background-color: #47BFD9;
@@ -646,6 +647,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    
     width: 91rem;
     height: 9rem;
     border: 1px solid #47BFD9;
