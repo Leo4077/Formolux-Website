@@ -1,0 +1,109 @@
+#aboutTaiwan01{
+    height: 100vh;
+    /* width: auto; */
+    background-image: url(../images/Group\ 80.png);
+	background-size: cover;
+	background-position: center; /*置中*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+/* .titleTaiwan{
+
+    width: 70%;
+}
+.titleContainer{
+    display: flex;
+    justify-content: center;
+    transform: translateY(-8%);
+} */
+/* .titleTaiwan p{ */
+    /* background-color: aquamarine;  */
+    /* display: block;
+    width: 1214px; */
+    /* font-family: var(--main-font);
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.04em;
+    color:var(--main-yellow);
+    text-shadow: 0px 4px 35px rgba(0, 0, 0, 0.3), 2px 2px 18px rgba(0, 5, 55, 0.4);
+    transform: translateY(-200%)
+} */
+
+/* 下半部資訊區 */
+
+.aboutTaiwan02{
+    height: auto;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    
+}
+.allContainer{ /*右半部整個大區域*/
+    /* background-color: blanchedalmond; */
+    width: 81%;
+    margin-top: 140px;
+
+}
+.allContainer h2{
+    display: inline-block;
+    /* background-color: aquamarine; */
+    font-family: var(--second-font);
+    font-style: italic;
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 82px;
+    letter-spacing: 0.02em;
+    color: #000537;
+    margin-top: 8px;
+    margin-bottom: 28px;
+    /* border-left: 1.5px solid #000537;
+    border-right: 1.5px solid #000537;
+    border-width: 5px; */
+}
+.allContainer h3{
+    font-family:var(--main-font);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 36px;
+    color: #000537;
+}
+
+.taiwan_item{ 
+    display: flex;
+    margin-bottom:160px;
+
+}
+.reverse{
+    flex-direction: row-reverse;
+    text-align: right;
+
+}
+.textarea{/*包含星星的文字整區*/
+    /* background-color: antiquewhite; */
+    margin-left: 110px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.textrev{
+    margin-right: 100px;
+    margin-left: 0;
+}
+#lastone{
+    background-color: var(--main-yellow);
+    width: 100vw;
+    height: 100vh;
+    
+}
+
+
+
