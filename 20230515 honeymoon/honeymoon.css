@@ -96,8 +96,8 @@ body {
 /* 標題區-小 */
 #honeymoon-leftpicture-word2 {
     display: flex;
-    flex-direction:row;
-    align-items:center;
+    flex-direction: row;
+    align-items: center;
     justify-content: center;
 
     margin-top: 1.5rem;
@@ -134,28 +134,371 @@ body {
     display: flex;
     /* 主軸垂直 */
     flex-direction: column;
-
-    background-color: aquamarine;
+    /* 
+    background-color: rgb(255, 255, 255); */
     /*     height: 200vh; */
     width: 60vw;
+
+    /* 內容區上端留白 */
+    padding-top: 2.8rem;
 }
 
 /* 內容區塊 */
+
 .honeymoon-content-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-    height: 100rem;
-    background-color: blueviolet;
+    height: auto;
+    /*     background-color: rgb(255, 255, 255); */
 
-    margin-bottom: 10rem;
+    text-align: center;
+
+    margin-top: 3.6rem;
+    margin-bottom: 3.6rem;
+}
+
+#honeymoon-content-box-7 {
+    margin-bottom: 6.7rem;
+}
+
+
+/* 文字區塊 */
+.honeymoon-wordbox {
+    font-family: 'DM Serif Display';
+    font-style: normal;
+    font-weight: 400;
+
+
+    color: black;
+
+    /* 文字區下端留白 */
+    margin-bottom: 2.8rem;
+}
+
+/* 主標 */
+.honeymoon-title {
+    font-size: 4rem;
+    line-height: 3.68rem;
+
+    letter-spacing: -0.015em;
+    margin-bottom: 0.6rem;
+}
+
+/* 副標 */
+.honeymoon-subtitle {
+    font-size: 2.5rem;
+    line-height: 2.3rem;
+}
+
+/* 圖片區塊 */
+.honeymoon-content-imagebox {
+    position: relative;
+    margin-bottom: 2.1rem;
+}
+
+.honeymoon-content-image {
+
+    z-index: -1;
+}
+
+/* 數字標示 */
+.honeymoon-content-image-p {
+    position: absolute;
+    z-index: 1;
+
+    font-family: 'Arial';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 6.25rem;
+    line-height: 7.1rem;
+    letter-spacing: -0.055em;
+
+    color: rgba(255, 255, 255, 0.55);
+
+    right: 2.5rem;
+    bottom: 1rem;
+}
+
+/* 介紹文字區塊 */
+.honeymoon-content-introbox {
+    width: 44.3rem;
+    text-align: justify;
+    height: auto;
+}
+
+.honeymoon-content-intro {
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.1rem;
+
+    letter-spacing: 0.09em;
+
+    color: #000000;
+}
+
+/* 內容區線段 */
+.honeymoon-content-line {
+    width: 1px;
+    height: 6.25rem;
+    background-color: #000000;
+    margin: auto;
+}
+
+
+/* 按鈕區 */
+/* 按鈕樣式 */
+#honeymoon-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    background-color: #FFFCEB;
+    width: 100%;
+    height: 9rem;
+
+    /* 去除邊框 */
+    border: 0;
+
+    animation: btnin 1s;
+    /* 沒hover時變色回來 */
+    animation: colorChangeback 0.5s ease-in;
+}
+
+
+.honeymoon-btn-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: none;
+    width: 100%;
+}
+
+.honeymoon-btn-box a {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    width: 100%;
 }
 
 
 
-/* 按鈕 */
-.honeymoon-btn {
-    background-color: antiquewhite;
-    height: 10rem;
+/* hover按鈕樣式 */
+#honeymoon-btn:hover {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    width: 100%;
+    height: 9rem;
+
+    border: 1px solid #000537;
+    background-color: #47BFD9;
+
+
+
+    /* hover時變色 */
+    animation: colorChange 0.5s ease-in;
+    /* 慢速開始 */
+    transition-timing-function: ease-in;
+
+    border: none;
+    border-bottom: 2px solid #FFFCEB;
 }
+
+/* 按鈕字樣 */
+#honeymoon-btn span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 2.75rem;
+    font-family: DM Serif Display;
+    font-style: normal;
+    font-weight: 400;
+    text-decoration: none;
+
+    line-height: 3.75rem;
+    letter-spacing: 0.155em;
+    color: #000537;
+
+    margin-left: 0rem;
+    margin-right: 1rem;
+
+    animation: btnin 1s;
+    /* 慢速開始 */
+    transition-timing-function: ease-in;
+
+}
+
+/* hover按鈕字樣 */
+#honeymoon-btn:hover span {
+    /* 製造殘影效果 */
+    position: absolute;
+    z-index: 2;
+    /*     display: none; */
+    animation: btnout 0.5s forwards;
+    /* 慢速開始 */
+    transition-timing-function: ease-in;
+}
+
+/* 偽元素hover前 */
+#honeymoon-btn:before {
+    display: flex;
+
+    position: absolute;
+    z-index: 1;
+
+    content: "OK! Here We GO!";
+    font-size: 2.75rem;
+    font-family: DM Serif Display;
+    font-style: normal;
+    font-weight: 400;
+    text-decoration: none;
+    line-height: 3.75rem;
+    letter-spacing: 0.155em;
+    color: #000537;
+    padding-left: 10rem;
+
+    margin-left: 0rem;
+    margin-right: 1rem;
+
+    opacity: 0;
+    animation: btnout 1s;
+    /* 慢速開始 */
+    transition-timing-function: ease-in;
+}
+
+/* 偽元素hover後 */
+#honeymoon-btn:hover:before {
+    display: flex;
+
+    position: absolute;
+    z-index: 2;
+
+    content: "OK! Here We GO!";
+    font-size: 2.75rem;
+    font-family: DM Serif Display;
+    font-style: normal;
+    font-weight: 400;
+    text-decoration: none;
+    line-height: 3.75rem;
+    letter-spacing: 0.155em;
+    color: #000537;
+
+    padding-left: 10rem;
+
+    margin-left: 0rem;
+    margin-right: 1rem;
+
+    opacity: 1;
+    animation: btnin 1s;
+    /* 慢速開始 */
+    transition-timing-function: ease-in;
+
+}
+
+/* arrow */
+#honeymoon-btn img {
+    position: absolute;
+    left: 65%;
+    z-index: 2;
+
+    animation: imgback 0.5s forwards;
+    /* 慢速開始 */
+    transition-timing-function: ease-in;
+}
+
+/* hover arrow */
+#honeymoon-btn:hover img {
+    position: absolute;
+    left: 65%;
+    z-index: 2;
+
+    animation: imggo 0.5s forwards;
+    /* 慢速開始 */
+    transition-timing-function: ease-in;
+}
+
+/* 箭頭移動 */
+@keyframes imggo {
+    0% {
+        transform: translate(0, 0);
+
+    }
+
+    100% {
+        transform: translate(100%, 0);
+
+    }
+}
+
+@keyframes imgback {
+    0% {
+        transform: translate(100%, 0);
+    }
+
+    100% {
+        transform: translate(0, 0);
+
+    }
+}
+
+
+/* 淡入淡出 */
+@keyframes btnin {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes btnout {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+/* 變色動畫 */
+@keyframes colorChange {
+    0% {
+        background-color: #FFFCEB;
+        /* 顏色A */
+    }
+
+    100% {
+        background-color: #47BFD9;
+        /* 顏色B */
+    }
+}
+
+@keyframes colorChangeback {
+    0% {
+        background-color: #47BFD9;
+        /* 顏色A */
+    }
+
+    100% {
+        background-color: #FFFCEB;
+        /* 顏色B */
+    }
+}
+
+
 
 /* 主內容3 (提示標語) */
 .honeymoon-section3 {
