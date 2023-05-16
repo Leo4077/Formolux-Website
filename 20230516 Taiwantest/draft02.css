@@ -98,11 +98,15 @@
     margin-right: 100px;
     margin-left: 0;
 }
-#lastone{
-    background-color: var(--main-yellow);
+/* 最後兩個區塊以及按鈕區域 */
+
+#aboutTaiwan03{
     width: 100vw;
-    height: 100vh;
+    
+    background-color: var(--main-yellow);
+
 }
+
 
 
 
