@@ -1,0 +1,41 @@
+body {
+    padding-top: 20px;
+}
+
+.carousel {
+    /*     width: 100vw; */
+
+/*     align-items: baseline; */
+}
+
+.slide-box {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: .5rem;
+}
+
+/* 按鈕樣式 */
+.carousel-control-prev,
+.carousel-control-next {
+    margin-top: 80px;
+
+    background-color: rgba(192, 192, 192, 0.5);
+    color: white;
+    border-radius: 25px;
+    width: 20px;
+    /* 修改按鈕寬度 */
+    height: 20px;
+    /* 修改按鈕高度 */
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}

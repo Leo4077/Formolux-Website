@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+:root {
+    --slider-width: 400px;
+    --slider-height: 200px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+#homepage-slider{
+        display: flex;
+        justify-content: center;
+        align-items: baseline;
+/*         border: 2px  solid red;
+        background-color: aqua; */
+}
+
+.slider {
+    position: absolute;
+    justify-content: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: var(--slider-height);
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, .2);
+}
+
+.wrapper {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: var(--slider-height);
+    z-index: 1;
+}
+
+.slides {
+    display: flex;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 10000px;
+}
+
+.slides.shifting {
+    transition: left .2s ease-out;
+}
+
+.slide {
+    width: var(--slider-width);
+    height: var(--slider-height);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: all 1s;
+    position: relative;
+/*     background: #FFCF47; */
+    border-radius: 2px;
+}
+
+.slider.loaded {}
+
+.control {
+    position: absolute;
+    top: 50%;
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, .2);
+    border: 2px solid white;
+    border-radius: 50px;
+    margin-top: -20px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
+    z-index: 2;
+}
+
+.prev,
+.next {
+    background-size: 22px;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.prev {
+    background-image: url(../images/arrow-left.png);
+    left: 20px;
+}
+
+.next {
+    background-image: url(../images/arrow-right.png);
+    right: 20px;
+}
+
+.prev:active,
+.next:active {
+    transform: scale(.8);
+}
+
+.dots{
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    margin-top: 0.5rem;
+}
+
+.dots i {
+    display: inline-block;
+    justify-content: center;
+    align-items: baseline;
+    width: 20px;
+    /* 指示器高度 */
+    height: 3px;
+    background: rgb(174, 174, 174);
+}
+
+.dots i.active {
+    background: white;
+}
