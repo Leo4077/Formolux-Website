@@ -634,8 +634,7 @@ body {
     height: 9rem;
     background-color: #47BFD9;
 
-    /* 去除邊框 */
-    border: 0;
+    border: 1px solid #47BFD9;
 
     /* 沒hover時變色回來 */
     animation: colorChangeback 0.5s ease-in;
