@@ -196,6 +196,7 @@ body {
 .honeymoon-content-imagebox {
     position: relative;
     margin-bottom: 2.1rem;
+    position: sticky;
 
 }
 
