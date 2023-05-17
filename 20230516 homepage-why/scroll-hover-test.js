@@ -22,17 +22,11 @@ function scrollAppear() {
 }
 window.addEventListener('scroll', scrollAppear);
 
-
-
-
-
 /* 頁面刷新後自動回到頂部 */
 window.onbeforeunload = function () {
     document.documentElement.scrollTop = 0;  //ie下
     document.body.scrollTop = 0;  //非ie
 }
-
-
 
 /* function scrollAppear() {
     let items = document.querySelectorAll('.homepage-introimage-content');
