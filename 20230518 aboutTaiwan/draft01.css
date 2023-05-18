@@ -1,0 +1,338 @@
+body {
+    margin: 0px;
+    /* overflow-x: hidden; */
+}
+#aboutTaiwan01{
+    height: 100vh;
+    width: 100%;
+    /* position: absolute; */
+    background-image: url(../images/aboutTaiwan_BG.png);
+	background-size: cover;
+	background-position: center; /*置中*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+/* .titleTaiwan{
+
+    width: 70%;
+}
+.titleContainer{
+    display: flex;
+    justify-content: center;
+    transform: translateY(-8%);
+} */
+ #aboutTaiwan01 p{ 
+    /* background-color: aquamarine;    */
+    display: block;
+    width: 1214px;
+    font-family: var(--main-font);
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.04em;
+    color:var(--main-yellow);
+    transform: translate(-1%,-100%);
+    /* transform: translateY(-150%);    */
+    text-shadow: 0px 4px 35px rgba(0, 0, 0, 0.3), 2px 2px 18px rgba(0, 5, 55, 0.4); 
+}
+
+#titleBanner{
+    transform: translate(-1%,15%);
+}
+
+
+/* 下半部資訊區 */
+
+#aboutTaiwan02{
+    height: auto;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    padding-left: 10%;
+    padding-right: 10%;
+    background-image: linear-gradient(white 82.5%,var(--main-yellow)82.5%);
+}
+
+/*整個圖片加文字的區域*/
+
+#allContainer{ 
+    /* position: relative; */
+    margin-top: 140px;
+    /* background-color: rgb(228, 20, 20); */
+
+}
+
+#allContainer h2{
+    display: inline-block;
+    background-color: aquamarine;
+    font-family: var(--second-font);
+    font-style: italic;
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 82px;
+    letter-spacing: 0.02em;
+    color: #000537;
+    margin-top: 8px;
+    margin-bottom: 28px;
+    /* border-left: 3px solid #000537;
+    border-right: 3px solid #000537; */
+   
+}
+#allContainer h3{
+    font-family:var(--main-font);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 36px;
+    color: #000537;
+}
+
+.taiwan_item{ 
+    display: flex;
+    margin-bottom:160px;
+
+}
+.reverse{
+    flex-direction: row-reverse;
+    text-align: right;
+
+}
+.textarea{/*包含星星的文字整區*/
+    /* background-color: antiquewhite; */
+    margin-left: 110px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.textrev{
+    margin-right: 100px;
+    margin-left: 0;
+}
+/*按鈕*/
+
+/* 按鈕樣式 */
+#taiwan-travelbtn {
+    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    width: 100%;
+    height: 9.1rem;
+    background-color: var(--main-blue);
+    border: 2px solid var(--main-blue);
+    /* 沒hover時變色回來 */
+    animation: colorChangeback 0.3s ease-in;
+
+}
+
+#taiwanbtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: none;
+    width: 100%;
+}
+
+#taiwanbtn a {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    width: 100%;
+}
+
+
+/* hover按鈕樣式 */
+#taiwan-travelbtn:hover {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    width: 100%;
+    height: 9.1rem;
+    border: 2px solid var(--main-blue);
+    background-color: var(--main-yellow);
+    /* hover時變色 */
+    animation: colorChange 0.3s ease-in;
+    /* 慢速開始 */
+    transition-timing-function: ease-in;
+}
+
+
+/* 按鈕字樣 */
+#taiwan-travelbtn span {
+    /* background-color: crimson; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    font-family: var(--second-font);
+    font-style: normal;
+    font-weight: 400;
+    text-decoration: none;
+    letter-spacing: 0.155em;
+    color: var(--main-yellow);
+    animation: btnin 0.3s;
+    /* 慢速開始 */
+    transition-timing-function: ease-in;
+}
+
+/* hover按鈕字樣 */
+#taiwan-travelbtn:hover span {
+    /* 製造殘影效果 */
+    position: absolute;
+    z-index: 2;
+    /*     display: none; */
+    animation: btnout 0.3s forwards;
+    /* 慢速開始 */
+    transition-timing-function: ease-in;
+}
+
+/* 偽元素hover前 */
+#taiwan-travelbtn:before {
+    display: flex;
+    position: absolute;
+    z-index: 1;
+    content: "OK! Here We GO!";
+    font-size: 2.75rem;
+    font-family: var(--second-font);
+    font-style: normal;
+    font-weight: 400;
+    text-decoration: none;
+    letter-spacing: 0.155em;
+    color: var(--main-blue);
+    padding-left: 35rem;
+    margin-left: 0rem;
+    margin-right: 1rem;
+    opacity: 0;
+    animation: btnout 0.3s;
+    /* 慢速開始 */
+    transition-timing-function: ease-in;
+}
+
+/* 偽元素hover後 */
+#taiwan-travelbtn:hover:before {
+    display: flex;
+    position: absolute;
+    z-index: 2;
+    content: "OK! Here We GO!";
+    font-size: 3rem;
+    font-family: var(--second-font);
+    font-style: normal;
+    font-weight: 400;
+    text-decoration: none;
+    letter-spacing: 0.155em;
+    color: var(--main-blue);
+    padding-left: 35rem;
+    margin-left: 0rem;
+    margin-right: 1rem;
+    opacity: 1;
+    animation: btnin 0.3s;
+    /* 慢速開始 */
+    transition-timing-function: ease-in;
+}
+
+/* arrow */
+#taiwan-travelbtn-img {
+    /*background-color: blue;*/
+    position: absolute;
+    /* 初始位置 */
+    left: 75%;
+    z-index: 2;
+    animation: imgback 0.3s forwards;
+    /* 慢速開始 */
+    transition-timing-function: ease-in;
+}
+
+/* hover arrow */
+#taiwan-travelbtn:hover img {
+    position: absolute;
+    /* 初始位置 */
+    left: 75%;
+    z-index: 2;
+    filter: invert(59%) sepia(59%) saturate(442%) hue-rotate(143deg) brightness(102%) contrast(87%);
+    filter: invert(52%) sepia(100%) saturate(288%) hue-rotate(143deg) brightness(107%) contrast(85%);
+    animation: imggo 0.3s forwards;
+    /* 慢速開始 */
+    transition-timing-function: ease-in;
+}
+
+/* 箭頭移動 */
+@keyframes imggo {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(10rem, 0);
+
+    }
+}
+
+@keyframes imgback {
+    0% {
+        transform: translate(10rem, 0);
+    }
+
+    100% {
+        transform: translate(0, 0);
+
+    }
+}
+
+/* 淡入淡出 */
+@keyframes btnin {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes btnout {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+/* 變色動畫 */
+@keyframes colorChange {
+    0% {
+        background-color: #47BFD9;
+        /* 顏色A */
+    }
+
+    100% {
+        background-color:var(--main-yellow);
+        /* 顏色B */
+    }
+}
+
+@keyframes colorChangeback {
+    0% {
+        background-color: var(--main-yellow);
+        /* 顏色A */
+    }
+
+    100% {
+        background-color: #47BFD9;
+        /* 顏色B */
+    }
+}
+
+
