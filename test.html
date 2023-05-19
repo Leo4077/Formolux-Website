@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        html,
+        body {
+            height: 100%;
+            background: #99405D;
+        }
+
+        .logo {
+            position: relative;
+            top: 50%;
+        }
+
+        svg {
+            display: block;
+            margin: 0 auto;
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+            max-width: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="logo">
+
+        <!-- 測試一 -->
+        <svg width="100%" height="100%" viewBox="0 0 120 120" version="1.1" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"
+            style="fill:none;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.41421;">
+
+            <defs>
+                <linearGradient id="gradient" x1="100%" y1="100%">
+
+                    <stop offset="0%" stop-color="lightblue" stop-opacity=".5">
+                        <animate attributeName="stop-color"
+                            values="lightblue;blue;red;red;black;red;red;purple;lightblue" dur="14s"
+                            repeatCount="indefinite" />
+                    </stop>
+
+                    <stop offset="100%" stop-color="lightblue" stop-opacity=".5">
+                        <animate attributeName="stop-color"
+                            values="lightblue;orange;red;purple;purple;purple;purple;blue;lightblue" dur="10s"
+                            repeatCount="indefinite" />
+
+                        <animate attributeName="offset" values=".95;.80;.60;.40;.20;.20;0;.20;.40;.60;.80;.95" dur="10s"
+                            repeatCount="indefinite" />
+
+                    </stop>
+                </linearGradient>
+            </defs>
+
+            <ellipse style="stroke-width:1.6px;" stroke="url('#gradient')" cx="60.391" cy="60.637" rx="54.902"
+                ry="55.689" />
+
+            <path fill="url('#gradient')"
+                d="M86.965,76.398c0.613,1.139 1.226,3.065 1.226,5.254c0,6.479 -5.166,11.208 -12.171,11.208c-3.239,0 -5.954,-1.576 -7.355,-3.678l-11.645,-17.512l0,9.982c0,5.604 -5.604,11.208 -12.259,11.208c-6.567,0 -12.171,-5.604 -12.171,-11.208l0,-41.066c0,0 0,-12.171 12.171,-12.171l21.19,0c4.465,0 21.277,1.401 21.277,19.701c0,10.77 -7.355,16.111 -7.355,16.111l7.092,12.171ZM82.15,64.665c0,0 6.829,-6.129 6.829,-16.549c0,-19.876 -18.212,-21.452 -23.028,-21.452l-21.19,0c-13.922,0 -13.922,13.922 -13.922,13.922l0,41.066c0,6.479 6.479,12.959 13.922,12.959c7.53,0 14.01,-6.48 14.01,-12.959l0,-4.203l8.493,12.784c1.664,2.452 4.991,4.378 8.756,4.378c8.056,0 13.923,-5.429 13.923,-12.959c0,-2.627 -0.701,-4.903 -1.401,-6.129l-6.392,-10.858Z" />
+
+        </svg>
+
+        <!-- 測試二 -->
+        <svg id="animated-svg" viewBox="0 0 100 100" height="150" width="150" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="gradient-1" gradientUnits="userSpaceOnUse">
+                    <stop class="stop-color-1" offset="0%" stop-color="red" />
+                    <stop class="stop-color-2" offset="100%" stop-color="blue" />
+                </linearGradient>
+            </defs>
+
+            <circle cx="50" cy="50" r="50" fill="url('#gradient-1')" />
+        </svg>
+
+        <svg viewBox="0 0 100 100" height="150" width="150" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+
+                <linearGradient id="gradient-2" gradientUnits="userSpaceOnUse">
+
+                    <stop offset="0%" stop-color="#7A5FFF">
+                        <animate attributeName="stop-color" values="#7A5FFF; #01FF89; #7A5FFF" dur="4s"
+                            repeatCount="indefinite" />
+                    </stop>
+
+                    <stop offset="100%" stop-color="#01FF89">
+                        <animate attributeName="stop-color" values="#01FF89; #7A5FFF; #01FF89" dur="4s"
+                            repeatCount="indefinite" />
+                    </stop>
+
+                </linearGradient>
+
+            </defs>
+
+            <circle cx="50" cy="50" r="50" fill="url('#gradient-2')" />
+        </svg>
+
+
+        <linearGradient id="hoverGradient"  x1="0" x2="0" y1="0" y2="1">
+            <stop offset="0" stop-color="rgba(71, 191, 217, 1)">
+                <animate attributeName="stop-color"
+                    values="rgba(71, 191, 217, 1);rgba(71, 191, 217, 0);rgba(71, 191, 217, 1)" dur="3s"
+                    repeatCount="indefinite" />
+            </stop>
+            <stop offset="100%" stop-color="rgba(71, 191, 217, 1)">
+                <animate attributeName="stop-color"
+                    values="rgba(71, 191, 217, 0);rgba(71, 191, 217, 1);rgba(71, 191, 217, 0)" dur="3s"
+                    repeatCount="indefinite" />
+            </stop>
+
+        </linearGradient>
+
+        <linearGradient id="hoverGradient2" x1="0" x2="1" y1="0" y2="1">
+            <stop offset="0" stop-color="rgba(71, 191, 217, 1)"></stop>
+            <stop offset="100" stop-color="rgba(71, 191, 217, 0.1)"></stop>
+        </linearGradient>
+
+
+
+    </div>
+</body>
+
+</html>

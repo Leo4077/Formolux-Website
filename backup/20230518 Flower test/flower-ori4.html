@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            background-color: rgb(255, 255, 255);
+        }
+
+        .flowersvg {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100vw;
+            height: 100vh;
+
+            overflow: hidden;
+        }
+
+        .flower {
+
+            color: #f70303;
+            position: relative;
+            opacity: .9;
+            width: 50vw;
+            height: 50vh;
+            display: block;
+            transition: transform .3s ease;
+            /* background-color: #7f7f7f; */
+            overflow: hidden;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="flowersvg">
+        <svg height="210" width="500">
+            <defs>
+                <radialGradient id="grad1" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+                    <stop offset="0%" style="stop-color:rgb(255,255,0);stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:rgb(255,0,0);stop-opacity:1" />
+                </radialGradient>
+            </defs>
+            <ellipse cx="50%" cy="50%" rx="85" ry="55" fill="url(#grad1)" />
+        </svg>
+
+
+
+
+
+        <svg>
+            <defs>
+                <linearGradient id="greenGradient">
+                    <stop offset="0" stop-color="#b2ed9d" />
+                    <stop offset="100%" stop-color="#569b3d" />
+                </linearGradient>
+            </defs>
+            <rect width="600" height="150" fill="url(#greenGradient)" />
+        </svg>
+
+        <div class="icons-after"></div>
+    </div>
+
+    <script src='./ori4.js'></script>
+</body>
+
+</html>
