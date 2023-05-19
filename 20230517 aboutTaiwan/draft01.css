@@ -42,6 +42,7 @@ body {
     text-shadow: 0px 4px 35px rgba(0, 0, 0, 0.3), 2px 2px 18px rgba(0, 5, 55, 0.4); 
 }
 
+
 #titleBanner{
     transform: translate(-1%,15%);
 }
@@ -59,13 +60,16 @@ body {
     background-image: linear-gradient(white 82.5%,var(--main-yellow)82.5%);
 }
 
+#allContainer span{
+    font-weight: 950;
+    font-style: normal;
+}
 #allContainer{ /*右半部整個大區域*/
     margin-top: 140px;
 }
 
 #allContainer h2{
     display: inline-block;
-    background-color: aquamarine;
     font-family: var(--second-font);
     font-style: italic;
     font-weight: 400;

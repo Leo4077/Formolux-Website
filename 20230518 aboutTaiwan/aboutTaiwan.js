@@ -1,11 +1,11 @@
 
 // 資訊區smoove
     $('.smoove').smoove({
-        offset : '25%',
-        moveX  : '-15px',
+        offset : '40%',
+        moveX  : '-20px',
     });
 
     $('.smoove_z').smoove({
-        offset : '25%',
-        moveX  : '15px',    
+        offset : '40%',
+        moveX  : '20px',    
     });
