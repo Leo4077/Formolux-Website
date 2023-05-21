@@ -1,0 +1,294 @@
+html{
+  scroll-behavior: smooth;
+} 
+#pageStyle{
+    height: 100vh;
+    width: auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .styleFront{
+    width: auto;
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+  }
+  
+  #styleImage {
+    z-index: 6;
+    margin-right:80px;
+    }
+  #longImage{
+      
+      width:100%;
+      margin-top: -50px;
+      position: relative;
+      z-index: 1;
+  }
+
+  /* 跑馬燈區域 */
+    
+    .marquee {
+      width: 100%;
+      height: 90px;
+      overflow: hidden;
+      margin-top: 16px;
+      padding-bottom: 20px;
+    }
+    
+    .marquee li {
+    font-size:  1.75rem;
+    font-family: var(--second-font);
+    color: var(--main-darkBlue);
+    }
+    
+    .marquee__content {
+      display: flex;
+      align-items: center;
+      animation: scrolling 20s linear infinite;
+      
+    }
+    
+    .marquee__item {
+      flex-shrink: 0; 
+    }
+    
+    @keyframes scrolling {
+      0% { transform: translateX(0) }
+      100% { transform: translateX(-100%) }
+    }
+    
+    /* 跑馬燈中的橫線 */
+
+    .marquee hr {
+      display: inline-block;
+      height: 0px;
+      border: 1px solid black; /*橫線加粗*/
+      border-left: 50px solid black; /*橫線加長*/
+      margin: 10px 6px 5px 15px; /* 添加間距 */
+    }
+
+    /* 第二部分 */
+    
+    #slider-2{
+      height: 100vh;
+      background-image: url(../images/travelstyle_BG.png);
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+
+    .container.wide {
+    max-width: 68%;
+    transform: translateY(20%);
+    padding: 0;
+    position: relative;
+}
+
+
+/* Swiper */
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.swiper-slide figure {
+    position: relative;
+    margin: 0;
+    overflow: hidden;
+}
+
+.swiper-slide figcaption {
+    position: absolute;
+    bottom: 0;
+    color: var(--main-yellow);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 3.8rem;
+}
+
+figcaption h2{
+  text-align: left;
+  text-transform: uppercase;
+  font-size: 4rem;
+  font-family: var(--second-font);
+  font-weight: 400;
+  letter-spacing: -0.015em;
+  line-height: 92.6%;
+  text-shadow: 0px 4px 14px rgba(0, 0, 0, 0.35);
+  display: inline-block;
+  margin-bottom: 0.8rem;
+}
+figcaption p{
+  text-align: left;
+  font-family: var(--main-font);
+  font-weight: 400;
+  font-size: 0.87rem;
+  letter-spacing: 0.18em;
+  text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.4);
+}
+
+/* .swiper-slide-active figcaption { 左右滑動時的動作， */
+    /* transform: translate3d(-50%, 0, 0);
+    opacity: 1;
+} */
+
+.swiper-slide figcaption img {
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+
+.swiper-custom-nav {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    transform: translate(-60%,-330%);
+    cursor: pointer;
+    width: 190px;
+}
+
+
+/*響應式*/
+@media screen and (max-width: 800px) {
+    .swiper-slide img {
+        height: 20rem;
+        border-radius: 45;
+    }
+
+    .swiper-slide figcaption {
+        left: 0;
+        transform: none;
+        width: 100%;
+        border-radius: 0;
+        background-color: var(--black-90);
+    }
+
+    .swiper-custom-nav {
+        display: none;
+    }
+}
+
+    /* 第二部分Travel style卡片區 */
+
+    .sumtext{
+
+      transform: translate(-13%,16%);
+      width: 21%;
+    }
+
+    .sumtext h4{
+        font-family: var(--main-font);
+        font-size: 1.4rem;
+        color: var(--main-yellow);
+        font-weight: 700;
+        line-height: 25px;
+        letter-spacing: 0.075em;
+        margin: 8px 0;
+      
+      }
+      .sumtext h2{
+        font-family: var(--second-font);
+        font-size:7.1rem;
+        color: var(--main-yellow);
+        font-weight: 400;
+        letter-spacing: -0.01em;
+        line-height: 92.6%;
+        
+      }
+      .sumtext h3{
+        font-family: var(--main-font);
+        font-weight: 700;
+        font-size: 1.4rem;
+        line-height: 25px;
+        letter-spacing: 0.015em;
+        color:#FFFFFF;
+        margin:16px 0;
+      }
+    
+      .sumtext p{
+        font-family: var(--main-font);
+        font-weight: 400;
+        font-size: 1rem;
+        line-height: 20px;
+        letter-spacing: 0.005em;
+        color:#FFFFFF;
+        margin-bottom: 15px;
+    
+      }
+      .more{
+        
+        display: inline-block;
+        text-decoration: none;
+        color: var(--main-blue);
+        font-family: var(--main-font);
+        font-weight: 400;
+        font-size: 1.4rem;
+        letter-spacing: 0.075em;
+        border: 2px solid var(--main-blue);
+        padding:15px 32px;
+        transition: all 0.3s;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+      }
+
+      .more:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -2;
+      }
+      .more:before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0%;
+        height: 100%;
+        background-color: var(--main-blue);
+        transition: all 0.3s;
+        z-index: -1;
+      }
+      .more:hover {
+        color: #fff;
+      }
+      .more:hover:before {
+        width: 100%;
+      }
+
+      /* 點擊 solo 時改變背景圖片 */
+      #solo:active~#slider-2 {
+        background-image: url(../images/soloBG.png);
+      }
+
+      /* 點擊 family 時改變背景圖片 */
+      #family:active~#slider-2 {
+        background-image: url(../images/familyBG.png);
+
+      }
+
+      /* 點擊 aboutUs 時改變背景圖片 */
+      #besties:active~#slider-2 {
+        background-image: url(../images/bestiesBG.png);
+
+      }
+
+
+
+
+
