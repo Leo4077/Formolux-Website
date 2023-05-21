@@ -1,0 +1,20 @@
+.slideshow-container {
+    width: 100%; /* 輪播容器的寬度 */
+    overflow: hidden; /* 隱藏超出容器範圍的圖片 */
+    white-space: nowrap; /* 讓圖片水平排列 */
+  }
+  
+  .slide {
+    display: inline-block; /* 讓圖片水平排列 */
+     /* 圖片的高度 */
+  }
+  
+  @keyframes slideAnimation {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-300px); /* 圖片往左移動一個容器的寬度 */
+    }
+  }
+  

@@ -75,3 +75,69 @@ document.addEventListener("DOMContentLoaded", function () {
 
   });
 });
+
+
+// 點擊圖像時整個容器向左移動
+
+var images = document.getElementsByClassName('swiper-slide');
+
+for (var i = 0; i < images.length; i++) {
+  images[i].addEventListener('click', function() {
+    var clickedImage = this;
+    var parent = clickedImage.parentNode;
+
+    parent.removeChild(clickedImage); // 从父容器中移除被点击的图像
+    parent.appendChild(clickedImage); // 将被点击的图像添加到末尾
+
+    // 更新图像的位置
+    var children = parent.children;
+    for (var j = 0; j < children.length; j++) {
+      var leftPos = (j * 40) + 'px';
+      children[j].style.left = leftPos;
+    }
+  });
+}
+
+// document.addEventListener('DOMContentLoaded', function() {
+//   var images = document.getElementsByClassName('image');
+
+//   for (var i = 0; i < images.length; i++) {
+//     images[i].addEventListener('click', function() {
+//       var clickedImage = this;
+//       var parent = clickedImage.parentNode;
+//       var containerWidth = parent.offsetWidth;
+//       var imageWidth = clickedImage.offsetWidth;
+//       var containerLeft = parent.offsetLeft;
+//       var clickedImageLeft = clickedImage.offsetLeft;
+//       var offset = containerLeft - clickedImageLeft - imageWidth;
+
+//       clickedImage.style.left = offset + 'px';
+
+//       setTimeout(function() {
+//         parent.removeChild(clickedImage);
+//         parent.appendChild(clickedImage);
+//         var images = parent.getElementsByClassName('image');
+//         for (var j = 0; j < images.length; j++) {
+//           images[j].style.left = '0';
+//         }
+//       }, 500);
+//     });
+//   }
+// });
+
+// const images = document.querySelectorAll('.swiper-slide img');
+// const container = document.querySelector('.swiper-slide');
+
+// container.addEventListener('click', handleClick);
+
+// function handleClick(event) {
+//   if (event.target.tagName === 'IMG') {
+//     const clickedImage = event.target;
+//     const index = Array.from(images).indexOf(clickedImage);
+//     const shiftedImages = Array.from(images).slice(index).concat(Array.from(images).slice(0, index));
+
+//     shiftedImages.forEach((image, i) => {
+//       image.style.transform = `translateX(-${(shiftedImages.length - i - 1) * 280}px)`;
+//     });
+//   }
+// }
