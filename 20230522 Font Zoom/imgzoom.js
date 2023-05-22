@@ -1,5 +1,9 @@
 // 選取具有 'zoom-svg' 類別的元素，用於放大縮小SVG
 const zoomSvg = document.querySelector('.zoom-svg');
+// 選取兩個 <p> 標籤
+const p1 = document.querySelector('#p1');
+const p2 = document.querySelector('#p2');
+
 // 初始化縮放比例為 1
 let scale = 1;
 // 初始化 X 和 Y 軸位移為 0
@@ -29,11 +33,14 @@ function handleScroll(event) {
         }
     } else if (stage === 'scale') {
         // 當滾輪滾動時，會增加或減少縮放比例（scale）。具體增加或減少的數值為 x * delta
-        scale = Math.max(1, scale + 0.1 * delta);
+        scale = Math.max(1, scale + 10 * delta);
         if (scale <= 1) {
             // 如果已經縮放到最小尺寸，防止過度滾動
             scale = 1;
             delta < 0 && (stage = 'translate');
+        } else if (scale >= 600) { // 當縮放到一定程度時，開始滑動 <p> 標籤
+            p1.style.transform = `translateX(${translateX + 10 * delta}px)`;
+            p2.style.transform = `translateX(${translateX - 10 * delta}px)`;
         }
     }
 
@@ -45,4 +52,5 @@ function handleScroll(event) {
 document.addEventListener('mousewheel', handleScroll); 
 // 監聽 DOMMouseScroll 事件，當滾輪滾動時觸發 handleScroll 函式（針對 Firefox 瀏覽器）
 document.addEventListener('DOMMouseScroll', handleScroll);
+
 
