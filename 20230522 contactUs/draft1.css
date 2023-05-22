@@ -1,0 +1,17 @@
+.contactUs{
+
+    display: flex;
+    justify-content: center;
+}
+.contactBanner{
+    display: inline-block;
+    /* background-color: aqua; */
+    padding-top: 3%;
+    padding-left: 4%;
+    
+}
+
+.contactBanner img{
+    width: 100%;
+    height: 100%;
+}

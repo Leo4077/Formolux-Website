@@ -14,24 +14,70 @@ new Swiper("#swiper-2", {
 });
 
 
+
+// window.addEventListener('scroll', function() {
+//   var scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+  
+//   if (scrollPosition > 100) {
+//     var targetElement = document.getElementById('slider-2');
+//     targetElement.style.scrollBehavior = 'auto'; // 暫時取消平滑滾動效果
+//     targetElement.scrollIntoView({ behavior: 'smooth' });
+//     targetElement.style.scrollBehavior = 'smooth'; // 恢復平滑滾動效果
+//   }
+// });
+
 //page scroll頁面滾動
-var slider = document.getElementById('slider-2');
-var isScrolling = false; //滾動過程中只執行一次滾動動作
+// window.addEventListener('scroll', function() {
+//   var scrollDistance = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
 
-window.addEventListener('scroll', function() {
-  var sliderPosition = slider.getBoundingClientRect().top;
-  var windowHeight = window.innerHeight;
-  // console.log(sliderPosition);
-  console.log(slider.getBoundingClientRect().top);
 
-  if (!isScrolling && sliderPosition - 950 <= 0) {
-    isScrolling = true;
-    slider.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });
-    setTimeout(function() {
-      isScrolling = false;
-    }, 1000);
-  }
-});
+//   if (scrollDistance >= 10) {
+//       var targetElement = document.getElementById('slider-2');
+
+//       targetElement.scrollIntoView({
+//           behavior: 'auto'
+//       },100);
+//       window.removeEventListener('scroll', arguments.callee); // 將arguments.callee改為匿名函數
+//   }
+// });
+
+// console.log(scrollDistance);
+
+
+//page scroll頁面滾動
+// var slider = document.getElementById('slider-2');
+// var isScrolling = false; //滾動過程中只執行一次滾動動作
+
+// window.addEventListener('scroll', function() {
+//   var sliderPosition = slider.getBoundingClientRect().top;
+
+
+//   if (!isScrolling && sliderPosition - 950 <= 0) {
+//     isScrolling = true;
+//     slider.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });
+//     setTimeout(function() {
+//       isScrolling = false;
+//     }, 1000);
+//   }
+// });
+
+// window.addEventListener('scroll', function() {
+//   var pageStyle = document.getElementById('pageStyle');
+//   var slider2 = document.getElementById('slider-2');
+  
+//   var pageStyleOffset = pageStyle.offsetTop;
+//   var slider2Offset = slider2.offsetTop;
+  
+//   var scrollPosition = window.scrollY;
+  
+//   if (scrollPosition >= (pageStyleOffset + 10) && scrollPosition < (slider2Offset - 10)) {
+//     window.scrollTo(0, slider2Offset);
+//   } else if (scrollPosition >= (slider2Offset + 20) && scrollPosition < (slider2Offset + 40)) {
+//     window.scrollTo(0, pageStyleOffset);
+//   }
+// });
+
+
 
 document.addEventListener("DOMContentLoaded", function () {
   // 獲取要點擊的元素
