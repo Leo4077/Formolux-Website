@@ -1,17 +1,77 @@
-.contactUs{
 
+#contactUs{
     display: flex;
     justify-content: center;
+
 }
 .contactBanner{
-    display: inline-block;
-    /* background-color: aqua; */
-    padding-top: 3%;
-    padding-left: 4%;
     
+    display: flex;
+    justify-content: center;
+    height: 300px;
+    margin-top: 3%;
+    margin-left: 4.6%;
+    margin-bottom: 2.2rem;
 }
 
-.contactBanner img{
+#contactBanner img{
     width: 100%;
     height: 100%;
+}
+
+#formpage{
+
+    display: flex;
+    flex-direction: column;
+
+    /* justify-content: center; */
+    align-items: center;
+    /* width: 100vw; */
+    height: 1651px;
+    /* background-color: rgb(236, 138, 19); */
+    background-image: url(../images/contact__us_BG.png); 
+    background-size: cover;
+    background-position: center;
+    border-radius: 25px 25px 0px 0px;
+}
+
+.blurbox{
+    /* background-color: aqua; */
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 45px 45px 0px 0px;
+    margin-right: 20px;
+    transform: translate(1.9%,8%);
+    width: 70%;
+    height: 1051px;
+    /* z-index: 5; */
+}
+.one{
+    position: absolute;
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: 15.3px 18px 40.5px 2.7px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(9px);
+    border: 2.7px solid #ffffff;
+    border-image:linear-gradient rgba(45deg,0, 0, 0, 0.1) ;
+
+}
+.two{
+    position: relative;
+    background: radial-gradient(141.6% 141.6% at 50% -23.09%, rgba(255, 255, 255, 0) 69.41%, #FFFCEB 100%);
+}
+.three{
+    position: absolute;
+    background: radial-gradient(141.6% 141.6% at 50% -23.09%, rgba(255, 255, 255, 0) 65.69%, #FFFCEB 100%);
+}
+.btnBar{
+    position: relative;
+    margin-top: 7%;
+    width: 100vw;
+    height: 24%;
+    bottom: 0;
+    background-color: aqua;
+    /* background-color: rgba(255, 252, 235, 0.9); */
+
 }
