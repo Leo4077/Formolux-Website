@@ -24,24 +24,51 @@ body {
     display: flex;
     align-items: center;
     flex-direction: row;
-    position: relative;
 
     height: 80px;
 }
 
-/* 按鈕框 */
-.aboutus-btn-box svg {
+/* 按鈕外框 */
+.aboutus-btn-outsvg {
     position: absolute;
+    z-index: 5;
 }
 
-#btn-svg-2 {
-    margin-left: 260.35px;
-    background-color: #47BFD9;
+.aboutus-btn-div{
+    display: flex;
+
 }
+
+/* 按鈕 */
+.aboutus-btn {
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: transparent;
+
+    cursor: pointer;
+    display: flex;
+    z-index: 3;
+}
+
+/* 按鈕底色 */
+.aboutus-btn-svg {
+
+    width: 100%;
+}
+
+.btn1 {
+/*     width: 306.81px; */
+}
+
+.btn2 {
+/*     width: 362px; */
+}
+
 
 /* 按鈕文字 */
-.aboutus-btn {
-    display: flex;
+.aboutus-btn-p {
+
     align-items: center;
 
     font-family: 'DM Serif Display';
@@ -54,8 +81,12 @@ body {
 
     color: #000537;
 
-    padding-left: 55px;
-    padding-right: 55px;
+/*     padding-left: 50px;
+    padding-right: 50px; */
+
+    position: absolute;
+    display: flex;
+    z-index: 5;
 }
 
 /* 區段二 */
@@ -187,7 +218,7 @@ body {
 
     align-items: center;
     text-decoration: none;
-    width: 91rem;
+    width: 875px;
 }
 
 
@@ -322,7 +353,7 @@ body {
     /* 初始位置 */
     left: 75%;
     z-index: 2;
-/*     filter: invert(52%) sepia(100%) saturate(288%) hue-rotate(143deg) brightness(107%) contrast(85%); */
+    /*     filter: invert(52%) sepia(100%) saturate(288%) hue-rotate(143deg) brightness(107%) contrast(85%); */
     animation: imggo 0.3s forwards;
     /* 慢速開始 */
     transition-timing-function: ease-in;
@@ -330,7 +361,7 @@ body {
 
 /* 箭頭變色 */
 /* path */
-#aboutus-choosebtn-svg path{
+#aboutus-choosebtn-svg path {
     animation: pathColorChangeBack 0.3s forwards;
 }
 
@@ -414,6 +445,7 @@ body {
     0% {
         fill: white;
     }
+
     100% {
         fill: #47BFD9;
     }
@@ -423,6 +455,7 @@ body {
     0% {
         fill: #47BFD9;
     }
+
     100% {
         fill: white;
     }
