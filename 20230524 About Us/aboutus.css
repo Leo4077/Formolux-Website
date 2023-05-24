@@ -1,6 +1,6 @@
 body {
     padding: 0px;
-    overflow-x: hidden;
+    /*     overflow-x: hidden; */
 }
 
 /* 區段一 */
@@ -28,47 +28,34 @@ body {
     height: 80px;
 }
 
-/* 按鈕外框 */
-.aboutus-btn-outsvg {
+/* 外框 */
+#svg-frame {
     position: absolute;
-    z-index: 5;
+    z-index: 10;
+    /* 鼠標事件 */
+    pointer-events: none;
 }
 
-.aboutus-btn-div{
-    display: flex;
-
-}
-
-/* 按鈕 */
+/* 按鈕共用 */
 .aboutus-btn {
     align-items: center;
     justify-content: center;
     border: none;
-    background-color: transparent;
+    background-color: white;
 
     cursor: pointer;
+
     display: flex;
-    z-index: 3;
+    /* 使按鈕相鄰 */
+    margin-right: -45px;
+    /* 動畫秒數 */
+    transition: background-color 0.5s, color 0.5s;
 }
 
-/* 按鈕底色 */
-.aboutus-btn-svg {
-
-    width: 100%;
-}
-
-.btn1 {
-/*     width: 306.81px; */
-}
-
-.btn2 {
-/*     width: 362px; */
-}
 
 
 /* 按鈕文字 */
 .aboutus-btn-p {
-
     align-items: center;
 
     font-family: 'DM Serif Display';
@@ -80,14 +67,63 @@ body {
     white-space: nowrap;
 
     color: #000537;
-
-/*     padding-left: 50px;
-    padding-right: 50px; */
+    border-bottom: 2px solid transparent;
 
     position: absolute;
     display: flex;
     z-index: 5;
+
+    /* 動畫秒數 */
+    transition: color 0.5s, border 0.5s;
+
 }
+
+
+/* 按鈕們 */
+#btn1 {
+    width: 307.5px;
+    height: 80px;
+    clip-path: polygon(0.2% 0, 100% 0, 85.3% 100%, 0.2% 100%);
+    /*     background-color: red; */
+    cursor: pointer;
+}
+
+#btn2 {
+    width: 362.5px;
+    height: 80px;
+    clip-path: polygon(12.4% 0, 100% 0, 87.5% 100%, 0 100%);
+    /*     background-color: orange; */
+}
+
+#btn3 {
+    width: 260px;
+    height: 80px;
+    clip-path: polygon(17.1% 0, 100% 0, 82.3% 100%, 0% 100%);
+    /*     background-color: yellow; */
+}
+
+
+#btn4 {
+    width: 299px;
+    height: 80px;
+    clip-path: polygon(15.3% 0, 100% 0, 84.6% 100%, 0% 100%);
+    /*     background-color: yellowgreen; */
+}
+
+#btn5 {
+    width: 256px;
+    height: 80px;
+    clip-path: polygon(17.6% 0, 100% 0, 82.3% 100%, 0% 100%);
+    /*     background-color: green; */
+}
+
+#btn6 {
+    width: 293px;
+    height: 80px;
+    clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%);
+    /*     background-color: blue; */
+}
+
 
 /* 區段二 */
 .aboutus-second-section {
@@ -99,6 +135,9 @@ body {
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
 }
+
+
+
 
 /* 區段三 */
 .aboutus-third-section {
