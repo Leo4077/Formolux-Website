@@ -120,26 +120,34 @@
         overflow: hidden;
         
 }
-.flower {
-        position: relative;
-        opacity: .9;
-        width: 15rem;
-        height: 15rem;
-        display: block;
-        /* transition: transform .3s ease; */
-        /* background-color: #7f7f7f; */
-        overflow: hidden;
-    }
 
-#FB{
+.flower-FB{
+    position: relative;
+    opacity: .9;
+    width: 15rem;
+    height: 15rem;
+    display: block;
+    overflow: hidden;
     margin-left: 65px;
     margin-right: 30px;
 }
-#IG {
+.flower-IG {
+    position: relative;
+    opacity: .9;
+    width: 15rem;
+    height: 15rem;
+    display: block;
+    overflow: hidden;
     margin-left: 30px;
     margin-right: 30px;
 }
-#Email{
+.flower-Email{
+    position: relative;
+    opacity: .9;
+    width: 15rem;
+    height: 15rem;
+    display: block;
+    overflow: hidden;
     margin-left: 30px;
     margin-right: 30px;
 }

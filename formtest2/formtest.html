@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./formtest.css">
+</head>
+<body>
+    <section class="form">
+    <form name="message_form" id="message_form"action="" method="post">
+        <label for="username">*姓名:</label>
+        <input type="text" name="username" id="username" title="請輸入姓名" placeholder="王大明" required autocomplete="on">
+
+        <label for="tel">聯絡電話:</label>
+        <input type="tel" name="tel" id="tel" title="請輸入電話" placeholder="02-34567489" autocomplete="on">
+
+        <label for="email">*Email:</label>
+        <input type="email" name="email" id="email" title="請輸入Email" placeholder="yourid@email.com">
+
+        <label for="message">留言:</label>
+        <textarea name="message" id="message" title="請填寫這個欄位"></textarea> 
+        <!-- 送出按鈕須放在form裡面 -->
+        <button>
+            <span>送出</span>
+        </button>
+    </form>
+    </section>
+</body>
+</html>
