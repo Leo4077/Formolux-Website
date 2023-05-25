@@ -1,6 +1,6 @@
 body {
     padding: 0px;
-    /*     overflow-x: hidden; */
+    overflow-x: hidden;
 }
 
 /* 區段一 */
@@ -8,15 +8,16 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+
     width: 100vw;
-    height: 515px;
+    height: 516px;
     background-color: white;
 }
 
 /* 大標區 */
 .aboutus-title-box {
-    padding-top: 47px;
-    padding-bottom: 37px;
+    margin-top: 47px;
+    margin-bottom: 37px;
 }
 
 /* 按鈕區 */
@@ -26,6 +27,7 @@ body {
     flex-direction: row;
 
     height: 80px;
+    margin-bottom: 55px;
 }
 
 /* 外框 */
@@ -129,16 +131,166 @@ body {
 
 /* 區段二 */
 .aboutus-second-section {
+    display: block;
+    position: relative;
+    overflow: hidden;
+
     width: 100vw;
-    height: 100vh;
+    height: calc(100vh - 516px);
     background-color: rgb(188, 188, 188);
 
     /* R角 */
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
+
+    /* 背景 */
+    background-image: url(../images/AboutUs-BG1.png);
+    /* 圖片填滿背景 */
+    background-size: cover;
+    /* 縮放圖片依然置中 */
+    background-position: center;
 }
 
+/* 左內容區 */
+.aboutus-content-box {
+    width: 74%;
+    height: 100%;
 
+    background: linear-gradient(89.82deg, rgba(0, 0, 0, 0.3) 13.2%, rgba(0, 0, 0, 0.18) 98.42%);
+    backdrop-filter: blur(9px);
+
+    border-radius: 25px 25px 0px 0px;
+
+    display: flex;
+    padding-left: 184px;
+    padding-top: 100px;
+
+    transition: padding-left 0.5s ease-out;
+
+}
+
+/* 左文字區 */
+.aboutus-content {
+    width: 586px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* 標題 */
+.aboutus-content-title {
+    font-family: 'DM Serif Display';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 4rem;
+    line-height: 3.6875rem;
+    white-space: nowrap;
+
+
+    text-align: left;
+    letter-spacing: 0.02em;
+
+    color: #FFFCEB;
+
+    margin-bottom: 30px;
+}
+
+/* 內文 */
+.aboutus-content-word {
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 200;
+    font-size: 1.375rem;
+    line-height: 2.125rem;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.1em;
+
+    color: #FFFCEB;
+
+    width: 544px;
+}
+
+.aboutus-content-1 {
+    margin-bottom: 20px;
+}
+
+/* 右花區 */
+.aboutus-content-flower-box {
+    margin-left: 171px;
+    width: 151px;
+}
+/* 花共用 */
+.aboutus-content-flower {
+    transition: transform 0.3s ease-in-out;
+}
+
+/* 右圖片區 */
+.aboutus-content-img-box {
+
+    width: calc(100vw - 74%);
+    height: 427px;
+
+    position: absolute;
+    z-index: 10;
+
+    left: 1287px;
+    top: 50px;
+
+}
+
+/* 共用 */
+.aboutus-content-img {
+    width: 460px;
+    height: 228px;
+}
+
+/* 左圖 */
+.aboutus-content-img-box1 {
+    position: absolute;
+    z-index: 20;
+    right: 457px;
+    top: 45%;
+
+    width: 460px;
+    height: 228px;
+
+    box-shadow: 15px 30px 40px 15px rgba(0, 0, 0, 0.35);
+/*     transform: matrix(1, 0, 0, 1, 0, 0); */
+
+    
+}
+
+.aboutus-content-img-box1 img {
+    max-width: 100%;
+    height: auto;
+
+    transition: opacity 0.2s ease-in;
+}
+
+/* 右圖 */
+.aboutus-content-img-box2 {
+    position: absolute;
+    z-index: 15;
+    right: 0;
+    top: 0;
+
+    width: 585px;
+    height: 397px;
+
+    box-shadow: 15px 30px 35px -15px rgba(0, 0, 0, 0.4);
+
+}
+
+.aboutus-content-img-box2 img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0px 45px 0px 0px;
+
+    transition: opacity 0.2s ease-in;
+}
+
+.oldImg1 .newImg1 .oldImg2 .newImg2{
+    transition: opacity 0.2s ease-in;
+}
 
 
 /* 區段三 */
