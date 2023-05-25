@@ -9,7 +9,7 @@ body {
     flex-direction: column;
     align-items: center;
 
-    width: 100%;
+    width: 100vw;
     height: 516px;
     background-color: white;
 }
