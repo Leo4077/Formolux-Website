@@ -9,7 +9,7 @@ body {
     flex-direction: column;
     align-items: center;
 
-    width: 100vw;
+    width: 100%;
     height: 516px;
     background-color: white;
 }
@@ -165,13 +165,12 @@ body {
     padding-left: 184px;
     padding-top: 100px;
 
-    transition: padding-left 0.5s ease-out;
-
+    transition: all 0.3s ease-in-out;
 }
 
 /* 左文字區 */
 .aboutus-content {
-    width: 586px;
+    width: 42%;
     transition: all 0.3s ease-in-out;
 }
 
@@ -191,6 +190,7 @@ body {
     color: #FFFCEB;
 
     margin-bottom: 30px;
+    
 }
 
 /* 內文 */
@@ -199,14 +199,14 @@ body {
     font-style: normal;
     font-weight: 200;
     font-size: 1.375rem;
-    line-height: 2.125rem;
+    line-height: 1.875rem;
     display: flex;
     align-items: center;
     letter-spacing: 0.1em;
 
     color: #FFFCEB;
 
-    width: 544px;
+
 }
 
 .aboutus-content-1 {

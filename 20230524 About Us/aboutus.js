@@ -37,6 +37,8 @@ const contents = {
         img1: '../images/Aboutus-a1.png',
         img2: '../images/Aboutus-a2.png',
         background: '../images/AboutUs-BG1.png',
+        marginLeft: '0px',
+        contentBoxWidth: '74%',
     },
 
     btn2: {
@@ -48,6 +50,8 @@ const contents = {
         img1: '../images/Aboutus-b1.png',
         img2: '../images/Aboutus-b2.png',
         background: '../images/AboutUs-BG2.png',
+        marginLeft: '5px',
+        contentBoxWidth: '75.7%',
     },
 
     btn3: {
@@ -59,6 +63,8 @@ const contents = {
         img1: '../images/Aboutus-c1.png',
         img2: '../images/Aboutus-c2.png',
         background: '../images/AboutUs-BG3.png',
+        marginLeft: '10px',
+        contentBoxWidth: '77.4%',
     },
 
     btn4: {
@@ -70,6 +76,8 @@ const contents = {
         img1: '../images/Aboutus-d1.png',
         img2: '../images/Aboutus-d2.png',
         background: '../images/AboutUs-BG4.png',
+        marginLeft: '15px',
+        contentBoxWidth: '79.1%',
     },
 
     btn5: {
@@ -81,6 +89,8 @@ const contents = {
         img1: '../images/Aboutus-e1.png',
         img2: '../images/Aboutus-e2.png',
         background: '../images/AboutUs-BG5.png',
+        marginLeft: '20px',
+        contentBoxWidth: '80.8%',
     },
 
     btn6: {
@@ -92,6 +102,8 @@ const contents = {
         img1: '../images/Aboutus-f1.png',
         img2: '../images/Aboutus-f2.png',
         background: '../images/AboutUs-BG6.png',
+        marginLeft: '25px',
+        contentBoxWidth: '82.5%',
     },
 
 
@@ -118,9 +130,6 @@ function buttonClicked(id) {
     document.querySelector('.aboutus-content-1').innerText = contents[id].content1;
     document.querySelector('.aboutus-content-2').innerText = contents[id].content2;
 
-    // 移動 aboutus-content (假設你想要增加左邊外距10px)
-    document.querySelector('.aboutus-content').style.marginLeft = '10px';
-
     // 旋轉SVG花
     document.querySelector('#aboutus-content-flower-1').style.transform = contents[id].flowerRotation1;
     document.querySelector('#aboutus-content-flower-2').style.transform = contents[id].flowerRotation2;
@@ -128,25 +137,44 @@ function buttonClicked(id) {
     // 更換圖片
     var imgBox1 = document.querySelector('.aboutus-content-img-box1 img');
     var imgBox2 = document.querySelector('.aboutus-content-img-box2 img');
+    var newImg1 = new Image();
+    var newImg2 = new Image();
 
-    // 將當前圖片淡出
-    imgBox1.style.opacity = '0';
-    imgBox2.style.opacity = '0';
+    newImg1.src = contents[id].img1;
+    newImg2.src = contents[id].img2;
+
+    newImg1.onload = function () {
+        // 當新圖片加載完成後，將當前圖片淡出
+        imgBox1.style.opacity = '0';
+    }
+
+    newImg2.onload = function () {
+        // 當新圖片加載完成後，將當前圖片淡出
+        imgBox2.style.opacity = '0';
+    }
 
     // 當當前圖片完全淡出後，更換圖片並將其淡入
     imgBox1.addEventListener('transitionend', function handler() {
         this.removeEventListener('transitionend', handler);
-        imgBox1.src = contents[id].img1;
+        imgBox1.src = newImg1.src;
         imgBox1.style.opacity = '1';
     });
+
     imgBox2.addEventListener('transitionend', function handler() {
         this.removeEventListener('transitionend', handler);
-        imgBox2.src = contents[id].img2;
+        imgBox2.src = newImg2.src;
         imgBox2.style.opacity = '1';
     });
 
+
     // 更換背景圖片
     document.querySelector('.aboutus-second-section').style.backgroundImage = 'url(' + contents[id].background + ')';
+
+    // 移動 aboutus-content 
+    document.querySelector('.aboutus-content').style.marginLeft = contents[id].marginLeft;
+
+    // 改變 aboutus-content-box 的 width
+    document.querySelector('.aboutus-content-box').style.width = contents[id].contentBoxWidth;
 
 
 
