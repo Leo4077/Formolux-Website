@@ -8,7 +8,7 @@
 </head>
 <link rel="stylesheet" href="../mainstyle.css">
 <link rel="stylesheet" href="../combine/combine.css">
-<link rel="stylesheet" href="./draft1.css">
+<link rel="stylesheet" href="./draft2.css">
 <body>
     <!-- 頁首區 -->
     <header class="header1">
@@ -107,7 +107,6 @@
             <div class="blurbox bottom-box"></div>
             <form name="message_form" id="message_form" action="" method="post">
                 <div class="form-container">
-                    <div class="form-row">
                         <div class="form-field">
                             <select name="style" id="style" required>
                                 <option disabled hidden selected></option>
@@ -119,41 +118,44 @@
                             </select>
                             <label for="style">Travel Style</label>
                         </div>
+
                         <div class="form-field">
-                            <input type="number" name="people-number" id="people-number" required>
+                            <input type="text" name="people-number" id="people-number" required>
                             <label for="people-number">Number of Travelers</label>
                         </div>
-                    </div>
-                    <div class="form-row">
+                    
                         <div class="form-field">
                             <input type="date" name="arrival-date" id="arrival-date" required>
                             <label for="arrival-date">Arrival Date</label>
                         </div>
+
                         <div class="form-field">
                             <input type="date" name="departure-date" id="departure-date" required>
                             <label for="departure-date">Departure Date</label>
                         </div>
-                    </div>
-                    <div class="form-row">
+                    
+                    
                         <div class="form-field">
                             <input type="text" name="firstname" id="firstname" required>
                             <label for="firstname">* First Name</label>
                         </div>
+
                         <div class="form-field">
                             <input type="text" name="lastname" id="lastname" required>
                             <label for="lastname">* Last Name</label>
                         </div>
-                    </div>
-                    <div class="form-row">
+                    
+                    
                         <div class="form-field">
                             <input type="email" name="email" id="email" required>
                             <label for="email">* Your E-Mail</label>
                         </div>
+
                         <div class="form-field">
                             <textarea name="country" id="country" not required></textarea>
                             <label for="country">Your Country</label>
                         </div>
-                    </div>
+                    
                 </div>
             </form>
         </div>
