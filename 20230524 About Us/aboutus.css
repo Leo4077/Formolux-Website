@@ -9,7 +9,7 @@ body {
     flex-direction: column;
     align-items: center;
 
-    width: auto;
+    width: 100vw;
     height: 516px;
     background-color: white;
 }
@@ -135,7 +135,7 @@ body {
     position: relative;
     overflow: hidden;
 
-    width: 100%;
+    width: 100vw;
     height: calc(100vh - 516px);
     background-color: rgb(188, 188, 188);
 
@@ -165,11 +165,14 @@ body {
     padding-left: 184px;
     padding-top: 100px;
 
+    transition: padding-left 0.5s ease-out;
+
 }
 
 /* 左文字區 */
 .aboutus-content {
     width: 586px;
+    transition: all 0.3s ease-in-out;
 }
 
 /* 標題 */
@@ -210,12 +213,15 @@ body {
     margin-bottom: 20px;
 }
 
-/* 右花 */
-.aboutus-content-flower {
+/* 右花區 */
+.aboutus-content-flower-box {
     margin-left: 171px;
     width: 151px;
 }
-
+/* 花共用 */
+.aboutus-content-flower {
+    transition: transform 0.3s ease-in-out;
+}
 
 /* 右圖片區 */
 .aboutus-content-img-box {
@@ -248,13 +254,16 @@ body {
     height: 228px;
 
     box-shadow: 15px 30px 40px 15px rgba(0, 0, 0, 0.35);
-    transform: matrix(-1, 0, 0, 1, 0, 0);
+/*     transform: matrix(1, 0, 0, 1, 0, 0); */
+
+    
 }
 
 .aboutus-content-img-box1 img {
     max-width: 100%;
     height: auto;
 
+    transition: opacity 0.2s ease-in;
 }
 
 /* 右圖 */
@@ -275,12 +284,18 @@ body {
     max-width: 100%;
     height: auto;
     border-radius: 0px 45px 0px 0px;
+
+    transition: opacity 0.2s ease-in;
+}
+
+.oldImg1 .newImg1 .oldImg2 .newImg2{
+    transition: opacity 0.2s ease-in;
 }
 
 
 /* 區段三 */
 .aboutus-third-section {
-    width: 100%;
+    width: 100vw;
     height: 440px;
     background-color: #FFFCEB;
 
