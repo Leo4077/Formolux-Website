@@ -5,8 +5,20 @@
 }
 
 #message_form{
+	column-count:2;
 	width: 35%;
 }
+
+#message_form input:focus ~ label,
+#message_form input:valid ~ label {
+  top: -20px;
+  left: 0;
+  color: #03e9f4;
+  font-size: 12px;
+}
+
+
+
 
 @media(max-width:992px){
 	#message_form{

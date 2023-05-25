@@ -10,21 +10,77 @@
 <body>
     <section class="form">
     <form name="message_form" id="message_form"action="" method="post">
-        <label for="username">*姓名:</label>
-        <input type="text" name="username" id="username" title="請輸入姓名" placeholder="王大明" required autocomplete="on">
+        
+        <label for="style">Travel Style</label>
+        <select textarea name="style" id="style" title="Travel Style" >                
+        <option disabled hidden selected></option>
+        <option>Honey Moon</option>
+        <option>Solo Travel</option>
+        <option>Family Trip</option>
+        <option>Besties trip</option>
+        </select>
 
-        <label for="tel">聯絡電話:</label>
-        <input type="tel" name="tel" id="tel" title="請輸入電話" placeholder="02-34567489" autocomplete="on">
+        <label for="date">Arrival Date </label>
+        <input type="date" name="date" id="date" title="Arrival Date">
 
-        <label for="email">*Email:</label>
-        <input type="email" name="email" id="email" title="請輸入Email" placeholder="yourid@email.com">
+        <label for="firstname">* First Name</label>
+        <input type="name" name="firstname" id="firstname" title="First Name">
 
-        <label for="message">留言:</label>
-        <textarea name="message" id="message" title="請填寫這個欄位"></textarea> 
+        <label for="email">* Your E-Mail</label>
+        <input type="email" id="email" title="Your E-Mail"></input> 
+        
+        <label for="peoplenumber">Number of Travelers </label>
+        <input type="number" name="peoplenumber" id="peoplenumber" title="Number of Travelers">
+
+        <label for="date">Departure Date </label>
+        <input type="date" name="date" id="date" title="Departure Date">
+
+        <label for="lastname">* Last Name</label>
+        <input type="name" name="lastname" id="lastname" title="Last Name">
+
+        <label for="country">Your Country</label>
+        <textarea name="country" id="country" title="Your Country">
+
+        <label for="message"> Notes / Special Requests </label>
+        <textarea name="message" id="message" title="Notes / Special Requests"></textarea> 
         <!-- 送出按鈕須放在form裡面 -->
         <button>
             <span>送出</span>
         </button>
+
+<!-- 排順序 -->
+<form name="message_form" id="message_form"action="" method="post">
+<label for="style">Travel Style</label>
+<select textarea name="style" id="style" title="Travel Style" >                
+<option disabled hidden selected></option>
+<option>Honey Moon</option>
+<option>Solo Travel</option>
+<option>Family Trip</option>
+<option>Besties trip</option>
+</select>
+
+<label for="peoplenumber">Number of Travelers </label>
+<input type="number" name="peoplenumber" id="peoplenumber" title="Number of Travelers">
+
+<label for="date">Arrival Date </label>
+<input type="date" name="date" id="date" title="Arrival Date">
+
+<label for="date">Departure Date </label>
+<input type="date" name="date" id="date" title="Departure Date">
+
+<label for="firstname">* First Name</label>
+<input type="name" name="firstname" id="firstname" title="First Name">
+
+<label for="lastname">* Last Name</label>
+<input type="name" name="lastname" id="lastname" title="Last Name">
+
+<label for="email">* Your E-Mail</label>
+<input type="email" id="email" title="Your E-Mail"></input> 
+
+<label for="country">Your Country</label>
+<textarea name="country" id="country" title="Your Country">
+
+
     </form>
     </section>
 </body>
