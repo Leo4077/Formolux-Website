@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /* 設定表單容器的樣式 */
+.form-container {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+/* 設定表單欄位的樣式 */
+.form-field {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+/* 設定浮動標籤的樣式 */
+label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  transition: 0.2s ease all;
+}
+
+/* 當輸入欄位有焦點時，調整浮動標籤的樣式 */
+input:focus ~ label,
+textarea:focus ~ label,
+select:focus ~ label {
+  transform: translateY(-120%);
+  font-size: 12px;
+  color: blue; /* 自訂選擇的顏色 */
+}
+
+/* 當輸入欄位有內容時，調整浮動標籤的樣式 */
+input:not(:placeholder-shown) ~ label,
+textarea:not(:placeholder-shown) ~ label,
+select:not([value=""]):not([value=" "]) ~ label {
+  transform: translateY(-120%);
+  font-size: 12px;
+  color: blue; /* 自訂選擇的顏色 */
+}
+
+/* 調整輸入欄位的樣式 */
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  outline: none;
+}
+
+/* 調整選擇欄位的樣式 */
+select {
+  appearance: none;
+  background: url("dropdown-arrow.png") no-repeat right center;
+}
+
+/* 選擇欄位的箭頭圖片 */
+select::-ms-expand {
+  display: none;
+}
+
+</style>
+<body>
+    <form name="message_form" id="message_form" action="" method="post">
+        <div class="form-container">
+                <div class="form-field">
+                    <select name="style" id="style" required>
+                        <option disabled hidden selected></option>
+                        <option>Honey Moon</option>
+                        <option>Solo Travel</option>
+                        <option>Family Trip</option>
+                        <option>Besties trip</option>
+                        <option>Others</option>
+                    </select>
+                    <label for="style">Travel Style</label>
+                </div>
+
+                <div class="form-field">
+                    <input type="text" name="people-number" id="people-number" required>
+                    <label for="people-number">Number of Travelers</label>
+                </div>
+            
+                <div class="form-field">
+                    <input type="date" name="arrival-date" id="arrival-date" required>
+                    <label for="arrival-date">Arrival Date</label>
+                </div>
+
+                <div class="form-field">
+                    <input type="date" name="departure-date" id="departure-date" >
+                    <label for="departure-date">Departure Date</label>
+                </div>
+            
+            
+                <div class="form-field">
+                    <input type="text" name="firstname" id="firstname" required>
+                    <label for="firstname">* First Name</label>
+                </div>
+
+                <div class="form-field">
+                    <input type="text" name="lastname" id="lastname" required>
+                    <label for="lastname">* Last Name</label>
+                </div>
+            
+            
+                <div class="form-field">
+                    <input type="email" name="email" id="email" required>
+                    <label for="email">* Your E-Mail</label>
+                </div>
+
+                <div class="form-field">
+                    <textarea name="country" id="country" not required></textarea>
+                    <label for="country">Your Country</label>
+                </div>
+
+                <div class="relative">
+                    <input type="text" id="floating_filled" class="block rounded-t-lg px-2.5 pb-2.5 pt-5 w-full text-sm text-gray-900 bg-gray-50 dark:bg-gray-700 border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " />
+                    <label for="floating_filled" class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] left-2.5 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4">Floating filled</label>
+                </div>
+            
+        </div>
+    </form>
+</body>
+</html>

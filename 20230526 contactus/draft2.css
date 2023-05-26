@@ -119,11 +119,11 @@
     color: var(--main-darkBlue);
 }
 
-/*文字輸入框*/
 .form-field select,
 .form-field input,
-.form-field textarea { 
-    height: 45px;
+.form-field textarea {
+    /* background-color: aquamarine; */
+    height: 50px;
     width: 96%;
     padding: 10px;
     border: none;
@@ -137,9 +137,7 @@ input[type="date"]:in-range::-webkit-datetime-edit-day-field,
 input[type="date"]:in-range::-webkit-datetime-edit-text { 	
     color: transparent; }
 
-
-
-.form-field select:focus~label,
+ .form-field select:focus~label,
 .form-field select:valid~label,
 .form-field input:focus~label,
 .form-field input:valid~label,
@@ -149,7 +147,20 @@ input[type="date"]:in-range::-webkit-datetime-edit-text {
     font-size: 12px;
     color: #666;
     border: none;
+} 
+
+.form-field select:focus~label,
+.form-field select~label,
+.form-field input:focus~label,
+.form-field input~label,
+.form-field textarea:focus~label,
+.form-field textarea~label {
+    transform: translateY(4px);
+    font-size: 12px;
+    color: #666;
+    border: none;
 }
+
 
 
 .btnBar {
