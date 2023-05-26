@@ -10,7 +10,7 @@ body {
     align-items: center;
 
     width: 100vw;
-    height: 516px;
+    height: calc(100vh - 565px);
     background-color: white;
 }
 
@@ -136,7 +136,7 @@ body {
     overflow: hidden;
 
     width: 100vw;
-    height: calc(100vh - 516px);
+    height: 565px;
     background-color: rgb(188, 188, 188);
 
     /* R角 */
@@ -197,7 +197,7 @@ body {
 .aboutus-content-word {
     font-family: 'Arial';
     font-style: normal;
-    font-weight: 200;
+    font-weight: 100;
     font-size: 1.375rem;
     line-height: 1.875rem;
     display: flex;
@@ -227,7 +227,7 @@ body {
 .aboutus-content-img-box {
 
     width: calc(100vw - 74%);
-    height: 427px;
+    height: 70%;
 
     position: absolute;
     z-index: 10;
