@@ -9,18 +9,20 @@ body {
     flex-direction: column;
     align-items: center;
 
-    width: 100vw;
-    height: calc(100vh - 565px);
+    width: 100%;
+    height: 50vh;
     background-color: white;
+
+    z-index: 5;
 }
 
 /* 大標區 */
 .aboutus-title-box {
-    margin-top: 47px;
-    margin-bottom: 37px;
+    margin-top: 30px;
+    margin-bottom: 20px;
 }
 
-/* 按鈕區 */
+/* 按鈕區大 */
 .aboutus-btn-box {
     display: flex;
     align-items: center;
@@ -29,6 +31,19 @@ body {
     height: 80px;
     margin-bottom: 55px;
 }
+
+/* 按鈕區小 */
+.aboutus-btn-wrapper {
+    position: relative;
+    display: flex;
+
+}
+
+#svg-frame {
+    position: absolute;
+    z-index: 1;
+}
+
 
 /* 外框 */
 #svg-frame {
@@ -135,8 +150,8 @@ body {
     position: relative;
     overflow: hidden;
 
-    width: 100vw;
-    height: 565px;
+    width: 100%;
+    height: 50vh;
     background-color: rgb(188, 188, 188);
 
     /* R角 */
@@ -149,6 +164,8 @@ body {
     background-size: cover;
     /* 縮放圖片依然置中 */
     background-position: center;
+
+    z-index: 15;
 }
 
 /* 左內容區 */
@@ -162,15 +179,16 @@ body {
     border-radius: 25px 25px 0px 0px;
 
     display: flex;
-    padding-left: 184px;
-    padding-top: 100px;
+    padding-left: 9%;
+
 
     transition: all 0.3s ease-in-out;
 }
 
 /* 左文字區 */
 .aboutus-content {
-    width: 42%;
+    width: 544PX;
+    padding-top: 100px;
     transition: all 0.3s ease-in-out;
 }
 
@@ -216,6 +234,7 @@ body {
 /* 右花區 */
 .aboutus-content-flower-box {
     margin-left: 171px;
+    padding-top: 70px;
     width: 151px;
 }
 /* 花共用 */
@@ -237,11 +256,6 @@ body {
 
 }
 
-/* 共用 */
-.aboutus-content-img {
-    width: 460px;
-    height: 228px;
-}
 
 /* 左圖 */
 .aboutus-content-img-box1 {
@@ -252,18 +266,14 @@ body {
 
     width: 460px;
     height: 228px;
-
-    box-shadow: 15px 30px 40px 15px rgba(0, 0, 0, 0.35);
-/*     transform: matrix(1, 0, 0, 1, 0, 0); */
-
-    
 }
 
 .aboutus-content-img-box1 img {
-    max-width: 100%;
-    height: auto;
 
+    height:100%;
     transition: opacity 0.2s ease-in;
+
+    box-shadow: 15px 30px 40px 15px rgba(0, 0, 0, 0.35);
 }
 
 /* 右圖 */
@@ -276,16 +286,17 @@ body {
     width: 585px;
     height: 397px;
 
-    box-shadow: 15px 30px 35px -15px rgba(0, 0, 0, 0.4);
+
 
 }
 
 .aboutus-content-img-box2 img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 0px 45px 0px 0px;
+height:90%;
 
+    border-radius: 0px 45px 0px 0px;
     transition: opacity 0.2s ease-in;
+
+    box-shadow: 15px 30px 35px -15px rgba(0, 0, 0, 0.4);
 }
 
 .oldImg1 .newImg1 .oldImg2 .newImg2{
