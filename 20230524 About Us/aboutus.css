@@ -67,7 +67,7 @@ body {
     /* 使按鈕相鄰 */
     margin-right: -45px;
     /* 動畫秒數 */
-    transition: background-color 0.5s, color 0.5s;
+    transition: background-color 0.8s, color 0.8s;
 }
 
 
@@ -239,7 +239,7 @@ body {
 }
 /* 花共用 */
 .aboutus-content-flower {
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.8s ease-in-out;
 }
 
 /* 右圖片區 */
@@ -271,7 +271,7 @@ body {
 .aboutus-content-img-box1 img {
 
     height:100%;
-    transition: opacity 0.2s ease-in;
+
 
     box-shadow: 15px 30px 40px 15px rgba(0, 0, 0, 0.35);
 }
@@ -294,13 +294,9 @@ body {
 height:90%;
 
     border-radius: 0px 45px 0px 0px;
-    transition: opacity 0.2s ease-in;
+
 
     box-shadow: 15px 30px 35px -15px rgba(0, 0, 0, 0.4);
-}
-
-.oldImg1 .newImg1 .oldImg2 .newImg2{
-    transition: opacity 0.2s ease-in;
 }
 
 

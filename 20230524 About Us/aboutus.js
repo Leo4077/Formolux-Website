@@ -134,37 +134,66 @@ function buttonClicked(id) {
     document.querySelector('#aboutus-content-flower-1').style.transform = contents[id].flowerRotation1;
     document.querySelector('#aboutus-content-flower-2').style.transform = contents[id].flowerRotation2;
 
+
+    var isTransitioning1 = false;  // 添加此標記
+    var isTransitioning2 = false;  // 添加此標記
     // 更換圖片
-    var imgBox1 = document.querySelector('.aboutus-content-img-box1 img');
-    var imgBox2 = document.querySelector('.aboutus-content-img-box2 img');
-    var newImg1 = new Image();
-    var newImg2 = new Image();
+    var oldImg1 = document.getElementById('oldImg1');
+    var newImg1 = document.getElementById('newImg1');
+    var oldImg2 = document.getElementById('oldImg2');
+    var newImg2 = document.getElementById('newImg2');
 
-    newImg1.src = contents[id].img1;
-    newImg2.src = contents[id].img2;
+    // 設定新圖片的來源（觸發加載）
+    if (!isTransitioning1) {  // 如果不在進行過渡，則載入新圖片
+        newImg1.src = contents[id].img1;
+    }
+    if (!isTransitioning2) {  // 如果不在進行過渡，則載入新圖片
+        newImg2.src = contents[id].img2;
+    }
 
+    // 新圖片加載完成後，將新圖片淡入，舊圖片淡出
     newImg1.onload = function () {
-        // 當新圖片加載完成後，將當前圖片淡出
-        imgBox1.style.opacity = '0';
+        if (isTransitioning1) return;  // 如果正在進行過渡，就不進行切換
+        isTransitioning1 = true;  // 開始過渡
+        oldImg1.style.transition = 'opacity 0.3s ease-out';  // 動態添加 transition 屬性
+        newImg1.style.transition = 'opacity 0.3s ease-out';  // 動態添加 transition 屬性
+        oldImg1.style.opacity = '0';
+        newImg1.style.opacity = '1';
     }
 
     newImg2.onload = function () {
-        // 當新圖片加載完成後，將當前圖片淡出
-        imgBox2.style.opacity = '0';
+        if (isTransitioning2) return;  // 如果正在進行過渡，就不進行切換
+        isTransitioning2 = true;  // 開始過渡
+        oldImg2.style.transition = 'opacity 0.3s ease-out';  // 動態添加 transition 屬性
+        newImg2.style.transition = 'opacity 0.3s ease-out';  // 動態添加 transition 屬性
+        oldImg2.style.opacity = '0';
+        newImg2.style.opacity = '1';
     }
 
-    // 當當前圖片完全淡出後，更換圖片並將其淡入
-    imgBox1.addEventListener('transitionend', function handler() {
+    // 當舊圖片完全淡出後，將其刪除，並將新圖片設定為當前圖片
+    oldImg1.addEventListener('transitionend', function handler() {
         this.removeEventListener('transitionend', handler);
-        imgBox1.src = newImg1.src;
-        imgBox1.style.opacity = '1';
+        oldImg1.src = newImg1.src;
+        oldImg1.style.opacity = '1';
+        newImg1.style.opacity = '0';
+        oldImg1.style.transition = '';  // 移除 transition 屬性
+        newImg1.style.transition = '';  // 移除 transition 屬性
+        newImg1.onload = null;
+        isTransitioning1 = false;  // 過渡結束
     });
 
-    imgBox2.addEventListener('transitionend', function handler() {
+    oldImg2.addEventListener('transitionend', function handler() {
         this.removeEventListener('transitionend', handler);
-        imgBox2.src = newImg2.src;
-        imgBox2.style.opacity = '1';
+        oldImg2.src = newImg2.src;
+        oldImg2.style.opacity = '1';
+        newImg2.style.opacity = '0';
+        oldImg2.style.transition = '';  // 移除 transition 屬性
+        newImg2.style.transition = '';  // 移除 transition 屬性
+        newImg2.onload = null;
+        isTransitioning2 = false;  // 過渡結束
     });
+
+
 
 
     // 更換背景圖片
