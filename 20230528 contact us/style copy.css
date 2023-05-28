@@ -40,7 +40,7 @@
     align-items: center;
     justify-content: center;
     border-radius: 45px 45px 0px 0px;
-    margin-right: 20px;
+    /* margin-right: 20px; */
     transform: translateY(8%);
     width: 70%;
     height: 1051px;
@@ -81,31 +81,31 @@
 /*表單區*/
 #message_form {
     /* background-color: rgb(0, 13, 255); */
+    
+    /* display: flex;
+    align-items: center; */
     width: 73%;
     height: 800px;
     z-index: 8;
 }
 
 .form-container {
-    display: flex;
-    /* flex:1; */
-    flex-wrap: wrap;
-    /* column-count: 2; */
-    /* grid-template-columns: repeat(2, 1fr); */
-    gap: 110px;
+    /* background-color: rgb(250, 215, 241); */
+    /* display: flex;
+    flex-wrap: wrap; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 110px;
+    column-gap: 90px;
+    /* gap: 110px; */
     width: 100%;
 }
 
-/* .form-row {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 110px;
-} */
 
 .form-field {
+    /* background-color: #666; */
     position: relative;
-    gap: 110px;
-    width: 40%;
+    /* gap: 110px;  */
 }
 
 .form-field label {
@@ -115,54 +115,58 @@
     pointer-events: none;
     transition: 0.2s ease all;
     transform: translateY(24px);
-    font-size: 14px;
+    font-size: 20px;
     color: var(--main-darkBlue);
 }
 
+/*文字輸入框*/
 .form-field select,
 .form-field input,
-.form-field textarea {
-    /* background-color: aquamarine; */
-    height: 50px;
-    width: 96%;
+.form-field textarea { 
+    height: 45px;
+    width: 100%;
     padding: 10px;
     border: none;
     border-bottom: 1.35px solid #000537;
     background: transparent;
 }
 
+input{
+    font-size: 20px;
+}
+/* select #style{
+background-color: aqua;
+} */
+#message{
+    grid-column: 1 / 2;
+
+}
+
+/*不顯示預設的年/月/日文字*/
 input[type="date"]:in-range::-webkit-datetime-edit-year-field, 
 input[type="date"]:in-range::-webkit-datetime-edit-month-field, 
 input[type="date"]:in-range::-webkit-datetime-edit-day-field, 
 input[type="date"]:in-range::-webkit-datetime-edit-text { 	
     color: transparent; }
 
-.form-field select:focus~label,
-.form-field select:valid~label,
-.form-field input:focus~label,
-.form-field input:valid~label,
-.form-field textarea:focus~label,
-.form-field textarea:valid~label {
-    transform: translateY(4px);
-    font-size: 12px;
-    color: #666;
-    border: none;
-} 
+
 
 .form-field select:focus~label,
-.form-field select~label,
+.form-field select:not(:placeholder-shown), /*讓沒有required的屬性仍然有floating labels*/
 .form-field input:focus~label,
-.form-field input~label,
+.form-field input:not(:placeholder-shown),
 .form-field textarea:focus~label,
-.form-field textarea~label {
+.form-field textarea:not(:placeholder-shown) {
     transform: translateY(4px);
-    font-size: 12px;
-    color: #666;
-    border: none;
+    font-size: 20px;
+    color: var(--main-darkBlue);
+    
 }
 
 
 
+
+/*按鈕區域*/
 .btnBar {
     position: absolute;
     display: flex;
@@ -231,3 +235,96 @@ input[type="date"]:in-range::-webkit-datetime-edit-text {
     margin-left: 30px;
     margin-right: 30px;
 }
+
+
+* {
+	-webkit-transition: all .2s;
+	-moz-transition: all .2s;
+	-ms-transition: all .2s;
+	-o-transition: all .2s;
+	transition: all .2s;
+}
+
+
+/* Select style here */
+
+.select-hidden {
+    display: none;
+    visibility: hidden;
+    padding-right: 10px;
+  }
+  
+  .select {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    font-size: 16px;
+    color: #fff;
+    width: 220px;
+    height: 40px;
+  }
+  
+  .select-styled {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #c0392b;
+    padding: 8px 15px;
+    -moz-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    -webkit-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+  }
+  .select-styled:after {
+    content: "";
+    width: 0;
+    height: 0;
+    border: 7px solid transparent;
+    border-color: #fff transparent transparent transparent;
+    position: absolute;
+    top: 16px;
+    right: 10px;
+  }
+  .select-styled:hover {
+    background-color: #b83729;
+  }
+  .select-styled:active, .select-styled.active {
+    background-color: #ab3326;
+  }
+  .select-styled:active:after, .select-styled.active:after {
+    top: 9px;
+    border-color: transparent transparent #fff transparent;
+  }
+  
+  .select-options {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    z-index: 999;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background-color: #ab3326;
+  }
+  .select-options li {
+    margin: 0;
+    padding: 12px 0;
+    text-indent: 15px;
+    border-top: 1px solid #962d22;
+    -moz-transition: all 0.15s ease-in;
+    -o-transition: all 0.15s ease-in;
+    -webkit-transition: all 0.15s ease-in;
+    transition: all 0.15s ease-in;
+  }
+  .select-options li:hover, .select-options li.is-selected {
+    color: #c0392b;
+    background: #fff;
+  }
+  .select-options li[rel="hide"] {
+    display: none;
+  }
+  

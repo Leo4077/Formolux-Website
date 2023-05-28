@@ -40,7 +40,7 @@
     align-items: center;
     justify-content: center;
     border-radius: 45px 45px 0px 0px;
-    margin-right: 20px;
+    /* margin-right: 20px; */
     transform: translateY(8%);
     width: 70%;
     height: 1051px;
@@ -81,88 +81,139 @@
 /*表單區*/
 #message_form {
     /* background-color: rgb(0, 13, 255); */
+    
+    /* display: flex;
+    align-items: center; */
     width: 73%;
     height: 800px;
     z-index: 8;
+    display: grid;
 }
 
 .form-container {
-    display: flex;
-    /* flex:1; */
-    flex-wrap: wrap;
-    /* column-count: 2; */
-    /* grid-template-columns: repeat(2, 1fr); */
-    gap: 110px;
+    /* background-color: rgb(250, 215, 241); */
+    /* display: flex;
+    flex-wrap: wrap; */
+    display: inline-grid;
+    grid-template-columns: 1fr 1fr; 
+    row-gap: 110px;
+    column-gap: 90px;
+    /* gap: 110px; */
     width: 100%;
 }
 
-/* .form-row {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 110px;
-} */
 
 .form-field {
+    /* background-color: #666; */
     position: relative;
-    gap: 110px;
-    width: 40%;
+
+    /* margin-bottom:20px; */
+    /* gap: 110px;  */
 }
 
 .form-field label {
     position: absolute;
-    top: 0;
-    left: 0;
+    left:5px;
+    top:5px;
     pointer-events: none;
     transition: 0.2s ease all;
-    transform: translateY(24px);
-    font-size: 14px;
+    /* transform: translateY(24px); */
+    font-size: 20px;
     color: var(--main-darkBlue);
+    transition:0.2s ease all; 
+    -moz-transition:0.2s ease all; 
+    -webkit-transition:0.2s ease all;
 }
 
+
+/*文字輸入框*/
 .form-field select,
 .form-field input,
-.form-field textarea {
-    /* background-color: aquamarine; */
-    height: 50px;
-    width: 96%;
-    padding: 10px;
+.form-field textarea { 
+    height: 45px;
+    width: 100%;
+    padding: 0px;
     border: none;
     border-bottom: 1.35px solid #000537;
     background: transparent;
+    outline:none;
 }
 
-input[type="date"]:in-range::-webkit-datetime-edit-year-field, 
+input, textarea, select{
+    font-size: 20px;
+}
+.form-field select{
+height: 27px;
+
+} 
+.form-field .floating-textarea {
+    padding-top: 10px;
+    grid-column: 1/-1;
+}
+
+/*不顯示預設的年/月/日文字*/
+/* input[type="date"]:in-range::-webkit-datetime-edit-year-field, 
 input[type="date"]:in-range::-webkit-datetime-edit-month-field, 
 input[type="date"]:in-range::-webkit-datetime-edit-day-field, 
 input[type="date"]:in-range::-webkit-datetime-edit-text { 	
-    color: transparent; }
+color: transparent; } */
 
-.form-field select:focus~label,
-.form-field select:valid~label,
-.form-field input:focus~label,
-.form-field input:valid~label,
-.form-field textarea:focus~label,
-.form-field textarea:valid~label {
-    transform: translateY(4px);
-    font-size: 12px;
-    color: #666;
-    border: none;
-} 
 
-.form-field select:focus~label,
-.form-field select~label,
-.form-field input:focus~label,
-.form-field input~label,
-.form-field textarea:focus~label,
-.form-field textarea~label {
-    transform: translateY(4px);
-    font-size: 12px;
-    color: #666;
-    border: none;
+/*讓有required屬性的欄位float*/
+.floating-label:focus~label,
+.floating-label:valid~label {
+    top: -10px;
+    font-size: 20px;
+    color: var(--main-darkBlue);
+    background-color: transparent;
+
 }
 
 
+.floating-input,
+.floating-select {
+    font-size: 20px;
+    padding: 4px 4px;
+    display: block;
+    width: 100%;
+    height: 45px;
+    background-color: transparent;
+    border: none;
+}
 
+.floating-input:focus,
+.floating-select:focus {
+    outline: none;
+    border-bottom: 1.35px solid #000537;
+}
+
+.floating-input:focus~label,
+.floating-input:not(:placeholder-shown)~label {
+    top: -10px;
+    font-size: 20px;
+    color: var(--main-darkBlue);
+}
+
+.floating-select:focus~label,
+.floating-select:not([value=""]):valid~label {
+    top: -10px;
+    font-size: 20px;
+    color: var(--main-darkBlue);
+}
+
+.floating-textarea {
+    min-height: 50px;
+    max-height: 300px;
+    overflow: hidden;
+    overflow-x: hidden;
+}
+
+/****  floating-Lable style end ****/
+
+
+
+
+/*按鈕區域*/
 .btnBar {
     position: absolute;
     display: flex;
@@ -231,3 +282,5 @@ input[type="date"]:in-range::-webkit-datetime-edit-text {
     margin-left: 30px;
     margin-right: 30px;
 }
+
+

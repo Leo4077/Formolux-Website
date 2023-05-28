@@ -40,7 +40,7 @@
     align-items: center;
     justify-content: center;
     border-radius: 45px 45px 0px 0px;
-    margin-right: 20px;
+    /* margin-right: 20px; */
     transform: translateY(8%);
     width: 70%;
     height: 1051px;
@@ -81,88 +81,92 @@
 /*表單區*/
 #message_form {
     /* background-color: rgb(0, 13, 255); */
+    
+    /* display: flex;
+    align-items: center; */
     width: 73%;
     height: 800px;
     z-index: 8;
 }
 
 .form-container {
-    display: flex;
-    /* flex:1; */
-    flex-wrap: wrap;
-    /* column-count: 2; */
-    /* grid-template-columns: repeat(2, 1fr); */
-    gap: 110px;
+    /* background-color: rgb(250, 215, 241); */
+    /* display: flex;
+    flex-wrap: wrap; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 110px;
+    column-gap: 90px;
+    /* gap: 110px; */
     width: 100%;
 }
 
-/* .form-row {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 110px;
-} */
 
 .form-field {
+    /* background-color: #666; */
     position: relative;
-    gap: 110px;
-    width: 40%;
+    /* gap: 110px;  */
 }
 
 .form-field label {
     position: absolute;
-    top: 0;
+    top: 0px;
     left: 0;
     pointer-events: none;
     transition: 0.2s ease all;
     transform: translateY(24px);
-    font-size: 14px;
+    font-size: 20px;
     color: var(--main-darkBlue);
 }
 
+/*文字輸入框*/
 .form-field select,
 .form-field input,
-.form-field textarea {
-    /* background-color: aquamarine; */
-    height: 50px;
-    width: 96%;
+.form-field textarea { 
+    height: 45px;
+    width: 100%;
     padding: 10px;
     border: none;
     border-bottom: 1.35px solid #000537;
     background: transparent;
 }
 
+
+/* select#style{
+background-color: aqua;
+} */
+#message{
+    grid-column: 1 / 2;
+
+}
+
+/*不顯示預設的年/月/日文字*/
 input[type="date"]:in-range::-webkit-datetime-edit-year-field, 
 input[type="date"]:in-range::-webkit-datetime-edit-month-field, 
 input[type="date"]:in-range::-webkit-datetime-edit-day-field, 
 input[type="date"]:in-range::-webkit-datetime-edit-text { 	
     color: transparent; }
 
-.form-field select:focus~label,
-.form-field select:valid~label,
-.form-field input:focus~label,
-.form-field input:valid~label,
-.form-field textarea:focus~label,
-.form-field textarea:valid~label {
-    transform: translateY(4px);
-    font-size: 12px;
-    color: #666;
-    border: none;
-} 
+
 
 .form-field select:focus~label,
-.form-field select~label,
+.form-field select:not(:placeholder-shown), /*讓沒有required的屬性仍然有floating labels*/
 .form-field input:focus~label,
-.form-field input~label,
+.form-field input:not(:placeholder-shown),
 .form-field textarea:focus~label,
-.form-field textarea~label {
-    transform: translateY(4px);
-    font-size: 12px;
-    color: #666;
-    border: none;
+.form-field textarea:not(:placeholder-shown) {
+    transform: translateY(5px);
+    font-size: 20px;
+    color: var(--main-darkBlue);
+    
 }
 
 
 
+
+
+
+/*按鈕區域*/
 .btnBar {
     position: absolute;
     display: flex;

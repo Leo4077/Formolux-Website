@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./form.css">
+</head>
+<body>
+    <div class='floating-heading'>Floating Label's - Pure CSS - without Required*</div>
+
+<br><br><br><br><br>
+<div class="floating-form">
+<div class="floating-label">  
+    <select class="floating-select" onclick="this.setAttribute('value', this.value);" value="">
+      <option value=""></option>
+      <option value="1">Alabama</option>
+      <option value="2">Boston</option>
+      <option value="3">Ohaio</option>
+      <option value="4">New York</option>
+      <option value="5">Washington</option>
+    </select>
+    <span class="highlight"></span>
+    <label>Travel Style</label>
+  </div>
+
+    <div class="floating-label">      
+      <input class="floating-input" type="text" placeholder=" ">
+      <span class="highlight"></span>
+      <label>Number of Travelers</label>
+    </div>
+
+    <div class="floating-label">      
+        <input class="floating-input" type="text" onclick="(this.type='date')" placeholder=" ">
+        <span class="highlight"></span>
+        <label>Arrival Date</label>
+      </div>
+
+      <div class="floating-label">      
+        <input class="floating-input" type="text" onclick="(this.type='date')" placeholder=" ">
+        <span class="highlight"></span>
+        <label>Departure Date</label>
+      </div>
+
+      <div class="floating-form">
+        <div class="floating-label">      
+          <input class="floating-input" type="text" placeholder=" ">
+          <span class="highlight"></span>
+          <label>* First Name</label>
+        </div>
+
+        <div class="floating-form">
+            <div class="floating-label">      
+              <input class="floating-input" type="text" placeholder=" ">
+              <span class="highlight"></span>
+              <label>* Last name</label>
+            </div>
+
+            <div class="floating-form">
+                <div class="floating-label">      
+                  <input class="floating-input" type="email" placeholder=" ">
+                  <span class="highlight"></span>
+                  <label>* Your Email</label>
+                </div>
+                <div class="floating-form">
+                    <div class="floating-label">      
+                      <input class="floating-input" type="text" placeholder=" ">
+                      <span class="highlight"></span>
+                      <label>Your Country</label>
+                    </div>
+
+
+    <div class="floating-label">      
+      <textarea class="floating-input floating-textarea" placeholder=" "></textarea>
+      <span class="highlight"></span>
+      <label>Notes / special requests</label>
+    </div>
+ 
+</div>
+
+</body>
+</html>

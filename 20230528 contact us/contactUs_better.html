@@ -8,7 +8,7 @@
 </head>
 <link rel="stylesheet" href="../mainstyle.css">
 <link rel="stylesheet" href="../combine/combine.css">
-<link rel="stylesheet" href="./draft2.css">
+<link rel="stylesheet" href="./style copy 2.css">
 <body>
     <!-- 頁首區 -->
     <header class="header1">
@@ -108,52 +108,58 @@
             <form name="message_form" id="message_form" action="" method="post">
                 <div class="form-container">
                         <div class="form-field">
-                            <select name="style" id="style">
-                                <option disabled hidden selected></option>
-                                <option>Honey Moon</option>
-                                <option>Solo Travel</option>
-                                <option>Family Trip</option>
-                                <option>Besties trip</option>
-                                <option>Others</option>
+                            <select class="floating-select" onclick="this.setAttribute('value',this.value);" value="" name="style" id="style" placeholder=" " style="width:100%; margin-top: 18px;">  <!-- 用placeholder空值代替required -->
+                                <option value=""></option>
+                                <option value="1">Honey Moon</option>
+                                <option value="2">Solo Travel</option>
+                                <option value="3">Family Trip</option>
+                                <option value="4">Besties trip</option>
+                                <option value="5">Others</option>
                             </select>
                             <label for="style">Travel Style</label>
                         </div>
 
                         <div class="form-field">
-                            <input type="text" name="people-number" id="people-number">
+                            <input class="floating-input" type="text" name="people-number" id="people-number" placeholder=" ">
                             <label for="people-number">Number of Travelers</label>
                         </div>
                     
                         <div class="form-field">
-                            <input type="date" name="arrival-date" id="arrival-date">
+                            <input class="floating-input" type="text" onclick="(this.type='date')" name="arrival-date" id="arrival-date" placeholder=" ">
                             <label for="arrival-date">Arrival Date</label>
                         </div>
 
                         <div class="form-field">
-                            <input type="date" name="departure-date" id="departure-date">
+                            <input class="floating-input" type="text" onclick="(this.type='date')" name="departure-date" id="departure-date" placeholder=" ">
                             <label for="departure-date">Departure Date</label>
                         </div>
                     
                     
                         <div class="form-field">
-                            <input type="text" name="firstname" id="firstname" required>
+                            <input class="floating-label" type="text" name="firstname" id="firstname" required>
                             <label for="firstname">* First Name</label>
                         </div>
 
                         <div class="form-field">
-                            <input type="text" name="lastname" id="lastname" required>
+                            <input class="floating-label" type="text" name="lastname" id="lastname" required>
                             <label for="lastname">* Last Name</label>
                         </div>
                     
                     
                         <div class="form-field">
-                            <input type="email" name="email" id="email" required>
+                            <input class="floating-label" type="text" name="email" id="email" required>
                             <label for="email">* Your E-Mail</label>
                         </div>
 
                         <div class="form-field">
-                            <textarea name="country" id="country"></textarea>
+                            <input class="floating-input" type="text" id="country" placeholder=" "></input>
                             <label for="country">Your Country</label>
+                        </div>
+                    
+
+                        <div class="form-field">
+                            <textarea class="floating-input floating-textarea" name="message" id="message" placeholder=" " cols="50" rows="50"></textarea>
+                            <label for="message">Notes / Special Requests <span>If you have any question, please don't hesitate to let us know. Thanks! </span></label>
                         </div>
 
 
