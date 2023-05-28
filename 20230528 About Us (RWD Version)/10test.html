@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<style>
+    .container {
+        display: flex;
+    }
+
+    .button {
+        width: 200px;
+        height: 100px;
+        background-color: #4CAF50; /* Green */
+        color: white;
+
+        font-size: 16px;
+        text-align: center;
+        line-height: 100px;
+        cursor: pointer;
+        margin-right: -30px;
+    }
+
+    .button:hover {
+        background-color: #45a049;
+    }
+
+    .button.first {
+        clip-path: polygon(0 0, 85% 0, 100% 100%, 0 100%);
+    }
+
+    .button.middle {
+        clip-path: polygon(0 0, 85% 0, 100% 100%, 15% 100%);
+    }
+
+    .button.last {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 15% 100%);
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <div class="button first">First</div>
+        <div class="button middle">Middle</div>
+        <div class="button middle">Middle</div>
+        <div class="button last">Last</div>
+    </div>
+</body>
+</html>
