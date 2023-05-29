@@ -15,7 +15,7 @@ footer {
     position: fixed;
     top: 0px;
     height: 10rem;
-    width: 100vw;
+    width: 100%;
     z-index: 100;
 /*     background-color: #ffffff; */
 }
@@ -27,7 +27,7 @@ footer {
 /*     position: absolute; */
     /* 主軸方向齊頭 */
     /*     justify-content: space-between; */
-    width: 67.5rem;
+    width: 100%;
     height: 10rem;
 }
 
@@ -267,7 +267,7 @@ ul {
     transform-origin: top;
     transform: translate(0%, -100%);
     transition: 0.3s ease;
-    width: 100vw;
+    width: 100%;
     /*螢幕的可視範圍，會依網頁縮放改變*/
     height: 100vh;
     display: flex;
@@ -424,7 +424,7 @@ li:hover .line {
     justify-content: space-between;
     align-items: center;
 
-    width: 100vw;
+    width: 100%;
     height: 25rem;
     /* 內距 */
     padding-left: 10rem;
