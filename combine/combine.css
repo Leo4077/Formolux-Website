@@ -17,14 +17,14 @@ footer {
     height: 10rem;
     width: 100%;
     z-index: 100;
-/*     background-color: #ffffff; */
+    /*     background-color: #ffffff; */
 }
 
 /* 頁首區 */
 .topbar {
     display: flex;
     align-items: center;
-/*     position: absolute; */
+    /*     position: absolute; */
     /* 主軸方向齊頭 */
     /*     justify-content: space-between; */
     width: 100%;
@@ -34,13 +34,20 @@ footer {
 /* 選單排版 */
 /* Logo */
 .headerLogo {
-    /* 垂直置中參數 */
-    /*     margin-top: 4.1875rem;
-    margin-bottom: 4.1875rem; */
+    width: 20%;
     /* 左距 */
     margin-left: 3.75rem;
     /* margin-right: 56px; */
     z-index: 1;
+}
+
+.headerLogo img {
+/*     height: auto;
+    width: 100%;
+    /* 圖片填滿背景 */
+    object-fit: cover;
+    /* 縮放圖片依然置中 */
+    background-position: center; */
 }
 
 .contactBtn {
@@ -53,7 +60,7 @@ footer {
     font-size: 1.25rem;
     /* 間距 */
     margin-left: 1.5rem;
-    top:4.125rem;
+    top: 4.125rem;
     right: 13rem;
 }
 
@@ -436,12 +443,17 @@ li:hover .line {
 /* 頁尾Logo區 */
 .footerLogo {
     /* Logo寬度 */
-    width: 20%;
+    width: 25%;
+}
+
+.footerLogo img {
+    width: 100%;
+    height: auto;
 }
 
 /* 頁尾按鈕區 */
-#footerBar nav{
-    width:64%;
+#footerBar nav {
+    width: 64%;
 }
 
 
@@ -451,12 +463,12 @@ li:hover .line {
     align-items: center;
     width: 100%;
     list-style: none;
-    border-top: 1.5px solid white;
-    border-bottom: 1.5px solid white;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
 }
 
-.footerMenu li{
-    width:15%;
+.footerMenu li {
+    width: 15%;
     /* 每一個按鈕的間距 */
     margin-left: 6.3%;
     margin-right: 6.3%;
@@ -480,4 +492,60 @@ li:hover .line {
     padding-top: 3.75rem;
     padding-bottom: 3.75rem;
     text-align: center;
+}
+
+/* 平板 尺寸範圍待調 */
+@media (min-width: 767px) and (max-width: 1000px) {
+
+    /* 頁尾區 */
+
+    #footerBar {
+        width: 100%;
+        height: 200px;
+        /* 內距 */
+        padding-left: 6.8%;
+        padding-right: 6.8%;
+    }
+
+    .footerLogo {
+        /* Logo寬度 */
+        width: 30%;
+    }
+
+    .footerLogo img {
+        width: 100%;
+        height: auto;
+    }
+
+
+    /* 頁尾按鈕區 */
+    #footerBar nav {
+        width: 60%;
+    }
+
+    .footerMenu {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        list-style: none;
+        border-top: 1px solid white;
+        border-bottom: 1px solid white;
+    }
+
+    .footerMenu li {
+        width: 30%;
+        /* 每一個按鈕的間距 */
+        margin-left: 3%;
+        margin-right: 3%;
+    }
+
+    .footerMenu a {
+        font-size: 0.75rem;
+        font-weight: 150;
+
+        /* 上下邊界距離 */
+        padding-top: 2.25rem;
+        padding-bottom: 2.25rem;
+        text-align: center;
+    }
 }
