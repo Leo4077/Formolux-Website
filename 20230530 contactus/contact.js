@@ -1,4 +1,4 @@
-
+//表單區
 /*點選textarea時placeholder自動消失*/
 window.onload = function(){
     var messageBox = document.getElementById('message');
@@ -30,10 +30,10 @@ svgElement1.addEventListener('mouseover', function () {
     let degreeFB = 0;
     rotationInterval = setInterval(function () {
         const radians = degreeFB * Math.PI / 180;
-        const x1 = 0.5 + Math.cos(radians) * 0.5;
-        const y1 = 0.5 + Math.sin(radians) * 0.5;
+        const x1 = 0.1 + Math.cos(radians) * 0.2;
+        const y1 = 0.5 + Math.sin(radians) * 0.8;
         const x2 = 0.5 - Math.cos(radians) * 0.5;
-        const y2 = 0.5 - Math.sin(radians) * 0.5;
+        const y2 = 0.5 - Math.sin(radians) * 0.2;
 
         document.getElementById('hoverGradient1').setAttribute('x1', x1);
         document.getElementById('hoverGradient1').setAttribute('y1', y1);
@@ -42,7 +42,7 @@ svgElement1.addEventListener('mouseover', function () {
 
         degreeFB = ((degreeFB + 1) + 360) % 360;
 
-        if (degreeFB === 60) {
+        if (degreeFB === 70) { /*轉到60度停止*/ 
             clearRotation();
         }
     }, 5);
@@ -67,10 +67,10 @@ svgElement2.addEventListener('mouseover', function () {
     let degreeIG = 0;
     rotationInterval = setInterval(function () {
         const radians = degreeIG * Math.PI / 180;
-        const x1 = 0.5 + Math.cos(radians) * 0.5;
-        const y1 = 0.5 + Math.sin(radians) * 0.5;
+        const x1 = 0.1 + Math.cos(radians) * 0.2;
+        const y1 = 0.5 + Math.sin(radians) * 0.8;
         const x2 = 0.5 - Math.cos(radians) * 0.5;
-        const y2 = 0.5 - Math.sin(radians) * 0.5;
+        const y2 = 0.5 - Math.sin(radians) * 0.2;
 
         document.getElementById('hoverGradient2').setAttribute('x1', x1);
         document.getElementById('hoverGradient2').setAttribute('y1', y1);
@@ -104,10 +104,10 @@ svgElement3.addEventListener('mouseover', function () {
     let degreeEmail = 0;
     rotationInterval = setInterval(function () {
         const radians = degreeEmail * Math.PI / 180;
-        const x1 = 0.5 + Math.cos(radians) * 0.5;
-        const y1 = 0.5 + Math.sin(radians) * 0.5;
+        const x1 = 0.1 + Math.cos(radians) * 0.2;
+        const y1 = 0.5 + Math.sin(radians) * 0.8;
         const x2 = 0.5 - Math.cos(radians) * 0.5;
-        const y2 = 0.5 - Math.sin(radians) * 0.5;
+        const y2 = 0.5 - Math.sin(radians) * 0.2;
 
         document.getElementById('hoverGradient3').setAttribute('x1', x1);
         document.getElementById('hoverGradient3').setAttribute('y1', y1);
