@@ -834,7 +834,7 @@ body {
 
     /* 標題 */
     .aboutus-content-title {
-        font-size: 3.8rem;
+        font-size: 3.5rem;
         line-height: 3.6875rem;
     }
 
@@ -845,7 +845,7 @@ body {
 
     /* 內文 */
     .aboutus-content-word {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
         line-height: 1.875rem;
     }
 
@@ -898,12 +898,16 @@ body {
     #aboutus-choosebtn span {
         height: 8.5rem;
         font-size: 2rem;
+
+        margin-left: 15%;
+        margin-right: 1rem;
     }
 
     /* hover按鈕字樣 */
     #aboutus-choosebtn:hover span {
         height: 8.5rem;
         font-size: 2rem;
+        margin-left: 15%;
     }
 
     /* 偽元素hover前 */
@@ -920,7 +924,7 @@ body {
     /* arrow */
     #aboutus-choosebtn svg {
         /* 初始位置 */
-        left: 80%;
+        left: 77%;
 
     }
 
@@ -928,7 +932,7 @@ body {
     #aboutus-choosebtn:hover svg {
         position: absolute;
         /* 初始位置 */
-        left: 80%;
+        left: 77%;
     }
 
     /* 箭頭移動 */
@@ -938,14 +942,14 @@ body {
         }
 
         100% {
-            transform: translate(50%, 0);
+            transform: translate(65%, 0);
 
         }
     }
 
     @keyframes imgback {
         0% {
-            transform: translate(50%, 0);
+            transform: translate(65%, 0);
         }
 
         100% {
@@ -1103,30 +1107,35 @@ body {
     /* 按鈕字樣 */
     #aboutus-choosebtn span {
         height: 8.5rem;
-        font-size: 2rem;
+        font-size: 1.8rem;
+
+        margin-left: 11%;
+        margin-right: 1rem;
     }
 
     /* hover按鈕字樣 */
     #aboutus-choosebtn:hover span {
         height: 8.5rem;
-        font-size: 2rem;
+        font-size: 1.8rem;
+
+        margin-left: 11%;
     }
 
     /* 偽元素hover前 */
     #aboutus-choosebtn:before {
-        padding-left: 40%;
+        padding-left: 35%;
 
     }
 
     /* 偽元素hover後 */
     #aboutus-choosebtn:hover:before {
-        padding-left: 40%;
+        padding-left: 35%;
     }
 
     /* arrow */
     #aboutus-choosebtn svg {
         /* 初始位置 */
-        left: 80%;
+        left: 75%;
 
     }
 
@@ -1134,7 +1143,7 @@ body {
     #aboutus-choosebtn:hover svg {
         position: absolute;
         /* 初始位置 */
-        left: 80%;
+        left: 75%;
     }
 
     /* 箭頭移動 */
@@ -1144,14 +1153,14 @@ body {
         }
 
         100% {
-            transform: translate(50%, 0);
+            transform: translate(65%, 0);
 
         }
     }
 
     @keyframes imgback {
         0% {
-            transform: translate(50%, 0);
+            transform: translate(65%, 0);
         }
 
         100% {
