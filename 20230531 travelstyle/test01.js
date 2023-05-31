@@ -15,60 +15,6 @@ new Swiper("#swiper-2", {
 
 
 
-    // window.addEventListener('scroll', function() {
-    //     // 當用戶滾動頁面時，執行以下代碼
-    //     if (window.scrollY > 10) { // 如果滾動超過10像素
-    //         var section = document.getElementById('slider-2');
-    //         var sectionPosition = section.getBoundingClientRect().top + window.pageYOffset;
-
-    //         window.scrollTo({
-    //             top: sectionPosition,
-    //             behavior: 'auto' // 平滑滾動效果
-    //         });
-    //     }
-    // });
-
-    let lastScrollTop = 0;
-let sectionPosition;
-
-window.addEventListener('scroll', function() {
-    let st = window.pageYOffset || document.documentElement.scrollTop; 
-
-    if (window.scrollY > 10) { // 如果滾動超過10像素
-      var section = document.getElementById('slider-2');
-      var sectionPosition = section.getBoundingClientRect().top + window.pageYOffset;
-
-      window.scrollTo({
-          top: sectionPosition,
-          behavior: 'auto' // 平滑滾動效果
-      });
-  }
-    if (st > lastScrollTop){ // 如果用戶正在向下滾動
-        // 設定一個你想讓用戶滾動到的位置, 例如底部
-        let footer = document.getElementById('footerBar');
-        let footerPosition = footer.getBoundingClientRect().top + window.pageYOffset;
-
-        if (window.scrollY > sectionPosition && window.scrollY < footerPosition) { // 如果當前位置在 slider-2 和 footer 之間
-            // 讓用戶可以自由滾動
-        }
-    } else { // 如果用戶正在向上滾動
-        // 檢查當前滾動位置是否在 slider-2 以下
-        if (window.scrollY > sectionPosition) {
-            window.scrollTo({
-                top: sectionPosition,
-                behavior: 'smooth' // 平滑滾動效果
-            });
-        }
-    }
-    lastScrollTop = st <= 0 ? 0 : st; // 更新 lastScrollTop
-}, false);
-
-
-
-
-
-
-
 // window.addEventListener('scroll', function() {
 //   var scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
   
@@ -178,6 +124,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   });
 });
+
+
 
 
 // 點擊圖像時整個容器向左移動
