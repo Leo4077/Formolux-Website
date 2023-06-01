@@ -32,7 +32,7 @@ body {
 
     /* 背景的移動距離及時間 */
     transform: translateY(100vh);
-    transition: all 1.2s cubic-bezier(0.22, 0.44, 0, 1);
+    transition: all 1.5s cubic-bezier(0.22, 0.44, 0, 1);
 }
 
 .background:before {
@@ -54,7 +54,7 @@ body {
     transform: translateY(0vh);
 }
 
-.background:first-child .content-wrapper {
+.background:first-child .content-wrapper-A {
     transform: translateY(15vh);
 }
 
@@ -63,26 +63,102 @@ body {
 }
 
 
-/* 母容器 */
-.content-wrapper {
-    height: 100vh;
-    width: 100%;
+
+
+/* 區段二子容器 */
+.sec2 {
     display: flex;
+    position: relative;
+}
+
+/* 速度層C 容器4 Z80 (花) */
+.content-wrapper-C {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+    height: 100vh;
 
     /* 容器的移動距離及時間 */
-    transform: translateY(40vh);
-    transition: all 1.7s cubic-bezier(0.22, 0.44, 0, 1);
+    transform: translateY(100vh);
+    transition: all 3.5s cubic-bezier(0.22, 0.44, 0, 1);
+
+    will-change: transform;
+    backface-visibility: hidden;
+
+    position: absolute;
+    z-index: 80;
+}
+
+/* 速度層B 容器3 Z70 (山 同背景) */
+.content-wrapper-B {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+    height: 100vh;
+
+    /* 容器的移動距離及時間 */
+    transform: translateY(0vh);
+    transition: all 2.5s cubic-bezier(0.22, 0.44, 0, 1);
+
+    will-change: transform;
+    backface-visibility: hidden;
+
+    position: absolute;
+    z-index: 70;
+}
+
+/* 速度層A 容器2 (扣掉主標的文字們) */
+#content-wrapper2 {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    z-index: 80;
+}
+
+/* 速度層A */
+.content-wrapper-A {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+
+    /* 容器的移動距離及時間 */
+    transform: translateY(80vh);
+    transition: all 2s cubic-bezier(0.22, 0.44, 0, 1);
 
     will-change: transform;
     backface-visibility: hidden;
 }
 
-#content-wrapper1 {
-    position: relative;
+/* 速度層D 容器5 Z60 (主標) */
+.content-wrapper-D {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+    height: 100vh;
+
+    /* 容器的移動距離及時間 */
+    transform: translateY(100vh);
+    transition: all 2s cubic-bezier(0.22, 0.44, 0, 1);
+
+    will-change: transform;
+    backface-visibility: hidden;
+
+    position: absolute;
+    z-index: 60;
 }
 
 
-/* 第一段 */
+
+/* 區段一 */
 .content-title-box {
     display: flex;
     flex-direction: column;
@@ -93,7 +169,7 @@ body {
     height: 240px;
 
     margin-right: 11%;
-    margin-bottom: 14%;
+    margin-bottom: 16%;
 
     position: absolute;
     right: 0;
@@ -139,17 +215,8 @@ body {
     margin: 0;
 }
 
-/* 第二段 */
-#content-wrapper2 {
-    display: flex;
-    height: 100%;
-    flex-direction: column;
-    /*     justify-content: center; */
-    align-items: center;
-    position: relative;
-    z-index: 50;
-}
 
+/* 第二段 */
 /* formolux */
 .content-svg-formo {
     display: flex;
@@ -159,7 +226,7 @@ body {
     position: absolute;
     z-index: 4;
 
-    top: 12.6vh;
+    top: 28%;
     justify-content: center;
     align-items: center;
 }
@@ -182,6 +249,8 @@ body {
     top: 26.6vh;
 }
 
+
+
 /* 中間文字區域 */
 .content-middle-box {
     display: flex;
@@ -190,7 +259,7 @@ body {
 
     position: absolute;
     z-index: 10;
-    top: 42.6vh;
+    top: 41vh;
 }
 
 .content-middle-box1 {
@@ -255,26 +324,18 @@ body {
     height: 100%;
 
     z-index: 4;
-    bottom: 15vh;
+    bottom: 0vh;
 
     /* 圖片填滿背景 */
     object-fit: cover;
     /* 縮放圖片依然置中 */
     background-position: center;
-    
+
     transform: translateY(0vh);
-    transition: all 1.2s cubic-bezier(0.22, 0.44, 0, 1);
+    transition: all 1.5s cubic-bezier(0.22, 0.44, 0, 1);
 }
 
-.background.up-scroll #foreground-img {
-    transform: translate3d(0, 115vh, 0);
-    transition: all 1.2s cubic-bezier(0.22, 0.44, 0, 1);
-}
 
-.background.down-scroll #foreground-img {
-    transform: translate3d(0, 15vh, 0);
-    transition: all 1.2s cubic-bezier(0.22, 0.44, 0, 1);
-}
 
 
 
@@ -292,7 +353,7 @@ body {
     width: 100%;
     height: 10vh;
 
-    bottom: 20vh;
+    bottom: 8vh;
 }
 
 /* gif本體 */
@@ -331,29 +392,29 @@ body {
 
 /* 下左左花 */
 #svg-flower-LL {
-    top: 60vh;
+    top: 78vh;
     left: 15%;
     position: absolute;
 }
 
 /* 下左中花 */
 #svg-flower-LM {
-    top: 37.8vh;
-    left: 19.8%;
+    top: 50vh;
+    left: 22%;
     position: absolute;
 }
 
 /* 下右中花 */
 #svg-flower-RM {
-    top: 39vh;
-    right: 27%;
+    top: 53vh;
+    right: 29%;
     position: absolute;
 }
 
 /* 下右右花 */
 #svg-flower-RR {
-    top: 45vh;
-    right: 10%;
+    top: 57vh;
+    right: 16%;
     position: absolute;
 }
 
@@ -369,20 +430,22 @@ body {
 
 /* 上左花 */
 #svg-flower-left-up {
-    top: 26vh;
+    top: 41vh;
     left: 10%;
     position: absolute;
 }
 
 /* 上右花 */
 #svg-flower-right-up {
-    top: 18vh;
-    right: 14%;
+    top: 34vh;
+    right: 18%;
     position: absolute;
 }
 
 
 /* 視差效果參數設定 */
+
+/* AAAAA */
 /* 向上滾動時，下移一個視口高度 */
 /* 將元素移動至原始位置 */
 .background.up-scroll {
@@ -390,7 +453,7 @@ body {
 }
 
 /* 將內容包裝器向下移動 15% 的視口高度 */
-.background.up-scroll .content-wrapper {
+.background.up-scroll .content-wrapper-A {
     transform: translateY(15vh);
 }
 
@@ -400,7 +463,7 @@ body {
 }
 
 /* 將下一個背景元素的內容包裝器向下移動 30% 的視口高度 */
-.background.up-scroll+.background .content-wrapper {
+.background.up-scroll+.background .content-wrapper-A {
     transform: translateY(30vh);
 }
 
@@ -412,7 +475,7 @@ body {
 }
 
 /* 將內容包裝器向下移動 40% 的視口高度 */
-.background.down-scroll .content-wrapper {
+.background.down-scroll .content-wrapper-A {
     transform: translateY(40vh);
 }
 
@@ -422,6 +485,55 @@ body {
 }
 
 /* 如果下一個背景元素未處於 down-scroll 狀態，則將其內容包裝器向下移動 15% 的視口高度 */
-.background.down-scroll+.background:not(.down-scroll) .content-wrapper {
+.background.down-scroll+.background:not(.down-scroll) .content-wrapper-A {
     transform: translateY(15vh);
+}
+
+/* CCCCC */
+/* 向上滾動時 */
+/* 將內容包裝器向下移動 15% 的視口高度 */
+.background.up-scroll .content-wrapper-C {
+    transform: translateY(30vh);
+}
+/* 將下一個背景元素的內容包裝器向下移動 30% 的視口高度 */
+.background.up-scroll+.background .content-wrapper-C {
+    transform: translateY(60vh);
+}
+
+
+/* 向下滾動時 */
+/* 將內容包裝器向下移動 40% 的視口高度 */
+.background.down-scroll .content-wrapper-C {
+    transform: translateY(70vh);
+}
+
+/* 如果下一個背景元素未處於 down-scroll 狀態，則將其內容包裝器向下移動 15% 的視口高度 */
+.background.down-scroll+.background:not(.down-scroll) .content-wrapper-C {
+    transform: translateY(0vh);
+}
+
+
+/* DDDDD */
+
+/* 向上滾動時 */
+/* 將內容包裝器向下移動 15% 的視口高度 */
+.background.up-scroll .content-wrapper-D {
+    transform: translateY(45vh);
+}
+
+/* 將下一個背景元素的內容包裝器向下移動 30% 的視口高度 */
+.background.up-scroll+.background .content-wrapper-D {
+    transform: translateY(90vh);
+}
+
+
+/* 向下滾動時 */
+/* 將內容包裝器向下移動 40% 的視口高度 */
+.background.down-scroll .content-wrapper-D {
+    transform: translateY(100vh);
+}
+
+/* 如果下一個背景元素未處於 down-scroll 狀態，則將其內容包裝器向下移動 15% 的視口高度 */
+.background.down-scroll+.background:not(.down-scroll) .content-wrapper-D {
+    transform: translateY(0vh);
 }
