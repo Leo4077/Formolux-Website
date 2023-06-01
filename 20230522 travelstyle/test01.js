@@ -13,55 +13,134 @@ new Swiper("#swiper-2", {
     },
 });
 
+window.onscroll=function(){
+  console.log( 
+    'top: '  + (window.pageYOffset || document.documentElement.scrollTop) + ' ' +
+    'left: ' + (window.pageXOffset || document.documentElement.scrollLeft)
+  );
+}
 
+// // 等待页面加载完成
+// document.addEventListener("DOMContentLoaded", function() {
+//   // 滚动到指定元素的最上方
+//   function scrollToElement(element) {
+//     var offset = 10; // 滚动的偏移量
 
-    // window.addEventListener('scroll', function() {
-    //     // 當用戶滾動頁面時，執行以下代碼
-    //     if (window.scrollY > 10) { // 如果滾動超過10像素
-    //         var section = document.getElementById('slider-2');
-    //         var sectionPosition = section.getBoundingClientRect().top + window.pageYOffset;
+//     // 计算目标元素的相对页面顶部的位置
+//     var position = element.offsetTop;
 
-    //         window.scrollTo({
-    //             top: sectionPosition,
-    //             behavior: 'auto' // 平滑滾動效果
-    //         });
-    //     }
-    // });
+//     // 执行滚动动画
+//     window.scrollTo({
+//       top: position - offset,
+//       behavior: "auto"
+//     });
+//   }
 
-    let lastScrollTop = 0;
-let sectionPosition;
+//   // 监听页面滚动事件
+//   window.addEventListener("scroll", function() {
+//     var bottomElement = document.getElementById("bottom");
+//     var pageStyleElement = document.getElementById("pageStyle");
+//     var bottomElementTop = bottomElement.getBoundingClientRect().top;
+//     var pageStyleElementTop = pageStyleElement.getBoundingClientRect().top;
+//     var pageStyleElementBottom = pageStyleElementTop + pageStyleElement.offsetHeight;
 
-window.addEventListener('scroll', function() {
-    let st = window.pageYOffset || document.documentElement.scrollTop; 
+//     // 当元素进入视窗时，触发滚动到元素的最上方
+//     if (bottomElementTop <= window.innerHeight) {
+//       if (window.pageYOffset > pageStyleElementBottom - 10 && window.pageYOffset < pageStyleElementBottom) {
+//         scrollToElement(pageStyleElement);
+//       }
+//     }
+//   });
+// });
 
-    if (window.scrollY > 10) { // 如果滾動超過10像素
-      var section = document.getElementById('slider-2');
-      var sectionPosition = section.getBoundingClientRect().top + window.pageYOffset;
+// 等待頁面加載完成
+document.addEventListener("DOMContentLoaded", function() {
+  // 滾動到指定元素的最上方
+  function scrollToElement() {
+    var element = document.getElementById("bottom");
+    var offset = 10; // 滾動10px
 
-      window.scrollTo({
-          top: sectionPosition,
-          behavior: 'auto' // 平滑滾動效果
-      });
+    // 计算目标元素的相对页面顶部的位置
+    var position = element.offsetTop;
+
+    // 执行滚动动画
+    window.scrollTo({
+      top: position - offset,
+      behavior: "auto"
+    });
   }
-    if (st > lastScrollTop){ // 如果用戶正在向下滾動
-        // 設定一個你想讓用戶滾動到的位置, 例如底部
-        let footer = document.getElementById('footerBar');
-        let footerPosition = footer.getBoundingClientRect().top + window.pageYOffset;
 
-        if (window.scrollY > sectionPosition && window.scrollY < footerPosition) { // 如果當前位置在 slider-2 和 footer 之間
-            // 讓用戶可以自由滾動
-        }
-    } else { // 如果用戶正在向上滾動
-        // 檢查當前滾動位置是否在 slider-2 以下
-        if (window.scrollY > sectionPosition) {
-            window.scrollTo({
-                top: sectionPosition,
-                behavior: 'smooth' // 平滑滾動效果
-            });
-        }
+  // 监听页面滚动事件
+  window.addEventListener("scroll", function() {
+    var element = document.getElementById("bottom");
+    var footer = document.getElementById("footerBar");
+    var elementTop = element.getBoundingClientRect().top;
+    var footerTop = footer.getBoundingClientRect().top;
+
+    // 当元素进入视窗时，触发滚动到元素的最上方
+    if (elementTop <= window.innerHeight && footerTop > window.innerHeight) {
+      scrollToElement();
     }
-    lastScrollTop = st <= 0 ? 0 : st; // 更新 lastScrollTop
-}, false);
+  });
+});
+
+
+
+
+
+//971-1359 
+// window.addEventListener('scroll', function() {
+//   var scrollPosition = window.pageYOffset;
+//   var footerPosition = document.querySelector('#footBar').offsetTop;
+
+//   if (scrollPosition >= footerPosition) {
+//     // 達到頁尾，釋放滾動
+//     document.querySelector('#nav-link').addEventListener('click', function(event) {
+//       event.stopPropagation();
+//     });
+//   } else {
+//     // 未達到頁尾，防止滾動
+//     document.querySelector('#nav-link').addEventListener('click', function(event) {
+//       event.preventDefault();
+//     });
+//   }
+// });
+
+
+// let lastScrollTop = 0;
+// let sectionPosition;
+
+// window.addEventListener('scroll', function() {
+//     let st = window.pageYOffset || document.documentElement.scrollTop; 
+
+//     if (window.scrollY > 10) { // 如果滾動超過10像素
+//       var section = document.getElementById('slider-2');
+//       var sectionPosition = section.getBoundingClientRect().top + window.pageYOffset;
+
+//       window.scrollTo({
+//           top: sectionPosition,
+//           behavior: 'auto' // 平滑滾動效果
+//       });
+//   }
+//     if (st > lastScrollTop){ // 如果用戶正在向下滾動
+//         // 設定一個你想讓用戶滾動到的位置, 例如底部
+//         let footer = document.getElementById('footerBar');
+//         let footerPosition = footer.getBoundingClientRect().top + window.pageYOffset;
+
+//         if (window.scrollY > sectionPosition && window.scrollY < footerPosition) { // 如果當前位置在 slider-2 和 footer 之間
+//             // 讓用戶可以自由滾動
+//         }
+//     } else { // 如果用戶正在向上滾動
+//         // 檢查當前滾動位置是否在 slider-2 以下
+//         if (window.scrollY > sectionPosition) {
+//             window.scrollTo({
+//                 top: sectionPosition,
+//                 behavior: 'smooth' // 平滑滾動效果
+//             });
+//         }
+//     }
+//     lastScrollTop = st <= 0 ? 0 : st; // 更新 lastScrollTop
+// }, false);
 
 
 
@@ -166,7 +245,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // 為 besties 添加點擊事件監聽器
   bestiesActive.addEventListener("click", function () {
     event.preventDefault();
-    travelBG.style.backgroundImage = "url('../images/bestiesBG.png')"
+    travelBG.style.backgroundImage = "url('../images/besties_BG.png')"
     // menuLogo.style.color = "#FFFFFF";
 
   });
