@@ -13,15 +13,20 @@
   
   .styleFront{
     width: auto;
-    height: 85vh;
+    height: 80%;
     display: flex;
     justify-content: center;
     margin-top: 80px;
   }
+
+  #styleImage{
+    width: 100%;
+    height: 100%;
+  }
   
   #styleImage {
     z-index: 6;
-    margin-right:80px;
+    margin-right:4.5%;
     }
   #longImage{
       
@@ -159,7 +164,6 @@ figcaption p{
     width: 190px;
 }
 
-
 /*響應式*/
 @media screen and (max-width: 800px) {
     .swiper-slide img {
@@ -221,10 +225,10 @@ figcaption p{
         font-family: var(--main-font);
         font-weight: 400;
         font-size: 1rem;
-        line-height: 20px;
-        letter-spacing: 0.005em;
+        line-height: 18px;
+        letter-spacing: 0.02em;
         color:#FFFFFF;
-        margin-bottom: 15px;
+        margin-bottom: 24px;
     
       }
       .more{
@@ -274,21 +278,21 @@ figcaption p{
       /*點擊卡片時背景圖片更換*/
 
       /* 點擊 solo 時改變背景圖片 */
-      #solo:active~#slider-2 {
+      /* #solo:active~#slider-2 {
         background-image: url(../images/soloBG.png);
-      }
+      } */
 
       /* 點擊 family 時改變背景圖片 */
-      #family:active~#slider-2 {
+      /* #family:active~#slider-2 {
         background-image: url(../images/familyBG.png);
 
-      }
+      } */
 
       /* 點擊 besties 時改變背景圖片 */
-      #besties:active~#slider-2 {
+      /* #besties:active~#slider-2 {
         background-image: url(../images/bestiesBG.png);
 
-      }
+      } */
 
 
       
