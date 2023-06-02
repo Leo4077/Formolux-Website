@@ -8,7 +8,7 @@ function clearRotation() {
 const svgElement1 = document.querySelector('.flower-FB');
 svgElement1.addEventListener('mouseover', function () {
     clearRotation();
-    let degreeFB = 0;
+    let degreeFB = -60;
     rotationInterval = setInterval(function () {
         const radians = degreeFB * Math.PI / 180;
         const x1 = 0.5 + Math.cos(radians) * 0.5;
@@ -23,7 +23,7 @@ svgElement1.addEventListener('mouseover', function () {
 
         degreeFB = ((degreeFB + 1) + 360) % 360;
 
-        if (degreeFB === 60) {
+        if (degreeFB === 45) {
             clearRotation();
         }
     }, 5);
