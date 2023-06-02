@@ -5,6 +5,7 @@ body {
 #aboutTaiwan01{
     height: 100vh;
     width: 100vw;
+    /* position: absolute; */
     background-image: url(../images/aboutTaiwan_BG.png);
 	background-size: cover;
 	background-position: center;
@@ -27,105 +28,25 @@ body {
 #aboutTaiwan01 p{ 
     /* background-color: aquamarine;    */
     display: block;
-    position: relative;
-    z-index: 5;
     width: 1214px;
     font-family: var(--main-font);
     font-weight: 400;
     font-size: 1.5rem;
-    line-height: 28px;
+    line-height: 1.75rem;
     display: flex;
     align-items: center;
     text-align: center;
     letter-spacing: 0.04em;
     color:var(--main-yellow);
-    transform: translate(7%,-63%);
+    transform: translate(-1%,-60%);
     /* transform: translateY(-150%);    */
     text-shadow: 0px 4px 35px rgba(0, 0, 0, 0.3), 2px 2px 18px rgba(0, 5, 55, 0.4); 
 }
 
 #titleBanner{
-    position: relative;
-    z-index: 5;
-    transform: translate(3%,15%);
+    transform: translate(-1%,15%);
 }
 
-.bigcontainer{
-    position: relative;
-}
-#flower1{
-    position: relative;
-    z-index: 1;
-    opacity:0.25;
-    transform: translate(21.5%,-125%) rotate(55.12deg);
-    /* animation: flower1 11s both ease-in-out; */
-    animation-name: move1;
-    animation-duration: 3.5s;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards;
-}
-
-
-@keyframes move1{
-    0%{transform: translate(21.5%,-125%)rotate(55.12deg); opacity:0.25;}
-    100%{transform: translate(21.5%,-190%) rotate(0deg); opacity:1;}
-}
-
-#flower2{
-    position: relative;
-    z-index: 1;
-    transform: translate(-178%,-140%) rotate(64deg);
-    opacity:0.23;
-    animation-name: move2;
-    animation-duration: 3.5s;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards;
-}
-
-@keyframes move2{
-    0%{transform: translate(-178%,-140%) rotate(64deg); opacity:0.23;}
-    100%{transform: translate(-178%,-240%) rotate(0deg); opacity:1;}
-}
-
-#flower3{
-    position: relative;
-    z-index: 1;
-    transform: translate(240%,-120%) rotate(-43.58deg);
-    opacity:0.5;
-    animation-name: move3;
-    animation-duration: 3.5s;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards;
-}
-
-@keyframes move3{
-    0%{transform: translate(240%,-120%) rotate(-43.58deg); opacity:0.2;}
-    100%{transform: translate(240%,-200%) rotate(0deg); opacity:0.7;}
-}
-
-#flower4{
-    position: relative;
-    z-index: 1;
-    transform: translate(180%,-40%) rotate(-139.97deg);
-    opacity:0.35;
-    animation-name: move4;
-    animation-duration: 3.5s;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards;
-}
-
-@keyframes move4{
-    0%{transform: translate(180%,-40%) rotate(-139.97deg); opacity:0.35;}
-    100%{transform: translate(190%,-120%) rotate(0deg); opacity:0.8;}
-} 
-
-
-
-
-/* @keyframes rotate {
-    0% { background-position: 0px; }
-    100% { background-position: 190px; }
-  } */
 
 /* 下半部資訊區 */
 

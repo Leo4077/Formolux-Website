@@ -64,13 +64,18 @@ const svgElement2 = document.querySelector('.flower-IG');
 
 svgElement2.addEventListener('mouseover', function () {
     clearRotation();
-    let degreeIG = 0;
+    let degreeIG = -60;
     rotationInterval = setInterval(function () {
         const radians = degreeIG * Math.PI / 180;
-        const x1 = 0.1 + Math.cos(radians) * 0.2;
-        const y1 = 0.5 + Math.sin(radians) * 0.8;
+        // const x1 = 0.1 + Math.cos(radians) * 0.2;
+        // const y1 = 0.5 + Math.sin(radians) * 0.8;
+        // const x2 = 0.5 - Math.cos(radians) * 0.5;
+        // const y2 = 0.5 - Math.sin(radians) * 0.2;
+
+        const x1 = 0.5 + Math.cos(radians) * 0.5;
+        const y1 = 0.5 + Math.sin(radians) * 0.5;
         const x2 = 0.5 - Math.cos(radians) * 0.5;
-        const y2 = 0.5 - Math.sin(radians) * 0.2;
+        const y2 = 0.5 - Math.sin(radians) * 0.5;
 
         document.getElementById('hoverGradient2').setAttribute('x1', x1);
         document.getElementById('hoverGradient2').setAttribute('y1', y1);
@@ -79,7 +84,7 @@ svgElement2.addEventListener('mouseover', function () {
 
         degreeIG = ((degreeIG + 1) + 360) % 360;
 
-        if (degreeIG === 60) {
+        if (degreeIG === 45) {
             clearRotation();
         }
     }, 5);
@@ -101,7 +106,7 @@ const svgElement3 = document.querySelector('.flower-Email');
 
 svgElement3.addEventListener('mouseover', function () {
     clearRotation();
-    let degreeEmail = 0;
+    let degreeEmail = -60;
     rotationInterval = setInterval(function () {
         const radians = degreeEmail * Math.PI / 180;
         const x1 = 0.1 + Math.cos(radians) * 0.2;
@@ -116,10 +121,10 @@ svgElement3.addEventListener('mouseover', function () {
 
         degreeEmail = ((degreeEmail + 1) + 360) % 360;
 
-        if (degreeEmail === 60) {
+        if (degreeEmail === 80) {
             clearRotation();
         }
-    }, 5);
+    }, 10);
 });
 /* 滑鼠離開時回歸到進來前的角度 */
 const svgElement33 = document.querySelector('.flower-Email');
