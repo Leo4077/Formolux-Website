@@ -182,6 +182,10 @@ body {
     z-index: 60;
 }
 
+/* 速度層F 容器7 Z100 (星星) */
+#content-wrapper7{
+    z-index: 100;
+}
 
 
 /* 區段一 */
@@ -255,6 +259,12 @@ body {
     top: 28%;
     justify-content: center;
     align-items: center;
+}
+
+/* 星星 */
+.zoom-svg{
+    position: absolute;
+    top: 28%;
 }
 
 /* travel */

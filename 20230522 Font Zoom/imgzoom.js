@@ -12,12 +12,18 @@ let translateY = 0;
 // 初始階段設定為位移
 let stage = 'translate';
 
+// 添加一個新的變數來追蹤全頁滾動的動畫是否正在播放
+let isScrolling = false;
+
 function handleScroll(event) {
+    // 如果全頁滾動的動畫正在播放，就不進行放大縮小的操作
+    if (isScrolling) return;
+
     // 阻止預設的滾動行為
     event.preventDefault();
     // 確定滾輪滾動的方向
     const delta = Math.max(-1, Math.min(1, event.wheelDelta || -event.detail));
-    
+
     // 依據現階段決定要進行的動作
     if (stage === 'translate') {
         translateX += 10 * delta;
@@ -45,12 +51,24 @@ function handleScroll(event) {
     }
 
     // 將新的縮放比例和位移套用到元素上
-    zoomSvg.style.transform = `translate(${translateX}px, ${translateY}px) scale(${scale})`; 
+    zoomSvg.style.transform = `translate(${translateX}px, ${translateY}px) scale(${scale})`;
 }
 
 // 監聽 mousewheel 事件，當滾輪滾動時觸發 handleScroll 函式
-document.addEventListener('mousewheel', handleScroll); 
+document.addEventListener('mousewheel', handleScroll);
 // 監聽 DOMMouseScroll 事件，當滾輪滾動時觸發 handleScroll 函式（針對 Firefox 瀏覽器）
 document.addEventListener('DOMMouseScroll', handleScroll);
 
+// 選取有全頁滾動動畫的元素
+const scrollingElement = document.querySelector('.scroll-animation');
+
+// 在動畫開始時設置 isScrolling 為 true
+scrollingElement.addEventListener('animationstart', function () {
+    isScrolling = true;
+});
+
+// 在動畫結束時設置 isScrolling 為 false
+scrollingElement.addEventListener('animationend', function () {
+    isScrolling = false;
+});
 
