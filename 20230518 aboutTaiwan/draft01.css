@@ -15,16 +15,14 @@ body {
 
 }
 
-/* .titleTaiwan{
 
-    width: 70%;
+.bigcontainer{
+    
+    position: relative;
+    margin: 0 auto;
 }
-.titleContainer{
-    display: flex;
-    justify-content: center;
-    transform: translateY(-8%);
-} */
-#aboutTaiwan01 p{ 
+
+.banner_word{ 
     /* background-color: aquamarine;    */
     display: block;
     position: relative;
@@ -39,7 +37,7 @@ body {
     text-align: center;
     letter-spacing: 0.04em;
     color:var(--main-yellow);
-    transform: translate(7%,-63%);
+    transform: translate(4%,-63%);
     /* transform: translateY(-150%);    */
     text-shadow: 0px 4px 35px rgba(0, 0, 0, 0.3), 2px 2px 18px rgba(0, 5, 55, 0.4); 
 }
@@ -47,12 +45,51 @@ body {
 #titleBanner{
     position: relative;
     z-index: 5;
-    transform: translate(3%,15%);
+    transform: translate(1%,15%);
 }
 
-.bigcontainer{
-    position: relative;
+
+/* 滑鼠滾輪gif */
+
+.scroll-downs-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(-1%);
+  }
+  
+.scroll-downs{
+    /* background-color: crimson; */
+    margin-top: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
 }
+
+#scroller{
+    /* background-color: #000537; */
+    object-fit: cover;
+    height: 90px;
+    width: auto;
+
+}
+
+.scroller_word{
+font-family: var(--main-font);
+font-style: normal;
+font-weight: 400;
+font-size: 0.9rem;
+line-height: 16px;
+letter-spacing: 0.065em;
+color: white;
+margin-top: .4rem;
+
+}
+
+/* 旋轉花花區 */
+
 #flower1{
     position: relative;
     z-index: 1;
@@ -64,8 +101,6 @@ body {
     animation-timing-function: ease-in-out;
     animation-fill-mode: forwards;
 }
-
-
 @keyframes move1{
     0%{transform: translate(21.5%,-125%)rotate(55.12deg); opacity:0.25;}
     100%{transform: translate(21.5%,-190%) rotate(0deg); opacity:1;}
