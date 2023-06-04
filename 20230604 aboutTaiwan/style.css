@@ -213,6 +213,7 @@ margin-top: .4rem;
     /* background-color: blue; */
     display: flex;
     margin-bottom:160px;
+
 }
 
 .reverse{ 
@@ -229,12 +230,14 @@ margin-top: .4rem;
     border-radius: 25px 25px 0px 0px;
     overflow: hidden;
     position: relative; /* 為了讓內部圖片可進行絕對定位 */
-
 }
 
 .parallaximg img {
+    display: block;
     object-fit: cover;
+    background-size: cover;
     position: absolute;
+    max-width: 100%;
     top: 0;
     left: 0;
 }
@@ -260,8 +263,8 @@ margin-top: .4rem;
 /* 純文字區域 */
 #titleText{
     display: inline-block;
-    margin-top: 8px;
-    margin-bottom: 28px;
+    margin-top: 0.5rem;
+    margin-bottom: 1.75rem;
     /* background-color: rgb(2, 33, 23); */
 
 }

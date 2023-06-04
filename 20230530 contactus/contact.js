@@ -1,4 +1,5 @@
 //表單區
+
 /*點選textarea時placeholder自動消失*/
 window.onload = function(){
     var messageBox = document.getElementById('message');
@@ -27,7 +28,7 @@ function clearRotation() {
 const svgElement1 = document.querySelector('.flower-FB');
 svgElement1.addEventListener('mouseover', function () {
     clearRotation();
-    let degreeFB = 0;
+    let degreeFB = -65;
     rotationInterval = setInterval(function () {
         const radians = degreeFB * Math.PI / 180;
         const x1 = 0.1 + Math.cos(radians) * 0.2;
@@ -42,10 +43,10 @@ svgElement1.addEventListener('mouseover', function () {
 
         degreeFB = ((degreeFB + 1) + 360) % 360;
 
-        if (degreeFB === 70) { /*轉到60度停止*/ 
+        if (degreeFB === 60) { /*轉到60度停止*/ 
             clearRotation();
         }
-    }, 5);
+    }, 10);
 });
 
 /* 滑鼠離開時回歸到進來前的角度 */
@@ -64,18 +65,13 @@ const svgElement2 = document.querySelector('.flower-IG');
 
 svgElement2.addEventListener('mouseover', function () {
     clearRotation();
-    let degreeIG = -60;
+    let degreeIG = -65;
     rotationInterval = setInterval(function () {
         const radians = degreeIG * Math.PI / 180;
-        // const x1 = 0.1 + Math.cos(radians) * 0.2;
-        // const y1 = 0.5 + Math.sin(radians) * 0.8;
-        // const x2 = 0.5 - Math.cos(radians) * 0.5;
-        // const y2 = 0.5 - Math.sin(radians) * 0.2;
-
-        const x1 = 0.5 + Math.cos(radians) * 0.5;
-        const y1 = 0.5 + Math.sin(radians) * 0.5;
+        const x1 = 0.1 + Math.cos(radians) * 0.2;
+        const y1 = 0.5 + Math.sin(radians) * 0.8;
         const x2 = 0.5 - Math.cos(radians) * 0.5;
-        const y2 = 0.5 - Math.sin(radians) * 0.5;
+        const y2 = 0.5 - Math.sin(radians) * 0.2;
 
         document.getElementById('hoverGradient2').setAttribute('x1', x1);
         document.getElementById('hoverGradient2').setAttribute('y1', y1);
@@ -84,10 +80,10 @@ svgElement2.addEventListener('mouseover', function () {
 
         degreeIG = ((degreeIG + 1) + 360) % 360;
 
-        if (degreeIG === 45) {
+        if (degreeIG === 60) {
             clearRotation();
         }
-    }, 5);
+    }, 10);
 });
 /* 滑鼠離開時回歸到進來前的角度 */
 const svgElement22 = document.querySelector('.flower-IG');
@@ -106,13 +102,13 @@ const svgElement3 = document.querySelector('.flower-Email');
 
 svgElement3.addEventListener('mouseover', function () {
     clearRotation();
-    let degreeEmail = -60;
+    let degreeEmail = -65;
     rotationInterval = setInterval(function () {
         const radians = degreeEmail * Math.PI / 180;
         const x1 = 0.1 + Math.cos(radians) * 0.2;
         const y1 = 0.5 + Math.sin(radians) * 0.8;
         const x2 = 0.5 - Math.cos(radians) * 0.5;
-        const y2 = 0.5 - Math.sin(radians) * 0.2;
+        const y2 = 0.5 - Math.sin(radians) * 0.5;
 
         document.getElementById('hoverGradient3').setAttribute('x1', x1);
         document.getElementById('hoverGradient3').setAttribute('y1', y1);
@@ -121,7 +117,7 @@ svgElement3.addEventListener('mouseover', function () {
 
         degreeEmail = ((degreeEmail + 1) + 360) % 360;
 
-        if (degreeEmail === 80) {
+        if (degreeEmail === 60) {
             clearRotation();
         }
     }, 10);
