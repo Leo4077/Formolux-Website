@@ -133,8 +133,46 @@ svgElement33.addEventListener('mouseout', function () {
 });
 
 
+//提交表單出現的動作
 
-        
+
+  document.addEventListener('DOMContentLoaded', function() {
+    // 获取表单和相关元素
+    var form = document.querySelector('form');
+    var submitBtn = document.getElementById('taiwan-travelbtn');
+    var overlay = document.createElement('div');
+    var messageBox = document.createElement('div');
+
+    // 配置遮罩层和消息框的样式和内容
+    overlay.className = 'overlay';
+    messageBox.className = 'message-box';
+    messageBox.innerHTML = '提交成功！';
+
+    // 添加遮罩层和消息框到文档中
+    document.body.appendChild(overlay);
+    document.body.appendChild(messageBox);
+
+    // 当表单提交时触发事件处理程序
+    form.addEventListener('submit', function(event) {
+      event.preventDefault(); // 阻止表单默认提交行为
+
+      // 显示遮罩层和消息框
+      overlay.style.display = 'block';
+      messageBox.style.display = 'block';
+
+      // 模拟提交过程
+      setTimeout(function() {
+        // 隐藏遮罩层和消息框
+        overlay.style.display = 'none';
+        messageBox.style.display = 'none';
+
+        // 重置表单
+        form.reset();
+      }, 2000); // 2秒后隐藏消息框并重置表单（可根据需要调整延时时间）
+    });
+  });
+
+
 
 
 

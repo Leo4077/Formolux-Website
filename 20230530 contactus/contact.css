@@ -480,7 +480,33 @@ color: transparent; } */
     }
 }
 
+/* 用戶提交表單後出現的畫面 */
 
+ /* 遮罩层样式 */
+ .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* 半透明黑色背景 */
+    z-index: 9999;
+    display: none; /* 默认隐藏 */
+  }
+
+  /* 消息框样式 */
+  .message-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 10000;
+    display: none; /* 默认隐藏 */
+  }
 
 /*按鈕區域*/
 .btnBar {
