@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Taiwan</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">     <link rel="stylesheet" href="../mainstyle.css">
+    <link rel="stylesheet" href="../mainstyle.css">
     <link rel="stylesheet" href="../combine/combine.css">
-    <link rel="stylesheet" href="./draft01.css">
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <!-- 頁首區 -->
@@ -126,13 +126,13 @@
         </section>
 
         <!-- 下半部資訊區 -->
-        <section id="aboutTaiwan02">
+        <section id="aboutTaiwan02" >
             <!-- 整個圖片加文字的區域 -->
             <div id="allContainer">
                 <!-- center of Asia 圖加文字-->
-                <article class="taiwan_item" data-scroll-container>
-                    <div class="parallaximg"data scroll data-scroll-speed="2">
-                        <img class="taiwanpic smoove" data scroll data-scroll-speed="4" src="../images/taiwangeo.png" alt="" >
+                <article class="taiwan_item" >
+                    <div class="parallaximg">
+                        <img class="taiwanpic smoove" src="../images/asiapic.png" alt="" >
                     </div>
                     <!-- 資訊區 -->
                     <div class="textarea smoove_z">
@@ -152,7 +152,7 @@
                 <article class="taiwan_item reverse">
                     <!-- 視差效果圖片 -->
                     <div class="parallaximg">
-                        <img  class="taiwanpic smoove_z" src="../images/image (1).png" alt="">
+                        <img  class="taiwanpic smoove_z" src="../images/weatherpic.png" alt="">
                     </div>
                     <!-- 資訊區 -->
                     <div class="textarea textrev smoove">
@@ -172,7 +172,7 @@
                 <article class="taiwan_item">
                     <!-- 視差效果圖片 -->
                     <div class="parallaximg">
-                        <img class="taiwanpic smoove" src="../images/image (2).png" alt="" >
+                        <img class="taiwanpic smoove" src="../images/aboutlandscape.png" alt="" >
                     </div>
                     <!-- 資訊區 -->
                     <div class="textarea smoove_z">
@@ -192,7 +192,7 @@
                 <article class="taiwan_item reverse">
                     <!-- 視差效果圖片 -->
                     <div class="parallaximg">
-                        <img class="taiwanpic smoove_z" src="../images/image (3).png" alt="" >
+                        <img class="taiwanpic smoove_z" src="../images/foodpic.png" alt="" >
                     </div>
                     <!-- 資訊區 -->
                     <div class="textarea textrev smoove">
@@ -209,7 +209,7 @@
                 <article class="taiwan_item">
                     <!-- 視差效果圖片 -->
                     <div class="parallaximg">
-                        <img class="taiwanpic smoove" src="../images/image (4).png" alt="" >
+                        <img class="taiwanpic smoove" src="../images/culturepic.png" alt="" >
                     </div>
                     <!-- 資訊區 -->
                     <div class="textarea smoove_z">
@@ -226,7 +226,7 @@
                 <article class="taiwan_item reverse">
                     <!-- 視差效果圖片 -->
                     <div class="parallaximg">
-                        <img class="taiwanpic smoove_z" src="../images/image (5).png" alt="" >
+                        <img class="taiwanpic smoove_z" src="../images/peoplepic.png" alt="" >
                     </div>
                     <!-- 資訊區 -->
                     <div class="textarea textrev smoove">
@@ -242,8 +242,8 @@
                 
                 <article class="taiwan_item useful" id="taiwanInfo">
                     <!-- 視差效果圖片 -->
-                    <div class="parallaximg last">
-                        <img class="taiwanpic smoove budda" src="../images/image (6).png" alt="" >
+                    <div class="parallaximg" id="lastbudda">
+                        <img class="taiwanpic smoove budda" src="../images/buddapic.png" alt="" >
                     </div>
                     <!-- 資訊區 -->
                     <div class="textarea smoove_z">
@@ -294,7 +294,8 @@
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <!-- jquery smoove -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-smoove/0.2.10/jquery.smoove.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
+    <!-- ukiyo parallax -->
+    <script src="https://cdn.jsdelivr.net/npm/ukiyojs@4.0.8/dist/ukiyo.min.js"></script>
     <script src="../combine/combine.js"></script>
     <script src="./aboutTaiwan.js"></script>
 

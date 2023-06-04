@@ -224,23 +224,22 @@ margin-top: .4rem;
 /* 視差圖片 */
 .parallaximg{
     /* background-color: aqua; */
-    width: 47%;
+    width: 46.5%;
     height: 380px;
     border-radius: 25px 25px 0px 0px;
     overflow: hidden;
     position: relative; /* 為了讓內部圖片可進行絕對定位 */
+
 }
 
 .parallaximg img {
-    background-size: cover;
+    object-fit: cover;
     position: absolute;
     top: 0;
     left: 0;
 }
 
-#taiwangeo{
-    transform: translateY(-15%);
-}
+
 
 /*僅不包含視差圖片的資訊區*/
 .textarea{
@@ -301,19 +300,17 @@ margin-top: .4rem;
 
 .useful{
     margin-bottom: 0;
+    height: 466px;
 }
-/* #taiwanInfo{
-   background-color: brown;
-   width: 100%;
-   height: 11.2%;
-} */
-.parallaximg .last{
-    display: inline-block;
 
+#lastbudda{
+    display: block;
+    height: 466px;
 }
 .taiwanpic .smoove .budda{
     width: 100%;
     height: 100%;
+    height: 466px;
 }
 
 

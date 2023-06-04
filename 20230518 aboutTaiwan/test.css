@@ -2,6 +2,8 @@
     margin: 0px;
     overflow-x: hidden;
 } */
+
+
 #aboutTaiwan01{
     height: 100vh;
     width: 100vw;
@@ -239,7 +241,7 @@ margin-top: .4rem;
 }
 
 #taiwangeo{
-    transform: translateY(-15%);
+    /* transform: translateY(-15%); */
 }
 
 /*僅不包含視差圖片的資訊區*/
