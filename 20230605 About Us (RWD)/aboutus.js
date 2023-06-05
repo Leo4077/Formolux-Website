@@ -1,3 +1,89 @@
+
+// 用於存儲當前已激活按鈕的ID
+var activeButton = null;
+var buttons = null;
+
+/* 設定每個按鈕對應的內容 */
+const contents = {
+    btn1: {
+        title: 'Luxury experiences',
+        content: 'Our travel agency specializes in luxury experiences for foreign travelers seeking unique, tailor-made adventures.<br><br>We offer a variety of one-day packages, allowing our clients to immerse themselves in Taiwanese culture within a limited time frame.',
+        flowerRotation1: 'rotate(0deg)',
+        flowerRotation2: 'rotate(0deg)',
+        img1: '../images/Aboutus-a1.png',
+        img2: '../images/Aboutus-a2.png',
+        background: '../images/AboutUs-BG1.png',
+        marginLeft: '0px',
+        contentBoxWidth: '74%',
+        contentBoxHeight: '58.72%',
+    },
+
+    btn2: {
+        title: 'Deluxe hotel',
+        content: 'We prioritize exceptional accommodations, handpicking five-star hotels.<br><br>Which all with premium amenities like pools, fitness centers, and spas to ensure a comfortable and relaxing stay during your trip.',
+        flowerRotation1: 'rotate(30deg)',
+        flowerRotation2: 'rotate(-20deg)',
+        img1: '../images/Aboutus-b1.png',
+        img2: '../images/Aboutus-b2.png',
+        background: '../images/AboutUs-BG2.png',
+        marginLeft: '5px',
+        contentBoxWidth: '75.7%',
+        contentBoxHeight: '63.29%',
+    },
+
+    btn3: {
+        title: 'Luxury rides',
+        content: 'We provide top-tier transportation using luxury brands like Rolls-Royce for airport and attraction transfers.<br><br>Our cars, combined with our professional, safe, and reliable drivers, ensure an unparalleled comfortable experience throughout your journey.',
+        flowerRotation1: 'rotate(60deg)',
+        flowerRotation2: 'rotate(-40deg)',
+        img1: '../images/Aboutus-c1.png',
+        img2: '../images/Aboutus-c2.png',
+        background: '../images/AboutUs-BG3.png',
+        marginLeft: '10px',
+        contentBoxWidth: '77.4%',
+        contentBoxHeight: '67.86%',
+    },
+
+    btn4: {
+        title: 'Expert guides',
+        content: 'Our multilingual and experienced tour guides expertly plan your itinerary, immersing you in authentic local culture, cuisine, and scenery.<br><br>Our tour guides are your best travel companions, making your journey unforgettable and wonderful!',
+        flowerRotation1: 'rotate(90deg)',
+        flowerRotation2: 'rotate(-60deg)',
+        img1: '../images/Aboutus-d1.png',
+        img2: '../images/Aboutus-d2.png',
+        background: '../images/AboutUs-BG4.png',
+        marginLeft: '15px',
+        contentBoxWidth: '79.1%',
+        contentBoxHeight: '72.43%',
+    },
+
+    btn5: {
+        title: 'Dedicated  team',
+        content: 'We take pride in offering exceptional 24/7 online customer service.<br><br>Our dedicated team is available around the clock to promptly address any questions or concerns, providing personalized assistance to ensure an unparalleled experience for our discerning clients.',
+        flowerRotation1: 'rotate(120deg)',
+        flowerRotation2: 'rotate(-80deg)',
+        img1: '../images/Aboutus-e1.png',
+        img2: '../images/Aboutus-e2.png',
+        background: '../images/AboutUs-BG5.png',
+        marginLeft: '20px',
+        contentBoxWidth: '80.8%',
+        contentBoxHeight: '76.99%',
+    },
+
+    btn6: {
+        title: 'Media recommending',
+        content: "Formolux Travel has garnered acclaim from top media outlets like BBC, CNN, and ELLE for our exceptional travel experiences.<br><br>Celebrated by industry experts, we excel in crafting personalized itineraries tailored to our clients' distinct interests and preferences.",
+        flowerRotation1: 'rotate(150deg)',
+        flowerRotation2: 'rotate(-100deg)',
+        img1: '../images/Aboutus-f1.png',
+        img2: '../images/Aboutus-f2.png',
+        background: '../images/AboutUs-BG6.png',
+        marginLeft: '25px',
+        contentBoxWidth: '84.37%',
+        contentBoxHeight: '81.56%',
+    },
+};
+
 window.onload = function () {
     // 獲取所有的按鈕元素
     var buttons = document.querySelectorAll('.aboutus-btn');
@@ -23,85 +109,20 @@ window.onload = function () {
     // 預設第一個按鈕被點擊
     buttonClicked('btn1');
 };
-// 用於存儲當前已激活按鈕的ID
-var activeButton = null;
-
-/* 設定每個按鈕對應的內容 */
-const contents = {
-    btn1: {
-        title: 'Luxury experiences',
-        content: 'Our travel agency specializes in luxury experiences for foreign travelers seeking unique, tailor-made adventures.<br><br>We offer a variety of one-day packages, allowing our clients to immerse themselves in Taiwanese culture within a limited time frame.',
-        flowerRotation1: 'rotate(0deg)',
-        flowerRotation2: 'rotate(0deg)',
-        img1: '../images/Aboutus-a1.png',
-        img2: '../images/Aboutus-a2.png',
-        background: '../images/AboutUs-BG1.png',
-        marginLeft: '0px',
-        contentBoxWidth: '74%',
-    },
-
-    btn2: {
-        title: 'Deluxe hotel',
-        content: 'We prioritize exceptional accommodations, handpicking five-star hotels.<br><br>Which all with premium amenities like pools, fitness centers, and spas to ensure a comfortable and relaxing stay during your trip.',
-        flowerRotation1: 'rotate(30deg)',
-        flowerRotation2: 'rotate(-20deg)',
-        img1: '../images/Aboutus-b1.png',
-        img2: '../images/Aboutus-b2.png',
-        background: '../images/AboutUs-BG2.png',
-        marginLeft: '5px',
-        contentBoxWidth: '75.7%',
-    },
-
-    btn3: {
-        title: 'Luxury rides',
-        content: 'We provide top-tier transportation using luxury brands like Rolls-Royce for airport and attraction transfers.<br><br>Our cars, combined with our professional, safe, and reliable drivers, ensure an unparalleled comfortable experience throughout your journey.',
-        flowerRotation1: 'rotate(60deg)',
-        flowerRotation2: 'rotate(-40deg)',
-        img1: '../images/Aboutus-c1.png',
-        img2: '../images/Aboutus-c2.png',
-        background: '../images/AboutUs-BG3.png',
-        marginLeft: '10px',
-        contentBoxWidth: '77.4%',
-    },
-
-    btn4: {
-        title: 'Expert guides',
-        content: 'Our multilingual and experienced tour guides expertly plan your itinerary, immersing you in authentic local culture, cuisine, and scenery.<br><br>Our tour guides are your best travel companions, making your journey unforgettable and wonderful!',
-        flowerRotation1: 'rotate(90deg)',
-        flowerRotation2: 'rotate(-60deg)',
-        img1: '../images/Aboutus-d1.png',
-        img2: '../images/Aboutus-d2.png',
-        background: '../images/AboutUs-BG4.png',
-        marginLeft: '15px',
-        contentBoxWidth: '79.1%',
-    },
-
-    btn5: {
-        title: 'Dedicated  team',
-        content: 'We take pride in offering exceptional 24/7 online customer service.<br><br>Our dedicated team is available around the clock to promptly address any questions or concerns, providing personalized assistance to ensure an unparalleled experience for our discerning clients.',
-        flowerRotation1: 'rotate(120deg)',
-        flowerRotation2: 'rotate(-80deg)',
-        img1: '../images/Aboutus-e1.png',
-        img2: '../images/Aboutus-e2.png',
-        background: '../images/AboutUs-BG5.png',
-        marginLeft: '20px',
-        contentBoxWidth: '80.8%',
-    },
-
-    btn6: {
-        title: 'Media recommending',
-        content: "Formolux Travel has garnered acclaim from top media outlets like BBC, CNN, and ELLE for our exceptional travel experiences.<br><br>Celebrated by industry experts, we excel in crafting personalized itineraries tailored to our clients' distinct interests and preferences.",
-        flowerRotation1: 'rotate(150deg)',
-        flowerRotation2: 'rotate(-100deg)',
-        img1: '../images/Aboutus-f1.png',
-        img2: '../images/Aboutus-f2.png',
-        background: '../images/AboutUs-BG6.png',
-        marginLeft: '25px',
-        contentBoxWidth: '82.5%',
-    },
 
 
-};
+/* 背景模糊 */
+// 當視窗大小變化時調整 #aboutus-bg-box 的大小
+function adjustBoxSize(id) {
+    if (window.innerWidth <= 1023) {
+        document.querySelector('#aboutus-bg-box').style.height = contents[id].contentBoxHeight;
+        document.querySelector('#aboutus-bg-box').style.width = '100%';
+    } else {
+        document.querySelector('#aboutus-bg-box').style.height = '100%';
+        document.querySelector('#aboutus-bg-box').style.width = contents[id].contentBoxWidth;
+    }
+}
+
 
 // 當按鈕被點擊時執行此函數
 function buttonClicked(id) {
@@ -125,8 +146,25 @@ function buttonClicked(id) {
     // 移動 aboutus-content 
     document.querySelector('.aboutus-content').style.marginLeft = contents[id].marginLeft;
 
-    // 改變 aboutus-bg-box 的 width
-    document.querySelector('#aboutus-bg-box').style.width = contents[id].contentBoxWidth;
+
+
+
+
+
+    // 背景模糊
+    adjustBoxSize(id);
+
+    // 移除舊的事件處理器以避免事件處理器堆疊的問題
+    window.removeEventListener('resize', adjustBoxSize);
+
+    // 當視窗大小變化時再次調整 #aboutus-bg-box 的大小
+    window.addEventListener('resize', function () {
+        adjustBoxSize(id);
+    });
+
+
+
+
 
 
     // 更換標題
@@ -269,13 +307,8 @@ function buttonClicked(id) {
         newBg.onload = null;
         isTransitioningBg = false;  // 過渡結束
     });
-
-
-
-
-
-
     // 更新已激活的按鈕ID
     activeButton = id;
 }
+
 
