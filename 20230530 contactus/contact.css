@@ -491,22 +491,149 @@ color: transparent; } */
     height: 100%;
     background-color: rgba(0, 0, 0, 0.8); /* 半透明黑色背景 */
     z-index: 9999;
-    display: none; /* 默认隐藏 */
+    /* display: none; 隱藏 */
   }
 
   /* 消息框样式 */
   .message-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 33%;
+    height: 320px;
+    border-radius: 35px 35px 0 0;
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    background-image: url(../images/sendbox.png);
+    padding: 0 2% 2% 4.5%;
     z-index: 10000;
-    display: none; /* 默认隐藏 */
-  }
+    /* display: none; 隱藏 */
+}
+
+.contenter{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 88%;
+}
+
+.message-text {
+    color: var(--main-darkBlue);
+    margin-bottom: -3%;
+}
+
+.message-text h2::before{
+    content:'Got it!';
+    position: absolute;
+    font-family: 'Tangerine';
+    color: var(--main-blue);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 6.38rem;
+    line-height: 102px;
+    letter-spacing: -0.005em;
+    left: 9%;
+    top: 42px;
+    z-index: 9999;
+    
+}
+.message-text h2{
+    font-family: var(--second-font);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2.8rem;
+    line-height: 62px;
+    letter-spacing: 0.02em;
+    z-index: 10002;
+}
+
+.message-text p{
+    font-family: var(--main-font);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 125.49%;
+    letter-spacing: 0.02em;
+    margin-top: 1%;
+    transform: translateX(1%);
+    z-index: 10002;
+}
+
+
+
+/*勾勾SVG*/
+.checkani{
+    /* background-color: brown; */
+    margin-bottom: 7%;
+}
+
+@keyframes outline {
+    from {
+        stroke-dasharray: 0, 345.576px;
+    }
+
+    to {
+        stroke-dasharray: 345.576px, 345.576px;
+    }
+}
+
+#outline {
+    animation: 0.38s ease-in outline;
+    transform: rotate(0deg);
+    transform-origin: center;
+}
+
+@keyframes circle {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(0);
+    }
+}
+
+#white-circle {
+    animation: 0.35s ease-in 0.35s forwards circle;
+    transform: none;
+    transform-origin: center;
+}
+
+@keyframes check {
+    from {
+        stroke-dasharray: 0, 75px;
+    }
+
+    to {
+        stroke-dasharray: 75px, 75px;
+    }
+}
+
+#check {
+    animation: 0.34s cubic-bezier(0.65, 0, 1, 1) 0.8s forwards check;
+    stroke-dasharray: 0, 75px;
+}
+
+@keyframes check-group {
+    from {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.09);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+#check-group {
+    animation: 0.32s ease-in-out 1.03s check-group;
+    transform-origin: center;
+}
 
 /*按鈕區域*/
 .btnBar {

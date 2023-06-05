@@ -60,21 +60,22 @@
   }
   
   .marquee__item {
-    flex-shrink: 0; 
+    flex-shrink: 0;
+
   }
-  
+
   @keyframes scrolling {
     0% { transform: translateX(0) }
     100% { transform: translateX(calc(-100% - 65px)); }
   }
-  
+  /* 跑馬燈區域 */
   .marquee hr {
     display: inline-block;
     height: 0px;
     border: 1px solid black; 
     border-left: 50px solid black; 
     margin: 10px 6px 5px 15px;
-  }
+  } 
   
 
     /* 第二部分 */
@@ -233,24 +234,29 @@ figcaption p{
         margin-bottom: 24px;
     
       }
-      .more{
-        
+
+      /* learn more按鈕樣式 */
+      .more{        
         display: inline-block;
         text-decoration: none;
-        color: var(--main-blue);
+        color: #FFFFFF; /*文字顏色*/
         font-family: var(--main-font);
         font-weight: 400;
         font-size: 1.4rem;
         letter-spacing: 0.075em;
-        border: 2px solid var(--main-blue);
-        padding:15px 32px;
+        /* border: 2px solid var(--main-blue); */
+        padding:16px 33px; /*用padding去撐*/
+        background-color: var(--main-blue);
         transition: all 0.3s;
         position: relative;
         overflow: hidden;
         z-index: 1;
       }
 
-      .more:after {
+      /*設定hover後的按鈕變化*/
+      /*使用偽元素的邏輯*/
+
+      .more::after {
         content: "";
         position: absolute;
         bottom: 0;
@@ -259,19 +265,19 @@ figcaption p{
         height: 100%;
         z-index: -2;
       }
-      .more:before {
+      .more::before { 
         content: "";
         position: absolute;
         bottom: 0;
         left: 0;
         width: 0%;
         height: 100%;
-        background-color: var(--main-blue);
-        transition: all 0.3s;
+        background-color: var(--main-yellow);
+        transition: all 0.3s ease-in-out;
         z-index: -1;
       }
       .more:hover {
-        color: #fff;
+        color: var(--main-blue); /*文字顏色*/
       }
       .more:hover:before {
         width: 100%;
