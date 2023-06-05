@@ -14,7 +14,7 @@ footer {
 .header1 {
     position: fixed;
     top: 0px;
-    height: 10rem;
+    height: 160px;
     width: 100%;
     z-index: 100;
 }
@@ -25,7 +25,7 @@ footer {
     align-items: center;
 
     width: 100%;
-    height: 10rem;
+    height: 160px;
 }
 
 /* 選單排版 */
@@ -33,7 +33,7 @@ footer {
 .headerLogo {
     width: 20%;
     /* 左距 */
-    margin-left: 3.75rem;
+    margin-left: 60px;
     /* margin-right: 56px; */
     z-index: 1;
 }
@@ -57,14 +57,13 @@ footer {
     font-size: 1.25rem;
     /* 間距 */
     margin-left: 1.5rem;
-    top: 4.125rem;
-    right: 13rem;
+    top: 63px;
+    right: 180px;
 }
 
 .btn-contact {
     list-style: none;
     padding: 0;
-
 }
 
 .contactBtn a {
@@ -491,6 +490,7 @@ li:hover .line {
     text-align: center;
 }
 
+/* 測試容器 */
 .container {
     height: 50vh;
 }
