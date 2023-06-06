@@ -120,7 +120,7 @@ window.onload = function () {
 /* 背景模糊 */
 // 當視窗大小變化時調整 #aboutus-bg-box 的大小
 function adjustBoxSize(id) {
-    if (window.innerWidth <= 1023) {
+    if (window.innerWidth <= 1200) {
         document.querySelector('#aboutus-bg-box').style.height = contents[id].contentBoxHeight;
         document.querySelector('#aboutus-bg-box').style.width = '100%';
     } else {
@@ -149,15 +149,16 @@ function buttonClicked(id) {
     // 旋轉SVG花
     document.querySelector('#aboutus-content-flower-1').style.transform = contents[id].flowerRotation1;
     document.querySelector('#aboutus-content-flower-2').style.transform = contents[id].flowerRotation2;
-
-    if (window.innerWidth <= 1023) {
+    /* 平板的花移動 */
+    if (window.innerWidth <= 1200) {
         document.querySelector('.aboutus-content-flower-box').style.bottom = contents[id].flowerMove;
     }
 
 
 
+
     // 移動 aboutus-content 
-    if (window.innerWidth > 1023) {
+    if (window.innerWidth > 1200) {
         document.querySelector('.aboutus-content').style.marginLeft = contents[id].marginLeft;
     }
 
