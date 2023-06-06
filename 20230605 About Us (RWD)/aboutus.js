@@ -10,6 +10,7 @@ const contents = {
         content: 'Our travel agency specializes in luxury experiences for foreign travelers seeking unique, tailor-made adventures.<br><br>We offer a variety of one-day packages, allowing our clients to immerse themselves in Taiwanese culture within a limited time frame.',
         flowerRotation1: 'rotate(0deg)',
         flowerRotation2: 'rotate(0deg)',
+        flowerMove: '-100%',
         img1: '../images/Aboutus-a1.png',
         img2: '../images/Aboutus-a2.png',
         background: '../images/AboutUs-BG1.png',
@@ -23,6 +24,7 @@ const contents = {
         content: 'We prioritize exceptional accommodations, handpicking five-star hotels.<br><br>Which all with premium amenities like pools, fitness centers, and spas to ensure a comfortable and relaxing stay during your trip.',
         flowerRotation1: 'rotate(30deg)',
         flowerRotation2: 'rotate(-20deg)',
+        flowerMove: '-96%',
         img1: '../images/Aboutus-b1.png',
         img2: '../images/Aboutus-b2.png',
         background: '../images/AboutUs-BG2.png',
@@ -36,6 +38,7 @@ const contents = {
         content: 'We provide top-tier transportation using luxury brands like Rolls-Royce for airport and attraction transfers.<br><br>Our cars, combined with our professional, safe, and reliable drivers, ensure an unparalleled comfortable experience throughout your journey.',
         flowerRotation1: 'rotate(60deg)',
         flowerRotation2: 'rotate(-40deg)',
+        flowerMove: '-92%',
         img1: '../images/Aboutus-c1.png',
         img2: '../images/Aboutus-c2.png',
         background: '../images/AboutUs-BG3.png',
@@ -49,6 +52,7 @@ const contents = {
         content: 'Our multilingual and experienced tour guides expertly plan your itinerary, immersing you in authentic local culture, cuisine, and scenery.<br><br>Our tour guides are your best travel companions, making your journey unforgettable and wonderful!',
         flowerRotation1: 'rotate(90deg)',
         flowerRotation2: 'rotate(-60deg)',
+        flowerMove: '-88%',
         img1: '../images/Aboutus-d1.png',
         img2: '../images/Aboutus-d2.png',
         background: '../images/AboutUs-BG4.png',
@@ -62,6 +66,7 @@ const contents = {
         content: 'We take pride in offering exceptional 24/7 online customer service.<br><br>Our dedicated team is available around the clock to promptly address any questions or concerns, providing personalized assistance to ensure an unparalleled experience for our discerning clients.',
         flowerRotation1: 'rotate(120deg)',
         flowerRotation2: 'rotate(-80deg)',
+        flowerMove: '-84%',
         img1: '../images/Aboutus-e1.png',
         img2: '../images/Aboutus-e2.png',
         background: '../images/AboutUs-BG5.png',
@@ -75,6 +80,7 @@ const contents = {
         content: "Formolux Travel has garnered acclaim from top media outlets like BBC, CNN, and ELLE for our exceptional travel experiences.<br><br>Celebrated by industry experts, we excel in crafting personalized itineraries tailored to our clients' distinct interests and preferences.",
         flowerRotation1: 'rotate(150deg)',
         flowerRotation2: 'rotate(-100deg)',
+        flowerMove: '-80%',
         img1: '../images/Aboutus-f1.png',
         img2: '../images/Aboutus-f2.png',
         background: '../images/AboutUs-BG6.png',
@@ -139,15 +145,23 @@ function buttonClicked(id) {
     textElement.style.color = '#47BFD9';
     textElement.style.borderBottom = '2px solid #47BFD9';
 
+
     // 旋轉SVG花
     document.querySelector('#aboutus-content-flower-1').style.transform = contents[id].flowerRotation1;
     document.querySelector('#aboutus-content-flower-2').style.transform = contents[id].flowerRotation2;
+
+    if (window.innerWidth <= 1023) {
+        document.querySelector('.aboutus-content-flower-box').style.bottom = contents[id].flowerMove;
+    }
+
+
 
     // 移動 aboutus-content 
     if (window.innerWidth > 1023) {
         document.querySelector('.aboutus-content').style.marginLeft = contents[id].marginLeft;
     }
-    
+
+
 
 
     // 背景模糊

@@ -315,6 +315,7 @@ body {
     height: 40%;
 
     z-index: 99;
+    transition: all 0.6s ease-in-out;
 }
 
 #aboutus-content-flower-1 {
@@ -1224,8 +1225,9 @@ body {
 
     /* 按鈕文字 */
     .aboutus-btn-p {
+        margin-top: 1.5px;
         font-size: 0.75rem;
-        line-height: 1rem;
+        line-height: 0.9rem;
     }
 
 
@@ -1369,7 +1371,7 @@ body {
     #content-layer {
         display: flex;
         position: relative;
-        width: 100%;
+        width: 496px;
         margin-top: 0px;
     }
 
@@ -1393,7 +1395,9 @@ body {
     /* 右花區 */
     .aboutus-content-flower-box {
         display: flex;
-        position: relative;
+        position: absolute;
+        right:-20%;
+        bottom:-100%;
 
         width: 40%;
         height: 40%;
@@ -1403,14 +1407,20 @@ body {
 
     #aboutus-content-flower-1 {
         position: absolute;
-        left: 30%;
-        top: 20%;
+        right: 19%;
+        top: 10%;
+
+        width: 53px;
+        height: 53px;
     }
 
     #aboutus-content-flower-2 {
         position: absolute;
-        right: 30%;
-        bottom: 0;
+        left: 55%;
+        bottom: 25%;
+
+        width: 24px;
+        height: 24px;
     }
 
     /* 花共用 */
@@ -1474,6 +1484,8 @@ body {
         background-position: center;
         border-radius: 0px 25px 0px 0px;
     }
+
+
 
 
     /* 區段三 */
