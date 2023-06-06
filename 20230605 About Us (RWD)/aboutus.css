@@ -283,9 +283,11 @@ body {
 /* 內文 */
 #content-layer {
     display: flex;
+    justify-content: center;
     position: relative;
     width: 100%;
     margin-top: 2%;
+
 }
 
 
@@ -961,8 +963,8 @@ body {
     }
 }
 
-/* RWD 1024-1500 font*0.9? */
-@media (min-width: 1024px) and (max-width: 1500px) {
+/* RWD 1201-1500 font*0.9? */
+@media (min-width: 1201px) and (max-width: 1500px) {
 
     /* 大標區 */
     .aboutus-title-box {
@@ -1173,8 +1175,8 @@ body {
     }
 }
 
-/* RWD 767-1023 font-1024*0.63636 */
-@media (min-width: 767px) and (max-width: 1023px) {
+/* RWD 767-1200 font-1024*0.63636 */
+@media (min-width: 767px) and (max-width: 1200px) {
 
     /* 區段一 */
 
@@ -1334,6 +1336,7 @@ body {
         transition: all 0.5s ease-in-out;
 
         display: flex;
+        align-items: center;
         flex-direction: column;
 
         margin-top: 35px;
