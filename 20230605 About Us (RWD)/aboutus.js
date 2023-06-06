@@ -144,27 +144,20 @@ function buttonClicked(id) {
     document.querySelector('#aboutus-content-flower-2').style.transform = contents[id].flowerRotation2;
 
     // 移動 aboutus-content 
-    document.querySelector('.aboutus-content').style.marginLeft = contents[id].marginLeft;
-
-
-
-
+    if (window.innerWidth > 1023) {
+        document.querySelector('.aboutus-content').style.marginLeft = contents[id].marginLeft;
+    }
+    
 
 
     // 背景模糊
     adjustBoxSize(id);
-
     // 移除舊的事件處理器以避免事件處理器堆疊的問題
     window.removeEventListener('resize', adjustBoxSize);
-
     // 當視窗大小變化時再次調整 #aboutus-bg-box 的大小
     window.addEventListener('resize', function () {
         adjustBoxSize(id);
     });
-
-
-
-
 
 
     // 更換標題
