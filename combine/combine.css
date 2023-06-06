@@ -176,6 +176,42 @@ footer {
     transform: rotate(225deg);
 }
 
+/*小筆電: hamburger點選按鈕樣式*/
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+    .menu-wrap .toggler {
+        position: absolute;
+        margin: 0;
+        padding: 0;
+
+        width: 56.25px;
+        height: 56.25px;
+
+        top: 6.5px;
+        right: -10px;
+    }
+
+    .menu-wrap .hamburger {
+
+        margin: 0;
+        padding: 0;
+        /*hamburger方框比例*/
+        position: absolute;
+        width: 56.25px;
+        height: 56.25px;
+        top: 6.5px;
+        right: -10px;
+    }
+
+    /* Hamburger Line */
+    .menu-wrap .hamburger>div {
+        position: relative;
+        width: 60%; /*三條線在圓圈中的比例*/
+        height: 2px;
+    }
+    }
+
+
 /* Show Menu 整個選單 */
 .menu-wrap .toggler:checked~.menu {
     visibility: visible;
@@ -212,10 +248,11 @@ footer {
     right: 62px;
     color: #fff;
     font-family: Arial;
-    font-size: 19.5px;
+    font-size: 1.2rem;
     letter-spacing: 0.225em;
     text-transform: uppercase;
 }
+
 
 /*Logo字樣*/
 .menu-wrap .menu>div>div .menu_logo {
@@ -225,25 +262,49 @@ footer {
     transform: translateX(-50%);
     font-family: 'DM Serif Display';
     font-style: normal;
-    font-size: 36px;
+    font-size: 2.25rem;
     letter-spacing: 0.13em;
     color: #000537;
 }
 
+/*小筆電: 下拉menu選單上半部樣式*/
 
-/*社群平台按鈕*/
+@media (min-width: 1025px) and (max-width: 1440px) {
+
+    /*Close字樣*/
+    .menu-wrap .menu>div>div .close {
+        position: fixed;
+        top: 100px;
+        right: 40px;
+        font-size: 0.9rem;
+        letter-spacing: 0.2em;
+    }
+
+    /*Logo字樣*/
+    .menu-wrap .menu>div>div .menu_logo {
+        position: fixed;
+        top: 50px;
+        left: 210px;
+        font-size: 1.8rem;
+        letter-spacing: 0.13em;
+    }
+    }
+
+/*社群平台按鈕們*/
+
+.menu-wrap .menu>div>div>nav {
+    position: absolute;
+    right: 62px;
+    bottom: 106px;
+}
+
 ol,
 ul {
     list-style: none;
     /*去掉點點*/
 }
 
-.menu-wrap .menu>div>div>nav {
-    position: absolute;
-    right: 62px;
-    bottom: 106px;
 
-}
 
 .icon a {
     display: block;
@@ -560,39 +621,7 @@ li:hover .line {
         padding-bottom: 4px;
     }
 
-    .menu-wrap .toggler {
-        position: absolute;
-        margin: 0;
-        padding: 0;
 
-        z-index: 2;
-        cursor: pointer;
-        opacity: 0;
-
-        width: 56.25px;
-        height: 56.25px;
-
-        top: 6.5px;
-        right: -10px;
-
-    }
-
-    .menu-wrap .hamburger {
-        border-radius: 100%;
-        border: 2px solid white;
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        /*hamburger方框比例*/
-        position: absolute;
-
-        z-index: 1;
-
-        width: 56.25px;
-        height: 56.25px;
-        top: 6.5px;
-        right: -10px;
-    }
 
 }
 

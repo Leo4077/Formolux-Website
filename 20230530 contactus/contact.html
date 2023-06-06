@@ -109,58 +109,58 @@
                 <div class="form-container">
                     <div class="form-field">
                         <!-- 用placeholder空值代替required -->
-                        <select class="floating-select" onclick="this.setAttribute('value',this.value);" value="" name="style"
+                        <select class="floating-select" onclick="this.setAttribute('value',this.value);" value="" name="style" title="please select travel style"
                             id="style" placeholder=" " style="width:100%; margin-top: 18px;">
                             <option value=""></option>
-                            <option value="1">Honey Moon</option>
-                            <option value="2">Solo Travel</option>
-                            <option value="3">Family Trip</option>
-                            <option value="4">Besties trip</option>
-                            <option value="5">Others</option>
+                            <option value="Honey Moon">Honey Moon</option>
+                            <option value="Solo Travel">Solo Travel</option>
+                            <option value="Family Trip">Family Trip</option>
+                            <option value="Besties trip">Besties trip</option>
+                            <option value="Others">Others</option>
                         </select>
                         <label for="style">Travel Style</label>
                     </div>
         
                     <div class="form-field">
-                        <input class="floating-input" type="text" name="people-number" id="people-number" placeholder=" ">
+                        <input class="floating-input" type="text" name="people-number" title="please fill in your phone number" id="people-number" placeholder=" ">
                         <label for="people-number">Number of Travelers</label>
                     </div>
         
                     <div class="form-field">
-                        <input class="floating-input" type="text" onclick="(this.type='date')" name="arrival-date"
+                        <input class="floating-input" type="text" onclick="(this.type='date')" name="arrival-date" title="please choose your arrival date"
                             id="arrival-date" placeholder=" ">
                         <label for="arrival-date">Arrival Date</label>
                     </div>
         
                     <div class="form-field">
-                        <input class="floating-input" type="text" onclick="(this.type='date')" name="departure-date"
+                        <input class="floating-input" type="text" onclick="(this.type='date')" name="departure-date" title="please choose your departure date"
                             id="departure-date" placeholder=" ">
                         <label for="departure-date">Departure Date</label>
                     </div>
                 
                     <div class="form-field">
-                        <input class="floating-label" type="text" name="firstname" id="firstname" required>
+                        <input class="floating-label" type="text" name="firstname" id="firstname" title="please fill in your first name" required>
                         <label for="firstname">&#10038; &nbsp; First Name</label>
                     </div>
         
                     <div class="form-field">
-                        <input class="floating-label" type="text" name="lastname" id="lastname" required>
+                        <input class="floating-label" type="text" name="lastname" id="lastname" title="please fill in your last name" required>
                         <label for="lastname">&#10038; &nbsp; Last Name</label>
                     </div>
         
         
                     <div class="form-field">
-                        <input class="floating-label" type="text" name="email" id="email" required>
+                        <input class="floating-label" type="text" name="email" id="email" title="please fill in your email" required>
                         <label for="email">&#10038; &nbsp; Your E-Mail</label>
                     </div>
         
                     <div class="form-field">
-                        <input class="floating-input" type="text" id="country" placeholder=" "></input>
+                        <input class="floating-input" type="text" id="country" placeholder=" " title="please fill in your country"></input>
                         <label for="country">Your Country</label>
                     </div>
 
                     <div class="form-field msgbox">
-                        <textarea class="floating-input floating-textarea" name="message" id="message" placeholder="If you have any question, please don't hesitate to let us know. Thanks!"
+                        <textarea class="floating-input floating-textarea" name="message" title="please fill in your Special Requests" id="message" placeholder="If you have any question, please don't hesitate to let us know. Thanks!"
                         ></textarea>
                         <label for="message" id="msglabel">Notes / Special Requests</label>
                     </div> 
@@ -175,6 +175,7 @@
                 </div>
             </form>
         </div>
+        <!-- 用戶按下送出按鈕的頁面 -->
         <div class="overlay"></div>
         <div class="message-box">
             <!-- 內文容器 -->

@@ -137,35 +137,44 @@ svgElement33.addEventListener('mouseout', function () {
 
 
 document.addEventListener('DOMContentLoaded', function() {
-    // 获取表单和相关元素
+    // 獲取表單和相關元素
     var form = document.querySelector('form');
     var submitBtn = document.getElementById('taiwan-travelbtn');
     var overlay = document.querySelector('.overlay');
     var messageBox = document.querySelector('.message-box');
-    
 
-    // 当表单提交时触发事件处理程序
+    // 當表單提交時觸發事件處理程序
     form.addEventListener('submit', function(event) {
-      event.preventDefault(); // 阻止表单默认提交行为
+        event.preventDefault(); // 阻止表單默認提交行為
 
-       // 显示遮罩层和消息框
-       overlay.style.display = 'block';
-       messageBox.style.display = 'block';
+        // 顯示遮罩層和訊息框
+        overlay.style.display = 'block';
+        messageBox.style.display = 'block';
 
-      // 显示填写成功弹出窗口
-      messageBox.style.display = 'flex';
+        // 顯示填寫成功彈出視窗
+        messageBox.style.display = 'flex';
 
-      // 模拟提交过程
-      setTimeout(function() {
-        
-        //隱藏遮罩層和消息框
+        // 添加點擊事件處理程序，用於關閉訊息框和遮罩層
+        document.addEventListener('click', closeMessageBox);
+
+        // 模擬提交過程
+        setTimeout(function() {
+            closeMessageBox();
+            // 重置表單
+            form.reset();
+        }, 15000);
+    });
+
+    // 關閉訊息框和遮罩層的函數
+    function closeMessageBox() {
+        // 隱藏遮罩層和訊息框
         overlay.style.display = 'none';
         messageBox.style.display = 'none';
-        // 重置表单
-        form.reset();
-      }, 15000); // 2秒后隐藏消息框并重置表单（可根据需要调整延时时间）
-    });
-  });
+
+        // 移除點擊事件處理程序
+        document.removeEventListener('click', closeMessageBox);
+    }
+});
 
 
 

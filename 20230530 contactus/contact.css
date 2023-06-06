@@ -128,6 +128,7 @@
 }
 
 
+
 /*文字輸入框*/
 .form-field select,
 .form-field input,
@@ -141,10 +142,6 @@
     outline:none;
     font-family: var(--main-font);
 }
-
-
-
-
 
 input, textarea, select{
     font-family: var(--main-font);
@@ -482,7 +479,7 @@ color: transparent; } */
 
 /* 用戶提交表單後出現的畫面 */
 
- /* 遮罩层样式 */
+ /* 遮罩層樣式 */
  .overlay {
     position: fixed;
     top: 0;
@@ -491,10 +488,10 @@ color: transparent; } */
     height: 100%;
     background-color: rgba(0, 0, 0, 0.8); /* 半透明黑色背景 */
     z-index: 9999;
-    /* display: none; 隱藏 */
+    display: none; /* 隱藏 */
   }
 
-  /* 消息框样式 */
+  /* 彈出框樣式 */
   .message-box {
     display: flex;
     justify-content: center;
@@ -509,7 +506,7 @@ color: transparent; } */
     background-image: url(../images/sendbox.png);
     padding: 0 2% 2% 4.5%;
     z-index: 10000;
-    /* display: none; 隱藏 */
+    display: none; /* 隱藏 */
 }
 
 .contenter{
@@ -535,7 +532,7 @@ color: transparent; } */
     line-height: 102px;
     letter-spacing: -0.005em;
     left: 9%;
-    top: 42px;
+    top: 39px;
     z-index: 9999;
     
 }
