@@ -146,13 +146,28 @@ function buttonClicked(id) {
     textElement.style.borderBottom = '2px solid #47BFD9';
 
 
-    // 旋轉SVG花
-    document.querySelector('#aboutus-content-flower-1').style.transform = contents[id].flowerRotation1;
-    document.querySelector('#aboutus-content-flower-2').style.transform = contents[id].flowerRotation2;
-    /* 平板的花移動 */
-    if (window.innerWidth <= 1200) {
-        document.querySelector('.aboutus-content-flower-box').style.bottom = contents[id].flowerMove;
+    function adjustFlowerPosition() {
+        // 旋轉SVG花
+        document.querySelector('#aboutus-content-flower-1').style.transform = contents[id].flowerRotation1;
+        document.querySelector('#aboutus-content-flower-2').style.transform = contents[id].flowerRotation2;
+        // 平板的花移動
+        if (window.innerWidth <= 1200) {
+            document.querySelector('.aboutus-content-flower-box').style.bottom = contents[id].flowerMove;
+            document.querySelector('.aboutus-content-flower-box').style.right = "-20%";
+            document.querySelector('.aboutus-content-flower-box').style.position = "absolute";
+        } else {
+            // 將花的位置設定回初始位置
+            document.querySelector('.aboutus-content-flower-box').style.bottom = 'auto';
+            document.querySelector('.aboutus-content-flower-box').style.right = 'auto';
+            document.querySelector('.aboutus-content-flower-box').style.position = "relative";
+        }
     }
+    
+
+    // 移除舊的事件處理器以避免事件處理器堆疊的問題
+    window.removeEventListener('resize', adjustFlowerPosition);
+    // 當視窗大小變化時再次調整花的位置
+    window.addEventListener('resize', adjustFlowerPosition);
 
 
 
