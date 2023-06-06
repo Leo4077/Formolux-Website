@@ -964,7 +964,7 @@ body {
 }
 
 /* RWD 1201-1500 font*0.9? */
-@media (min-width: 1201px) and (max-width: 1500px) {
+@media (min-width: 1201px) and (max-width: 1500.98px) {
 
     /* 大標區 */
     .aboutus-title-box {
@@ -1176,7 +1176,7 @@ body {
 }
 
 /* RWD 767-1200 font-1024*0.63636 */
-@media (min-width: 767px) and (max-width: 1200px) {
+@media (min-width: 767px) and (max-width: 1200.98px) {
 
     /* 區段一 */
 
@@ -1703,3 +1703,5 @@ body {
         }
     }
 }
+
+/* RWD 手機版 待coding */
