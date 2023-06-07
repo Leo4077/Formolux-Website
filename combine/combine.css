@@ -138,7 +138,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: all 0.4s ease;
+    transition: all 0.4s ease-in-out;
 }
 
 
@@ -304,13 +304,18 @@ footer {
 .menu-wrap .menu>div>div .menu_logo {
     position: fixed;
     top: 55px;
-    left: 250px;
-    transform: translateX(-50%);
+    left: 60px;
+    /* transform: translateX(-50%); */
+    /* background-color: aqua; */
+}
+
+.menu_logo h1{
     font-family: 'DM Serif Display';
     font-style: normal;
     font-size: 2.25rem;
     letter-spacing: 0.13em;
     color: #000537;
+
 }
 
 /*小筆電: 下拉menu選單上半部樣式*/
@@ -327,13 +332,19 @@ footer {
     }
 
     /*Logo字樣*/
-    .menu-wrap .menu>div>div .menu_logo {
+    /* .menu-wrap .menu>div>div .menu_logo { 
         position: fixed;
         top: 50px;
-        left: 210px;
+        left: 50px;
+        
+    } */
+
+    .menu-wrap .menu>div>div .menu_logo h1{
         font-size: 1.8rem;
         letter-spacing: 0.13em;
+
     }
+
 }
 
 /*平板: 下拉menu選單上半部樣式*/
@@ -346,15 +357,19 @@ footer {
         /*隱藏*/
     }
 
+    .menu-wrap .menu>div>div .menu_logo { 
+    transform: translateY(50%);
+         
+    }
+
 
     /*Logo字樣*/
-    .menu-wrap .menu>div>div .menu_logo {
-        position: fixed;
-        top: 36px;
-        left: 160px;
+    /* .menu_logo h1{
+        
         font-size: 1.25rem;
+        line-height: 1.68rem;
         letter-spacing: 0.13em;
-    }
+    } */ 
 }
 
 
@@ -364,11 +379,11 @@ footer {
     position: fixed;
     width: 4.3%;
     height: auto;
-    right: 62px;
-    bottom: 9%;
+    right: 40px;
+    bottom:10vh;
 }
 
-.icon img{
+.icon svg{
     width: 100%;
     height: 100%;
 }
@@ -444,54 +459,7 @@ footer {
     transition: background-image 0.7s ease;
 }
 
-/*平板: 四個框框按鈕區域(變平行)*/
 
-@media (min-width: 768px) and (max-width:1024px) {
-    /*整個主選單*/
-    .menu{
-        max-height: 855px;
-        border-radius: 0px 0px 25px 25px;
-        filter: drop-shadow(0px 9px 17px rgba(0, 0, 0, 0.25));
-
-    }
-    
-    /*改變背景圖片*/
-    .menu>div {
-        background-image: url(../images/ipad-ham-BG.png);
-    }
-
-    .menu-wrap .menu>div>div{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .menu-wrap .menu>div>div>ul{
-        /* background-color: aqua; */
-        flex-direction: column;
-        padding: 0;
-        
-    }
-
-    .menu-wrap .menu>div>div>ul>li {
-
-        box-sizing: border-box;
-        width: 592px;
-        max-height: 110px;
-
-        padding: 0;
-        margin-bottom: 30px ;
-        
-        background-color: rgba(255, 255, 255, 0.1);
-        text-align: center;
-        justify-content: center;
-
-
-    }
-
-
-
-}
 
 .hambtn {
     width: 100%;
@@ -517,12 +485,23 @@ footer {
     padding: 0 10px 0px 10px;
 }
 
+/*平板about us 隱藏*/
+.ipad_usbtn{
+    display: none;
+}
+
 /*小筆電: 按鈕們的大小變化*/
 @media (min-width: 1025px) and (max-width: 1440px) {
     /*右邊3個icon按鈕*/
     .iconboxer{
+        
         right: 40px;
-        bottom: 9%;
+        bottom:13vh;
+    }
+
+    .icon svg{
+        min-width: 60px;
+        height: auto;
     }
     /*四個框框按鈕的大小改變*/
     .menu-wrap .menu>div>div>ul>li {
@@ -600,6 +579,12 @@ li:hover .line {
 
 }
 
+/*隱藏在平板中顯示的line和arrow*/
+
+.ipadline, .ipadarrow{
+    display: none;
+}
+
 /*玻璃擬態*/
 .menu-wrap .menu>div>div>ul>li:hover {
     background-image: linear-gradient(to bottom, #47BFD9 8.15%, rgba(255, 252, 235, 0.02) 86.87%);
@@ -627,6 +612,158 @@ li:hover .line {
 /* 懸停 contactUs 時改變背景圖片 */
 #contactUs:hover~.menu>div {
     background-image: url(../images/BG-4.jpg);
+
+}
+
+/*平板: 四個框框按鈕區域(變平行)*/
+
+@media (min-width: 768px) and (max-width:1024px) {
+
+    /*整個主選單*/
+    .menu {
+        width: 100%;
+        max-height: 855px;
+        border-radius: 0px 0px 25px 25px;
+        filter: drop-shadow(0px 9px 17px rgba(0, 0, 0, 0.25));
+        background-image: url(../images/ipad-ham-BG\ \(2\).png);
+        animation: moveUp 2s 1s both ease-in-out;
+
+    }
+
+    
+
+    @keyframes moveUp {
+        0% { background-position: 0 -70px; }
+        100% { background-position: 0 -180px; }
+      }
+
+    /*改變背景圖片*/
+    .menu>div {
+        width: 100%;
+        max-height: 855px;
+        background-image: none;
+
+    }
+
+
+    /*  四個框框垂直排列*/
+    .menu-wrap .menu>div>div {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu-wrap .menu>div>div>ul {
+       
+        width:77%;
+        max-height: 588px;
+        /* background-color: bisque; */
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 0;
+        transform: translateY(-5%); /*整個框框往上移一點*/
+    }
+
+    .menu-wrap .menu>div>div>ul>li {
+
+        display: block;
+        
+        width: 100%;
+        height: 110px;
+
+        padding: 0;
+        margin: 15px 0 15px 0;
+
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%);
+        border: 1.2px solid #FFFFFF;
+
+        /* flex-direction: row;
+        text-align: center;
+        justify-content: center; */
+    }
+
+    .menu-wrap .menu>div>div>ul>li>a{
+        height: 110px;
+    }
+
+    .textboxx{
+        width: 73%;
+        /* background-color: #47BFD9; */
+    }
+
+    .textboxx h2{
+        font-size:1.75rem;
+
+    }
+
+    .usbtn{
+        display: none;
+    }
+
+    .ipad_usbtn{
+        display: block;
+    }
+
+    .line{
+        display: none;
+    }
+
+    /*隱藏hover出現的箭頭*/
+    li:hover .arrow {
+        display: none;
+    }
+
+    .ipadline{
+        display: block;
+    }
+
+    /* 懸停 travelStyle 時改變背景圖片 */
+    #travelStyle:active~.menu>div {
+        background-image: url(../images/ipad_travel_BG.png);
+    }
+
+    /* 懸停 aboutTaiwan 時改變背景圖片 */
+    #aboutTaiwan:active~.menu>div {
+        background-image: url(../images/ipad_contact_BG.png);
+    }
+
+    /* 懸停 aboutUs 時改變背景圖片 */
+    #aboutUs:active~.menu>div {
+        background-image: url(../images/ipad_us_BG.png);
+    }
+
+    /* 懸停 contactUs 時改變背景圖片 */
+    #contactUs:active~.menu>div {
+        background-image: url(../images/ipad_contact_BG.png);
+    }
+
+    .icon{
+    /* background-color: #47BFD9; */
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    width: 36%;
+    max-height: 66px;
+    right: 11.4%;
+    bottom: 75px;
+}
+
+.icon svg{
+    width: 100%;
+    height: 100%;
+}
+
+/*更改svg邊線粗度*/
+.icon svg circle{
+    stroke-width: 1.76px;
+}
+.icon a {
+    display: block;
+    margin-bottom:40%;
+}
+
 
 }
 

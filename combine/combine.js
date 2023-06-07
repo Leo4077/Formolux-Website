@@ -1,3 +1,5 @@
+
+
 document.addEventListener("DOMContentLoaded", function () {
     // 獲取要懸停的元素
     var travelStyle = document.getElementById("travelStyle");
@@ -36,6 +38,23 @@ document.addEventListener("DOMContentLoaded", function () {
 
     });
 
+    // 平板懸停事件監聽器
+    travelStyle.addEventListener("touchstart", function () {
+        menuDiv.style.backgroundImage = "url('../images/ipad_travel_BG.png')";
+    });
+
+    aboutTaiwan.addEventListener("touchstart", function () {
+        menuDiv.style.backgroundImage = "url('../images/ipad_contact_BG.png')";
+    });
+
+    aboutUs.addEventListener("touchstart", function () {
+        menuDiv.style.backgroundImage = "url('../images/ipad_us_BG.png')";
+    });
+
+    contactUs.addEventListener("touchstart", function () {
+        menuDiv.style.backgroundImage = "url('../images/ipad_contact_BG.png')";
+    });
+
     // 在懸停其他部分時恢復原始背景圖片
     travelStyle.addEventListener("mouseleave", function () {
         menuDiv.style.backgroundImage = "url('../images/Hamburger_bg.jpg')";
@@ -63,3 +82,23 @@ document.addEventListener("DOMContentLoaded", function () {
 
     });
 });
+
+/*還是沒有辦法有觸發*/ 
+
+function triggerAnimation() {
+    var menu = document.querySelector(".menu");
+    menu.classList.add("move-up"); // Add the "move-up" class to trigger the animation
+  }
+  
+  // Trigger animation on menu open
+  var toggler = document.querySelector(".toggler");
+  toggler.addEventListener("change", function () {
+    if (toggler.checked) {
+      triggerAnimation();
+    }
+    
+  });
+  
+  
+  
+
