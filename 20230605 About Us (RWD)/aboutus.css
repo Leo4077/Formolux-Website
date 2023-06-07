@@ -251,7 +251,7 @@ body {
     flex-direction: column;
 
     margin-top: 5%;
-    margin-bottom: 10%;
+    margin-bottom: 5%;
 
     margin-left: 0px;
 }
@@ -286,8 +286,7 @@ body {
     justify-content: center;
     position: relative;
     width: 100%;
-    margin-top: 2%;
-
+    margin-top: 30px;
 }
 
 
@@ -844,7 +843,7 @@ body {
 
     /* 內文 */
     #content-layer {
-        margin-top: 2%;
+        margin-top: 25px;
     }
 
     /* 內文 */
@@ -968,7 +967,7 @@ body {
 
     /* 大標區 */
     .aboutus-title-box {
-        margin-top: 60px;
+        margin-top: 25px;
         margin-bottom: 20px;
     }
 
@@ -984,11 +983,18 @@ body {
         height: 59.71px;
     }
 
+    /* 按鈕區大 */
+.aboutus-btn-box {
+    margin-bottom: 30px;
+}
+
     .aboutus-btn-wrapper {
         width: 1100px;
         height: 59.71px;
         padding-right: 31.82px;
     }
+
+    
 
     /* 按鈕高度 */
     .aboutus-btn {
@@ -1054,7 +1060,8 @@ body {
 
     /* 內文 */
     #content-layer {
-        margin-top: 2%;
+        width: 105%;
+        margin-top: 20px;
     }
 
     /* 內文 */
@@ -1331,7 +1338,7 @@ body {
 
     /* 左文字區(下文字) */
     .aboutus-content {
-        width: 90%;
+        width: 70%;
 
         transition: all 0.5s ease-in-out;
 
@@ -1399,7 +1406,7 @@ body {
     .aboutus-content-flower-box {
         display: flex;
         position: absolute;
-        right:-20%;
+        right: -23%;
         bottom:-100%;
 
         width: 40%;
