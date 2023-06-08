@@ -3,13 +3,13 @@ body {
     overflow-x: hidden;
 }
 
-/* 主要內容 */
+/* > 主要內容 */
 #homepage-content {
     display: flex;
     flex-direction: column;
 }
 
-/* 區段一 */
+/* > 區段一 */
 #homepage-topsection {
     display: flex;
     flex-direction: column;
@@ -23,7 +23,7 @@ body {
     z-index: 19;
 }
 
-/* 排序盒子Z20 */
+/* > 排序盒子Z20 */
 .desktop-box {
     display: flex;
     justify-content: center;
@@ -40,18 +40,18 @@ body {
 
 #homepage-bigimage-desktop {
     height: 70%;
-    /* 圖片填滿背景 */
+    /* - 圖片填滿背景 */
     object-fit: cover;
-    /* 縮放圖片依然置中 */
+    /* - 縮放圖片依然置中 */
     background-position: center;
-    /* 推右側寬度使置中 */
-    padding-right: 7%;
+    /* - 推右側寬度使置中 */
+    padding-right: 8%;
     margin-top: 12vh;
 
     opacity: 1;
 }
 
-/* 排序盒子Z15 */
+/* > 排序盒子Z15 */
 .phone-box {
     display: flex;
     position: absolute;
@@ -68,20 +68,20 @@ body {
 
 
 
-/* 圖片區容器 */
+/* > 圖片區容器 */
 .homepage-introbox {
     display: flex;
-    /* 水平置中 */
+    /* - 水平置中 */
     justify-content: center;
 
     width: 100%;
     margin-top: 58vh;
 
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 50px;
+    padding-right: 50px;
 }
 
-/* 三張圖 */
+/* > 三張圖 */
 .homepage-introimage {
     display: flex;
     position: relative;
@@ -89,7 +89,7 @@ body {
 
 
     height: 100vh;
-    /* 橫向間距 */
+    /* - 橫向間距 */
     margin-left: 30px;
     margin-right: 30px;
 
@@ -97,11 +97,11 @@ body {
 }
 
 #homepage-introimage2 {
-    /* 高度差 */
+    /* - 高度差 */
     margin-top: 16.66vh;
 }
 
-/* 圖片區文字內容 */
+/* > 圖片區文字內容 */
 .homepage-introimage-content {
     display: flex;
     position: absolute;
@@ -114,30 +114,30 @@ body {
     z-index: 20;
     flex-direction: column;
     align-items: center;
-    /* padding-right: 0.5rem; */
+    /* - padding-right: 0.5rem; */
 
-    /* 背景漸層嵌入 */
+    /* - 背景漸層嵌入 */
     background-image: url(../images/introimage-bg.png);
     background-repeat: no-repeat;
-    /* background-attachment: fixed; */
+    /* - background-attachment: fixed; */
     background-position: center;
     background-size: cover;
 
-    /* 初始樣式 */
+    /* - 初始樣式 */
     opacity: 0.5;
     transform: translateY(100vh);
 }
 
-/* 關鍵幀動畫 */
+/* > 關鍵幀動畫 */
 .showIntrocontent {
     animation: showIntrocontent 1.5s forwards;
-    /* 動畫的速度變化 */
+    /* - 動畫的速度變化 */
     animation-timing-function: ease-out;
 }
 
 .hideIntrocontent {
     animation: hideIntrocontent 1.5s forwards;
-    /* 動畫的速度變化 */
+    /* - 動畫的速度變化 */
     animation-timing-function: ease-out;
 }
 
@@ -166,7 +166,7 @@ body {
 }
 
 
-/* 標題 */
+/* > 標題 */
 .homepage-introimage-content1 {
     display: flex;
     align-items: center;
@@ -182,14 +182,14 @@ body {
     letter-spacing: 0.02em;
     color: white;
 
-    /* 底線 */
+    /* - 底線 */
     border-bottom: 1px solid white;
     padding-bottom: 20px;
 
     margin-bottom: 11.2px;
 }
 
-/* 內文 */
+/* > 內文 */
 .homepage-introimage-content2 {
     display: flex;
 
@@ -206,10 +206,10 @@ body {
     margin-top: 9.6px;
 }
 
-/* 區段二 */
+/* > 區段二 */
 .homepage-bottomsection {
     display: flex;
-    /* 水平置中 */
+    /* - 水平置中 */
     align-items: center;
     flex-direction: column;
 
@@ -220,10 +220,10 @@ body {
     background-color: #000537;
 }
 
-/* 標語 */
+/* > 標語 */
 .homepage-slogan {
     display: flex;
-    /* 水平置中 */
+    /* - 水平置中 */
     justify-content: center;
     align-items: center;
 
@@ -232,12 +232,12 @@ body {
     background-color: #000537;
 
     height: 185px;
-    /* 底部間距 */
+    /* - 底部間距 */
     margin-bottom: 32px;
     margin-top: 0px;
 }
 
-/* 左標語 */
+/* > 左標語 */
 #homepage-slogan-element-1 {
     padding-left: 2vh;
     padding-right: 2vh;
@@ -247,7 +247,7 @@ body {
     letter-spacing: 0.08em;
 }
 
-/* 中標語 */
+/* > 中標語 */
 .homepage-typing,
 #head,
 #sub {
@@ -260,7 +260,7 @@ body {
 #head,
 #sub {
     font-family: Tangerine;
-    /* 使用Arial字體，如果無法顯示則使用系統的無襯線字體 */
+    /* - 使用Arial字體，如果無法顯示則使用系統的無襯線字體 */
     font-size: 11.5rem;
     color: #47BFD9;
     font-style: normal;
@@ -273,7 +273,7 @@ body {
 
 .cursor.blink {
     visibility: visible;
-    /* 光標閃爍速度 */
+    /* - 光標閃爍速度 */
     animation: blink 0.5s infinite;
 }
 
@@ -289,7 +289,7 @@ body {
     }
 }
 
-/* 右標語 */
+/* > 右標語 */
 #homepage-slogan-element-3 {
     padding-left: 2vh;
     padding-right: 2vh;
@@ -299,7 +299,7 @@ body {
     letter-spacing: 0.08em;
 }
 
-/* 左右滑圖片區 */
+/* > 左右滑圖片區 */
 
 :root {
     --slider-width: 400px;
@@ -359,7 +359,7 @@ body {
     justify-content: center;
     transition: all 1s;
     position: relative;
-    /*     background: #FFCF47; */
+    /* -     background: #FFCF47; */
     border-radius: 2px;
 }
 
@@ -367,13 +367,13 @@ body {
 
 .control {
     position: absolute;
-    /*     top: 50%; */
+    /* -     top: 50%; */
     width: 50px;
     height: 50px;
     background: rgba(255, 255, 255, .2);
     border: 2px solid white;
     border-radius: 50px;
-    /*     margin-top: -20px; */
+    /* -    margin-top: -20px; */
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
     z-index: 2;
 }
@@ -413,7 +413,7 @@ body {
     justify-content: center;
     align-items: baseline;
     width: 20px;
-    /* 指示器高度 */
+    /* - 指示器高度 */
     height: 3px;
     background: rgb(174, 174, 174);
 }
@@ -465,7 +465,7 @@ body {
     justify-content: center;
     transition: all 1s;
     position: relative;
-    /*     background: #FFCF47; */
+    /* -     background: #FFCF47; */
     border-radius: 2px;
 }
 
@@ -480,7 +480,7 @@ body {
     background: rgba(255, 255, 255, .2);
     border: 2px solid white;
     border-radius: 50px;
-    /*     margin-top: -1.5rem; */
+
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
     z-index: 2;
 }
@@ -499,14 +499,14 @@ body {
     height: 100%;
 }
 
-/* 左按鈕 */
+/* > 左按鈕 */
 .prev {
     position: absolute;
     background-image: url(../images/arrow-left.png);
     left: 5rem;
 }
 
-/* 右按鈕 */
+/* > 右按鈕 */
 .next {
     position: absolute;
     background-image: url(../images/arrow-right.png);
@@ -518,7 +518,7 @@ body {
     transform: scale(.8);
 }
 
-/* 指示器 */
+/* > 指示器 */
 .dots {
     position: relative;
     margin-top: 16rem;
@@ -529,7 +529,7 @@ body {
     justify-content: center;
     align-items: baseline;
     width: 16px;
-    /* 指示器高度 */
+    /* - 指示器高度 */
     height: 0rem;
     background: rgb(174, 174, 174);
 }
@@ -539,7 +539,7 @@ body {
 }
 
 
-/* 評論區 */
+/* > 評論區 */
 .homepage-comment-box {
     display: flex;
     flex-direction: row;
@@ -551,14 +551,14 @@ body {
     margin-bottom: 6rem;
 }
 
-/* 評論標題區 */
+/* > 評論標題區 */
 #homepage-comment-titlebox {
     position: relative;
     display: flex;
     padding-right: 3rem;
 }
 
-/* 逗號 */
+/* > 逗號 */
 #homepage-comment-icon {
     position: absolute;
     top: -1.5rem;
@@ -566,7 +566,7 @@ body {
     z-index: 10;
 }
 
-/* 文字 */
+/* > 文字 */
 #homepage-comment-word {
     border: 2px solid #47BFD9;
     padding-top: 1.5rem;
@@ -576,7 +576,7 @@ body {
     height: 10rem;
 }
 
-/* 標題 */
+/* > 標題 */
 #homepage-comment-title {
     color: white;
     font-family: DM Serif Display;
@@ -588,7 +588,7 @@ body {
     text-align: center;
 }
 
-/* 副標題 */
+/* > 副標題 */
 #homepage-comment-subtitle {
     color: white;
     font-family: DM Serif Display;
@@ -600,20 +600,20 @@ body {
     text-align: center;
 }
 
-/* 評論內容區 */
+/* > 評論內容區 */
 .homepage-comment-contentbox {
     display: flex;
     flex-direction: column;
     width: 300px;
-    /* 每一則的間距 */
+    /* - 每一則的間距 */
     margin-left: 4.5rem;
     margin-right: 0rem;
     margin-top: 0.7rem;
     margin-bottom: 0.8rem;
-    /*     border: 1px solid white; */
+
 }
 
-/* 評論內容上區 */
+/* > 評論內容上區 */
 .homepage-comment-upbox {
     display: flex;
     justify-content: space-between;
@@ -622,14 +622,14 @@ body {
     padding-bottom: 0.6rem;
 }
 
-/* 分數星星 */
+/* > 分數星星 */
 #homepage-comment-contentbox0 {
     display: flex;
     flex-direction: row;
     align-items: baseline;
 }
 
-/* 分數 */
+/* > 分數 */
 #homepage-comment-contentbox1 {
     display: flex;
     flex-direction: row;
@@ -644,7 +644,7 @@ body {
     padding-right: 0.5rem;
 }
 
-/* 人物 */
+/* > 人物 */
 #homepage-comment-contentbox2 {
     display: flex;
     flex-direction: row;
@@ -658,7 +658,7 @@ body {
 }
 
 
-/* 評論內容下區 */
+/* > 評論內容下區 */
 
 .homepage-comment-comment {
     padding-top: 0.6rem;
@@ -668,12 +668,11 @@ body {
     font-weight: 400;
     line-height: 1rem;
     text-align: justify;
-    /*     overflow-wrap: break-word; */
     letter-spacing: 0.065em;
     color: white;
 }
 
-/* 聯絡按鈕區 */
+/* > 聯絡按鈕區 */
 #homepage-contactbtn-box {
     display: flex;
     justify-content: center;
@@ -693,7 +692,7 @@ body {
     height: 147px;
 }
 
-/* 按鈕樣式 */
+/* > 按鈕樣式 */
 #homepage-contactbtn {
     display: flex;
     align-items: center;
@@ -706,15 +705,11 @@ body {
     background-color: #47BFD9;
 
     border: 2px solid #47BFD9;
-
-    /* 沒hover時變色回來 */
+    /* - 沒hover時變色回來 */
     animation: colorChangeback 0.3s ease-in;
 }
 
-
-
-
-/* hover按鈕樣式 */
+/* > hover按鈕樣式 */
 #homepage-contactbtn:hover {
     display: flex;
     align-items: center;
@@ -727,21 +722,21 @@ body {
     border: 2px solid #47BFD9;
     background-color: #000537;
 
-    /* hover時變色 */
+    /* - hover時變色 */
     animation: colorChange 0.3s ease-in;
-    /* 慢速開始 */
+    /* - 慢速開始 */
     transition-timing-function: ease-in;
 }
 
-/* 按鈕字樣 */
+/* > 按鈕字樣 */
 #homepage-contactbtn span {
     display: flex;
     align-items: center;
     justify-content: center;
 
-    height: 9rem;
+    /* - 隨視窗寬度調整 */
+    font-size: clamp(25px, 2.29vw, 50px);
 
-    font-size: 2.75rem;
     font-family: DM Serif Display;
     font-style: normal;
     font-weight: 400;
@@ -751,34 +746,31 @@ body {
     letter-spacing: 0.155em;
     color: #ffffff;
 
-    margin-left: 0rem;
-    margin-right: 1rem;
-
     animation: btnin 0.3s;
-    /* 慢速開始 */
+    /* - 慢速開始 */
     transition-timing-function: ease-in;
 }
 
-/* hover按鈕字樣 */
+/* > hover按鈕字樣 */
 #homepage-contactbtn:hover span {
-    /* 製造殘影效果 */
+    /* - 製造殘影效果 */
     position: absolute;
     z-index: 2;
-    /*     display: none; */
+    /* -     display: none; */
     animation: btnout 0.3s forwards;
-    /* 慢速開始 */
+    /* - 慢速開始 */
     transition-timing-function: ease-in;
 }
 
-/* 偽元素hover前 */
+/* > 偽元素hover前 */
 #homepage-contactbtn:before {
     display: flex;
-
     position: absolute;
     z-index: 1;
 
     content: "OK! Here We GO!";
-    font-size: 2.75rem;
+    /* - 隨視窗寬度調整 */
+    font-size: clamp(25px, 2.29vw, 50px);
     font-family: DM Serif Display;
     font-style: normal;
     font-weight: 400;
@@ -786,26 +778,25 @@ body {
     line-height: 3.75rem;
     letter-spacing: 0.155em;
     color: #47BFD9;
-    padding-left: 35rem;
 
-    margin-left: 0rem;
-    margin-right: 1rem;
+    padding-left: 38%;
+
 
     opacity: 0;
     animation: btnout 0.3s;
-    /* 慢速開始 */
+    /* - 慢速開始 */
     transition-timing-function: ease-in;
 }
 
-/* 偽元素hover後 */
+/* > 偽元素hover後 */
 #homepage-contactbtn:hover:before {
     display: flex;
-
     position: absolute;
     z-index: 2;
 
     content: "OK! Here We GO!";
-    font-size: 2.75rem;
+    /* - 隨視窗寬度調整 */
+    font-size: clamp(25px, 2.29vw, 50px);
     font-family: DM Serif Display;
     font-style: normal;
     font-weight: 400;
@@ -814,65 +805,93 @@ body {
     letter-spacing: 0.155em;
     color: #47BFD9;
 
-    padding-left: 35rem;
-
-    margin-left: 0rem;
-    margin-right: 1rem;
+    padding-left: 38%;
 
     opacity: 1;
     animation: btnin 0.3s;
-    /* 慢速開始 */
+    /* - 慢速開始 */
     transition-timing-function: ease-in;
 }
 
-/* arrow */
-#homepage-contactbtn img {
+/* > arrow */
+#homepage-contactbtn-svg {
     position: absolute;
-    /* 初始位置 */
+    /* - 初始位置 */
     left: 75%;
     z-index: 2;
 
-    animation: imgback 0.3s forwards;
-    /* 慢速開始 */
+    animation: svg-back 0.3s forwards;
+    /* - 慢速開始 */
     transition-timing-function: ease-in;
 }
 
-/* hover arrow */
-#homepage-contactbtn:hover img {
+/* > hover arrow */
+#homepage-contactbtn:hover #homepage-contactbtn-svg {
     position: absolute;
-    /* 初始位置 */
+    /* - 初始位置 */
     left: 75%;
     z-index: 2;
-    filter: invert(52%) sepia(100%) saturate(288%) hue-rotate(143deg) brightness(107%) contrast(85%);
-    animation: imggo 0.3s forwards;
-    /* 慢速開始 */
+    /* - PNG強制轉色 */
+    /* -    filter: invert(52%) sepia(100%) saturate(288%) hue-rotate(143deg) brightness(107%) contrast(85%); */
+    animation: svg-go 0.3s forwards;
     transition-timing-function: ease-in;
 }
 
-/* 箭頭移動 */
-@keyframes imggo {
+#homepage-contactbtn-svg path {
+    animation: svg-white 0.3s forwards;
+    /* - 慢速開始 */
+    transition-timing-function: ease-in;
+}
+
+#homepage-contactbtn:hover #homepage-contactbtn-svg path {
+    animation: svg-blue 0.3s forwards;
+    transition-timing-function: ease-in;
+}
+
+
+/* > 箭頭移動 */
+@keyframes svg-go {
     0% {
         transform: translate(0, 0);
     }
 
     100% {
-        transform: translate(10rem, 0);
-
+        transform: translate(120%, 0);
     }
 }
 
-@keyframes imgback {
+@keyframes svg-back {
     0% {
-        transform: translate(10rem, 0);
+        transform: translate(120%, 0);
     }
 
     100% {
         transform: translate(0, 0);
-
     }
 }
 
-/* 淡入淡出 */
+/* > path變色 */
+@keyframes svg-blue {
+    0% {
+        fill: #ffffff;
+    }
+
+    100% {
+        fill: #47BFD9;
+    }
+}
+
+@keyframes svg-white {
+    0% {
+        fill: #47BFD9;
+    }
+
+    100% {
+        fill: #ffffff;
+    }
+}
+
+/* > 淡入淡出 */
 @keyframes btnin {
     0% {
         opacity: 0;
@@ -893,33 +912,33 @@ body {
     }
 }
 
-/* 變色動畫 */
+/* > 變色動畫 */
 @keyframes colorChange {
     0% {
         background-color: #47BFD9;
-        /* 顏色A */
+        /* - 顏色A */
     }
 
     100% {
         background-color: #000537;
-        /* 顏色B */
+        /* - 顏色B */
     }
 }
 
 @keyframes colorChangeback {
     0% {
         background-color: #000537;
-        /* 顏色A */
+        /* - 顏色A */
     }
 
     100% {
         background-color: #47BFD9;
-        /* 顏色B */
+        /* - 顏色B */
     }
 }
 
 
-/* 媒體報導 */
+/* > 媒體報導 */
 .homepage-mediabox {
     display: flex;
     flex-direction: column;
@@ -932,8 +951,8 @@ body {
     height: auto;
 }
 
-/* 媒體標題盒子 */
-.homepage-mediatitle-box{
+/* > 媒體標題盒子 */
+.homepage-mediatitle-box {
     width: 100%;
 }
 
@@ -950,15 +969,118 @@ body {
     margin-bottom: 32px;
 }
 
-/* 媒體圖片盒子 */
+/* > 媒體圖片盒子 */
 #homepage-media {
-    /* 圖片填滿背景 */
+    /* - 圖片填滿背景 */
     object-fit: cover;
-    /* 縮放圖片依然置中 */
+    /* - 縮放圖片依然置中 */
     background-position: center;
 }
 
 #homepage-media img {
     width: 100%;
     height: 100%;
+}
+
+/*! RWD 1401-1700 (size*0.9) */
+@media (min-width: 1401px) and (max-width: 1700.98px) {
+
+    #homepage-contactbtn-box a {
+        width: 76%;
+        height: calc(147px * 0.9);
+    }
+
+    /* > 偽元素hover前 */
+    #homepage-contactbtn:before {
+        padding-left: 35%;
+    }
+
+    /* > 偽元素hover後 */
+    #homepage-contactbtn:hover:before {
+        padding-left: 35%;
+    }
+
+    /* > arrow */
+    #homepage-contactbtn-svg {
+        width: calc(142px * 0.9);
+        height: calc(53px * 0.9);
+        left: 75%;
+    }
+
+    /* > hover arrow */
+    #homepage-contactbtn:hover #homepage-contactbtn-svg {
+        left: 75%;
+    }
+
+    /* > 箭頭移動 */
+    @keyframes svg-go {
+        0% {
+            transform: translate(0, 0);
+        }
+
+        100% {
+            transform: translate(90%, 0);
+        }
+    }
+
+    @keyframes svg-back {
+        0% {
+            transform: translate(90%, 0);
+        }
+
+        100% {
+            transform: translate(0, 0);
+        }
+    }
+}
+
+/*! RWD 1201-1400 (size*0.9) */
+@media (min-width: 1201px) and (max-width: 1400.98px){
+    #homepage-contactbtn-box a {
+        width: 76%;
+        height: calc(147px * 0.8);
+    }
+
+    /* > 偽元素hover前 */
+    #homepage-contactbtn:before {
+        padding-left: 35%;
+    }
+
+    /* > 偽元素hover後 */
+    #homepage-contactbtn:hover:before {
+        padding-left: 35%;
+    }
+
+    /* > arrow */
+    #homepage-contactbtn-svg {
+        width: calc(142px * 0.8);
+        height: calc(53px * 0.8);
+        left: 75%;
+    }
+
+    /* > hover arrow */
+    #homepage-contactbtn:hover #homepage-contactbtn-svg {
+        left: 75%;
+    }
+
+    /* > 箭頭移動 */
+    @keyframes svg-go {
+        0% {
+            transform: translate(0, 0);
+        }
+
+        100% {
+            transform: translate(90%, 0);
+        }
+    }
+
+    @keyframes svg-back {
+        0% {
+            transform: translate(90%, 0);
+        }
+
+        100% {
+            transform: translate(0, 0);
+        }
+    }
 }
