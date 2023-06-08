@@ -85,19 +85,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
 /*還是沒有辦法有觸發*/ 
 
-function triggerAnimation() {
-    var menu = document.querySelector(".menu");
-    menu.classList.add("move-up"); // Add the "move-up" class to trigger the animation
-  }
+// function triggerAnimation() {
+//     var menu = document.querySelector(".menu");
+//     menu.classList.add("move-up"); // Add the "move-up" class to trigger the animation
+//   }
   
-  // Trigger animation on menu open
-  var toggler = document.querySelector(".toggler");
-  toggler.addEventListener("change", function () {
-    if (toggler.checked) {
-      triggerAnimation();
-    }
+//   // Trigger animation on menu open
+//   var toggler = document.querySelector(".toggler");
+//   toggler.addEventListener("change", function () {
+//     if (toggler.checked) {
+//       triggerAnimation();
+//     }
     
-  });
+//   });
   
   
   
