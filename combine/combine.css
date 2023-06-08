@@ -16,7 +16,7 @@ footer {
     top: 0px;
     height: 160px;
     width: 100%;
-    z-index: 100;
+    z-index: 990;
 }
 
 /* 頁首區 */
@@ -31,14 +31,16 @@ footer {
 /* 選單排版 */
 /* Logo */
 .headerLogo {
+    position: relative;
     width: 20%;
     /* 左距 */
     margin-left: 60px;
     /* margin-right: 56px; */
-    z-index: 1;
+    z-index: 990;
 }
 
 .headerLogo img {
+    position: relative;
     width: 100%;
     height: auto;
 
@@ -46,6 +48,7 @@ footer {
     object-fit: cover;
     /* 縮放圖片依然置中 */
     background-position: center;
+    z-index: 990;
 }
 
 .contactBtn {
@@ -956,7 +959,7 @@ li:hover .line {
         width: 27.4%;
         /* 左距 */
         margin-left: 2.75rem;
-        z-index: 1;
+       
     }
 
     .headerLogo img {
