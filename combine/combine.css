@@ -357,19 +357,15 @@ footer {
         /*隱藏*/
     }
 
-    .menu-wrap .menu>div>div .menu_logo { 
-    transform: translateY(50%);
-         
-    }
 
 
     /*Logo字樣*/
-    /* .menu_logo h1{
+    .menu_logo h1{
         
         font-size: 1.25rem;
         line-height: 1.68rem;
         letter-spacing: 0.13em;
-    } */ 
+    }
 }
 
 
@@ -416,9 +412,8 @@ footer {
     background-size: cover;
     /* 縮放圖片依然置中 */
     background-position: center;
-    /* 固定背景 */
-    background-attachment: fixed;
-    /* transition: background-image 0.5s ease-in-out;*/
+
+    transition: background-image 0.5s ease-in-out;
 }
 
 .menu-wrap .menu>div>div {
@@ -535,12 +530,17 @@ footer {
 
 /* hover到框框時，框內所有元素的改變 */
 
-.menu-wrap menu div div ul li a.hambtn {
-    animation: hamback .5s forwards;
-}
+/* .menu-wrap menu div div ul li a.hambtn {
+    animation: hamhover .5s forwards;
+    animation: hamhback .5s backwards;
+} */
 
+.menu-wrap .menu>div>div>ul>li>a.hambtn {
+    transition: 1.5s;
+}
 li:hover a.hambtn {
     animation: hamhover .5s forwards;
+    transition: 1.5s;
 }
 
 @keyframes hamhover{
@@ -548,10 +548,11 @@ li:hover a.hambtn {
     100%{transform: translateY(5%)}
 }
 
-@keyframes hamback{
+/* @keyframes hamback{
     0% { transform: translateY(5%)}
     100%{transform: translateY(0%)}
-}
+} */
+
 
 .line {
     padding-top: 28px;
@@ -576,14 +577,16 @@ li:hover .arrow {
 
 li:hover .line {
     display: none;
-
 }
+
 
 /*隱藏在平板中顯示的line和arrow*/
 
 .ipadline, .ipadarrow{
     display: none;
 }
+
+
 
 /*玻璃擬態*/
 .menu-wrap .menu>div>div>ul>li:hover {
@@ -622,42 +625,52 @@ li:hover .line {
     /*整個主選單*/
     .menu {
         width: 100%;
-        max-height: 855px;
+        max-height: 83%;
         border-radius: 0px 0px 25px 25px;
         filter: drop-shadow(0px 9px 17px rgba(0, 0, 0, 0.25));
-        background-image: url(../images/ipad-ham-BG\ \(2\).png);
-        animation: moveUp 2s 1s both ease-in-out;
-
     }
 
+    .menu-wrap .menu>div{
+        width: 100%;
+        max-height: 100%;
     
+    }
 
-    @keyframes moveUp {
-        0% { background-position: 0 -70px; }
-        100% { background-position: 0 -180px; }
-      }
 
     /*改變背景圖片*/
     .menu>div {
         width: 100%;
-        max-height: 855px;
-        background-image: none;
+        max-height: 100%;
+        background-image: url(../images/ipad-ham-BG.png);
+        /* animation: moveUp 2s 1s both ease-in-out; */
 
+    }
+
+    @keyframes moveUp {
+        0% {
+            background-position: 0 -80px;
+        }
+
+        100% {
+            background-position: 0 -200px;
+        }
     }
 
 
     /*  四個框框垂直排列*/
     .menu-wrap .menu>div>div {
         width: 100%;
+        height: 100%;
         display: flex;
         flex-direction: column;
+        justify-content: center;
         align-items: center;
     }
 
     .menu-wrap .menu>div>div>ul {
-       
+    
         width:77%;
-        max-height: 588px;
+        height: 69%;
         /* background-color: bisque; */
         align-items: center;
         justify-content: center;
@@ -665,6 +678,7 @@ li:hover .line {
         padding: 0;
         transform: translateY(-5%); /*整個框框往上移一點*/
     }
+
 
     .menu-wrap .menu>div>div>ul>li {
 
@@ -674,18 +688,11 @@ li:hover .line {
         height: 110px;
 
         padding: 0;
-        margin: 15px 0 15px 0;
+        margin: 2% 0 2% 0;
 
         background: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%);
         border: 1.2px solid #FFFFFF;
 
-        /* flex-direction: row;
-        text-align: center;
-        justify-content: center; */
-    }
-
-    .menu-wrap .menu>div>div>ul>li>a{
-        height: 110px;
     }
 
     .textboxx{
@@ -719,49 +726,57 @@ li:hover .line {
         display: block;
     }
 
-    /* 懸停 travelStyle 時改變背景圖片 */
-    #travelStyle:active~.menu>div {
-        background-image: url(../images/ipad_travel_BG.png);
+    /*hover後的玻璃擬態*/
+
+    .menu-wrap .menu>div>div>ul>li:hover {
+        background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.02) 8.15%, #47BFD9 86.87%);
+        
     }
 
-    /* 懸停 aboutTaiwan 時改變背景圖片 */
-    #aboutTaiwan:active~.menu>div {
-        background-image: url(../images/ipad_contact_BG.png);
+    /*hover後的文字位置改變*/
+
+    li:hover a.hambtn {
+        animation: hamhover .5s forwards;
+        transition: 1.5s;
+    }
+    
+    @keyframes hamhover{
+        0% { transform: translateX(0%)}
+        100%{transform: translateX(5%)}
     }
 
-    /* 懸停 aboutUs 時改變背景圖片 */
-    #aboutUs:active~.menu>div {
-        background-image: url(../images/ipad_us_BG.png);
-    }
-
-    /* 懸停 contactUs 時改變背景圖片 */
-    #contactUs:active~.menu>div {
-        background-image: url(../images/ipad_contact_BG.png);
-    }
 
     .icon{
     /* background-color: #47BFD9; */
+    
     display: flex;
     justify-content: space-between;
     position: fixed;
     width: 36%;
-    max-height: 66px;
+    height: 66px;
     right: 11.4%;
-    bottom: 75px;
+    
 }
 
 .icon svg{
     width: 100%;
     height: 100%;
+    
 }
 
 /*更改svg邊線粗度*/
 .icon svg circle{
     stroke-width: 1.76px;
 }
-.icon a {
-    display: block;
-    margin-bottom:40%;
+
+@keyframes iconUp {
+    0% { 
+        bottom: 6%;
+    }
+
+    100% {
+        bottom: 8%;
+    }
 }
 
 

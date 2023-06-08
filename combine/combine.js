@@ -1,104 +1,141 @@
-
-
 document.addEventListener("DOMContentLoaded", function () {
-    // 獲取要懸停的元素
     var travelStyle = document.getElementById("travelStyle");
     var aboutTaiwan = document.getElementById("aboutTaiwan");
     var aboutUs = document.getElementById("aboutUs");
-    var contactUs = document.getElementById("contactUs"); // 確保您在HTML中有一個具有此ID的元素
-
-    // 獲取要改變背景圖片的元素
+    var contactUs = document.getElementById("contactUs");
     var menuDiv = document.querySelector(".menu>div");
-    // 獲取要改變LOGO顏色的元素
-    var menuLogo = document.querySelector(".menu_logo");
+    var menuLogo = document.querySelector(".logo_color");
+    var toggler = document.querySelector(".toggler");
+    var menuIcon = document.querySelector(".icon");
 
-    // 為 travelStyle 添加懸停事件監聽器
-    travelStyle.addEventListener("mouseover", function () {
-        menuDiv.style.backgroundImage = "url('../images/travel_bg.jpg')";
+    /*設定平板與手機尺寸*/
+    var isMobileOrTablet = window.matchMedia("(max-width: 1024px)").matches;
 
-    });
+    /*桌機板hover效果*/
+    if (!isMobileOrTablet) {
+        travelStyle.addEventListener("mouseover", function () {
+            menuDiv.style.backgroundImage = "url('../images/travel_bg.jpg')";
+        });
 
-    // 為 aboutTaiwan 添加懸停事件監聽器
-    aboutTaiwan.addEventListener("mouseover", function () {
-        menuDiv.style.backgroundImage = "url('../images/Taiwan_bg.jpg') ";
-        menuLogo.style.color = "#FFFFFF";
+        aboutTaiwan.addEventListener("mouseover", function () {
+            menuDiv.style.backgroundImage = "url('../images/Taiwan_bg.jpg')";
+            menuLogo.style.color = "#FFFFFF";
+        });
 
-    });
+        aboutUs.addEventListener("mouseover", function () {
+            menuDiv.style.backgroundImage = "url('../images/BG-3.jpg')";
+            menuLogo.style.color = "#FFFFFF";
+        });
 
-    // 為 aboutUs 添加懸停事件監聽器
-    aboutUs.addEventListener("mouseover", function () {
-        menuDiv.style.backgroundImage = "url('../images/BG-3.jpg')"
-        menuLogo.style.color = "#FFFFFF";
+        contactUs.addEventListener("mouseover", function () {
+            menuDiv.style.backgroundImage = "url('../images/BG-4.jpg')";
+        });
 
-    });
+        travelStyle.addEventListener("mouseleave", function () {
+            menuDiv.style.backgroundImage = "url('../images/Hamburger_bg.jpg')";
+            menuLogo.style.color = "#000537";
+        });
 
-    // 為 contactUs 添加懸停事件監聽器
-    contactUs.addEventListener("mouseover", function () {
-        menuDiv.style.backgroundImage = "url('../images/BG-4.jpg')";
+        aboutTaiwan.addEventListener("mouseleave", function () {
+            menuDiv.style.backgroundImage = "url('../images/Hamburger_bg.jpg')";
+            menuLogo.style.color = "#000537";
+        });
 
-    });
+        aboutUs.addEventListener("mouseleave", function () {
+            menuDiv.style.backgroundImage = "url('../images/Hamburger_bg.jpg')";
+            menuLogo.style.color = "#000537";
+        });
 
-    // 平板懸停事件監聽器
-    travelStyle.addEventListener("touchstart", function () {
-        menuDiv.style.backgroundImage = "url('../images/ipad_travel_BG.png')";
-    });
+        contactUs.addEventListener("mouseleave", function () {
+            menuDiv.style.backgroundImage = "url('../images/Hamburger_bg.jpg')";
+            menuLogo.style.color = "#000537";
+        });
 
-    aboutTaiwan.addEventListener("touchstart", function () {
-        menuDiv.style.backgroundImage = "url('../images/ipad_contact_BG.png')";
-    });
+        // 在懸停其他部分時恢復原始背景圖片
+        travelStyle.addEventListener("mouseleave", function () {
+            menuDiv.style.backgroundImage = "url('../images/Hamburger_bg.jpg')";
+            menuLogo.style.color = "#000537";
+        });
 
-    aboutUs.addEventListener("touchstart", function () {
-        menuDiv.style.backgroundImage = "url('../images/ipad_us_BG.png')";
-    });
+        aboutTaiwan.addEventListener("mouseleave", function () {
+            menuDiv.style.backgroundImage = "url('../images/Hamburger_bg.jpg')";
+            menuLogo.style.color = "#000537";
+        });
 
-    contactUs.addEventListener("touchstart", function () {
-        menuDiv.style.backgroundImage = "url('../images/ipad_contact_BG.png')";
-    });
+        aboutUs.addEventListener("mouseleave", function () {
+            menuDiv.style.backgroundImage = "url('../images/Hamburger_bg.jpg')";
+            menuLogo.style.color = "#000537";
+        });
 
-    // 在懸停其他部分時恢復原始背景圖片
-    travelStyle.addEventListener("mouseleave", function () {
-        menuDiv.style.backgroundImage = "url('../images/Hamburger_bg.jpg')";
-        menuLogo.style.color = "#000537";
+        contactUs.addEventListener("mouseleave", function () {
+            menuDiv.style.backgroundImage = "url('../images/Hamburger_bg.jpg')";
+            menuLogo.style.color = "#000537";
+        });
+    } else {
+        // 平板與手機的觸動效果
 
-    });
+        travelStyle.addEventListener("click", function () {
+            menuDiv.style.backgroundImage = "url('../images/ipad_travel_BG.png')";
+            menuDiv.style.backgroundPosition = "0 0";
+            menuDiv.style.animation = "none";
+            event.stopPropagation(); // 阻止事件冒泡
+        });
 
-    aboutTaiwan.addEventListener("mouseleave", function () {
-        menuDiv.style.backgroundImage = "url('../images/Hamburger_bg.jpg')";
-        menuLogo.style.color = "#000537";
+        aboutTaiwan.addEventListener("click", function () {
+            menuDiv.style.backgroundImage = "url('../images/ipad_about_BG.png')";
+            menuDiv.style.backgroundPosition = "0 0";
+            menuDiv.style.animation = "none";
+            event.stopPropagation(); // 阻止事件冒泡
+        });
 
-    });
+        aboutUs.addEventListener("click", function () {
+            menuDiv.style.backgroundImage = "url('../images/ipad_us_BG.png')";
+            menuDiv.style.backgroundPosition = "0 0";
+            menuDiv.style.animation = "none";
+            event.stopPropagation(); // 阻止事件冒泡
+        });
 
-    aboutUs.addEventListener("mouseleave", function () {
+        contactUs.addEventListener("click", function () {
+            menuDiv.style.backgroundImage = "url('../images/ipad_contact_BG.png')";
+            menuDiv.style.backgroundPosition = "0 0";
+            menuDiv.style.animation = "none";
+            event.stopPropagation(); // 阻止事件冒泡
+        });
 
-        menuDiv.style.backgroundImage = "url('../images/Hamburger_bg.jpg')";
-        menuLogo.style.color = "#000537";
+        /*在每次點擊toggler都重新這段動畫*/
 
-    });
+        toggler.addEventListener("click", function () {
+            menuDiv.style.backgroundImage = "url('../images/ipad-ham-BG.png')";
+            menuDiv.style.backgroundPosition = "0 -20px";
+            menuIcon.style.bottom = "6%" ;
+            
 
-    contactUs.addEventListener("mouseleave", function () {
+            // 移除原本的動畫 (這樣才可以重複被觸發)
+            menuDiv.style.animation = "none";
+            menuIcon.style.animation = "none";
 
-        menuDiv.style.backgroundImage = "url('../images/Hamburger_bg.jpg')";
-        menuLogo.style.color = "#000537";
-
-    });
+            // 在下一個 JavaScript 執行周期設定新的動畫
+            setTimeout(function () {
+                menuDiv.style.animation = "moveUp 1.5s both ease-in-out";
+                menuIcon.style.animation = "iconUp 1.5s both ease-in-out"
+            }, 0);
+        });
+    }
 });
 
-/*還是沒有辦法有觸發*/ 
+/*還是沒有辦法有觸發*/
 
 // function triggerAnimation() {
 //     var menu = document.querySelector(".menu");
-//     menu.classList.add("move-up"); // Add the "move-up" class to trigger the animation
+//     menu.classList.add("moveUp"); // Add the "move-up" class to trigger the animation
 //   }
-  
-//   // Trigger animation on menu open
-//   var toggler = document.querySelector(".toggler");
-//   toggler.addEventListener("change", function () {
-//     if (toggler.checked) {
-//       triggerAnimation();
-//     }
-    
-//   });
-  
-  
-  
 
+//   // Trigger animation on menu open
+//   document.addEventListener("DOMContentLoaded", function() {
+//     var toggler = document.querySelector(".toggler");
+//     toggler.addEventListener("change", function() {
+//       if (toggler.checked) {
+//         triggerAnimation();
+//       }
+//     });
+//   });
