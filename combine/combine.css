@@ -120,7 +120,7 @@ footer {
     /*hamburger方框比例*/
     position: absolute;
     top: 1rem;
-    right: 1rem;
+    right: 16px;
     z-index: 1;
     width: 75px;
     height: 75px;
@@ -378,7 +378,7 @@ footer {
     position: fixed;
     width: 4.3%;
     height: auto;
-    right: 40px;
+    right: 60px;
     bottom:10vh;
 }
 
@@ -696,17 +696,36 @@ li:hover .line {
         background: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%);
         border: 1.2px solid #FFFFFF;
 
+        overflow: hidden;
+
     }
 
     .textboxx{
         width: 73%;
+        display: flex;
+        position: relative;
         /* background-color: #47BFD9; */
+        
     }
 
-    .textboxx h2{
+    .textboxx .fadeText{
         font-size:1.75rem;
-
+        position: relative;
+        /* display: block; */
+        padding-left: 19%;
+        animation: fadeUpIn 1.5s both ease-in-out;
+        -webkit-animation: fadeUpIn 1.5s both ease-in-out; /* Safari and Chrome */
+        
     }
+
+
+
+    @-webkit-keyframes fadeUpIn
+    {
+      from { opacity:0.5; top:50px; }
+      to { opacity:1; top: 0; }
+    }
+
 
     .usbtn{
         display: none;
@@ -729,6 +748,8 @@ li:hover .line {
         display: block;
     }
 
+    
+
     /*hover後的玻璃擬態*/
 
     .menu-wrap .menu>div>div>ul>li:hover {
@@ -742,11 +763,32 @@ li:hover .line {
         animation: hamhover .5s forwards;
         transition: 1.5s;
     }
-    
+     
     @keyframes hamhover{
         0% { transform: translateX(0%)}
         100%{transform: translateX(5%)}
     }
+
+    /*點擊後:原本的線不見*/
+
+    li:hover .ipadline{
+        display: none;
+    }
+
+    /*點擊後:箭頭出現*/
+
+    li:hover .ipadarrow {
+        display: block;
+        padding-right: 5%;
+        animation: arrhover .5s ease-in-out;
+    
+    }
+    
+    @keyframes arrhover{
+        0% { opacity: 0;}
+        100% {opacity:1;}
+    }
+    
 
 
     .icon{
