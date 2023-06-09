@@ -1,12 +1,12 @@
 /* 頁面刷新後自動回到頂部 */
 // 當頁面準備卸載時（即刷新或關閉頁面），執行此函數
-window.onbeforeunload = function () {
+/* window.onbeforeunload = function () {
     // 將頁面滾動的位置設置為0（頂部），IE 瀏覽器對此的處理方式
     document.documentElement.scrollTop = 0;
     // 將頁面滾動的位置設置為0（頂部），非 IE 瀏覽器對此的處理方式
     document.body.scrollTop = 0;
 }
-
+ */
 
 /* 打字機效果 */
 $(document).ready(function () {
