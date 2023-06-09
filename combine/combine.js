@@ -135,20 +135,3 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 });
-
-/*還是沒有辦法有觸發*/
-
-// function triggerAnimation() {
-//     var menu = document.querySelector(".menu");
-//     menu.classList.add("moveUp"); // Add the "move-up" class to trigger the animation
-//   }
-
-//   // Trigger animation on menu open
-//   document.addEventListener("DOMContentLoaded", function() {
-//     var toggler = document.querySelector(".toggler");
-//     toggler.addEventListener("change", function() {
-//       if (toggler.checked) {
-//         triggerAnimation();
-//       }
-//     });
-//   });
