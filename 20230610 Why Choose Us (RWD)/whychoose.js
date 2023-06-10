@@ -144,7 +144,7 @@ $('.carousel-main').owlCarousel({
     responsive: {
         0: {
             items: 1.5,
-            nav: true,
+            nav: false,
             loop: true,
         },
         767: {

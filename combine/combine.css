@@ -206,12 +206,13 @@ footer {
     /* Hamburger Line */
     .menu-wrap .hamburger>div {
         position: relative;
-        width: 60%; /*三條線在圓圈中的比例*/
+        width: 60%;
+        /*三條線在圓圈中的比例*/
         height: 2px;
     }
 
 
-    }
+}
 
 /*平板: hamburger點選按鈕樣式*/
 
@@ -258,7 +259,7 @@ footer {
     .menu-wrap .hamburger>div::after {
         top: 8px;
     }
-    }
+}
 
 
 /* Show Menu 整個選單 */
@@ -312,7 +313,7 @@ footer {
     /* background-color: aqua; */
 }
 
-.menu_logo h1{
+.menu_logo h1 {
     font-family: 'DM Serif Display';
     font-style: normal;
     font-size: 2.25rem;
@@ -342,7 +343,7 @@ footer {
         
     } */
 
-    .menu-wrap .menu>div>div .menu_logo h1{
+    .menu-wrap .menu>div>div .menu_logo h1 {
         font-size: 1.8rem;
         letter-spacing: 0.13em;
 
@@ -363,8 +364,8 @@ footer {
 
 
     /*Logo字樣*/
-    .menu_logo h1{
-        
+    .menu_logo h1 {
+
         font-size: 1.25rem;
         line-height: 1.68rem;
         letter-spacing: 0.13em;
@@ -374,21 +375,22 @@ footer {
 
 /*社群平台按鈕們*/
 
-.iconboxer{
+.iconboxer {
     position: fixed;
     width: 4.3%;
     height: auto;
     right: 60px;
-    bottom:10vh;
+    bottom: 10vh;
 }
 
-.icon svg{
+.icon svg {
     width: 100%;
     height: 100%;
 }
+
 .icon a {
     display: block;
-    margin-bottom:40%;
+    margin-bottom: 40%;
 }
 
 .menu-wrap .menu>div {
@@ -449,7 +451,7 @@ footer {
     height: 712px;
     margin: 50px;
     border: 2.5px solid #FFFFFF;
-    
+
     background-color: rgba(255, 255, 255, 0.1);
     text-align: center;
     justify-content: center;
@@ -471,39 +473,42 @@ footer {
     transition: color 0.4s ease;
 }
 
-.hambtn h2{
+.hambtn h2 {
     color: #fff;
     font-family: var(--second-font);
     letter-spacing: 0.13em;
-    font-size:2.5rem;
+    font-size: 2.5rem;
     line-height: 150.1%;
 
 }
-.usbtn{
+
+.usbtn {
     padding: 0 10px 0px 10px;
 }
 
 /*平板about us 隱藏*/
-.ipad_usbtn{
+.ipad_usbtn {
     display: none;
 }
 
 /*小筆電: 按鈕們的大小變化*/
 @media (min-width: 1025px) and (max-width: 1440px) {
+
     /*右邊3個icon按鈕*/
-    .iconboxer{
-        
+    .iconboxer {
+
         right: 40px;
-        bottom:13vh;
+        bottom: 13vh;
     }
 
-    .icon svg{
+    .icon svg {
         min-width: 60px;
         height: auto;
     }
+
     /*四個框框按鈕的大小改變*/
     .menu-wrap .menu>div>div>ul>li {
-        margin:17.5px;
+        margin: 17.5px;
         height: 650px;
         font-size: 2.2rem;
     }
@@ -511,7 +516,7 @@ footer {
 
 @media (min-width: 1025px) and (max-width: 1600px) {
     .menu-wrap .menu>div>div>ul>li {
-        margin:17.5px;
+        margin: 17.5px;
         height: 650px;
         font-size: 2.2rem;
     }
@@ -523,11 +528,12 @@ footer {
         display: flex;
         flex-direction: row;
         align-items: center;
-        
+
     }
 
 
 }
+
 /*平板: 按鈕們的大小變化*/
 
 
@@ -541,14 +547,20 @@ footer {
 .menu-wrap .menu>div>div>ul>li>a.hambtn {
     transition: 1.5s;
 }
+
 li:hover a.hambtn {
     animation: hamhover .5s forwards;
     transition: 1.5s;
 }
 
-@keyframes hamhover{
-    0% { transform: translateY(0%)}
-    100%{transform: translateY(5%)}
+@keyframes hamhover {
+    0% {
+        transform: translateY(0%)
+    }
+
+    100% {
+        transform: translateY(5%)
+    }
 }
 
 /* @keyframes hamback{
@@ -572,9 +584,14 @@ li:hover .arrow {
 
 }
 
-@keyframes arrhover{
-    0% { opacity: 0;}
-    100% {opacity:1;}
+@keyframes arrhover {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 
@@ -585,7 +602,8 @@ li:hover .line {
 
 /*隱藏在平板中顯示的line和arrow*/
 
-.ipadline, .ipadarrow{
+.ipadline,
+.ipadarrow {
     display: none;
 }
 
@@ -695,8 +713,6 @@ li:hover .line {
         /* display: block; */
         padding-left: 19%;
         animation: fadeUpIn 1.5s both ease-in-out;
-
-
     }
 
     @keyframes fadeUpIn {
@@ -822,8 +838,7 @@ li:hover .line {
 
 
 
-/* 頁尾區 */
-
+/* > 頁尾區 */
 #footerBar {
     display: flex;
     /* 主軸方向齊頭 */
@@ -855,7 +870,6 @@ li:hover .line {
     width: 64%;
 }
 
-
 .footerMenu {
     display: flex;
     justify-content: center;
@@ -864,6 +878,13 @@ li:hover .line {
     list-style: none;
     border-top: 2px solid white;
     border-bottom: 2px solid white;
+
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+.footerMenu ul {
+    margin-bottom: 0;
 }
 
 .footerMenu li {
@@ -893,12 +914,18 @@ li:hover .line {
     text-align: center;
 }
 
-/* 測試容器 */
-.container {
+
+
+
+/* > 測試容器 */
+.test-container {
     height: 50vh;
 }
 
-/* 小筆電 1025-1440 */
+
+
+
+/* ! 小筆電 1025-1440 (頁首+頁尾) */
 @media (min-width: 1025px) and (max-width: 1440px) {
     .header1 {
         height: 120px;
@@ -962,16 +989,10 @@ li:hover .line {
         /* 底線間距 */
         padding-bottom: 4px;
     }
-
-
-
 }
 
-
-
-/* 平板 768-1024 */
-@media (min-width: 768px) and (max-width: 1024px) {
-
+/* ! 平板 577-1024 (頁首) */
+@media (min-width: 577px) and (max-width: 1024.98px) {
     .header1 {
         display: flex;
         position: fixed;
@@ -993,8 +1014,8 @@ li:hover .line {
     .headerLogo {
         width: 27.4%;
         /* 左距 */
-        margin-left: 2.75rem;
-       
+        margin-left: 44px;
+
     }
 
     .headerLogo img {
@@ -1072,7 +1093,6 @@ li:hover .line {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-        /*hamburger方框比例*/
         position: absolute;
 
         z-index: 1;
@@ -1082,21 +1102,97 @@ li:hover .line {
         top: 5px;
         right: -10px;
     }
+}
+
+/* ! 手機 0-577 (頁首) */
+@media (max-width: 576.98px) {
+
+    /* > 頁首區 */
+    .header1 {
+        display: flex;
+        position: fixed;
+        top: 0px;
+        height: 100px;
+        width: 100%;
+        z-index: 100;
+    }
+
+    /* 頁首區 */
+    .topbar {
+        align-items: center;
+        width: 100%;
+        height: 100px;
+    }
 
 
+    /* Logo */
+    .headerLogo {
+        width: 27.4%;
+        /* 左距 */
+        margin-left: 30px;
+    }
 
-    /* 頁尾區 */
+    .headerLogo img {
+        width: 159px;
+        height: auto;
+    }
 
+    .contactBtn {
+        /* - 隱藏Contact */
+        display: none;
+    }
+
+    .menu-wrap .toggler {
+        position: absolute;
+        margin: 0;
+        padding: 0;
+
+        z-index: 2;
+        cursor: pointer;
+        opacity: 0;
+
+        /* FIXME */
+        /* ? 比平板的大 */
+        width: 48px;
+        height: 48px;
+
+        top: 5px;
+        right: -10px;
+
+    }
+
+    .menu-wrap .hamburger {
+        border-radius: 100%;
+        border: 2px solid white;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        position: absolute;
+        z-index: 1;
+
+        /* FIXME */
+        /* ? 比平板的大 */
+        width: 48px;
+        height: 48px;
+        top: 5px;
+        right: -10px;
+    }
+}
+
+/* ! 平板 767-1024 (頁尾) */
+@media (min-width: 767px) and (max-width: 1024.98px) {
+
+    /* > 頁尾區 */
     #footerBar {
         width: 100%;
         height: 200px;
-        /* 內距 */
+        /* - 內距 */
         padding-left: 6.8%;
         padding-right: 6.8%;
     }
 
     .footerLogo {
-        /* Logo寬度 */
+        /* - Logo寬度 */
         width: 30%;
     }
 
@@ -1106,7 +1202,7 @@ li:hover .line {
     }
 
 
-    /* 頁尾按鈕區 */
+    /* > 頁尾按鈕區 */
     #footerBar nav {
         width: 60%;
     }
@@ -1118,11 +1214,12 @@ li:hover .line {
         list-style: none;
         border-top: 1px solid white;
         border-bottom: 1px solid white;
+
     }
 
     .footerMenu li {
         width: 30%;
-        /* 每一個按鈕的間距 */
+        /* - 每一個按鈕的間距 */
         margin-left: 3%;
         margin-right: 3%;
     }
@@ -1131,9 +1228,93 @@ li:hover .line {
         font-size: 0.75rem;
         font-weight: 150;
 
-        /* 上下邊界距離 */
+        /* - 上下邊界距離 */
         padding-top: 2.25rem;
         padding-bottom: 2.25rem;
+        text-align: center;
+    }
+}
+
+/* ! 手機 0-767 (頁尾) */
+@media(max-width: 766.98px) {
+
+    /* > 頁尾區 */
+    #footerBar {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        align-items: center;
+
+        width: 100%;
+        height: auto;
+        /* 內距 */
+        padding-left: 0%;
+        padding-right: 0%;
+
+        background-color: #000537;
+    }
+
+    /* > 頁尾Logo區 */
+    .footerLogo {
+        /* Logo寬度 */
+        width: 68%;
+        margin-top: 33px;
+        margin-bottom: 56px;
+    }
+
+    .footerLogo img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* > 頁尾按鈕區 */
+    #footerBar nav {
+        width: 68%;
+    }
+
+    .footerMenu {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+
+        width: 100%;
+        list-style: none;
+        border-top: 2px solid white;
+        border-bottom: 2px solid white;
+
+        margin: 0;
+
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 33px;
+        padding-bottom: 33px;
+    }
+
+    .footerMenu ul {
+        margin-bottom: 0;
+    }
+
+    .footerMenu li {
+        display: flex;
+        align-items: center;
+
+        width: 15%;
+        height: 48px;
+        margin: 0;
+        margin-left: 20px;
+    }
+
+    .footerMenu a {
+        display: block;
+        position: relative;
+        font-family: Arial;
+        font-size: 0.875rem;
+        font-weight: 400;
+
+        /* 上下邊界距離 */
+        padding-top: 0;
+        padding-bottom: 0;
         text-align: center;
     }
 }

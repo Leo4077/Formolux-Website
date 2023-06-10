@@ -995,8 +995,8 @@ button:active,
     }
 }
 
-/*! RWD 767-1300 (for 評論區) */
-@media (min-width:767px) and (max-width:1300.98px) {
+/*! RWD 577-1300 (for 評論區) */
+@media (min-width:577px) and (max-width:1300.98px) {
 
 
     /* > 評論區 */
@@ -1167,9 +1167,9 @@ button:active,
     }
 }
 
-/*! RWD 767-940 (for 媒體區-部分平板) */
+/*! RWD 577-940 (for 媒體區-部分平板) */
 /* -媒體區標題換行 */
-@media (min-width: 767px) and (max-width: 940.98px) {
+@media (min-width: 577px) and (max-width: 940.98px) {
     .homepage-mediatitle-break {
         display: block;
     }
@@ -1228,8 +1228,8 @@ button:active,
     }
 }
 
-/*! RWD 767-1200 (平板) */
-@media (min-width: 767px) and (max-width: 1200.98px) {
+/*! RWD 577-1200 (平板) */
+@media (min-width: 577px) and (max-width: 1200.98px) {
 
     /* > 區段一 */
     #homepage-topsection {
@@ -1405,8 +1405,6 @@ button:active,
     }
 }
 
-
-
 /* !RWD 1101-1300 (for 按鈕區) */
 @media (min-width: 1101px) and (max-width: 1300.98px) {
 
@@ -1535,10 +1533,8 @@ button:active,
 
 }
 
-
-
-/* ! RWD 576-767 手機板 */
-@media (min-width: 576px) and (max-width: 766.98px) {
+/* ! RWD -577 手機板 */
+@media (max-width: 576.98px) {
 
     /* ?媒體區highlight */
     .homepage-mediatitle-highlight {
@@ -1546,6 +1542,3 @@ button:active,
     }
 }
 
-
-/* !RWD XS尺寸? */
-@media (max-width: 575.98px) {}
