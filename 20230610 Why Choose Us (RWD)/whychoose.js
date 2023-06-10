@@ -120,7 +120,7 @@ $('.carousel-main').owlCarousel({
     loop: true,
     autoplay: false,
     autoplayTimeout: 2000,
-    margin: 10,
+    margin: 0,
     nav: true,
     dots: false,
     navText: [ 
@@ -149,10 +149,10 @@ $('.carousel-main').owlCarousel({
         },
         767: {
             items: 1.5,
-            nav: false,
+            nav: true,
             loop: true,
         },
-        1000: {
+        1200: {
             items: 3.5,
             nav: true,
             loop: true,
