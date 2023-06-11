@@ -3,7 +3,7 @@ body {
     overflow-x: hidden;
 }
 
-p{
+p {
     margin-bottom: 0;
 }
 
@@ -58,9 +58,9 @@ p{
     position: absolute;
 
     width: 100%;
-    height: 100vh;
+    height: 0vh;
     z-index: 15;
-    opacity: 1;
+    opacity: 0;
 }
 
 #homepage-bigimage-phone {
@@ -72,8 +72,6 @@ p{
     background-position: center;
     opacity: 0;
 }
-
-
 
 /* > 圖片區容器 */
 .homepage-introbox {
@@ -94,18 +92,37 @@ p{
     position: relative;
     justify-content: center;
 
-
+    width: 28%;
     height: 100vh;
     /* - 橫向間距 */
     margin-left: 30px;
     margin-right: 30px;
 
+    /* - 圖片填滿背景 */
+    background-size: cover;
+    /* - 縮放圖片依然置中 */
+    background-position: center;
+    background-repeat: no-repeat;
     overflow: hidden;
 }
 
 #homepage-introimage2 {
     /* - 高度差 */
     margin-top: 16.66vh;
+}
+
+/* > 圖片背景 */
+.intro-1 {
+    background-image: url(../images/why-1.png);
+}
+
+.intro-2 {
+
+    background-image: url(../images/why-2.png);
+}
+
+.intro-3 {
+    background-image: url(../images/why-3.png);
 }
 
 /* > 圖片區文字內容 */
@@ -121,18 +138,27 @@ p{
     z-index: 20;
     flex-direction: column;
     align-items: center;
-    /* - padding-right: 0.5rem; */
 
-    /* - 背景漸層嵌入 */
-    background-image: url(../images/introimage-bg.png);
-    background-repeat: no-repeat;
-    /* - background-attachment: fixed; */
-    background-position: center;
-    background-size: cover;
+
+    background: linear-gradient(180deg, rgba(0, 5, 55, 0) 39.58%, rgba(0, 5, 55, 0.66) 92.71%);
+    background-blend-mode: darken;
 
     /* - 初始樣式 */
     opacity: 0.5;
-    transform: translateY(100vh);
+    transform: translateY(-100vh);
+}
+
+/* > 文案選擇 */
+.desktop-text {
+    display: block;
+}
+
+.phone-text {
+    display: none;
+}
+
+.homepage-intro-break {
+    display: none;
 }
 
 /* > 關鍵幀動畫 */
@@ -242,7 +268,14 @@ p{
     /* - 底部間距 */
     margin-top: 0px;
     margin-bottom: 32px;
+}
 
+/* > 上層 */
+.homepage-slogan-top {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
 
 /* > 左、右標語 */
@@ -252,14 +285,15 @@ p{
     font-weight: 400;
     line-height: 3.75rem;
     letter-spacing: 0.08em;
+    white-space: nowrap;
 }
 
 #homepage-slogan-element-1 {
-    padding-right: 2.18%;
+    padding-right: 42px;
 }
 
 #homepage-slogan-element-3 {
-    padding-left: 2.18%;
+    padding-left: 42px;
 }
 
 /* > 中標語 */
@@ -339,13 +373,22 @@ p{
 .owl-prev,
 .owl-next {
     position: absolute;
-    top: 0;
-    height: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 75px;
+    height: 75px;
+}
+
+#svg-left,
+#svg-right {
+    width: 75px;
+    height: 75px;
 }
 
 /* > 按鈕左右距 */
 .owl-prev {
     left: 2.1vw;
+
 }
 
 .owl-next {
@@ -368,10 +411,9 @@ button:active,
 .owl-next:active,
 .customNextBtn:active,
 .customPrevBtn:active {
-    transform: scale(1.2);
+    transform: translateY(-50%) scale(1.2);
     transition: transform 0.3s;
 }
-
 
 .btn {
     border: none;
@@ -520,9 +562,10 @@ button:active,
 .homepage-comment-upbox {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     flex-direction: row;
     border-bottom: 1.5px solid white;
-    padding-bottom: 0.6rem;
+    padding-bottom: 9.6px;
 }
 
 /* > 分數星星 */
@@ -545,6 +588,13 @@ button:active,
     letter-spacing: 0.02em;
     color: white;
     padding-right: 8px;
+}
+
+/* > 星星 */
+.star-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* > 人物 */
@@ -882,6 +932,7 @@ button:active,
 /* > 媒體圖片盒子 */
 .homepage-media {
     width: 100%;
+    height: auto;
 
     display: flex;
     position: relative;
@@ -913,9 +964,9 @@ button:active,
     display: flex;
     position: absolute;
     width: 100%;
-    z-index: 20;
-
     height: 0;
+
+    z-index: 4;
     opacity: 0;
 
     /* - 圖片填滿背景 */
@@ -982,7 +1033,10 @@ button:active,
     }
 }
 
-/*! RWD 1201-1600 (for 評論區字距) */
+
+
+/* ! 評論區 */
+/* ! RWD 1201-1600 (for 評論區字距) */
 @media (min-width: 1201px) and (max-width: 1600.98px) {
     #homepage-comment-contentbox2 {
         font-size: 1.3rem;
@@ -995,7 +1049,7 @@ button:active,
     }
 }
 
-/*! RWD 577-1300 (for 評論區) */
+/* ! RWD 577-1300 (for 評論區-平板) */
 @media (min-width:577px) and (max-width:1300.98px) {
 
 
@@ -1101,8 +1155,8 @@ button:active,
         flex-direction: column;
         width: 300px;
 
-        margin-top: 0.7rem;
-        margin-bottom: 0.8rem;
+        margin-top: 11.2px;
+        margin-bottom: 12.8px;
     }
 
     /* > 評論內容上區 */
@@ -1111,7 +1165,7 @@ button:active,
         justify-content: space-between;
         flex-direction: row;
         border-bottom: 1.5px solid white;
-        padding-bottom: 0.6rem;
+        padding-bottom: 9.6px;
     }
 
     /* > 分數 */
@@ -1151,7 +1205,138 @@ button:active,
 
 }
 
-/*! RWD 1431-1600 (for 媒體區字距) */
+/* ! RWD -577 (for 評論區-手機) */
+@media (max-width:576.98px) {
+
+
+    /* > 評論區 */
+    .homepage-comment-box {
+        width: 74.8%;
+        height: auto;
+        margin-top: 50px;
+        margin-bottom: 38px;
+
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+
+    /* > 評論區左側 */
+    .homepage-comment-titlebox {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+
+        justify-content: center;
+
+        width: 100%;
+        height: 63px;
+    }
+
+    /* > 逗號 */
+    #homepage-comment-icon {
+        position: absolute;
+        top: -12px;
+        left: -3px;
+        z-index: 10;
+    }
+
+    #homepage-comment-icon svg {
+        width: calc(52px * 0.48);
+        height: calc(39px * 0.48);
+    }
+
+    /* > 文字 */
+    #homepage-comment-word {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+
+        border: 2px solid #47BFD9;
+        padding-top: 0;
+        padding-bottom: 0;
+        height: 63px;
+    }
+
+    /* > Traveler & Review */
+    #homepage-comment-title,
+    #homepage-comment-subtitle {
+        font-size: 1.43rem;
+        line-height: 2rem;
+        letter-spacing: 0.03em;
+        text-align: center;
+
+    }
+
+    #homepage-comment-title {
+        margin-right: 3.5px;
+        margin-bottom: 0;
+    }
+
+    #homepage-comment-subtitle {
+        margin-left: 3.5px;
+        margin-bottom: 0;
+    }
+
+
+    /* >評論內容區 */
+    .homepage-comment-contentbox {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .homepage-comment-contentbox-A {
+        margin-right: 0%;
+    }
+
+    .homepage-comment-contentbox-B {
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+
+    .homepage-comment-contentbox-C {
+        margin-left: 0%;
+    }
+
+    .homepage-comment-contentbox-A,
+    .homepage-comment-contentbox-B,
+    .homepage-comment-contentbox-C {
+        width: 81.3%;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    /* > 評論內容上區 */
+    .homepage-comment-upbox {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        border-bottom: 1.5px solid white;
+        padding-bottom: 9px;
+    }
+
+    /* > 分數 */
+    #homepage-comment-contentbox1 {
+        color: #47BFD9;
+    }
+
+    /* >星星 */
+    #homepage-comment-contentbox0 svg path {
+        fill: #47BFD9;
+    }
+}
+
+
+
+/* ! 媒體區 */
+/* ! RWD 1431-1600 (for 媒體區字距) */
 @media (min-width: 1431px) and (max-width: 1600.98px) {
     #homepage-mediatitle {
         font-size: 1.45rem;
@@ -1159,7 +1344,7 @@ button:active,
     }
 }
 
-/* !RWD 1201-1430 (for 媒體區字距) */
+/* ! RWD 1201-1430 (for 媒體區字距) */
 @media (min-width: 1201px) and (max-width: 1430.98px) {
     #homepage-mediatitle {
         font-size: 1.3rem;
@@ -1167,7 +1352,7 @@ button:active,
     }
 }
 
-/*! RWD 577-940 (for 媒體區-部分平板) */
+/* ! RWD 577-940 (for 媒體區-部分平板) */
 /* -媒體區標題換行 */
 @media (min-width: 577px) and (max-width: 940.98px) {
     .homepage-mediatitle-break {
@@ -1175,7 +1360,10 @@ button:active,
     }
 }
 
-/*! RWD 1201-1400 (size*0.9) */
+
+
+/* ! 按鈕區 */
+/* ! RWD 1201-1400 (for 按鈕區) */
 @media (min-width: 1201px) and (max-width: 1400.98px) {
 
     /* > 按鈕區 */
@@ -1228,247 +1416,7 @@ button:active,
     }
 }
 
-/*! RWD 577-1200 (平板) */
-@media (min-width: 577px) and (max-width: 1200.98px) {
-
-    /* > 區段一 */
-    #homepage-topsection {
-        height: 78.12vh;
-    }
-
-    /* > 排序盒子Z20 */
-    .desktop-box {
-        display: flex;
-        justify-content: center;
-        position: absolute;
-
-        width: 79.5%;
-        height: auto;
-
-        z-index: 20;
-
-        left: 50%;
-        transform: translate(-50%, 0);
-    }
-
-    #homepage-bigimage-desktop {
-        width: 100%;
-        height: auto;
-
-        /* - 推右側寬度使置中 */
-        margin-right: 12%;
-        padding-right: 0%;
-        margin-top: 10vh;
-
-        opacity: 1;
-    }
-
-    /* > 圖片區容器 */
-    .homepage-introbox {
-        width: 100%;
-        margin-top: 34.6vh;
-
-        padding-left: 18px;
-        padding-right: 18px;
-    }
-
-    /* > 三張圖 */
-    .homepage-introimage {
-        height: 39.3vh;
-        /* - 橫向間距 */
-        margin-left: 12.5px;
-        margin-right: 12.5px;
-    }
-
-    #homepage-introimage2 {
-        /* - 高度差 */
-        margin-top: 6.7vh;
-    }
-
-
-    /* > 區段二 */
-    .homepage-bottomsection {
-        /* - 區段二上端空白 */
-        padding-top: 56px;
-    }
-
-    /* > 標語 */
-    .homepage-slogan {
-        font-size: 1.43rem;
-        color: rgb(255, 255, 255);
-        background-color: #000537;
-
-        height: 95px;
-        /* - 底部間距 */
-        margin-top: 0px;
-        margin-bottom: 36px;
-    }
-
-    /* > 左、右標語 */
-    #homepage-slogan-element-1,
-    #homepage-slogan-element-3 {
-        line-height: 2rem;
-        letter-spacing: 0.08em;
-    }
-
-    #homepage-slogan-element-1 {
-        padding-right: 2.18%;
-    }
-
-    #homepage-slogan-element-3 {
-        padding-left: 2.18%;
-    }
-
-    /* > 中標語 */
-    #head,
-    #sub {
-        font-family: Tangerine;
-        font-size: 6rem;
-        line-height: 6rem;
-        letter-spacing: -0.015em;
-    }
-
-    /* > 按鈕區 */
-    #homepage-contactbtn-box a {
-        width: 88.5%;
-        height: 10vw;
-    }
-
-    /* > 按鈕字樣 */
-    #homepage-contactbtn span {
-        padding-right: 10%;
-    }
-
-    /* > hover按鈕字樣 */
-    #homepage-contactbtn:hover span {
-        padding-right: 10%;
-    }
-
-    /* > 偽元素hover前 */
-    #homepage-contactbtn:before {
-        padding-left: 25%;
-    }
-
-    /* > 偽元素hover後 */
-    #homepage-contactbtn:hover:before {
-        padding-left: 25%;
-    }
-
-    /* > arrow */
-    #homepage-contactbtn-svg {
-        width: calc(142px * 0.5);
-        height: calc(53px * 0.5);
-        left: 75%;
-    }
-
-    /* > hover arrow */
-    #homepage-contactbtn:hover #homepage-contactbtn-svg {
-        left: 75%;
-    }
-
-    /* > 箭頭移動 */
-    @keyframes svg-go {
-        0% {
-            transform: translate(0, 0);
-        }
-
-        100% {
-            transform: translate(90%, 0);
-        }
-    }
-
-    @keyframes svg-back {
-        0% {
-            transform: translate(90%, 0);
-        }
-
-        100% {
-            transform: translate(0, 0);
-        }
-    }
-
-    /* > 媒體報導 */
-    .homepage-mediabox {
-        margin-top: 62px;
-        margin-bottom: 20px;
-
-        width: 88.5%;
-        height: auto;
-    }
-
-    #homepage-mediatitle {
-        font-size: 1rem;
-        line-height: 1.375rem;
-        white-space: normal;
-
-        margin-bottom: 22px;
-    }
-}
-
-/* !RWD 1101-1300 (for 按鈕區) */
-@media (min-width: 1101px) and (max-width: 1300.98px) {
-
-    /* > 按鈕區 */
-    #homepage-contactbtn-box a {
-        width: 76%;
-        height: 10vw;
-    }
-
-    /* > 按鈕字樣 */
-    #homepage-contactbtn span {
-        padding-right: 8%;
-    }
-
-    /* > hover按鈕字樣 */
-    #homepage-contactbtn:hover span {
-        padding-right: 8%;
-    }
-
-    /* > 偽元素hover前 */
-    #homepage-contactbtn:before {
-        padding-left: 30%;
-    }
-
-    /* > 偽元素hover後 */
-    #homepage-contactbtn:hover:before {
-        padding-left: 30%;
-    }
-
-    /* > arrow */
-    #homepage-contactbtn-svg {
-        width: calc(142px * 0.5);
-        height: calc(53px * 0.5);
-        left: 73%;
-    }
-
-    /* > hover arrow */
-    #homepage-contactbtn:hover #homepage-contactbtn-svg {
-        left: 73%;
-    }
-
-    /* > 箭頭移動 */
-    @keyframes svg-go {
-        0% {
-            transform: translate(0, 0);
-        }
-
-        100% {
-            transform: translate(160%, 0);
-        }
-    }
-
-    @keyframes svg-back {
-        0% {
-            transform: translate(160%, 0);
-        }
-
-        100% {
-            transform: translate(0, 0);
-        }
-    }
-}
-
-/* !RWD 900-1100 (for 按鈕區) */
+/* ! RWD 900-1100 (for 按鈕區) */
 @media (min-width: 900px) and (max-width: 1100.98px) {
 
 
@@ -1533,12 +1481,560 @@ button:active,
 
 }
 
-/* ! RWD -577 手機板 */
+/* ! RWD 577-900 (for 按鈕區) */
+@media (min-width: 577px) and (max-width: 899.98px) {
+
+    /* > 按鈕區 */
+    #homepage-contactbtn-box a {
+        width: 88.5%;
+        height: 10vw;
+    }
+
+    /* > 按鈕字樣 */
+    #homepage-contactbtn span {
+        padding-right: 12%;
+    }
+
+    /* > hover按鈕字樣 */
+    #homepage-contactbtn:hover span {
+        padding-right: 12%;
+    }
+
+    /* > 偽元素hover前 */
+    #homepage-contactbtn:before {
+        padding-left: 25%;
+    }
+
+    /* > 偽元素hover後 */
+    #homepage-contactbtn:hover:before {
+        padding-left: 25%;
+    }
+
+    /* > arrow */
+    #homepage-contactbtn-svg {
+        width: calc(142px * 0.5);
+        height: calc(53px * 0.5);
+        left: 75%;
+    }
+
+    /* > hover arrow */
+    #homepage-contactbtn:hover #homepage-contactbtn-svg {
+        left: 75%;
+    }
+
+    /* > 箭頭移動 */
+    @keyframes svg-go {
+        0% {
+            transform: translate(0, 0);
+        }
+
+        100% {
+            transform: translate(90%, 0);
+        }
+    }
+
+    @keyframes svg-back {
+        0% {
+            transform: translate(90%, 0);
+        }
+
+        100% {
+            transform: translate(0, 0);
+        }
+    }
+
+}
+
+/* ! RWD -577 (for 按鈕區) */
 @media (max-width: 576.98px) {
 
-    /* ?媒體區highlight */
-    .homepage-mediatitle-highlight {
-        color: #47BFD9
+    /* > 按鈕區 */
+    #homepage-contactbtn-box a {
+        width: 74.3%;
+        height: 63px;
+    }
+
+    /* > 按鈕字樣 */
+    #homepage-contactbtn span {
+        padding-right: 15%;
+        font-size: 13.5px;
+
+        line-height: 1.1875rem;
+        letter-spacing: 0.15em;
+    }
+
+    /* > hover按鈕字樣 */
+    #homepage-contactbtn:hover span {
+        padding-right: 15%;
+        font-size: 13.5px;
+
+        line-height: 1.1875rem;
+        letter-spacing: 0.15em;
+    }
+
+    /* > 偽元素hover前 */
+    #homepage-contactbtn:before {
+        padding-left: 10%;
+        font-size: 13.5px;
+
+        line-height: 1.1875rem;
+        letter-spacing: 0.15em;
+    }
+
+    /* > 偽元素hover後 */
+    #homepage-contactbtn:hover:before {
+        padding-left: 10%;
+        font-size: 13.5px;
+
+        line-height: 1.1875rem;
+        letter-spacing: 0.15em;
+    }
+
+    /* > arrow */
+    #homepage-contactbtn-svg {
+        width: calc(142px * 0.25);
+        height: calc(53px * 0.25);
+        left: 80%;
+    }
+
+    /* > hover arrow */
+    #homepage-contactbtn:hover #homepage-contactbtn-svg {
+        left: 80%;
+    }
+
+    /* > 箭頭移動 */
+    @keyframes svg-go {
+        0% {
+            transform: translate(0, 0);
+        }
+
+        100% {
+            transform: translate(30%, 0);
+        }
+    }
+
+    @keyframes svg-back {
+        0% {
+            transform: translate(30%, 0);
+        }
+
+        100% {
+            transform: translate(0, 0);
+        }
     }
 }
 
+
+
+/* ! RWD 577-1200 (平板) */
+@media (min-width: 577px) and (max-width: 1200.98px) {
+
+    /* > 區段一 */
+    #homepage-topsection {
+        height: 78.12vh;
+    }
+
+    /* > 排序盒子Z20 */
+    .desktop-box {
+        display: flex;
+        justify-content: center;
+        position: absolute;
+
+        width: 79.5%;
+        height: auto;
+
+        z-index: 20;
+
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+
+    #homepage-bigimage-desktop {
+        width: 100%;
+        height: auto;
+
+        /* - 推右側寬度使置中 */
+        margin-right: 12%;
+        padding-right: 0%;
+        margin-top: 10vh;
+
+        opacity: 1;
+    }
+
+    /* > 圖片區容器 */
+    .homepage-introbox {
+        display: flex;
+        width: 100%;
+        margin-top: 34.6vh;
+
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    /* > 三張圖 */
+    .homepage-introimage {
+        height: 39.3vh;
+        /* - 橫向間距 */
+        margin-left: 12.5px;
+        margin-right: 12.5px;
+    }
+
+    #homepage-introimage2 {
+        /* - 高度差 */
+        margin-top: 6.7vh;
+    }
+
+
+    /* > 圖片區文字內容 */
+    .homepage-introimage-content {
+        height: 39.3vh;
+        opacity: 1;
+        background: linear-gradient(180deg, rgba(0, 5, 55, 0) 39.58%, rgba(0, 3, 32, 0.66) 92.71%);
+        background-blend-mode: darken;
+
+        padding-bottom: 30px;
+    }
+
+    /* > 標題 */
+    .homepage-introimage-content1 {
+        width: 84.3%;
+
+        font-size: 0.9375rem;
+        line-height: 1.8125rem;
+        letter-spacing: 0.01em;
+        white-space: nowrap;
+
+        height: 29px;
+        padding-bottom: 0px;
+        margin-bottom: 6px;
+    }
+
+    /* > 內文 */
+    .homepage-introimage-content2 {
+        width: 84.3%;
+
+        font-size: 0.75rem;
+        line-height: 1.0625rem;
+        letter-spacing: 0.05em;
+
+        margin-top: 8px;
+    }
+
+
+    /* > 區段二 */
+    .homepage-bottomsection {
+        /* - 區段二上端空白 */
+        padding-top: 56px;
+        height: auto;
+    }
+
+    /* > 標語 */
+    .homepage-slogan {
+        font-size: 1.43rem;
+        color: rgb(255, 255, 255);
+        background-color: #000537;
+
+        height: 95px;
+        /* - 底部間距 */
+        margin-top: 0px;
+        margin-bottom: 36px;
+    }
+
+    /* > 左、右標語 */
+    #homepage-slogan-element-1,
+    #homepage-slogan-element-3 {
+        line-height: 2rem;
+        letter-spacing: 0.08em;
+    }
+
+    #homepage-slogan-element-1 {
+        padding-right: 17px;
+    }
+
+    #homepage-slogan-element-3 {
+        padding-left: 17px;
+    }
+
+    /* > 中標語 */
+    #head,
+    #sub {
+        font-family: Tangerine;
+        font-size: 6rem;
+        line-height: 6rem;
+        letter-spacing: -0.015em;
+    }
+
+    /* > 左右滑圖片區 */
+    .grid {
+        height: 145px;
+    }
+
+    /* >　按鈕尺寸 */
+    .owl-prev,
+    .owl-next {
+        width: 45px;
+        height: 45px;
+    }
+
+    #svg-left,
+    #svg-right {
+        width: 45px;
+        height: 45px;
+    }
+
+
+    /* > 媒體報導 */
+    .homepage-mediabox {
+        margin-top: 62px;
+        margin-bottom: 20px;
+
+        width: 88.5%;
+        height: auto;
+    }
+
+    #homepage-mediatitle {
+        font-size: 1rem;
+        line-height: 1.375rem;
+        white-space: normal;
+
+        margin-bottom: 22px;
+    }
+}
+
+/* ! RWD -577 手機板 */
+@media (max-width: 576.98px) {
+
+    /* > 區段一 */
+    #homepage-topsection {
+        height: auto;
+    }
+
+    /* > 排序盒子Z20 */
+    #homepage-bigimage-desktop {
+        opacity: 0;
+    }
+
+    /* > 排序盒子Z15 */
+    .phone-box {
+        display: flex;
+        justify-content: center;
+        position: absolute;
+
+        width: 100%;
+        height: 100vh;
+        z-index: 15;
+        opacity: 1;
+    }
+
+    #homepage-bigimage-phone {
+        width: auto;
+        height: 37.9%;
+
+        margin-top: 86px;
+        margin-left: 3%;
+        margin-right: 7%;
+        /* - 圖片填滿背景 */
+        object-fit: cover;
+        /* - 縮放圖片依然置中 */
+        background-position: center;
+        opacity: 1;
+    }
+
+
+    /* > 圖片區容器 */
+    .homepage-introbox {
+        flex-direction: column;
+
+        width: 100%;
+        margin-top: 43.54vh;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    /* > 三張圖 */
+    .homepage-introimage {
+        width: 100%;
+        height: 35.8vh;
+        /* - 橫向間距 */
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    #homepage-introimage2 {
+        /* - 高度差 */
+        margin-top: 0vh;
+    }
+
+    .homepage-introimage-content {
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: center;
+
+        height: 35.8vh;
+        padding-bottom: 30px;
+        background: linear-gradient(180deg, rgba(0, 5, 55, 0) 46.73%, rgba(0, 5, 55, 0.66) 82.62%);
+        background-blend-mode: darken;
+
+    }
+
+    /* > 圖片區文字內容 */
+    /* -標題 */
+    .homepage-introimage-content1 {
+        font-size: 1.125rem;
+        line-height: 1.3125rem;
+        letter-spacing: 0.01em;
+        text-align: right;
+
+        width: 27.7%;
+        height: 55px;
+
+        align-items: center;
+        justify-content: flex-end;
+        border-bottom: none;
+
+        padding-bottom: 0px;
+        margin-bottom: 0px;
+        /* -中間間距 */
+        margin-right: 3.8%;
+    }
+
+    /* -內文 */
+    .homepage-introimage-content2 {
+        font-size: 0.875rem;
+        line-height: 1.125rem;
+        letter-spacing: 0.05em;
+        text-align: left;
+
+        width: 42.7%;
+        height: 55px;
+
+        align-items: center;
+        margin-top: 0px;
+        /* -中間間距 */
+        margin-left: 3.8%;
+    }
+
+    .homepage-introimage-content1 p,
+    .homepage-introimage-content2 p {
+        margin-bottom: 0;
+    }
+
+    /* > 文案選擇 */
+    .desktop-text {
+        display: none;
+    }
+
+    .phone-text {
+        display: block;
+    }
+
+    .homepage-intro-break {
+        display: block;
+    }
+
+    /* > 圖片背景 */
+    .intro-1 {
+        background-image: url(../images/why-1-phone.png);
+        /* -下距 */
+        margin-bottom: 30px;
+    }
+
+    .intro-2 {
+        background-image: url(../images/why-2-phone.png);
+        /* -下距 */
+        margin-bottom: 30px;
+    }
+
+    .intro-3 {
+        background-image: url(../images/why-3-phone.png);
+    }
+
+    /* > 區段二 */
+    .homepage-bottomsection {
+        /* - 區段二上端空白 */
+        padding-top: 33px;
+    }
+
+    /* > 標語 */
+    .homepage-slogan {
+        /* - 主軸改垂直 */
+        flex-direction: column;
+
+        font-size: 1.25rem;
+        height: 110px;
+        /* - 底部間距 */
+        margin-top: 0px;
+        margin-bottom: 35px;
+    }
+
+    /* > 左、右標語 */
+    #homepage-slogan-element-1,
+    #homepage-slogan-element-3 {
+        line-height: 27px;
+        letter-spacing: 0.05em;
+    }
+
+    #homepage-slogan-element-1 {
+        padding-right: 8px;
+    }
+
+    #homepage-slogan-element-3 {
+        padding-left: 0;
+    }
+
+    /* > 中標語 */
+    #head,
+    #sub {
+        font-family: Tangerine;
+        font-size: 4.875rem;
+        line-height: 4.875rem;
+        letter-spacing: -0.015em;
+    }
+
+    /* > 左右滑圖片區 */
+    .grid {
+        height: 200px;
+    }
+
+    /* > 媒體報導 */
+    .homepage-mediabox {
+        margin-top: 49px;
+        margin-bottom: 3px;
+
+        width: 80%;
+        height: auto;
+    }
+
+    #homepage-mediatitle {
+        font-size: 1.25rem;
+        line-height: 1.6875rem;
+        white-space: normal;
+        margin-bottom: 26px;
+    }
+
+    /* > 媒體圖片盒子 */
+    .homepage-media {
+        height: 45px;
+    }
+
+    /* > 媒體區highlight */
+    .homepage-mediatitle-highlight {
+        color: #47BFD9
+    }
+
+    /* > 標題引號 */
+    .quotation-marks {
+        display: none;
+    }
+
+    /* > 電腦&平板 */
+    .homepage-media-desktop {
+        opacity: 0;
+    }
+
+    /* > 手機板 */
+    .homepage-media-phone {
+        height: 45px;
+        opacity: 1;
+    }
+}
