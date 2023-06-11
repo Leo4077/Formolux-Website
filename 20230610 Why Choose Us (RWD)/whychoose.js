@@ -123,17 +123,17 @@ $('.carousel-main').owlCarousel({
     margin: 0,
     nav: true,
     dots: false,
-    navText: [ 
+    navText: [
         // 使用SVG作為導航按鈕
         // 左按鈕
-        `<svg width="75" height="75" viewBox="0 0 75 75" fill="none" xmlns="http://www.w3.org/2000/svg">
+        `<svg id="svg-left" viewBox="0 0 75 75" fill="none" xmlns="http://www.w3.org/2000/svg">
     <circle cx="37.5" cy="37.5" r="36.5" transform="rotate(-180 37.5 37.5)" fill="#FFFCEB"
         fill-opacity="0.5" stroke="white" stroke-width="2" />
     <path d="M43 51L28 36.9882L43 23.7407" stroke="white" stroke-width="2"
         stroke-linecap="round" stroke-linejoin="round" />
 </svg>`,
-// 右按鈕
-        `<svg width="75" height="75" viewBox="0 0 75 75" fill="none" xmlns="http://www.w3.org/2000/svg">
+        // 右按鈕
+        `<svg id="svg-right" viewBox="0 0 75 75" fill="none" xmlns="http://www.w3.org/2000/svg">
     <circle cx="37.5" cy="37.5" r="36.5" fill="#FFFCEB" fill-opacity="0.5" stroke="white"
         stroke-width="2" />
     <path d="M32 24L47 38.0118L32 51.2593" stroke="white" stroke-width="2"
@@ -148,7 +148,7 @@ $('.carousel-main').owlCarousel({
             loop: true,
         },
         767: {
-            items: 1.5,
+            items: 3.5,
             nav: true,
             loop: true,
         },
