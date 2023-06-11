@@ -72,45 +72,159 @@ $(document).ready(function () {
 
 
 
+
 /* 滾動顯示效果 */
-let vh;
-let start;
-let end;
+// 定義每一個 intro 與 content 的對應
+const items = [
+    { intro: 'intro-1', content: 'content-A' },
+    { intro: 'intro-2', content: 'content-B' },
+    { intro: 'intro-3', content: 'content-C' }
+];
 
-// 創建一個函數來計算和更新 start 和 end 的值
-function calculateVH() {
-    vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
-    start = 0.324 * vh;  // 將 32.4vh 轉換為像素
-    end = 1.66 * vh;  // 將 166vh 轉換為像素
-}
+// 定義不同螢幕寬度對應的閾值
+const thresholds = {
+    mobile: [0, 0.3, 1],  // 手機
+    tablet: [0, 1],  // 平板
+    desktop: [0, 0.3, 0.5, 1]  // 電腦
+};
 
-// 現在，我們首先調用一次 calculateVH 函數來進行初始計算
-calculateVH();
+// 定義觀察者的選項
+let observerOptions = {
+    root: null,  // 觀察的根元素，null 表示為 viewport
+    rootMargin: '0px',  // 根元素的邊距，用來調整觀察範圍
+    threshold: thresholds.desktop  // 預設為電腦的閾值
+};
 
-// 定義一個函數名為 scrollAppear
-function scrollAppear() {
-    let items = document.querySelectorAll('.homepage-introimage-content');
+let tabletMode = false;
 
-    items.forEach(function (item) {
-        if (window.scrollY < start) {
-            item.classList.remove('showIntrocontent');
-            item.classList.add('hideIntrocontent');
-        }
-        else if (end >= window.scrollY && window.scrollY >= start) {
-            item.classList.add('showIntrocontent');
-            item.classList.remove('hideIntrocontent');
-        }
-        else if (window.scrollY > end) {
-            item.classList.remove('showIntrocontent');
-            item.classList.add('hideIntrocontent');
+// 建立 Intersection Observer
+let observer = new IntersectionObserver((entries, observer) => {
+    // 迴圈處理每一個觀察的元素(entry)
+    entries.forEach(entry => {
+        // 迴圈處理每一個 intro 與 content 的對應
+        items.forEach(item => {
+            // 取得對應的 intro 元素與 content 元素
+            const intro = document.querySelector(`.${item.intro}`);
+            const content = document.querySelector(`.${item.content}`);
+
+            // 如果找不到元素，則跳過此次迴圈
+            if (!intro || !content) {
+                return;
+            }
+
+            // 如果 entry 的目標與 intro 元素相同
+            if (entry.target === intro) {
+                // 平板模式下，元素一直保持顯示狀態
+                if (tabletMode) {
+                    content.classList.add('showIntrocontent');
+                    content.classList.remove('hideIntrocontent');
+                } else {
+                    // 當元素至少進入視窗50%時
+                    if (entry.intersectionRatio >= 0.5) {
+                        content.classList.add('showIntrocontent');
+                        content.classList.remove('hideIntrocontent');
+                    }
+                    // 當元素在視窗中少於20%時（也就是已經離開視窗80%時）
+                    else if (entry.intersectionRatio < 0.5) {
+                        content.classList.remove('showIntrocontent');
+                        content.classList.add('hideIntrocontent');
+                    }
+                }
+            }
+        });
+    });
+}, observerOptions);
+
+// 將每一個 intro 元素加入到觀察者
+items.forEach(item => {
+    const intro = document.querySelector(`.${item.intro}`);
+    if (intro) {
+        observer.observe(intro);
+    }
+});
+
+// 監聽窗口大小變化
+window.addEventListener('resize', () => {
+    // 取得窗口的寬度
+    const width = window.innerWidth;
+
+    // 先清除原本 Observer 監控的元素
+    items.forEach(item => {
+        const intro = document.querySelector(`.${item.intro}`);
+        if (intro) {
+            observer.unobserve(intro);
         }
     });
-}
 
-// 當頁面滾動時，執行 scrollAppear 函數，實現視窗滾動時的元素顯示和隱藏效果
-window.addEventListener('scroll', scrollAppear);
-// 最後，添加一個監聽器來監聽窗口大小的改變。當窗口大小改變時，重新計算 start 和 end 的值
-window.addEventListener('resize', calculateVH);
+    // 根據窗口的寬度設定對應的閾值
+    if (width <= 577) {  // 手機
+        observerOptions.threshold = thresholds.mobile;
+        tabletMode = false;
+    }
+    else if (width <= 1200) {  // 平板
+        observerOptions.threshold = thresholds.tablet;
+        tabletMode = true;
+    }
+    else {  // 電腦
+        observerOptions.threshold = thresholds.desktop;
+        tabletMode = false;
+    }
+
+    // 更新觀察者的選項
+    observer = new IntersectionObserver((entries, observer) => {
+        // 迴圈處理每一個觀察的元素(entry)
+        entries.forEach(entry => {
+            // 迴圈處理每一個 intro 與 content 的對應
+            items.forEach(item => {
+                // 取得對應的 intro 元素與 content 元素
+                const intro = document.querySelector(`.${item.intro}`);
+                const content = document.querySelector(`.${item.content}`);
+
+                // 如果找不到元素，則跳過此次迴圈
+                if (!intro || !content) {
+                    return;
+                }
+
+                // 如果 entry 的目標與 intro 元素相同
+                if (entry.target === intro) {
+                    // 平板模式下，元素一直保持顯示狀態
+                    if (tabletMode) {
+                        content.classList.add('showIntrocontent');
+                        content.classList.remove('hideIntrocontent');
+                    } else {
+                        // 當元素至少進入視窗50%時
+                        if (entry.intersectionRatio >= 0.5) {
+                            content.classList.add('showIntrocontent');
+                            content.classList.remove('hideIntrocontent');
+                        }
+                        // 當元素在視窗中少於20%時（也就是已經離開視窗80%時）
+                        else if (entry.intersectionRatio < 0.5) {
+                            content.classList.remove('showIntrocontent');
+                            content.classList.add('hideIntrocontent');
+                        }
+                    }
+                }
+            });
+        });
+    }, observerOptions);
+
+
+    // 將每一個 intro 元素加入到新的觀察者
+    items.forEach(item => {
+        const intro = document.querySelector(`.${item.intro}`);
+        if (intro) {
+            observer.observe(intro);
+        }
+    });
+});
+
+
+
+
+
+
+
+
 
 
 

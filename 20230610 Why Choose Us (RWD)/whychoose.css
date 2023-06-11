@@ -144,10 +144,8 @@ p {
     background-blend-mode: darken;
 
     /* - 初始樣式 */
-    /* ! 0.5 */
-    opacity: 1;
-    /* ! 100vh */
-    transform: translateY(-70vh);
+    opacity: 0.5;
+    transform: translateY(-100vh);
 }
 
 /* > 文案選擇 */
@@ -1365,45 +1363,35 @@ button:active,
 
 
 /* ! 按鈕區 */
-/* ! RWD 1101-1300 (for 按鈕區) */
-@media (min-width: 1101px) and (max-width: 1300.98px) {
+/* ! RWD 1201-1400 (for 按鈕區) */
+@media (min-width: 1201px) and (max-width: 1400.98px) {
 
     /* > 按鈕區 */
     #homepage-contactbtn-box a {
         width: 76%;
-        height: 10vw;
-    }
-
-    /* > 按鈕字樣 */
-    #homepage-contactbtn span {
-        padding-right: 8%;
-    }
-
-    /* > hover按鈕字樣 */
-    #homepage-contactbtn:hover span {
-        padding-right: 8%;
+        height: calc(147px * 0.8);
     }
 
     /* > 偽元素hover前 */
     #homepage-contactbtn:before {
-        padding-left: 30%;
+        padding-left: 35%;
     }
 
     /* > 偽元素hover後 */
     #homepage-contactbtn:hover:before {
-        padding-left: 30%;
+        padding-left: 35%;
     }
 
     /* > arrow */
     #homepage-contactbtn-svg {
-        width: calc(142px * 0.5);
-        height: calc(53px * 0.5);
-        left: 73%;
+        width: calc(142px * 0.8);
+        height: calc(53px * 0.8);
+        left: 75%;
     }
 
     /* > hover arrow */
     #homepage-contactbtn:hover #homepage-contactbtn-svg {
-        left: 73%;
+        left: 75%;
     }
 
     /* > 箭頭移動 */
@@ -1413,13 +1401,13 @@ button:active,
         }
 
         100% {
-            transform: translate(160%, 0);
+            transform: translate(90%, 0);
         }
     }
 
     @keyframes svg-back {
         0% {
-            transform: translate(160%, 0);
+            transform: translate(90%, 0);
         }
 
         100% {
@@ -1638,67 +1626,6 @@ button:active,
 
 
 
-
-
-
-
-/* ! RWD 1201-1400 (size*0.9) */
-@media (min-width: 1201px) and (max-width: 1400.98px) {
-
-    /* > 按鈕區 */
-    #homepage-contactbtn-box a {
-        width: 76%;
-        height: calc(147px * 0.8);
-    }
-
-    /* > 偽元素hover前 */
-    #homepage-contactbtn:before {
-        padding-left: 35%;
-    }
-
-    /* > 偽元素hover後 */
-    #homepage-contactbtn:hover:before {
-        padding-left: 35%;
-    }
-
-    /* > arrow */
-    #homepage-contactbtn-svg {
-        width: calc(142px * 0.8);
-        height: calc(53px * 0.8);
-        left: 75%;
-    }
-
-    /* > hover arrow */
-    #homepage-contactbtn:hover #homepage-contactbtn-svg {
-        left: 75%;
-    }
-
-    /* > 箭頭移動 */
-    @keyframes svg-go {
-        0% {
-            transform: translate(0, 0);
-        }
-
-        100% {
-            transform: translate(90%, 0);
-        }
-    }
-
-    @keyframes svg-back {
-        0% {
-            transform: translate(90%, 0);
-        }
-
-        100% {
-            transform: translate(0, 0);
-        }
-    }
-}
-
-
-
-
-
 /* ! RWD 577-1200 (平板) */
 @media (min-width: 577px) and (max-width: 1200.98px) {
 
@@ -1755,6 +1682,42 @@ button:active,
     #homepage-introimage2 {
         /* - 高度差 */
         margin-top: 6.7vh;
+    }
+
+
+    /* > 圖片區文字內容 */
+    .homepage-introimage-content {
+        height: 39.3vh;
+        opacity: 1;
+        background: linear-gradient(180deg, rgba(0, 5, 55, 0) 39.58%, rgba(0, 3, 32, 0.66) 92.71%);
+        background-blend-mode: darken;
+
+        padding-bottom: 30px;
+    }
+
+    /* > 標題 */
+    .homepage-introimage-content1 {
+        width: 84.3%;
+
+        font-size: 0.9375rem;
+        line-height: 1.8125rem;
+        letter-spacing: 0.01em;
+        white-space: nowrap;
+
+        height: 29px;
+        padding-bottom: 0px;
+        margin-bottom: 6px;
+    }
+
+    /* > 內文 */
+    .homepage-introimage-content2 {
+        width: 84.3%;
+
+        font-size: 0.75rem;
+        line-height: 1.0625rem;
+        letter-spacing: 0.05em;
+
+        margin-top: 8px;
     }
 
 
