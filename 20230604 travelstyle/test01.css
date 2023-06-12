@@ -12,71 +12,119 @@
   }
   
   .styleFront{
-    width: auto;
-    height: 80%;
+    width: 62%;
+    min-width: 920px;
+    /* height: auto; */
     display: flex;
     justify-content: center;
-    margin-top: 80px;
+    padding-top: 4.2%;
   }
 
   #styleImage{
-    width: 100%;
-    height: 100%;
-  }
-  
-  #styleImage {
     z-index: 6;
-    margin-right:4.5%;
-    }
+    margin-right:4%;
+    width: 100%;
+  }
+
+  #ipadImage{
+    display: none;
+  }
+
+  .longbox{
+    width: 100%;
+  }
+
   #longImage{
       
-      width:100%;
-      margin-top: -50px;
-      position: relative;
-      z-index: 1;
+    width:100%;
+    min-height: 80px;
+    margin-top: -50px;
+    position: relative;
+    z-index: 1;
   }
 
-  /* 跑馬燈區域 */
+
+
+    /* 跑馬燈區域 */
     
-  .marquee {
-    width: 100%;
-    height: 5.5rem;
-    overflow: hidden;
-    margin-top: 16px; 
-    padding-bottom: 1.5rem;
-  }
+    .marquee {
+      width: 100%;
+      height: 5.5rem;
+      overflow: hidden;
+      margin-top: 1%; 
+      /* margin-bottom: 2vh; */
+      /* padding-bottom: 1.5rem; */
+    }
+    
+    .marquee li {
+      font-size:  1.75rem;
+      font-family: var(--second-font);
+      color: var(--main-darkBlue);
+      font-style: Italic;
+    }
+    
+    .marquee__content {
+      display: flex;
+      /* align-items: center; */
+      width: 100%;
+      animation: scrolling 20s linear infinite;
+    }
+    
+    .marquee__item {
+      flex-shrink: 0; 
+    }
+    
+    @keyframes scrolling {
+      from { transform: translateX(0); }
+      to { transform: translateX(-100%); }
+    }
+    
+    .marquee__line {
+      display: inline-block;
+      width: 70.5px;
+      height: 1px;
+      background-color: black;
+      position: relative;
+      bottom: 25%; /*讓他置中*/
+      margin:0 20px 0 20px;
   
-  .marquee li {
-    font-size:  1.75rem;
-    font-family: var(--second-font);
-    color: var(--main-darkBlue);
-  }
-  
-  .marquee__content {
-    display: flex;
-    align-items: center;
-    width: 100%; /* two marquee lists, so the width should be 200% */
-    animation: scrolling 20s linear infinite;
-  }
-  
-  .marquee__item {
-    flex-shrink: 0;
+    }
 
-  }
+    /*平板: 上半部分的變化*/
 
-  @keyframes scrolling {
-    0% { transform: translateX(0) }
-    100% { transform: translateX(calc(-100% - 65px)); }
-  }
-  /* 跑馬燈區域 */
-  .marquee hr {
-    display: inline-block;
-    height: 0px;
-    border: 1px solid black; 
-    border-left: 50px solid black; 
-    margin: 10px 6px 5px 15px;
-  } 
+    @media (min-width: 768px) and (max-width:1024px) {
+      #pageStyle{
+        height: 87.6vh;
+      }
   
+      /*標題大小*/
+      .styleFront{
+        min-width: 87.5%;
+      }
+  
+      #longImage{
+        display: none;
+      }
+  
+      #ipadImage{
+        display: block;
+        width: 100%;
+        transform: translateY(-1.7vh);
+      }
+
+      .marquee li {
+        font-size:  1.125rem;
+      }
+
+      .marquee__line {
+        width: 45.12px;
+        height: 0.64px;
+    
+      }
+
+
+  
+    }
 
     /* 第二部分 */
     

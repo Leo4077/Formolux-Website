@@ -110,13 +110,36 @@
 @media (min-width: 768px) and (max-width:1024px) {
     #formpage {
         height: 1854px;
+        background-repeat: no-repeat;
+        animation: backUp 2s both ease-in-out;
     }
+
+    @keyframes backUp{
+        0%{
+            background-position-y: -100px;
+        }
+        100%{
+            background-position-y: 0px;
+        }
+    }
+
     .blurContainer{
         height: 1396px;
         width: 88.5%;
         transform: translateY(2.6%);
         display: flex;
         align-items: flex-start;
+        animation: formUp 2s both ease-in-out
+    }
+
+    @keyframes formUp {
+        0% {
+            bottom: -4%;
+        }
+    
+        100% {
+            bottom: 0%;
+        }
     }
 
 }
@@ -151,7 +174,7 @@
 
 @media (min-width: 768px) and (max-width:1024px) {
     #message_form {
-        width: 60%;
+        width: 61%;
         height: 1396px;
         /* background-color: #000537; */
         /* transform: translateY(-8%); */
@@ -416,10 +439,12 @@ color: transparent; } */
     width:194.25px;
 }
 
+/*平板: 送出按鈕大小變化*/
+
 @media (min-width: 768px) and (max-width:1024px) {
     #taiwan-travelbtn {
         align-self: center;
-        width: 100%;
+        width: 130%;
     }
 }
 
@@ -611,6 +636,134 @@ color: transparent; } */
     }
 }
 
+
+/*小筆電(1440-1800): 送出按鈕hover後的變化*/
+@media (min-width: 1440px) and (max-width:1800px) {
+
+    /*按鈕hover後出現的字，往左邊移動的距離*/
+    #taiwan-travelbtn:before {
+        transform: translateX(-7.5%);
+    }
+
+    #taiwan-travelbtn:hover:before {
+        transform: translateX(-7.5%);
+    }
+
+
+    /* hover arrow */
+    #taiwan-travelbtn:hover img {
+
+        animation: imggo 0.3s forwards;
+
+    }
+
+    /* 箭頭移動 */
+    @keyframes imggo {
+        0% {
+            transform: translate(0, 0);
+        }
+
+        100% {
+            transform: translate(27em, 0);
+
+        }
+    }
+}
+
+/*小筆電(1023-1439): 送出按鈕hover後的變化*/
+@media (min-width: 1023px) and (max-width:1439px) {
+
+    #taiwan-travelbtn span {
+        font-size: 1.5rem;
+    }
+
+    #taiwan-travelbtn img {
+        width: 35%; /*箭頭縮小*/
+    }
+
+    /*按鈕hover後出現的字，往左邊移動的距離*/
+    #taiwan-travelbtn:before {
+        transform: translateX(-7.5%);
+        font-size: 1.5rem;
+
+    }
+
+    #taiwan-travelbtn:hover:before {
+        transform: translateX(-7.5%);
+        font-size: 1.5rem;
+    }
+
+
+    /* hover arrow */
+    #taiwan-travelbtn:hover img {
+        width: 35%; /*箭頭縮小*/
+        animation: imggo 0.3s forwards;
+
+    }
+
+    /* 箭頭移動 */
+    @keyframes imggo {
+        0% {
+            transform: translate(0, 0);
+        }
+
+        100% {
+            transform: translate(23em, 0);
+
+        }
+    }
+}
+
+/*平板: 送出按鈕hover後的變化*/
+@media (min-width: 768px) and (max-width:1024px) {
+
+    .sendcontainer {
+        width: auto;
+    }
+
+    #taiwan-travelbtn span {
+        transform: translateX(40%); /*send字樣距離改變*/
+        font-size: 1.25rem; }
+
+    #taiwan-travelbtn img {
+        margin-left:30%; /*與send隔的距離*/
+        align-self: center;
+        width: 41%; /*箭頭縮小*/
+    }
+
+    /*按鈕hover後出現的字，往左邊移動的距離*/
+    #taiwan-travelbtn:before {
+        transform: translateX(-7.5%);
+        font-size: 1.25rem;
+
+    }
+
+    #taiwan-travelbtn:hover:before {
+        transform: translateX(-7.5%);
+        font-size: 1.25rem;
+    }
+
+
+    /* hover arrow */
+    #taiwan-travelbtn:hover img {
+        width: 55%;
+        animation: imggo 0.3s forwards;
+
+    }
+
+    /* 箭頭移動 */
+    @keyframes imggo {
+        0% {
+            transform: translate(0, 0);
+        }
+
+        100% {
+            transform: translate(15em, 0);
+
+        }
+    }
+}
+
 /* 用戶提交表單後出現的畫面 */
 
  /* 遮罩層樣式 */
@@ -630,7 +783,8 @@ color: transparent; } */
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 33%;
+    width: 640px;
+    /* width: 33%; */
     height: 320px;
     border-radius: 35px 35px 0 0;
     position: fixed;
@@ -938,8 +1092,8 @@ color: transparent; } */
 
 @media (min-width: 768px) and (max-width:1024px) {
     .btnBar {
-        /* height: 348px; */
-        height: 40vh;
+        height: 348px;
+        /* height: 40vh; */
         flex-direction: column;
         
 
@@ -958,13 +1112,13 @@ color: transparent; } */
 
     .getintouch{
         display: flex;
-        width: 50%;
+        width: 260px;
     }
 
     .intouch p{
         /* position: absolute; */
         display: block;
-        padding: 0 0 12px 27px;
+        padding: 0 0 1% 27px;
         width:43%;
         height: auto;
     
@@ -998,6 +1152,7 @@ color: transparent; } */
         /* overflow: hidden; */
     
     }
+
 }
 
 

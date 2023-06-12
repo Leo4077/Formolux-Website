@@ -12,24 +12,39 @@
   }
   
   .styleFront{
-    width: auto;
-    height: 85vh;
+    
+    width: 62%;
+    min-width: 920px;
+    /* height: auto; */
     display: flex;
     justify-content: center;
-    margin-top: 80px;
+    padding-top: 4.2%;
+    /* margin-top: 80px; */
   }
   
   #styleImage {
     z-index: 6;
-    margin-right:80px;
+    margin-right:4%;
+    width: 100%;
     }
+
+  .longbox{
+    width: 100vw;
+  }
+
   #longImage{
       
       width:100%;
+      min-height: 80px;
       margin-top: -50px;
       position: relative;
       z-index: 1;
+      
   }
+
+  /* #styleImage, #longImage{
+    transform-origin: bottom;
+  } */
 
   /* 跑馬燈區域 */
     
@@ -37,19 +52,21 @@
     width: 100%;
     height: 5.5rem;
     overflow: hidden;
-    margin-top: 16px; 
-    padding-bottom: 1.5rem;
+    margin-top: 1%; 
+    /* margin-bottom: 2vh; */
+    /* padding-bottom: 1.5rem; */
   }
   
   .marquee li {
     font-size:  1.75rem;
     font-family: var(--second-font);
     color: var(--main-darkBlue);
+    font-style: Italic;
   }
   
   .marquee__content {
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     width: 100%; /* two marquee lists, so the width should be 200% */
     animation: scrolling 20s linear infinite;
   }
@@ -70,6 +87,18 @@
     border-left: 50px solid black; 
     margin: 10px 6px 5px 15px;
   }
+
+  .marquee__line {
+    display: inline-block;
+    width: 70.5px;
+    height: 1px;
+    background-color: black;
+    position: relative;
+    bottom: 25%; /*讓他置中*/
+    margin:0 20px 0 20px;
+
+  }
+  
   
 
     /* 第二部分 */

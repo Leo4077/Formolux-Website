@@ -18,21 +18,21 @@ var cardDetails = {
     text1: "1 person",
     text2: "SOLO<br>TRAVEL",
     text3: "# spiritual # cultural # fineart",
-    text4: "Unlock the mysteries of a captivating solo adventure where culture and spirituality intertwine. Immerse yourself in the tranquility of a Chinese temple, engage in enriching spiritual activities, and explore fascinating museums.",
+    text4: "Experience a valuable travel that allows one to explore oneself, and grow.",
     bg: "url('../images/soloBG.png')"
   },
   family: {
     text1: "3-6 people",
     text2: "FAMILY<br>TRAVEL",
     text3: "# hotAirBallon # deerPark #hiking",
-    text4: "Get up close with adorable animals at the charming farm, bask in the sun on pristine beaches, and let your spirits soar with a breathtaking hot air balloon ride. Experience joy, adventure, and togetherness on this magical family getaway.",
+    text4: "Sharing joy to strengthen familial bonds, interacting to deepen affections.",
     bg: "url('../images/familyBG.png')"
   },
   besties: {
     text1: "2-4 people",
     text2: "BESTIES<br>TRIP",
     text3: "# spa # relaxing #photoshoot",
-    text4: "Enjoy the ultimate freedom of a solo travel experience. Discover new places at your own pace.",
+    text4: "Enjoying a luxurious trip with my best friend like a privileged lady, relaxing both mind and body.",
     bg: "url('../images/besties_BG.png')"
   },
   honeymoonCard: {
@@ -53,10 +53,10 @@ document.addEventListener("DOMContentLoaded", function () {
     el.addEventListener("click", function(event) {
       event.preventDefault();
 
-      // 获取对应的对象
+      // 獲取對應的對象
       var details = cardDetails[this.id];
       if (!details) {
-        // 如果没有找到对应的对象，就直接返回
+        // 如果沒有找到對象，就直接返回
         return;
       }
 
