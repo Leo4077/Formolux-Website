@@ -3,7 +3,7 @@ body {
     overflow-x: hidden;
 }
 
-/* 區段一 */
+/* > 區段一 */
 .aboutus-first-section {
     display: flex;
     flex-direction: column;
@@ -16,7 +16,7 @@ body {
     z-index: 5;
 }
 
-/* 大標區 */
+/* > 大標區 */
 .aboutus-title-box {
     display: flex;
     justify-content: center;
@@ -27,13 +27,13 @@ body {
 .aboutus-title-box img {
     height: auto;
     width: 100%;
-    /* 圖片填滿背景 */
+    /* -圖片填滿背景 */
     object-fit: cover;
-    /* 縮放圖片依然置中 */
+    /* -縮放圖片依然置中 */
     background-position: center;
 }
 
-/* 按鈕區大 */
+/* > 按鈕區大 */
 .aboutus-btn-box {
     display: flex;
     align-items: center;
@@ -43,7 +43,7 @@ body {
     margin-bottom: 55px;
 }
 
-/* 按鈕區小 */
+/* > 按鈕區小 */
 .aboutus-btn-wrapper {
     position: relative;
     display: flex;
@@ -53,37 +53,37 @@ body {
     padding-right: 45px;
 }
 
-/* 外框 */
+/* > 外框 */
 #svg-frame {
     position: absolute;
     z-index: 10;
-    /* 鼠標事件 */
+    /* -鼠標事件 */
     pointer-events: none;
     left: 50%;
     transform: translate(-50%, 0);
 }
 
-/* 按鈕共用 */
+/* > 按鈕共用 */
 .aboutus-btn {
     align-items: center;
     justify-content: center;
     border: none;
-    /* 連動js */
+    /* -連動js */
     background-color: rgb(255, 255, 255);
 
     cursor: pointer;
 
     display: flex;
-    /* 使按鈕相鄰 */
+    /* -使按鈕相鄰 */
     margin-right: -45px;
-    /* 動畫秒數 */
+    /* -動畫秒數 */
     transition: background-color 0.8s, color 0.8s;
     padding: 0;
 }
 
 
 
-/* 按鈕文字 */
+/* > 按鈕文字 */
 .aboutus-btn-p {
     align-items: center;
     text-align: center;
@@ -96,7 +96,7 @@ body {
     letter-spacing: 0.065em;
     white-space: nowrap;
 
-    /* 連動js */
+    /* -連動js */
     color: #000537;
     border-bottom: 2px solid transparent;
 
@@ -104,7 +104,7 @@ body {
     display: flex;
     z-index: 5;
 
-    /* 動畫秒數 */
+    /* -動畫秒數 */
     transition: color 0.5s, border 0.5s;
 
 }
@@ -114,7 +114,7 @@ body {
     cursor: pointer;
 }
 
-/* 按鈕們 */
+/* > 按鈕們 */
 #btn1 {
     width: 307.5px;
     clip-path: polygon(0.2% 0, 100% 0, 85.3% 100%, 0.2% 100%);
@@ -153,7 +153,7 @@ body {
 }
 
 
-/* 區段二 */
+/* > 區段二 */
 .aboutus-second-section {
     display: block;
     position: relative;
@@ -163,20 +163,20 @@ body {
     height: 50vh;
     /*background-color: rgb(188, 188, 188); */
 
-    /* R角 */
+    /* -R角 */
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
 
 
-    /* 圖片填滿背景 */
+    /* -圖片填滿背景 */
     background-size: cover;
-    /* 縮放圖片依然置中 */
+    /* -縮放圖片依然置中 */
     background-position: center;
 
     z-index: 15;
 }
 
-/* 背景區 */
+/* > 背景區 */
 .background-layer {
     position: absolute;
     top: 0;
@@ -187,7 +187,7 @@ body {
     color: transparent;
 }
 
-/* 背景 */
+/* > 背景 */
 #aboutus-bg-box {
     bottom: 0;
     left: 0;
@@ -206,13 +206,13 @@ body {
 #newBg {
     height: 100%;
     width: 100%;
-    /* 圖片填滿背景 */
+    /* -圖片填滿背景 */
     object-fit: cover;
-    /* 縮放圖片依然置中 */
+    /* -縮放圖片依然置中 */
     background-position: center;
 }
 
-/* 大區 */
+/* > 大區 */
 .aboutus-main-content {
     display: flex;
     justify-content: space-between;
@@ -228,7 +228,7 @@ body {
 }
 
 
-/* 左內容區 */
+/* > 左內容區 */
 .aboutus-content-box {
     width: 39%;
     height: 100%;
@@ -241,7 +241,7 @@ body {
     transition: all 0.5s ease-in-out;
 }
 
-/* 左文字區 */
+/* > 左文字區 */
 .aboutus-content {
     width: 90%;
 
@@ -257,14 +257,14 @@ body {
 }
 
 
-/* 標題區 */
+/* > 標題區 */
 #title-layer {
     display: flex;
     position: relative;
     width: 100%;
 }
 
-/* 標題 */
+/* > 標題 */
 .aboutus-content-title {
     font-family: 'DM Serif Display';
     font-style: normal;
@@ -280,7 +280,7 @@ body {
     width: 100%;
 }
 
-/* 內文 */
+/* > 內文 */
 #content-layer {
     display: flex;
     justify-content: center;
@@ -290,7 +290,7 @@ body {
 }
 
 
-/* 內文 */
+/* > 內文 */
 .aboutus-content-word {
     font-family: 'Arial';
     font-style: normal;
@@ -307,7 +307,7 @@ body {
 }
 
 
-/* 右花區 */
+/* > 右花區 */
 .aboutus-content-flower-box {
     display: flex;
     position: relative;
@@ -331,12 +331,12 @@ body {
     bottom: 0;
 }
 
-/* 花共用 */
+/* > 花共用 */
 .aboutus-content-flower {
     transition: transform 0.6s ease-in-out;
 }
 
-/* 右圖片區 */
+/* > 右圖片區 */
 .aboutus-content-img-box {
     display: flex;
     position: relative;
@@ -346,7 +346,7 @@ body {
     z-index: 1;
 }
 
-/* 左圖 */
+/* > 左圖 */
 .aboutus-content-img-box1 {
     position: absolute;
     z-index: 20;
@@ -362,13 +362,13 @@ body {
 .aboutus-content-img-box1 img {
     height: 100%;
     width: 100%;
-    /* 圖片填滿背景 */
+    /* -圖片填滿背景 */
     object-fit: cover;
-    /* 縮放圖片依然置中 */
+    /* -縮放圖片依然置中 */
     background-position: center;
 }
 
-/* 右圖 */
+/* > 右圖 */
 .aboutus-content-img-box2 {
     position: absolute;
     z-index: 15;
@@ -387,15 +387,15 @@ body {
 .aboutus-content-img-box2 img {
     height: 100%;
     width: 100%;
-    /* 圖片填滿背景 */
+    /* -圖片填滿背景 */
     object-fit: cover;
-    /* 縮放圖片依然置中 */
+    /* -縮放圖片依然置中 */
     background-position: center;
     border-radius: 0px 45px 0px 0px;
 }
 
 
-/* 區段三 */
+/* > 區段三 */
 .aboutus-third-section {
     width: 100%;
     height: 440px;
@@ -406,14 +406,15 @@ body {
     align-items: center;
 }
 
-/* 色塊區 */
+/* > 色塊區 */
 .aboutus-color-box {
     background-color: #47BFD9;
-    height: 40px;
     width: 100%;
+    height: 40px;
+
 }
 
-/* choose區 */
+/* > choose區 */
 .aboutus-choose-box {
     display: flex;
     flex-direction: row;
@@ -432,7 +433,7 @@ body {
 
 }
 
-/* 文字區 */
+/* > 文字區 */
 .aboutus-choose-wordbox {
     display: flex;
     flex-direction: column;
@@ -440,7 +441,7 @@ body {
     height: 145px;
 }
 
-/* 上區 */
+/* > 上區 */
 .aboutus-choose-titlebox {
     display: flex;
     flex-direction: row;
@@ -448,7 +449,7 @@ body {
 }
 
 
-/* 主標題 */
+/* > 主標題 */
 .aboutus-choose-title {
     font-family: 'DM Serif Display';
     font-style: normal;
@@ -476,16 +477,28 @@ body {
 }
 
 
-/* 聯絡按鈕區 */
-/* choose按鈕 */
+/* > 聯絡按鈕區 */
+/* > choose按鈕 */
 #aboutus-choosebtn-box {
-    margin-left: 96px;
     display: flex;
+    align-items: center;
     justify-content: flex-start;
+
     width: 63%;
+    margin-left: 96px;
+    background-color: none;
 }
 
-/* 按鈕樣式 */
+
+#aboutus-choosebtn-box a {
+    display: flex;
+
+    align-items: center;
+    text-decoration: none;
+    width: 875px;
+}
+
+/* > 按鈕樣式 */
 #aboutus-choosebtn {
     display: flex;
     align-items: center;
@@ -499,28 +512,11 @@ body {
 
     border: 2px solid #47BFD9;
 
-    /* 沒hover時變色回來 */
+    /* > 沒hover時變色回來 */
     animation: colorChangeback 0.3s ease-in;
 }
 
-#aboutus-choosebtn-box {
-    display: flex;
-
-    align-items: center;
-    background-color: none;
-    width: 100%;
-}
-
-#aboutus-choosebtn-box a {
-    display: flex;
-
-    align-items: center;
-    text-decoration: none;
-    width: 875px;
-}
-
-
-/* hover按鈕樣式 */
+/* > hover按鈕樣式 */
 #aboutus-choosebtn:hover {
     display: flex;
     align-items: center;
@@ -533,13 +529,13 @@ body {
     border: 2px solid #47BFD9;
     background-color: #FFFCEB;
 
-    /* hover時變色 */
+    /* > hover時變色 */
     animation: colorChange 0.3s ease-in;
-    /* 慢速開始 */
+    /* > 慢速開始 */
     transition-timing-function: ease-in;
 }
 
-/* 按鈕字樣 */
+/* > 按鈕字樣 */
 #aboutus-choosebtn span {
     display: flex;
     align-items: center;
@@ -561,22 +557,22 @@ body {
     margin-right: 1rem;
 
     animation: btnin 0.3s;
-    /* 慢速開始 */
+    /* -慢速開始 */
     transition-timing-function: ease-in;
 }
 
-/* hover按鈕字樣 */
+/* > hover按鈕字樣 */
 #aboutus-choosebtn:hover span {
-    /* 製造殘影效果 */
+    /* -製造殘影效果 */
     position: absolute;
     z-index: 2;
-    /*     display: none; */
+    /* - display: none; */
     animation: btnout 0.3s forwards;
-    /* 慢速開始 */
+    /* -慢速開始 */
     transition-timing-function: ease-in;
 }
 
-/* 偽元素hover前 */
+/* > 偽元素hover前 */
 #aboutus-choosebtn:before {
     display: flex;
 
@@ -600,11 +596,11 @@ body {
 
     opacity: 0;
     animation: btnout 0.3s;
-    /* 慢速開始 */
+    /* -慢速開始 */
     transition-timing-function: ease-in;
 }
 
-/* 偽元素hover後 */
+/* > 偽元素hover後 */
 #aboutus-choosebtn:hover:before {
     display: flex;
 
@@ -628,48 +624,48 @@ body {
 
     opacity: 1;
     animation: btnin 0.3s;
-    /* 慢速開始 */
+    /* -慢速開始 */
     transition-timing-function: ease-in;
 }
 
-/* 箭頭移動 */
-/* arrow */
+/* > 箭頭移動 */
+/* > arrow */
 #aboutus-choosebtn svg {
     position: absolute;
-    /* 初始位置 */
+    /* -初始位置 */
     left: 75%;
     z-index: 2;
 
     animation: imgback 0.3s forwards;
-    /* 慢速開始 */
+    /* -慢速開始 */
     transition-timing-function: ease-in;
 }
 
-/* hover arrow */
+/* > hover arrow */
 #aboutus-choosebtn:hover svg {
     position: absolute;
-    /* 初始位置 */
+    /* -初始位置 */
     left: 75%;
     z-index: 2;
-    /*     filter: invert(52%) sepia(100%) saturate(288%) hue-rotate(143deg) brightness(107%) contrast(85%); */
+    /* -filter: invert(52%) sepia(100%) saturate(288%) hue-rotate(143deg) brightness(107%) contrast(85%); */
     animation: imggo 0.3s forwards;
-    /* 慢速開始 */
+    /* -慢速開始 */
     transition-timing-function: ease-in;
 }
 
-/* 箭頭變色 */
-/* path */
+/* > 箭頭變色 */
+/* > path */
 #aboutus-choosebtn-svg path {
     animation: pathColorChangeBack 0.3s forwards;
 }
 
-/* hover path */
+/* > hover path */
 #aboutus-choosebtn:hover #aboutus-choosebtn-svg-path {
     animation: pathColorChange 0.3s forwards;
 }
 
 
-/* 箭頭移動 */
+/* > 箭頭移動 */
 @keyframes imggo {
     0% {
         transform: translate(0, 0);
@@ -692,7 +688,7 @@ body {
     }
 }
 
-/* 淡入淡出 */
+/* > 淡入淡出 */
 @keyframes btnin {
     0% {
         opacity: 0;
@@ -713,32 +709,32 @@ body {
     }
 }
 
-/* 按鈕變色動畫 */
+/* > 按鈕變色動畫 */
 @keyframes colorChange {
     0% {
         background-color: #47BFD9;
-        /* 顏色A */
+        /* -顏色A */
     }
 
     100% {
         background-color: #FFFCEB;
-        /* 顏色B */
+        /* -顏色B */
     }
 }
 
 @keyframes colorChangeback {
     0% {
         background-color: #FFFCEB;
-        /* 顏色A */
+        /* -顏色A */
     }
 
     100% {
         background-color: #47BFD9;
-        /* 顏色B */
+        /* -顏色B */
     }
 }
 
-/* 箭頭變色動畫 */
+/* > 箭頭變色動畫 */
 @keyframes pathColorChange {
     0% {
         fill: white;
@@ -759,16 +755,16 @@ body {
     }
 }
 
-/* RWD 1501-1720 font*0.95 */
+/* ! RWD 1501-1720 font*0.95 */
 @media (min-width: 1501px) and (max-width: 1720px) {
 
-    /* 大標區 */
+    /* > 大標區 */
     .aboutus-title-box img {
         height: auto;
         width: 95%;
     }
 
-    /* 按鈕外框 */
+    /* > 按鈕外框 */
     #svg-frame {
         width: 1300px;
         height: 70.57px;
@@ -780,79 +776,79 @@ body {
         padding-right: 37.62px;
     }
 
-    /* 按鈕高度 */
+    /* > 按鈕高度 */
     .aboutus-btn {
         height: 68px;
-        /* 使按鈕相鄰 */
+        /* -使按鈕相鄰 */
         margin-right: -37.62px;
     }
 
-    /* 按鈕文字 */
+    /* > 按鈕文字 */
     .aboutus-btn-p {
         font-size: 1.3rem;
     }
 
-    /* 按鈕們 0.836 */
+    /* > 按鈕們 0.836 */
     #btn1 {
         width: 257px;
         clip-path: polygon(0.2% 0, 100% 0, 85.3% 100%, 0.2% 100%);
-        /*     background-color: red; */
+        /* -background-color: red; */
     }
 
     #btn2 {
         width: 303.05px;
         clip-path: polygon(12.4% 0, 100% 0, 87.5% 100%, 0 100%);
-        /*     background-color: orange; */
+        /* -background-color: orange; */
     }
 
     #btn3 {
         width: 217.36px;
         clip-path: polygon(17.1% 0, 100% 0, 82.3% 100%, 0% 100%);
-        /*     background-color: yellow; */
+        /* -background-color: yellow; */
     }
 
 
     #btn4 {
         width: 249.96px;
         clip-path: polygon(15.3% 0, 100% 0, 84.6% 100%, 0% 100%);
-        /*     background-color: yellowgreen; */
+        /* -background-color: yellowgreen; */
     }
 
     #btn5 {
         width: 214.02px;
         clip-path: polygon(17.6% 0, 100% 0, 82.3% 100%, 0% 100%);
-        /*     background-color: green; */
+        /* -background-color: green; */
     }
 
     #btn6 {
         width: 244.95px;
         clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%);
-        /*     background-color: blue; */
+        /* -background-color: blue; */
     }
 
-    /* 左內容區上距 */
+    /* > 左內容區上距 */
     .aboutus-content {
         margin-top: 2.5%;
     }
 
-    /* 標題 */
+    /* > 標題 */
     .aboutus-content-title {
         font-size: 3.5rem;
         line-height: 3.6875rem;
     }
 
-    /* 內文 */
+    /* > 內文 */
     #content-layer {
         margin-top: 25px;
     }
 
-    /* 內文 */
+    /* > 內文 */
     .aboutus-content-word {
         font-size: 1.2rem;
         line-height: 1.875rem;
     }
 
-    /* 右花區 */
+    /* > 右花區 */
     .aboutus-content-flower-box {
         width: 40%;
         height: 40%;
@@ -869,8 +865,8 @@ body {
         bottom: 0;
     }
 
-    /* choose區 */
-    /* 主標題 */
+    /* > choose區 */
+    /* > 主標題 */
     .aboutus-choose-title {
         font-family: 'DM Serif Display';
         font-style: normal;
@@ -897,7 +893,7 @@ body {
         margin-left: 60px;
     }
 
-    /* 按鈕字樣 */
+    /* > 按鈕字樣 */
     #aboutus-choosebtn span {
         height: 8.5rem;
         font-size: 2rem;
@@ -906,39 +902,39 @@ body {
         margin-right: 1rem;
     }
 
-    /* hover按鈕字樣 */
+    /* > hover按鈕字樣 */
     #aboutus-choosebtn:hover span {
         height: 8.5rem;
         font-size: 2rem;
         margin-left: 15%;
     }
 
-    /* 偽元素hover前 */
+    /* > 偽元素hover前 */
     #aboutus-choosebtn:before {
         padding-left: 40%;
 
     }
 
-    /* 偽元素hover後 */
+    /* > 偽元素hover後 */
     #aboutus-choosebtn:hover:before {
         padding-left: 40%;
     }
 
-    /* arrow */
+    /* > arrow */
     #aboutus-choosebtn svg {
-        /* 初始位置 */
+        /* -初始位置 */
         left: 77%;
 
     }
 
-    /* hover arrow */
+    /* > hover arrow */
     #aboutus-choosebtn:hover svg {
         position: absolute;
-        /* 初始位置 */
+        /* -初始位置 */
         left: 77%;
     }
 
-    /* 箭頭移動 */
+    /* > 箭頭移動 */
     @keyframes imggo {
         0% {
             transform: translate(0, 0);
@@ -962,31 +958,31 @@ body {
     }
 }
 
-/* RWD 1201-1500 font*0.9? */
+/* ! RWD 1201-1500 font*0.9? */
 @media (min-width: 1201px) and (max-width: 1500.98px) {
 
-    /* 大標區 */
+    /* > 大標區 */
     .aboutus-title-box {
         margin-top: 25px;
         margin-bottom: 20px;
     }
 
-    /* 大標區 */
+    /* > 大標區 */
     .aboutus-title-box img {
         height: auto;
         width: 90%;
     }
 
-    /* 按鈕外框 */
+    /* > 按鈕外框 */
     #svg-frame {
         width: 1100px;
         height: 59.71px;
     }
 
-    /* 按鈕區大 */
-.aboutus-btn-box {
-    margin-bottom: 30px;
-}
+    /* > 按鈕區大 */
+    .aboutus-btn-box {
+        margin-bottom: 30px;
+    }
 
     .aboutus-btn-wrapper {
         width: 1100px;
@@ -994,83 +990,83 @@ body {
         padding-right: 31.82px;
     }
 
-    
 
-    /* 按鈕高度 */
+
+    /* > 按鈕高度 */
     .aboutus-btn {
         height: 58px;
-        /* 使按鈕相鄰 */
+        /* -使按鈕相鄰 */
         margin-right: -31.82px;
     }
 
-    /* 按鈕文字 */
+    /* > 按鈕文字 */
     .aboutus-btn-p {
         font-size: 1.1rem;
         line-height: 1.5rem;
     }
 
-    /* 按鈕們 0.846 */
+    /* > 按鈕們 0.846 */
     #btn1 {
         width: 217.422px;
         clip-path: polygon(0.2% 0, 100% 0, 85.3% 100%, 0.2% 100%);
-        /*     background-color: red; */
+        /* -background-color: red; */
     }
 
     #btn2 {
         width: 256.38px;
         clip-path: polygon(12.4% 0, 100% 0, 87.5% 100%, 0 100%);
-        /*     background-color: orange; */
+        /* -background-color: orange; */
     }
 
     #btn3 {
         width: 183.886px;
         clip-path: polygon(17.1% 0, 100% 0, 82.3% 100%, 0% 100%);
-        /*     background-color: yellow; */
+        /* -background-color: yellow; */
     }
 
 
     #btn4 {
         width: 211.466px;
         clip-path: polygon(15.3% 0, 100% 0, 84.6% 100%, 0% 100%);
-        /*     background-color: yellowgreen; */
+        /* -background-color: yellowgreen; */
     }
 
     #btn5 {
         width: 181.06px;
         clip-path: polygon(17.6% 0, 100% 0, 82.3% 100%, 0% 100%);
-        /*     background-color: green; */
+        /* -background-color: green; */
     }
 
     #btn6 {
         width: 207.227px;
         clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%);
-        /*     background-color: blue; */
+        /* -background-color: blue; */
     }
 
-    /* 左內容區上距 */
+    /* > 左內容區上距 */
     .aboutus-content {
         margin-top: 2.5%;
     }
 
-    /* 標題 */
+    /* > 標題 */
     .aboutus-content-title {
         font-size: 3.3rem;
         line-height: 3.6rem;
     }
 
-    /* 內文 */
+    /* > 內文 */
     #content-layer {
         width: 105%;
         margin-top: 20px;
     }
 
-    /* 內文 */
+    /* > 內文 */
     .aboutus-content-word {
         font-size: 1.2rem;
         line-height: 1.8rem;
     }
 
-    /* 右花區 */
+    /* > 右花區 */
     .aboutus-content-flower-box {
         width: 40%;
         height: 40%;
@@ -1088,8 +1084,8 @@ body {
         bottom: 0;
     }
 
-    /* choose區 */
-    /* 主標題 */
+    /* > choose區 */
+    /* > 主標題 */
     .aboutus-choose-title {
         font-family: 'DM Serif Display';
         font-style: normal;
@@ -1116,7 +1112,7 @@ body {
         margin-left: 60px;
     }
 
-    /* 按鈕字樣 */
+    /* > 按鈕字樣 */
     #aboutus-choosebtn span {
         height: 8.5rem;
         font-size: 1.8rem;
@@ -1125,7 +1121,7 @@ body {
         margin-right: 1rem;
     }
 
-    /* hover按鈕字樣 */
+    /* > hover按鈕字樣 */
     #aboutus-choosebtn:hover span {
         height: 8.5rem;
         font-size: 1.8rem;
@@ -1133,32 +1129,32 @@ body {
         margin-left: 11%;
     }
 
-    /* 偽元素hover前 */
+    /* > 偽元素hover前 */
     #aboutus-choosebtn:before {
         padding-left: 35%;
 
     }
 
-    /* 偽元素hover後 */
+    /* > 偽元素hover後 */
     #aboutus-choosebtn:hover:before {
         padding-left: 35%;
     }
 
-    /* arrow */
+    /* > arrow */
     #aboutus-choosebtn svg {
-        /* 初始位置 */
+        /* -初始位置 */
         left: 75%;
 
     }
 
-    /* hover arrow */
+    /* > hover arrow */
     #aboutus-choosebtn:hover svg {
         position: absolute;
-        /* 初始位置 */
+        /* -初始位置 */
         left: 75%;
     }
 
-    /* 箭頭移動 */
+    /* > 箭頭移動 */
     @keyframes imggo {
         0% {
             transform: translate(0, 0);
@@ -1182,28 +1178,28 @@ body {
     }
 }
 
-/* RWD 767-1200 font-1024*0.63636 */
-@media (min-width: 767px) and (max-width: 1200.98px) {
+/* ! RWD 577-1200 font-1024*0.63636 */
+@media (min-width: 577px) and (max-width: 1200.98px) {
 
-    /* 區段一 */
+    /* > 區段一 */
 
     .aboutus-first-section {
         height: 377px;
     }
 
-    /* 大標區 */
+    /* > 大標區 */
     .aboutus-title-box {
         margin-top: 80px;
         margin-bottom: 30px;
     }
 
-    /* 大標區 */
+    /* > 大標區 */
     .aboutus-title-box img {
         height: auto;
         width: 70%;
     }
 
-    /* 按鈕區大 */
+    /* > 按鈕區大 */
     .aboutus-btn-box {
         display: flex;
         align-items: center;
@@ -1213,7 +1209,7 @@ body {
         margin-bottom: 40px;
     }
 
-    /* 按鈕外框 */
+    /* > 按鈕外框 */
     #svg-frame {
         width: 700px;
         height: 38px;
@@ -1225,14 +1221,14 @@ body {
         padding-right: 20.249px;
     }
 
-    /* 按鈕高度 */
+    /* > 按鈕高度 */
     .aboutus-btn {
         height: 36.90888px;
-        /* 使按鈕相鄰 */
+        /* -使按鈕相鄰 */
         margin-right: -20.248975px;
     }
 
-    /* 按鈕文字 */
+    /* > 按鈕文字 */
     .aboutus-btn-p {
         margin-top: 1.5px;
         font-size: 0.75rem;
@@ -1241,7 +1237,7 @@ body {
 
 
 
-    /* 按鈕們 0.846 */
+    /* > 按鈕們 0.846 */
     #btn1 {
         width: 138.358px;
         clip-path: polygon(0.2% 0, 100% 0, 85.3% 100%, 0.2% 100%);
@@ -1279,12 +1275,12 @@ body {
         /*     background-color: blue; */
     }
 
-    /* 區段二 */
+    /* > 區段二 */
     .aboutus-second-section {
         height: 613px;
     }
 
-    /* 背景 */
+    /* > 背景 */
     #aboutus-bg-box {
         width: 100%;
         height: 58.72%;
@@ -1297,7 +1293,7 @@ body {
         transition: all 0.5s ease-in-out;
     }
 
-    /* 大區 */
+    /* > 大區 */
     .aboutus-main-content {
         display: flex;
         flex-direction: column-reverse;
@@ -1316,7 +1312,7 @@ body {
         margin-bottom: 3%;
     }
 
-    /* 左內容區(下文字) */
+    /* > 左內容區(下文字) */
     .aboutus-content-box {
         width: 100%;
         /* 加 */
@@ -1336,7 +1332,7 @@ body {
 
 
 
-    /* 左文字區(下文字) */
+    /* > 左文字區(下文字) */
     .aboutus-content {
         width: 70%;
 
@@ -1352,7 +1348,7 @@ body {
     }
 
 
-    /* 標題區 */
+    /* > 標題區 */
     #title-layer {
         display: flex;
         position: relative;
@@ -1361,7 +1357,7 @@ body {
         margin-bottom: 30px;
     }
 
-    /* 標題 */
+    /* > 標題 */
     .aboutus-content-title {
         font-family: 'DM Serif Display';
         font-style: normal;
@@ -1377,7 +1373,7 @@ body {
         width: 100%;
     }
 
-    /* 內文 */
+    /* > 內文 */
     #content-layer {
         display: flex;
         position: relative;
@@ -1385,7 +1381,7 @@ body {
         margin-top: 0px;
     }
 
-    /* 內文 */
+    /* > 內文 */
     .aboutus-content-word {
         font-family: 'Arial';
         font-style: normal;
@@ -1402,12 +1398,12 @@ body {
     }
 
 
-    /* 右花區 */
+    /* > 右花區 */
     .aboutus-content-flower-box {
         display: flex;
         position: absolute;
         right: -23%;
-        bottom:-100%;
+        bottom: -100%;
 
         width: 40%;
         height: 40%;
@@ -1433,12 +1429,12 @@ body {
         height: 24px;
     }
 
-    /* 花共用 */
+    /* > 花共用 */
     .aboutus-content-flower {
         transition: transform 0.6s ease-in-out;
     }
 
-    /* 右圖片區(上圖片區) */
+    /* > 右圖片區(上圖片區) */
     .aboutus-content-img-box {
         display: flex;
         position: relative;
@@ -1449,7 +1445,7 @@ body {
         margin-top: 45px;
     }
 
-    /* 左圖 */
+    /* > 左圖 */
     .aboutus-content-img-box1 {
         position: absolute;
         z-index: 20;
@@ -1465,13 +1461,13 @@ body {
     .aboutus-content-img-box1 img {
         height: 100%;
         width: 100%;
-        /* 圖片填滿背景 */
+        /* -圖片填滿背景 */
         object-fit: cover;
-        /* 縮放圖片依然置中 */
+        /* -縮放圖片依然置中 */
         background-position: center;
     }
 
-    /* 右圖 */
+    /* > 右圖 */
     .aboutus-content-img-box2 {
         position: absolute;
         z-index: 15;
@@ -1488,9 +1484,9 @@ body {
     .aboutus-content-img-box2 img {
         height: 100%;
         width: 100%;
-        /* 圖片填滿背景 */
+        /* -圖片填滿背景 */
         object-fit: cover;
-        /* 縮放圖片依然置中 */
+        /* -縮放圖片依然置中 */
         background-position: center;
         border-radius: 0px 25px 0px 0px;
     }
@@ -1498,18 +1494,18 @@ body {
 
 
 
-    /* 區段三 */
+    /* > 區段三 */
     .aboutus-third-section {
         height: 261px;
 
     }
 
-    /* 色塊區 */
+    /* > 色塊區 */
     .aboutus-color-box {
         height: 40px;
     }
 
-    /* choose區 */
+    /* > choose區 */
     .aboutus-choose-box {
         display: flex;
         flex-direction: row;
@@ -1527,7 +1523,7 @@ body {
         align-items: center;
     }
 
-    /* 文字區 */
+    /* > 文字區 */
     .aboutus-choose-wordbox {
         display: flex;
         flex-direction: column;
@@ -1535,15 +1531,15 @@ body {
         height: auto;
     }
 
-    /* 上區 */
+    /* > 上區 */
     .aboutus-choose-titlebox {
         display: flex;
         flex-direction: row;
         width: 187px;
-        
+
     }
 
-    /* 主標題 */
+    /* > 主標題 */
     .aboutus-choose-title {
         font-family: 'DM Serif Display';
         font-style: normal;
@@ -1557,7 +1553,7 @@ body {
         margin-right: 10px;
     }
 
-    /* 副標題 */
+    /* > 副標題 */
     .aboutus-choose-subtitle {
         font-family: 'DM Serif Display';
         font-style: normal;
@@ -1572,22 +1568,24 @@ body {
         margin-left: 20px;
     }
 
-    .aboutus-choose-titlebox svg{
+    .aboutus-choose-titlebox svg {
         width: 19px;
         height: 19px;
     }
 
-    /* 聯絡按鈕區 */
-    /* choose按鈕 */
+    /* > 聯絡按鈕區 */
+    /* > choose按鈕 */
     #aboutus-choosebtn-box {
-        margin-left: 96px;
         display: flex;
-        justify-content: center;
         align-items: center;
+        justify-content: center;
+
         width: 63%;
+        margin-left: 96px;
+        background-color: none;
     }
 
-    /* 按鈕樣式 */
+    /* > 按鈕樣式 */
     #aboutus-choosebtn {
         display: flex;
         align-items: center;
@@ -1601,16 +1599,8 @@ body {
 
         border: 2px solid #47BFD9;
 
-        /* 沒hover時變色回來 */
+        /* -沒hover時變色回來 */
         animation: colorChangeback 0.3s ease-in;
-    }
-
-    #aboutus-choosebtn-box {
-        display: flex;
-
-        align-items: center;
-        background-color: none;
-        width: 100%;
     }
 
     #aboutus-choosebtn-box a {
@@ -1621,7 +1611,7 @@ body {
         width: 430px;
     }
 
-    /* hover按鈕樣式 */
+    /* > hover按鈕樣式 */
     #aboutus-choosebtn:hover {
         display: flex;
         align-items: center;
@@ -1634,13 +1624,13 @@ body {
         border: 2px solid #47BFD9;
         background-color: #FFFCEB;
 
-        /* hover時變色 */
+        /* -hover時變色 */
         animation: colorChange 0.3s ease-in;
-        /* 慢速開始 */
+        /* -慢速開始 */
         transition-timing-function: ease-in;
     }
 
-    /* 按鈕字樣 */
+    /* > 按鈕字樣 */
     #aboutus-choosebtn span {
         height: 5rem;
         font-size: 1.25rem;
@@ -1649,7 +1639,7 @@ body {
         margin-right: 1rem;
     }
 
-    /* hover按鈕字樣 */
+    /* > hover按鈕字樣 */
     #aboutus-choosebtn:hover span {
         height: 5rem;
         font-size: 1.25rem;
@@ -1657,37 +1647,37 @@ body {
         margin-left: 8%;
     }
 
-    /* 偽元素hover前 */
+    /* > 偽元素hover前 */
     #aboutus-choosebtn:before {
         padding-left: 35%;
         font-size: 1.25rem;
 
     }
 
-    /* 偽元素hover後 */
+    /* > 偽元素hover後 */
     #aboutus-choosebtn:hover:before {
         padding-left: 35%;
         font-size: 1.25rem;
     }
 
-    /* arrow */
+    /* > arrow */
     #aboutus-choosebtn svg {
-        /* 初始位置 */
+        /* -初始位置 */
         left: 80%;
         width: 57px;
         height: 20px;
     }
 
-    /* hover arrow */
+    /* > hover arrow */
     #aboutus-choosebtn:hover svg {
         position: absolute;
-        /* 初始位置 */
+        /* -初始位置 */
         left: 80%;
         width: 57px;
         height: 20px;
     }
 
-    /* 箭頭移動 */
+    /* > 箭頭移動 */
     @keyframes imggo {
         0% {
             transform: translate(0, 0);
@@ -1711,4 +1701,4 @@ body {
     }
 }
 
-/* RWD 手機版 待coding */
+/* ! RWD 手機版 待coding */
