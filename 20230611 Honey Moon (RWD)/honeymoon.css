@@ -237,12 +237,12 @@ body {
 /* > 右邊內容區 */
 .honeymoon-content {
     display: flex;
-    /* > 主軸垂直 */
+    /* -主軸垂直 */
     flex-direction: column;
     align-items: center;
     width: 60%;
 
-    /* > 內容區上端留白 */
+    /* -內容區上端留白 */
     padding-top: 50px;
 }
 
@@ -691,7 +691,7 @@ body {
 
 
 
-    /* > 區段三 */
+    /* ! 區段三 */
     /* > 主內容3 (提示標語) */
     .honeymoon-section3 {
         padding-left: 6.5%;

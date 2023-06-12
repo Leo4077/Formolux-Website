@@ -82,13 +82,13 @@ body {
 }
 
 #honeymoon-keyvisual-tablet {
-    width: 79.94%;
+    width: 78%;
     height: auto;
     z-index: 6;
-    bottom: 9.3%;
+    bottom: 7%;
 }
 
-#honeymoon-background-tablet {
+#honeymoon-background-tablet{
     width: 100%;
     height: 100%;
     z-index: 5;
@@ -127,6 +127,8 @@ body {
     z-index: 5;
 }
 
+
+
 /* ! 主內容2 (內文) */
 .honeymoon-section2 {
     display: flex;
@@ -144,7 +146,7 @@ body {
     flex-direction: column;
     justify-content: flex-end;
 
-    background-image: url(../images/SoloTravelLeft.png);
+    background-image: url(../images/FamilyTripLeft.png);
     /* -圖片填滿背景 */
     background-size: cover;
     /* -縮放圖片依然置中 */
@@ -163,7 +165,7 @@ body {
 
 /* > 標題區-大 */
 #honeymoon-leftpicture-word1 {
-    /*     margin-top: 81%; */
+/*     margin-top: 81%; */
 }
 
 /* > 標題-上 */
@@ -188,15 +190,15 @@ body {
     font-weight: 400;
     font-size: 7.5rem;
     line-height: 6.9rem;
-
     text-align: center;
     letter-spacing: 0.005em;
+    white-space: nowrap;
 
     color: #FFFCEB;
     text-shadow: 0px 4px 40px rgba(0, 0, 0, 0.35);
 }
 
-/* > 標題區-小 */
+/* 標題區-小 */
 #honeymoon-leftpicture-word2 {
     display: flex;
     flex-direction: row;
@@ -261,7 +263,7 @@ body {
     margin-bottom: 50px;
 }
 
-#honeymoon-content-box-7 {
+#honeymoon-content-box-6 {
     margin-bottom: 107px;
 }
 
@@ -362,7 +364,7 @@ body {
     margin: auto;
 }
 
-/* > 按鈕區 */
+/* ! 按鈕區 */
 /* > 按鈕樣式 */
 #honeymoon-btn {
     display: flex;
@@ -597,7 +599,7 @@ body {
     }
 }
 
-/* > 主內容3 (提示標語) */
+/* ! 主內容3 (提示標語) */
 .honeymoon-section3 {
     display: flex;
     align-items: center;
@@ -629,7 +631,8 @@ body {
     display: none;
 }
 
-/* !　RWD 1501-1700 */
+
+/* ! RWD 1501-1700 */
 @media (min-width:1501px) and (max-width:1700px) {
 
     /* > 按鈕字樣 */
@@ -662,7 +665,7 @@ body {
         left: 60%;
     }
 
-    /* 箭頭移動 */
+    /* > 箭頭移動 */
     @keyframes imggo {
         0% {
             transform: translate(0, 0);
@@ -784,7 +787,7 @@ body {
         letter-spacing: 0.08em;
     }
 
-    /* >換行 */
+    /* >　換行 */
     .section3-break {
         display: none;
     }
@@ -794,7 +797,7 @@ body {
 /* ! RWD 577-1200 */
 @media (min-width: 577px) and (max-width: 1200.98px) {
 
-    /* > 主視覺 */
+   /* > 主視覺 */
     /* > 桌面端 */
     .honeymoon-desktop {
         display: none;
@@ -854,7 +857,7 @@ body {
         margin-bottom: 50px;
     }
 
-    #honeymoon-content-box-7 {
+    #honeymoon-content-box-6 {
         margin-bottom: 80px;
     }
 
@@ -896,6 +899,7 @@ body {
     .honeymoon-content-image-p {
         font-size: 4.3rem;
         line-height: 5rem;
+        letter-spacing: -0.055em;
     }
 
     /* > 介紹文字區塊 */
@@ -908,7 +912,6 @@ body {
         font-size: 0.75rem;
         line-height: 1.1rem;
         letter-spacing: 0.09em;
-
     }
 
     /* > 內容區線段 */
@@ -1044,7 +1047,6 @@ body {
         }
 }
 
-
 /* ! RWD -577 手機板 */
 @media (max-width: 576.98px) {
 
@@ -1083,7 +1085,7 @@ body {
     }
 
     #honeymoon-keyvisual-phone {
-        margin-left: 3%;
+        margin-left: 2%;
         width: 86.1%;
         height: auto;
         bottom: 14.5%;
@@ -1123,7 +1125,7 @@ body {
         margin-bottom: 30px;
     }
 
-    #honeymoon-content-box-7 {
+    #honeymoon-content-box-6 {
         margin-bottom: 70px;
     }
 
