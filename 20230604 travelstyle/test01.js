@@ -13,6 +13,24 @@ new Swiper("#swiper-2", {
   },
 });
 
+// if (window.matchMedia("(min-width: 577px) and (max-width: 1024px)").matches) {
+//   new Swiper("#swiper-2", {
+//     slidesPerView: 4.5,
+//     centeredSlides: false,
+//     spaceBetween: 20,
+//     lazy: true,
+//     loop: true,
+//     keyboard: {
+//       enabled: true,
+//     },
+//     navigation: {
+//       nextEl: "#stylenav-right",
+//       prevEl: "#stylenav-left"
+//     },
+//   });
+// }
+
+
 var cardDetails = {
   solo: {
     text1: "1 person",
@@ -74,39 +92,31 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-// 看滾輪位置
-// window.onscroll=function(){
-//   console.log( 
-//     'top: '  + (window.pageYOffset || document.documentElement.scrollTop) + ' ' +
-//     'left: ' + (window.pageXOffset || document.documentElement.scrollLeft)
-//   );
-// }
+// document.addEventListener('DOMContentLoaded', function () {
+//   const carouselContainer = document.getElementById('swiper-2');
+//   const carouselItems = carouselContainer.getElementsByClassName('swiper-slide');
+//   let count = 0;
+//   let transitionTimeout;
 
-document.addEventListener('DOMContentLoaded', function () {
-  const carouselContainer = document.getElementById('swiper-2');
-  const carouselItems = carouselContainer.getElementsByClassName('swiper-slide');
-  let count = 0;
-  let transitionTimeout;
+//   // 綁定圖片點擊事件
+//   for (let i = 0; i < carouselItems.length; i++) {
+//     const slide = carouselItems[i];
+//     slide.onclick = function (e) {
+//       e.preventDefault();
+//       const slideIndex = parseInt(slide.getAttribute('index'));
+//       const slideWidth = slide.getBoundingClientRect().width;
+//       const newLeft = slideIndex * slideWidth * -1;
+//       carouselContainer.style.transition = 'left 2s ease 0s';
+//       carouselContainer.style.left = newLeft + 'px';
 
-  // 綁定圖片點擊事件
-  for (let i = 0; i < carouselItems.length; i++) {
-    const slide = carouselItems[i];
-    slide.onclick = function (e) {
-      e.preventDefault();
-      const slideIndex = parseInt(slide.getAttribute('index'));
-      const slideWidth = slide.getBoundingClientRect().width;
-      const newLeft = slideIndex * slideWidth * -1;
-      carouselContainer.style.transition = 'left 2s ease 0s';
-      carouselContainer.style.left = newLeft + 'px';
-
-      // 停止動畫
-      clearTimeout(transitionTimeout);
-      transitionTimeout = setTimeout(() => {
-        carouselContainer.style.transition = 'none';
-      }, 2000);
-    };
-  }
-});
+//       // 停止動畫
+//       clearTimeout(transitionTimeout);
+//       transitionTimeout = setTimeout(() => {
+//         carouselContainer.style.transition = 'none';
+//       }, 2000);
+//     };
+//   }
+// });
 
 
 //滾動至不同section

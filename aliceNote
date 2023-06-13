@@ -1,18 +1,19 @@
 Hamburger:
-1. close 位置重新包
-2. onclick圖片淡入效果
-3. flex: 1 ?
+
+1. onclick圖片淡入效果
+2. 手機板RWD
 
 Travel Style:
 1. 跑馬燈優化
-2. 先做點擊變換背景圖片的效果 以Hamburger JS去套
-3. 卡牌區點擊火車效果 看可不可以用左右按鈕的邏輯去套 指定第幾張之前出現動畫效果
+2. 平板RWD
+3. 手機板RWD
+06/13 sumtext字形尺寸還有margin都還沒有調
 
 About Taiwan:
-1. 旋轉花花  (完成)
-2. 加入滑鼠gif檔  (完成)
-3. 標題兩旁加入直線 (完成)
-4. 資訊區smoove? (完成)
-5. 圖片視差效果  (完成)
-6. 下方按鈕 (完成，但可再優化RWD)
+1. 平板RWD
+2. 手機板RWD
+
+Contact us:
+1. 手機板RWD
+
 

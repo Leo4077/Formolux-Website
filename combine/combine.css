@@ -216,7 +216,7 @@ footer {
 
 /*平板: hamburger點選按鈕樣式*/
 
-@media (min-width: 768px) and (max-width:1024px) {
+@media (min-width: 577px) and (max-width:1024.98px) {
     .menu-wrap .toggler {
 
         width: 44px;
@@ -353,7 +353,7 @@ footer {
 
 /*平板: 下拉menu選單上半部樣式*/
 
-@media (min-width: 768px) and (max-width:1024px) {
+@media (min-width: 577px) and (max-width:1024.98px) {
 
     /*Close字樣*/
     .menu-wrap .menu>div>div .close {
@@ -522,7 +522,7 @@ footer {
     }
 }
 
-@media (min-width: 768px) and (max-width:1024px) {
+@media (min-width: 577px) and (max-width:1024.98px) {
     .hambtn {
         padding: 0;
         display: flex;
@@ -619,7 +619,7 @@ li:hover .line {
 
 /*平板: 主要區域的所有變化*/
 
-@media (min-width: 768px) and (max-width:1024px) {
+@media (min-width: 577px) and (max-width:1024.98px) {
 
     /*整個主選單*/
     .menu {
