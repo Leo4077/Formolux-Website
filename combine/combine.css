@@ -1179,8 +1179,8 @@ li:hover .line {
     }
 }
 
-/* ! 平板 767-1024 (頁尾) */
-@media (min-width: 767px) and (max-width: 1024.98px) {
+/* ! 平板 577-1024 (頁尾) */
+@media (min-width: 577px) and (max-width: 1024.98px) {
 
     /* > 頁尾區 */
     #footerBar {
@@ -1235,8 +1235,8 @@ li:hover .line {
     }
 }
 
-/* ! 手機 0-767 (頁尾) */
-@media(max-width: 766.98px) {
+/* ! 手機 0-577 (頁尾) */
+@media(max-width: 576.98px) {
 
     /* > 頁尾區 */
     #footerBar {
