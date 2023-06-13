@@ -1179,8 +1179,8 @@ li:hover .line {
     }
 }
 
-/* ! 平板 767-1024 (頁尾) */
-@media (min-width: 767px) and (max-width: 1024.98px) {
+/* ! 平板 700-1024 (頁尾) */
+@media (min-width: 700px) and (max-width: 1024.98px) {
 
     /* > 頁尾區 */
     #footerBar {
@@ -1209,7 +1209,7 @@ li:hover .line {
 
     .footerMenu {
         display: flex;
-        justify-content: space-between;
+/*         justify-content: space-between; */
         width: 100%;
         list-style: none;
         border-top: 1px solid white;
@@ -1235,8 +1235,8 @@ li:hover .line {
     }
 }
 
-/* ! 手機 0-767 (頁尾) */
-@media(max-width: 766.98px) {
+/* ! 手機 0-700 (頁尾) */
+@media(max-width: 699.98px) {
 
     /* > 頁尾區 */
     #footerBar {

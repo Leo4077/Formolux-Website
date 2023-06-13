@@ -1,8 +1,3 @@
-body {
-    overflow-y: scroll;
-    overflow-x: hidden;
-}
-
 /* ! 主內容1 (首圖) */
 .honeymoon-section1 {
     display: flex;
@@ -1047,8 +1042,6 @@ body {
     }
 }
 
-
-/* TODO */
 /* ! RWD -577 手機板 */
 @media (max-width: 576.98px) {
 
