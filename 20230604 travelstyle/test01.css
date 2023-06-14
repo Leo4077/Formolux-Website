@@ -297,7 +297,7 @@ figcaption p{
       
       }
 
-    /*honey moon*/  
+    /*honey moon大標題*/  
     .sumtext h2{
         font-family: var(--second-font);
         font-size:5.9vw;
@@ -387,7 +387,7 @@ figcaption p{
 
 @media (min-width: 577px) and (max-width:1024px) {
   #slider-2{
-    height: 73vh;
+    height: 71vh;
     background-image: url(../images/ipad_travelsty_BG.png);
     flex-direction: column;
     justify-content: center;
@@ -395,7 +395,7 @@ figcaption p{
 
   .container.wide {
     width: 100%;
-    margin-bottom: 0;
+    margin-bottom: -2vh;
     
   }
   .spaces{
@@ -404,11 +404,16 @@ figcaption p{
 
   .sumtext{
     /* background-color: aqua; */
+    display: inline-block;
 
     margin: 0;
+    padding-bottom:5vh;
+    margin-left: 30%;
     width: 56.8%;
     display: flex;
     flex-wrap: wrap;
+    /* transform: translateY(-5vh); */
+
 
   }
   .smallStar{
@@ -420,15 +425,76 @@ figcaption p{
   /*2 people*/
 
   .sumtext h4{
-    font-family: var(--main-font);
-    font-size: max(1.15vw, 1rem);
-    color: var(--main-yellow);
-    font-weight: 700;
-    line-height: 1.56rem;
-    letter-spacing: 0.075em;
-    margin:4.6% 60% 2.8% 1.4%;;
+    
+    font-size: 1rem;
+    line-height: 1.15rem;
+    letter-spacing: 7.5%;
+    margin:4.6% 60% 4% 4.6%;
   
   }
+
+  /*honey moon大標題*/  
+  .sumtext h2{
+    
+    font-size:8.5vw;
+    font-weight: 400;
+    letter-spacing: -1%;
+    line-height: 93%;
+    
+  }
+
+  /*hashtag ##*/
+  .sumtext h3{
+    font-size: 1rem;
+    line-height: 1.56rem;
+    letter-spacing: 0.015em;
+    margin:3.6% 0 3.6% 1.4%;
+    
+  }
+
+  /*段落小字*/
+  .sumtext p{
+    font-size: 0.88rem;
+    line-height: 1.125rem;
+    letter-spacing: 0.02em;
+    color:#FFFFFF;
+    margin-bottom: 4.8%;
+    margin-left: 1.4%;
+
+  }
+
+  /* learn more按鈕樣式 */
+  .more{        
+
+    font-size:  1.05rem;
+    padding:2% 3.5%; /*用padding去撐*/
+  }
+
+  /*左右按鈕鍵*/
+
+  .swiper-custom-nav {
+      /* background-color: aquamarine; */
+      position: absolute;
+      display: flex;
+      margin-left: 65%;
+      margin-bottom: 5vh;
+      cursor: pointer;
+      width: 10%;
+  }
+  
+  #stylenav-left{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    margin-right: 20px;
+  }
+  #stylenav-right{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    margin-left: 20px;
+  }
+
 
 }
 
