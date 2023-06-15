@@ -21,6 +21,15 @@ body {
     justify-content: center;
     margin-top: 30px;
     margin-bottom: 20px;
+    width: 100%;
+    height: 57.5%;
+
+/* TODO */
+    object-fit: cover;
+    background-size: contain;
+    background-position: center;
+    background-repeat:no-repeat;
+    background-image: url(../images/Aboutus-title.png);
 }
 
 .aboutus-title-box img {
@@ -1774,6 +1783,7 @@ body {
 
 /* ! RWD 851-1200 */
 @media (min-width: 851px) and (max-width: 1200.98px) {
+
     /* > 按鈕字樣 */
     #aboutus-choosebtn span {
         font-size: 1.25rem;
@@ -1912,6 +1922,17 @@ body {
 
 
 /* ! RWD 手機版 待coding */
-@media (max-width: 576.98px){
+@media (max-width: 576.98px) {
+    .aboutus-title-box {
+        margin-top: 74px;
+        margin-bottom: 10px;
+        margin-left: 15%;
+        margin-right: 15%;
+
+        width: 70%;
+        height: 128px;
     
+        background-image: url(../images/Aboutus-title-phone.png);
+    }
+                /* TODO */
 }
