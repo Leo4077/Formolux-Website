@@ -391,7 +391,9 @@ figcaption p{
     background-image: url(../images/ipad_travelsty_BG.png);
     flex-direction: column;
     justify-content: center;
-    align-items:center;}
+    align-items:center;
+    
+  }
 
   .container.wide {
     width: 100%;
@@ -412,6 +414,7 @@ figcaption p{
     width: 56.8%;
     display: flex;
     flex-wrap: wrap;
+
     /* transform: translateY(-5vh); */
 
 
@@ -480,6 +483,7 @@ figcaption p{
       margin-bottom: 5vh;
       cursor: pointer;
       width: 10%;
+      z-index: 5;
   }
   
   #stylenav-left{

@@ -1,132 +1,174 @@
-/* body {
-    margin: 0px;
-    overflow-x: hidden;
-} */
+
 #aboutTaiwan01{
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     background-image: url(../images/aboutTaiwan_BG.png);
 	background-size: cover;
 	background-position: center;
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     justify-content: center;
     align-items: center;
+    position: relative;
 
 }
 
 
 .bigcontainer{
     
-    position: relative;
-    margin: 0 auto;
+    position: absolute;
+    /* margin: 0 auto; */
+    width: 63%;
+    height: 100vh;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    /* gap: 7%; */
+    /* justify-content: center; */
+    align-items: center;
+    margin-bottom:7.8%;
+    margin-left: -3%;
 }
 
-.banner_word{ 
-    /* background-color: aquamarine;    */
-    display: block;
+#titleBanner{
+    min-width: 900px;
+    width: 100%;
     position: relative;
     z-index: 5;
-    width: 1214px;
-    font-family: var(--main-font);
+    /* margin-top: -%; */
+    /* transform: translate(1%,15%); */
+}
+
+#titleBanner2{
+    display: none;
+}
+
+
+/* .banner_word{ 
+    background-color: aquamarine;    */
+/* display: block;
+    position: relative;
+    z-index: 5;
+    margin-bottom: 15%;
+    /* width: 70%; */
+    /* width: 1214px; */
+    /*font-family: var(--main-font);
     font-weight: 400;
     font-size: 1.5rem;
-    line-height: 28px;
+    line-height: 1.75rem;
     display: flex;
     align-items: center;
     text-align: center;
     letter-spacing: 0.04em;
     color:var(--main-yellow);
-    transform: translate(4%,-63%);
+    /* transform: translate(4%,-63%); */
     /* transform: translateY(-150%);    */
-    text-shadow: 0px 4px 35px rgba(0, 0, 0, 0.3), 2px 2px 18px rgba(0, 5, 55, 0.4); 
-}
+/* text-shadow: 0px 4px 35px rgba(0, 0, 0, 0.3), 2px 2px 18px rgba(0, 5, 55, 0.4); 
+} */
 
-#titleBanner{
-    position: relative;
-    z-index: 5;
-    transform: translate(1%,15%);
-}
 
 
 /* 滑鼠滾輪gif */
 
 .scroll-downs-container {
+    position:relative;
+    /* z-index: 5; */
     display: flex;
-    justify-content: center;
-    align-items: center;
-    transform: translateX(-1%);
-  }
-  
-.scroll-downs{
-    /* background-color: crimson; */
-    margin-top: 20vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
-    position: absolute;
+    justify-content: center;
+    align-items: center;
+    /* margin-top: 3.2%; */
+    margin-bottom: -33%;
+    width: 6%;
+    /* width: 115px;
+    height: 123px; */
+    /* justify-content: space-between; */
+    /* transform: translateX(-1%); */
 }
+
 
 #scroller{
     /* background-color: #000537; */
-    object-fit: cover;
-    height: 90px;
-    width: auto;
+    /* object-fit: cover; */
+    /* height: 90px; */
+    width:80%;
+    height: 80%;
 
 }
 
 .scroller_word{
+display: block;
+width: 100%;
 font-family: var(--main-font);
 font-style: normal;
-font-weight: 400;
-font-size: 0.9rem;
-line-height: 16px;
+font-weight: 700;
+font-size: max(0.8vw, 0.2rem);
+/* font-size: 0.875rem; */
+line-height: 1rem;
 letter-spacing: 0.065em;
 color: white;
 margin-top: .4rem;
+white-space: nowrap;
+/* margin-right: 10%; */
 
 }
 
+
+/*小筆電:scrolling位置*/
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+    .scroll-downs-container {
+        margin-bottom: -40%;
+    }
+}
+
+
 /* 旋轉花花區 */
 
+.flowerBox{
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+}
 #flower1{
-    position: relative;
-    z-index: 1;
-    opacity:0.25;
-    transform: translate(21.5%,-125%) rotate(55.12deg);
-    /* animation: flower1 11s both ease-in-out; */
+    position: absolute;
+    width: 13.5%;
+    top: 39.4%;
+    left: 16.8%;
+    animation: flower1 11s both ease-in-out;
     animation-name: move1;
     animation-duration: 3s;
     animation-timing-function: ease-in-out;
     animation-fill-mode: forwards; 
 }
+
 @keyframes move1{
-    0%{transform: translate(21.5%,-125%)rotate(55.12deg); opacity:0.25;}
-    100%{transform: translate(21.5%,-190%) rotate(0deg); opacity:1;}
+    0%{transform: translateY(0) rotate(55.12deg); opacity:0.25;}
+    100%{transform: translateY(-67.5%) rotate(0deg); opacity:1;}
 }
 
 #flower2{
-    position: relative;
-    z-index: 1;
-    transform: translate(-178%,-140%) rotate(64deg);
-    opacity:0.23;
+    position: absolute;
+    width: 6.5%;
+    left: 15%;
+    top:55.5%;
     animation-name: move2;
     animation-duration: 3s;
     animation-timing-function: ease-in-out;
     animation-fill-mode: forwards;
+
 }
 
 @keyframes move2{
-    0%{transform: translate(-178%,-140%) rotate(64deg); opacity:0.23;}
-    100%{transform: translate(-178%,-240%) rotate(0deg); opacity:1;}
+    0%{transform: translateY(0) rotate(64deg); opacity:0.23;}
+    100%{transform: translateY(-85%) rotate(0deg); opacity:1;}
 }
 
 #flower3{
-    position: relative;
-    z-index: 1;
-    transform: translate(230%,-120%) rotate(-43.58deg);
-    opacity:0.5;
+    position: absolute;
+    width: 13%;
+    top:38%;
+    right: 22%;
     animation-name: move3;
     animation-duration: 3s;
     animation-timing-function: ease-in-out;
@@ -134,15 +176,15 @@ margin-top: .4rem;
 }
 
 @keyframes move3{
-    0%{transform: translate(230%,-120%) rotate(-43.58deg); opacity:0.2;}
-    100%{transform: translate(230%,-200%) rotate(0deg); opacity:0.7;}
+    0%{transform: translateY(0) rotate(-43.58deg); opacity:0.2;}
+    100%{transform: translateY(-70%) rotate(0deg); opacity:0.7;}
 }
 
 #flower4{
-    position: relative;
-    z-index: 1;
-    transform: translate(175%,-40%) rotate(-139.97deg);
-    opacity:0.35;
+    position: absolute;
+    width: 10%;
+    bottom:15%;
+    right: 19.5%;
     animation-name: move4;
     animation-duration: 3s;
     animation-timing-function: ease-in-out;
@@ -150,39 +192,187 @@ margin-top: .4rem;
 }
 
 @keyframes move4{
-    0%{transform: translate(175%,-40%) rotate(-139.97deg); opacity:0.35;}
-    100%{transform: translate(175%,-120%) rotate(0deg); opacity:0.8;}
+    0%{transform: translateY(0) rotate(-139.97deg); opacity:0.35;}
+    100%{transform: translateY(-90.5%) rotate(0deg); opacity:0.9;}
 }
- #flower5{
-    position: relative;
-    z-index: 1;
-    transform: translate(800%,-720%)  rotate(-86.97deg);
-    opacity:0.8;
+
+#flower5{
+    position: absolute;
+    width: 2.5%;
+    bottom:35%;
+    right: 18%;
     animation-name: move5;
     animation-duration: 3s;
     animation-timing-function: ease-in-out;
     animation-fill-mode: forwards;
+    
 }
 
 @keyframes move5{
-    0%{transform: translate(800%,-720%) rotate(-86.97deg); opacity:0.4;}
-    100%{transform: translate(800%,-1080%) rotate(6deg); opacity:0.8;}
+    0%{transform: translateY(0) rotate(-86.97deg); opacity:0.4;}
+    100%{transform: translateY(-350%) rotate(0deg); opacity:0.7;}
 } 
+
 #flower6{
-    position: relative;
-    z-index: 1;
-    transform: translate(1370%,-920%)  rotate(-144deg);
-    opacity:0.8;
-    animation-name: move8;
+    position: absolute;
+    width: 1.5%;
+    bottom:28%;
+    right: 15%;
+    animation-name: move6;
     animation-duration: 3s;
     animation-timing-function: ease-in-out;
     animation-fill-mode: forwards;
 }
-@keyframes move8{
-    0%{transform: translate(1370%,-920%) rotate(-144deg); opacity:0.4;}
-    100%{transform: translate(1370%,-1500%) rotate(0deg); opacity:1;}
+
+@keyframes move6{
+    0%{transform: translateY(0) rotate(-144deg); opacity:0.4;}
+    100%{transform: translateY(-610%) rotate(0deg); opacity:0.7;}
+}
+
+
+/*平板:上半部分的變化*/
+
+@media (min-width: 577px) and (max-width:1024.98px) {
+    #aboutTaiwan01{
+        height: 75vh;
+        background-repeat: no-repeat;
+        animation: zoom 1.5s both ease-in-out;
+    }
+
+@keyframes zoom{
+    0%{ background-size: 250%}
+    100%{background-size: 240%}
+    }
+
+    .bigcontainer{
+        width: 76%;
+        height: 75vh;
+        margin: 0;
+    }
+
+    #titleBanner{
+        display: none;
+    }
+
+    #titleBanner2{
+        display: block;
+        margin-bottom: 12%;
+        width: 100%;
+        position: relative;
+        z-index: 5;
+    }
+
+    .scroll-downs-container{
+        display: none;
+    }
+
+    
+    .flowerBox{
+    height: 75vh;
+    }
+
+#flower1{
+    position: absolute;
+    width: 13.5%;
+    top: 39.4%;
+    left: 16.8%;
+    animation: flower1 11s both ease-in-out;
+    animation-name: move1;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards; 
+}
+
+@keyframes move1{
+    0%{transform: translateY(0) rotate(55.12deg); opacity:0.25;}
+    100%{transform: translateY(-67.5%) rotate(0deg); opacity:1;}
+}
+
+#flower2{
+    position: absolute;
+    width: 6.5%;
+    left: 15%;
+    top:55.5%;
+    animation-name: move2;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+
+}
+
+@keyframes move2{
+    0%{transform: translateY(0) rotate(64deg); opacity:0.23;}
+    100%{transform: translateY(-85%) rotate(0deg); opacity:1;}
+}
+
+#flower3{
+    position: absolute;
+    width: 13%;
+    top:38%;
+    right: 22%;
+    animation-name: move3;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes move3{
+    0%{transform: translateY(0) rotate(-43.58deg); opacity:0.2;}
+    100%{transform: translateY(-70%) rotate(0deg); opacity:0.7;}
+}
+
+#flower4{
+    position: absolute;
+    width: 10%;
+    bottom:15%;
+    right: 19.5%;
+    animation-name: move4;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes move4{
+    0%{transform: translateY(0) rotate(-139.97deg); opacity:0.35;}
+    100%{transform: translateY(-90.5%) rotate(0deg); opacity:0.9;}
+}
+
+#flower5{
+    position: absolute;
+    width: 2.5%;
+    bottom:35%;
+    right: 18%;
+    animation-name: move5;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    
+}
+
+@keyframes move5{
+    0%{transform: translateY(0) rotate(-86.97deg); opacity:0.4;}
+    100%{transform: translateY(-350%) rotate(0deg); opacity:0.7;}
 } 
 
+#flower6{
+    position: absolute;
+    width: 1.5%;
+    bottom:28%;
+    right: 15%;
+    animation-name: move6;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes move6{
+    0%{transform: translateY(0) rotate(-144deg); opacity:0.4;}
+    100%{transform: translateY(-610%) rotate(0deg); opacity:0.7;}
+}
+
+
+
+}
 
 
 
@@ -372,6 +562,7 @@ margin-top: .4rem;
 }
 
 
+
 /* 按鈕字樣 */
 #taiwan-travelbtn span {
     /* background-color: crimson; */
@@ -460,15 +651,20 @@ margin-top: .4rem;
 }
 
 /* hover arrow */
-#taiwan-travelbtn:hover img {
+#taiwan-travelbtn:hover svg{
     position: absolute;
     /* 初始位置 */
     left: 75%;
     z-index: 2;
-    filter: invert(52%) sepia(100%) saturate(288%) hue-rotate(143deg) brightness(107%) contrast(85%);
     animation: imggo 0.3s forwards;
+    
     /* 慢速開始 */
     transition-timing-function: ease-in;
+}
+
+/*svg箭頭路徑變色*/
+#taiwan-travelbtn:hover svg path{
+    fill:var(--main-blue);
 }
 
 /* 箭頭移動 */
