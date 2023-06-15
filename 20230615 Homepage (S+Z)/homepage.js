@@ -60,13 +60,33 @@ function previousItem() {
 
 // > 定義一個函數來處理縮放滾動的事件
 const zoomSvg = document.querySelector('.zoom-svg');
+// > 初始化縮放比例為 1
 let scale = 1;
+
+// !
+const p1 = document.querySelector('#p1');
+const p2 = document.querySelector('#p2');
+// > 初始化 X 和 Y 軸位移為 0
+let translateX = 0;
+let translateY = 0;
+// > 初始階段設定為位移
+let stage = 'translate';
+// !
+
 
 function handleZoomScroll(event) {
     event.preventDefault();
     const delta = Math.max(-1, Math.min(1, (event.wheelDelta || -event.detail)));
-    scale = Math.max(1, scale - 0.1 * delta);
-    zoomSvg.style.transformOrigin = 'center center'; // > 這裡設置 transformOrigin
+    // > delta 前的數值影響每次滾動縮放的比例
+    scale = Math.max(1, scale - 5 * delta);
+
+    // !
+    // > delta 前的數值影響每次滾動的移動距離
+    // translateX += 0.1 * delta;
+    // !
+
+    // > 透過設置 transformOrigin調整中心點
+    zoomSvg.style.transformOrigin = '58.685% 50%';
     zoomSvg.style.transform = `scale(${scale})`;
 }
 
@@ -80,6 +100,28 @@ function scrollEventHandler(evt) {
     if (currentSlideNumber === 1 && scale !== 1) {
         // > 在第二個 .background 上並且比例不為 1
         handleZoomScroll(evt);
+
+        // !
+        // > 當縮放到一定程度時，開始滑動 <p> 標籤
+        if (scale >= 120) {
+            // > 每次滾動時，translateX 變化的固定量
+            let translatePercentage = 10;
+            let parentWidth = p1.parentElement.offsetWidth;
+            const translateChange = (translatePercentage / 100) * parentWidth;
+
+            if (delta > 0) {
+                // > 向上滾動
+                translateX += translateChange;
+            } else {
+                // > 向下滾動
+                translateX -= translateChange;
+            }
+
+            p1.style.transform = `translateX(${-translateX}px)`;
+            p2.style.transform = `translateX(${translateX}px)`;
+        }
+        // !
+
         evt.stopPropagation();  // > 阻止事件的進一步傳播
         return;
     }
