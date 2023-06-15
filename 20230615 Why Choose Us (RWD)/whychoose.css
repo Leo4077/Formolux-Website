@@ -350,7 +350,7 @@ p {
     transform: translate(-50%, -50%);
     pointer-events: none;
     z-index: 999;
-    transition: width 0.5s ease, height 0.5s ease, opacity 0.5s ease , transform 0.1s ease-in-out;
+    transition: width 0.5s ease-in-out, height 0.5s ease-in-out, opacity 0.5s ease-in-out , transform 0.1s ease-in-out;
     opacity: 0;
     transform-origin: 0% 0%;
 }
@@ -364,7 +364,7 @@ p {
     z-index: 999;
     display: grid;
     place-items: center;
-    transition: opacity 150ms ease-in-out ,  transform 0.1s ease-in-out;;
+    transition: opacity 150ms ease-in-out ,  transform 0.1s ease-in-out;
     transform-origin: 0% 0%;
 
     font-family: 'Arial';
