@@ -530,7 +530,7 @@ white-space: nowrap;
 }
 
 /* 按鈕樣式 */
-#taiwan-travelbtn {
+#about-taiwanbtn {
     display: inline-block;
     display: flex;
     align-items: center;
@@ -547,7 +547,7 @@ white-space: nowrap;
 
 
 /* hover按鈕樣式 */
-#taiwan-travelbtn:hover {
+#about-taiwanbtn:hover {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -565,7 +565,7 @@ white-space: nowrap;
 
 
 /* 按鈕字樣 */
-#taiwan-travelbtn span {
+#about-taiwanbtn span {
     /* background-color: crimson; */
     display: flex;
     align-items: center;
@@ -582,10 +582,11 @@ white-space: nowrap;
     /* 慢速開始 */
     transition-timing-function: ease-in;
     transform: translateX(-7%);
+    
 }
 
 /* hover按鈕字樣 */
-#taiwan-travelbtn:hover span {
+#about-taiwanbtn:hover span {
     /* 製造殘影效果 */
     position: absolute;
     z-index: 2;
@@ -596,7 +597,7 @@ white-space: nowrap;
 }
 
 /* 偽元素hover前 */
-#taiwan-travelbtn:before {
+#about-taiwanbtn:before {
     display: flex;
     position: absolute;
     z-index: 1;
@@ -618,7 +619,7 @@ white-space: nowrap;
 }
 
 /* 偽元素hover後 */
-#taiwan-travelbtn:hover:before {
+#about-taiwanbtn:hover:before {
     display: flex;
     position: absolute;
     z-index: 2;
@@ -640,19 +641,19 @@ white-space: nowrap;
 }
 
 /* arrow */
-#taiwan-travelbtn-img {
+#about-taiwanbtn-img {
     /*background-color: blue;*/
     position: absolute;
     /* 初始位置 */
     left: 70%;
-    z-index: 2;
+    /* margin-left: 5rem; */
     animation: imgback 0.3s forwards;
     /* 慢速開始 */
     transition-timing-function: ease-in;
 }
 
 /* hover arrow */
-#taiwan-travelbtn:hover svg{
+#about-taiwanbtn:hover svg{
     position: absolute;
     /* 初始位置 */
     left: 75%;
@@ -664,7 +665,7 @@ white-space: nowrap;
 }
 
 /*svg箭頭路徑變色*/
-#taiwan-travelbtn:hover svg path{
+#about-taiwanbtn:hover svg path{
     fill:var(--main-blue);
 }
 
@@ -736,5 +737,118 @@ white-space: nowrap;
         /* 顏色B */
     }
 }
+
+/*RWD小筆電板:按鈕變化*/
+
+@media (min-width: 1500px) and (max-width:1919.98px) {
+
+    /* arrow */
+    #about-taiwanbtn-img {
+        left: 75%;
+    }
+
+    /* hover arrow */
+    #about-taiwanbtn:hover svg {
+        left: 78%;
+    }
+
+
+    @keyframes imggo {
+        0% {
+            transform: translate(0, 0);
+        }
+
+        100% {
+            transform: translate(5rem, 0);
+
+        }
+    }
+
+    @keyframes imgback {
+        0% {
+            transform: translate(5rem, 0);
+        }
+
+        100% {
+            transform: translate(0, 0);
+
+        }
+    }
+
+    /* 偽元素hover前 OK! Here We GO! */
+    #about-taiwanbtn:before {
+
+        font-size: 3rem;
+        padding-left: 20rem;
+        margin-right: 1rem;
+    }
+
+    /* 偽元素hover後OK! Here We GO! */
+    #about-taiwanbtn:hover:before {
+        font-size: 3rem;
+        padding-left: 20rem;
+    }
+}
+
+@media (min-width: 1200px) and (max-width:1499.98px) {
+
+    #about-taiwanbtn span {
+
+        font-size: 2.5rem;
+        transform: translateX(-7%);
+        
+    }
+
+    /* arrow */
+    #about-taiwanbtn-img {
+        width: 12%;
+        left: 75%;
+    }
+
+    /* hover arrow */
+    #about-taiwanbtn:hover svg {
+        width: 12%;
+        left: 78%;
+    }
+
+
+
+    @keyframes imggo {
+        0% {
+            transform: translate(0, 0);
+        }
+
+        100% {
+            transform: translate(3rem, 0);
+
+        }
+    }
+
+    @keyframes imgback {
+        0% {
+            transform: translate(3rem, 0);
+        }
+
+        100% {
+            transform: translate(0, 0);
+
+        }
+    }
+
+    /* 偽元素hover前 OK! Here We GO! */
+    #about-taiwanbtn:before {
+
+        font-size: 2.5rem;
+        padding-left: 20rem;
+        margin-right: 1rem;
+    }
+
+    /* 偽元素hover後OK! Here We GO! */
+    #about-taiwanbtn:hover:before {
+        font-size: 2.5rem;
+        padding-left: 20rem;
+    }
+}
+
 
 
