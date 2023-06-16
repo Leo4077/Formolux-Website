@@ -80,14 +80,19 @@ function handleZoomScroll(event) {
     // > delta 前的數值影響每次滾動縮放的比例
     scale = Math.max(1, scale - 5 * delta);
 
-    // !
-    // > delta 前的數值影響每次滾動的移動距離
-    // translateX += 0.1 * delta;
-    // !
-
     // > 透過設置 transformOrigin調整中心點
     zoomSvg.style.transformOrigin = '58.685% 50%';
     zoomSvg.style.transform = `scale(${scale})`;
+
+    // > 改變 content-wrapper7 的 z-index 值
+    const contentWrapper7 = document.getElementById('content-wrapper7');
+    if (scale !== 1) {
+        // > 當比例不為 1，也就是星星開始放大時
+        contentWrapper7.style.zIndex = 100;
+    } else {
+        // > 當星星比例為 1，回復原本 z-index 的值
+        contentWrapper7.style.zIndex = 60;
+    }
 }
 
 // > 定義一個函數來處理滾動事件的分派
@@ -97,29 +102,32 @@ function scrollEventHandler(evt) {
         evt.preventDefault();
         return;
     }
+    // > 在第二個 .background 上並且比例不為 1
     if (currentSlideNumber === 1 && scale !== 1) {
-        // > 在第二個 .background 上並且比例不為 1
+
+        // > 星星放大
         handleZoomScroll(evt);
+
 
         // !
         // > 當縮放到一定程度時，開始滑動 <p> 標籤
         if (scale >= 120) {
-            // 每次滾動時，translateX 變化的固定量
+            // > 每次滾動時，translateX 變化的固定量
             let translatePercentage = 10;
             let parentWidth = p1.parentElement.offsetWidth;
             const translateChange = (translatePercentage / 100) * parentWidth;
-            const maxTranslate = parentWidth;  // 定義最大移動距離
-    
+            // > 定義最大移動距離
+            const maxTranslate = parentWidth;
+
             if (delta > 0) {
-                // 向上滾動
+                // > 向上滾動
                 translateX = Math.max(0, translateX - translateChange);
 
             } else {
-                // 向下滾動
+                // > 向下滾動
                 translateX = Math.min(maxTranslate, translateX + translateChange);
-
             }
-    
+
             p1.style.transform = `translateX(${translateX}px)`;
             p2.style.transform = `translateX(${-translateX}px)`;
         }
