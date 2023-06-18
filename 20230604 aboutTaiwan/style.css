@@ -381,7 +381,7 @@ white-space: nowrap;
 
 #aboutTaiwan02{
     height: auto;
-    width: 100vw;
+    width: 100%;
     display: flex;
     justify-content: center;
     padding-left: 10%;
@@ -402,6 +402,9 @@ white-space: nowrap;
 .taiwan_item{ 
     /* background-color: blue; */
     display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    /* height: 23.75em; */
     margin-bottom:160px;
 
 }
@@ -426,12 +429,107 @@ white-space: nowrap;
     display: block;
     object-fit: cover;
     background-size: cover;
+    background-position: center;
     position: absolute;
     max-width: 100%;
-    top: 0;
+    top:0;
     left: 0;
 }
 
+.ipadtxt{
+    display: none;
+}
+
+@media (min-width: 577px) and (max-width:1024.98px) {
+    #aboutTaiwan02{
+        padding: 0;
+        justify-content: center;
+        background-image: linear-gradient(white 77.8%,var(--main-yellow)77.8%);
+    }
+
+    #allContainer{        
+        width: 71%;
+        margin-top: 50px;   
+    }
+
+    .taiwan_item{ 
+        display: none;
+    }
+
+
+    .ipadtxt{
+        display: block;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 100px;
+        
+    }
+
+    .ipad_titleText{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+
+    /*讓星星跟標題顛倒*/
+
+    .ipad_titleText.oppo{
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .ipad_titleText img{
+        width: 6.5%;
+        margin-right: 4.4%;
+    }
+
+    /*顛倒星星的margin改變位置*/
+
+    .ipad_titleText.oppo img{
+        margin:0 0 0 4.4%;
+    }
+
+    .ipad_parallaximg{
+        border-radius: 25px 25px 0px 0px;
+        width: 100%;
+        height: 255px;
+        overflow: hidden;
+        position: relative; /* 為了讓內部圖片可進行絕對定位 */
+    }
+
+    .ipad_taiwanpic{
+        display: block;
+        object-fit: cover;
+        background-size: cover;
+        background-position: center;
+        position: absolute;
+        max-width: 100%;
+        top: -50px; /*讓圖片在框框內的顯示區域改變*/
+        left: 0;
+    }
+
+    .ipad_infoarea{
+        
+        width: 89.3%;
+        margin: 25px auto 0 auto;
+    }
+    
+    .ipad_infoarea h3{
+        line-height: 1.59rem;
+    }
+
+    /* 資訊區最後一個的改變 */
+
+    .ipadtxt.smoove_z.usetxt{
+        margin: 20px 0 60px 0;
+    }
+
+
+
+
+
+}
 
 
 /*僅不包含視差圖片的資訊區*/
@@ -446,9 +544,21 @@ white-space: nowrap;
     
 }
 .textrev{
-    margin-right: 100px;
+    margin-right: 8%;
     margin-left: 0;
 }
+
+/* .stardecor{
+    width: 8.28%;
+} */
+.stardecor img{
+    width: 3vw;
+}
+/* textarea.textrev.smoove{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+} */
 
 /* 純文字區域 */
 #titleText{
@@ -463,7 +573,7 @@ white-space: nowrap;
     font-family: var(--second-font);
     font-style: italic;
     font-weight: 400;
-    font-size: 3.125rem;
+    font-size: max(2.6vw, 2.5rem);
     line-height: 82px;
     letter-spacing: 0.02em;
     color: #000537;
@@ -475,16 +585,16 @@ white-space: nowrap;
 
 #allContainer span{
     font-weight: 999.5;
-    font-size: 3.625rem;
+    font-size: max(2.7vw, 2.5rem);
     font-style: normal;
 }
- 
+
 #allContainer h3{
     font-family:var(--main-font);
     font-style: normal;
     font-weight: 400;
-    font-size: 1.25rem;
-    line-height: 36px;
+    font-size: max(1.08vw, 0.875rem);
+    line-height: 158.27%;
     color: #000537;
 }
 
@@ -500,11 +610,13 @@ white-space: nowrap;
     display: block;
     height: 466px;
 }
-.taiwanpic .smoove .budda{
+.taiwanpic.smoove.budda{
     width: 100%;
-    height: 100%;
+    /* height: 100%; */
     height: 466px;
 }
+
+
 
 
 /*按鈕區*/
@@ -790,7 +902,7 @@ white-space: nowrap;
     }
 }
 
-@media (min-width: 1200px) and (max-width:1499.98px) {
+@media (min-width: 1400px) and (max-width:1499.98px) {
 
     #about-taiwanbtn span {
 
@@ -819,14 +931,14 @@ white-space: nowrap;
         }
 
         100% {
-            transform: translate(3rem, 0);
+            transform: translate(4rem, 0);
 
         }
     }
 
     @keyframes imgback {
         0% {
-            transform: translate(3rem, 0);
+            transform: translate(4rem, 0);
         }
 
         100% {
@@ -847,6 +959,188 @@ white-space: nowrap;
     #about-taiwanbtn:hover:before {
         font-size: 2.5rem;
         padding-left: 20rem;
+    }
+}
+
+@media (min-width: 1200px) and (max-width:1399.98px) {
+
+    #about-taiwanbtn span {
+
+        font-size: 2.4rem;
+        transform: translateX(-7%);
+        
+    }
+
+    /* arrow */
+    #about-taiwanbtn-img {
+        width: 10%;
+        left: 77%;
+    }
+
+    /* hover arrow */
+    #about-taiwanbtn:hover svg {
+        width: 10%;
+        left: 79%;
+    }
+
+
+
+    @keyframes imggo {
+        0% {
+            transform: translate(0, 0);
+        }
+
+        100% {
+            transform: translate(4.2rem, 0);
+
+        }
+    }
+
+    @keyframes imgback {
+        0% {
+            transform: translate(4.2rem, 0);
+        }
+
+        100% {
+            transform: translate(0, 0);
+
+        }
+    }
+
+    /* 偽元素hover前 OK! Here We GO! */
+    #about-taiwanbtn:before {
+
+        font-size: 2.4rem;
+        padding-left: 15rem;
+        margin-right: 1rem;
+    }
+
+    /* 偽元素hover後OK! Here We GO! */
+    #about-taiwanbtn:hover:before {
+        font-size: 2.4rem;
+        padding-left: 15rem;
+    }
+}
+
+@media (min-width: 1025px) and (max-width:1199.98px) {
+
+    #about-taiwanbtn span {
+
+        font-size: 2.2rem;
+        transform: translateX(-7%);
+        
+    }
+
+    /* arrow */
+    #about-taiwanbtn-img {
+        width: 10%;
+        left: 77%;
+    }
+
+    /* hover arrow */
+    #about-taiwanbtn:hover svg {
+        width: 10%;
+        left: 79%;
+    }
+
+
+
+    @keyframes imggo {
+        0% {
+            transform: translate(0, 0);
+        }
+
+        100% {
+            transform: translate(4.2rem, 0);
+
+        }
+    }
+
+    @keyframes imgback {
+        0% {
+            transform: translate(4.2rem, 0);
+        }
+
+        100% {
+            transform: translate(0, 0);
+
+        }
+    }
+
+    /* 偽元素hover前 OK! Here We GO! */
+    #about-taiwanbtn:before {
+
+        font-size: 2.2rem;
+        padding-left: 15rem;
+        margin-right: 1rem;
+    }
+
+    /* 偽元素hover後OK! Here We GO! */
+    #about-taiwanbtn:hover:before {
+        font-size: 2.2rem;
+        padding-left: 15rem;
+    }
+}
+
+/* 平板按鈕(尚未改) */
+
+@media (min-width: 577px) and (max-width:1024.98px) {
+
+    #about-taiwanbtn span {
+
+        font-size: 1.375rem;
+        transform: translateX(-7%);
+        
+    }
+
+    /* arrow */
+    #about-taiwanbtn-img {
+        width: 10%;
+        left: 77%;
+    }
+
+    /* hover arrow */
+    #about-taiwanbtn:hover svg {
+        width: 10%;
+        left: 79%;
+    }
+
+
+
+    @keyframes imggo {
+        0% {
+            transform: translate(0, 0);
+        }
+
+        100% {
+            transform: translate(4.2rem, 0);
+
+        }
+    }
+
+    @keyframes imgback {
+        0% {
+            transform: translate(4.2rem, 0);
+        }
+
+        100% {
+            transform: translate(0, 0);
+
+        }
+    }
+
+    /* 偽元素hover前 OK! Here We GO! */
+    #about-taiwanbtn:before {
+
+        font-size: 2.2rem;
+        padding-left: 15rem;
+        margin-right: 1rem;
+    }
+
+    /* 偽元素hover後OK! Here We GO! */
+    #about-taiwanbtn:hover:before {
+        font-size: 2.2rem;
+        padding-left: 15rem;
     }
 }
 
