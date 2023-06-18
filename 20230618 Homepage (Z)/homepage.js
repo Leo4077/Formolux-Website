@@ -85,8 +85,14 @@ function handleZoomScroll(event) {
         return;
     }
 
+
     // > delta 前的數值影響每次滾動縮放的比例
-    scale = Math.max(1, scale - 5 * delta);
+    if (delta > 0) {
+        scale = Math.max(1, scale - 8 * delta);
+    } else if (delta < 0 && scale < 150) {
+        // > 当放大到指定比例后不再继续放大
+        scale = Math.min(150, scale - 8 * delta);
+    }
 
     // > 透過設置 transformOrigin調整中心點
     zoomSvg.style.transformOrigin = '58.685% 50%';
@@ -107,6 +113,12 @@ function handleZoomScroll(event) {
 // ! 定義處理滾動事件的函數
 function scrollEventHandler(evt) {
     var delta = evt.wheelDelta || -evt.detail;
+    var thirdBackground = document.querySelector('.why-choose');
+    var isAt100vh = thirdBackground.style.top === "100vh";
+    var isAt0vh = thirdBackground.style.top === "0vh";
+    var translateY = thirdBackground.style.transform === "translateY(100vh)";
+
+
     if (currentSlideNumber === 0 && delta > 0) {
         evt.preventDefault();
         return;
@@ -126,7 +138,7 @@ function scrollEventHandler(evt) {
 
             if (delta > 0) {
                 // ! 向上滾動
-                let thirdBackground = document.querySelector('.third-background');
+                let thirdBackground = document.querySelector('.why-choose');
                 // > 檢查是否已經滾動到頂部
                 let isAtTop = thirdBackground.scrollTop === 0;
                 // > 檢查是否已經滾動到 top=100vh 的位置
@@ -168,7 +180,7 @@ function scrollEventHandler(evt) {
 
                 // ? p1p2 達到最大位移量時
                 if (translateX === maxTranslate) {
-                    var thirdBackground = document.querySelector('.third-background');
+                    var thirdBackground = document.querySelector('.why-choose');
                     // > 將 top 樣式設為 "0"，將物件移動到頂部
                     thirdBackground.style.top = "0";
                     // > .thirdBackground 正常捲動
@@ -201,7 +213,16 @@ function scrollEventHandler(evt) {
     }
 }
 
+function scrollWhyChoose(evt) {
+    evt.stopPropagation();
+}
+
+
 
 // ! 為 window 物件添加滾動事件處理器
-document.addEventListener('mousewheel', scrollEventHandler, { passive: false });
-document.addEventListener('DOMMouseScroll', scrollEventHandler, { passive: false });
+var elements = document.querySelectorAll('.background');
+elements.forEach(function (element) {
+    element.addEventListener('mousewheel', scrollEventHandler, { passive: false });
+    element.addEventListener('DOMMouseScroll', scrollEventHandler, { passive: false });
+});
+
