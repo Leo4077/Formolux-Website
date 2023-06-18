@@ -436,9 +436,90 @@ white-space: nowrap;
     left: 0;
 }
 
+/*給平板的內容隱藏*/
 .ipadtxt{
     display: none;
 }
+
+
+/*僅不包含視差圖片的資訊區*/
+.textarea{
+    /* background-color: antiquewhite; */
+    width: 45%;
+    margin-left: 8%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 1;
+    
+}
+.textrev{
+    margin-right: 8%;
+    margin-left: 0;
+}
+
+.stardecor img{
+    width: 3vw;
+}
+
+
+/* 純文字區域 */
+#titleText{
+    display: inline-block;
+    margin-top: 0.5rem;
+    margin-bottom: 1.75rem;
+    /* background-color: rgb(2, 33, 23); */
+
+}
+#allContainer h2{
+   
+    font-family: var(--second-font);
+    font-style: italic;
+    font-weight: 400;
+    font-size: max(2.6vw, 2.5rem);
+    line-height: 82px;
+    letter-spacing: 0.02em;
+    color: #000537;
+
+    /* border-left: 3px solid #000537;
+    border-right: 3px solid #000537; */
+   
+}
+
+#allContainer span{
+    font-weight: 999.5;
+    font-size: max(2.7vw, 2.5rem);
+    font-style: normal;
+}
+
+#allContainer h3{
+    font-family:var(--main-font);
+    font-style: normal;
+    font-weight: 400;
+    font-size: max(1.08vw, 0.875rem);
+    line-height: 158.27%;
+    color: #000537;
+}
+
+
+/* 最後一個useful info */
+
+.useful{
+    margin-bottom: 0;
+    height: 466px;
+}
+
+#lastbudda{
+    display: block;
+    height: 466px;
+}
+.taiwanpic.smoove.budda{
+    width: 100%;
+    /* height: 100%; */
+    height: 466px;
+}
+
+/*平板:內文資訊區*/
 
 @media (min-width: 577px) and (max-width:1024.98px) {
     #aboutTaiwan02{
@@ -449,7 +530,10 @@ white-space: nowrap;
 
     #allContainer{        
         width: 71%;
-        margin-top: 50px;   
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 
     .taiwan_item{ 
@@ -525,97 +609,7 @@ white-space: nowrap;
         margin: 20px 0 60px 0;
     }
 
-
-
-
-
 }
-
-
-/*僅不包含視差圖片的資訊區*/
-.textarea{
-    /* background-color: antiquewhite; */
-    width: 45%;
-    margin-left: 8%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    flex-grow: 1;
-    
-}
-.textrev{
-    margin-right: 8%;
-    margin-left: 0;
-}
-
-/* .stardecor{
-    width: 8.28%;
-} */
-.stardecor img{
-    width: 3vw;
-}
-/* textarea.textrev.smoove{
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-} */
-
-/* 純文字區域 */
-#titleText{
-    display: inline-block;
-    margin-top: 0.5rem;
-    margin-bottom: 1.75rem;
-    /* background-color: rgb(2, 33, 23); */
-
-}
-#allContainer h2{
-   
-    font-family: var(--second-font);
-    font-style: italic;
-    font-weight: 400;
-    font-size: max(2.6vw, 2.5rem);
-    line-height: 82px;
-    letter-spacing: 0.02em;
-    color: #000537;
-
-    /* border-left: 3px solid #000537;
-    border-right: 3px solid #000537; */
-   
-}
-
-#allContainer span{
-    font-weight: 999.5;
-    font-size: max(2.7vw, 2.5rem);
-    font-style: normal;
-}
-
-#allContainer h3{
-    font-family:var(--main-font);
-    font-style: normal;
-    font-weight: 400;
-    font-size: max(1.08vw, 0.875rem);
-    line-height: 158.27%;
-    color: #000537;
-}
-
-
-/* 最後一個useful info */
-
-.useful{
-    margin-bottom: 0;
-    height: 466px;
-}
-
-#lastbudda{
-    display: block;
-    height: 466px;
-}
-.taiwanpic.smoove.budda{
-    width: 100%;
-    /* height: 100%; */
-    height: 466px;
-}
-
 
 
 
@@ -1086,10 +1080,35 @@ white-space: nowrap;
 
 @media (min-width: 577px) and (max-width:1024.98px) {
 
+    #taiwanbtn {
+        display: inline-block;
+        align-self: center;
+        width: 127.5%;
+        height: 100px;
+        margin-bottom: 80px;
+    }
+    
+    #taiwanbtn a {
+
+        height: 100px;
+        margin: 0;
+        
+    }
+
+    #about-taiwanbtn {
+        height: 100px;
+    }
+
+    #about-taiwanbtn:hover {
+        height: 100px;
+    }
+    
+
     #about-taiwanbtn span {
 
         font-size: 1.375rem;
-        transform: translateX(-7%);
+        letter-spacing: 15.5%;
+        transform: translateX(0);
         
     }
 
