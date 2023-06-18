@@ -85,8 +85,14 @@ function handleZoomScroll(event) {
         return;
     }
 
+
     // > delta 前的數值影響每次滾動縮放的比例
-    scale = Math.max(1, scale - 5 * delta);
+    if (delta > 0) {
+        scale = Math.max(1, scale - 8 * delta);
+    } else if (delta < 0 && scale < 150) {
+        // > 当放大到指定比例后不再继续放大
+        scale = Math.min(150, scale - 8 * delta);
+    }
 
     // > 透過設置 transformOrigin調整中心點
     zoomSvg.style.transformOrigin = '58.685% 50%';
@@ -107,6 +113,11 @@ function handleZoomScroll(event) {
 // ! 定義處理滾動事件的函數
 function scrollEventHandler(evt) {
     var delta = evt.wheelDelta || -evt.detail;
+    var thirdBackground = document.querySelector('.why-choose');
+    var isAtTop = thirdBackground.scrollTop === 0;
+    var translateY100vh = thirdBackground.style.transform === "translateY(100vh)";
+    var translateY0vh = thirdBackground.style.transform === "translateY(0vh)";
+
     if (currentSlideNumber === 0 && delta > 0) {
         evt.preventDefault();
         return;
@@ -124,68 +135,46 @@ function scrollEventHandler(evt) {
             const maxTranslate = parentWidth;
 
 
-            if (delta > 0) {
-                // ! 向上滾動
-                let thirdBackground = document.querySelector('.third-background');
-                // > 檢查是否已經滾動到頂部
-                let isAtTop = thirdBackground.scrollTop === 0;
-                // > 檢查是否已經滾動到 top=100vh 的位置
-                let isAt100vh = thirdBackground.style.top === "100vh";
 
-                // ? 如果物件位於 top=100vh 的位置
-                if (isAtTop && isAt100vh) {
-                    // ? p1p2 尚未達到最大位移量時
-                    if (translateX < maxTranslate) {
-                        // > p1p2正常位移
-                        translateX = Math.max(0, translateX - translateChange);
-                        p1.style.transform = `translateX(${translateX}px)`;
-                        p2.style.transform = `translateX(${-translateX}px)`;
-                    } else {
-                        // ? p1p2 達到最大位移量時
-                        // > p1p2正常位移
-                        translateX = Math.max(0, translateX - translateChange);
-                        p1.style.transform = `translateX(${translateX}px)`;
-                        p2.style.transform = `translateX(${-translateX}px)`;
-                    }
-                } else if (isAtTop && !isAt100vh) {
-                    // ? 物件位於頂部，但尚未滾動到 top=100vh 的位置
-                    // > 將 top 樣式設為 "100"，將物件移動到下面
-                    thirdBackground.style.top = "100vh";
+            if (delta > 0) {
+                // 向上滾動
+                if (translateY100vh && translateX < maxTranslate) {
+                    // p1p2正常位移
+                    translateX = Math.max(0, translateX - translateChange);
+                    p1.style.transform = `translateX(${translateX}px)`;
+                    p2.style.transform = `translateX(${-translateX}px)`;
+                } else if (translateY100vh && translateX >= maxTranslate) {
+                    // p1p2正常位移
+                    translateX = Math.max(0, translateX - translateChange);
+                    p1.style.transform = `translateX(${translateX}px)`;
+                    p2.style.transform = `translateX(${-translateX}px)`;
+                } else if (isAtTop && !translateY100vh) {
+                    // 物件位於頂部，但尚未滾動到 translateY(100vh) 的位置
+                    // 將 transform 設為 "translateY(100vh)"，將物件移動到下面
+                    thirdBackground.style.transform = "translateY(100vh)";
                 } else {
-                    // ? 向上滾動，但未滿足以上兩個條件
-                    if (thirdBackground.style.top !== "0") {
-                        thirdBackground.style.top = "0";
+                    if (!translateY0vh) {
+                        thirdBackground.style.transform = "translateY(0vh)";
                     }
-                    // > .thirdBackground 正常捲動
                     thirdBackground.scrollTop -= evt.deltaY;
                 }
             } else {
-                // ! 向下滾動
-                // ? p1p2 尚未達到最大位移量時
-                // -Math.min() 函數用於比較兩個值，並返回其中較小的值
-                // -確保 translateX 不會超過指定的最大位移量，並達到限制元素位移的效果
-                translateX = Math.min(maxTranslate, translateX + translateChange);
-
-                // ? p1p2 達到最大位移量時
-                if (translateX === maxTranslate) {
-                    var thirdBackground = document.querySelector('.third-background');
-                    // > 將 top 樣式設為 "0"，將物件移動到頂部
-                    thirdBackground.style.top = "0";
-                    // > .thirdBackground 正常捲動
+                // 向下滾動
+                if (translateY100vh && translateX < maxTranslate) {
+                    translateX = Math.min(maxTranslate, translateX + translateChange);
+                    p1.style.transform = `translateX(${translateX}px)`;
+                    p2.style.transform = `translateX(${-translateX}px)`;
+                } else if (translateY100vh && translateX >= maxTranslate) {
+                    thirdBackground.style.transform = "translateY(0vh)";
                     thirdBackground.scrollTop -= evt.deltaY;
                 }
-                // > p1p2正常位移
-                p1.style.transform = `translateX(${translateX}px)`;
-                p2.style.transform = `translateX(${-translateX}px)`;
             }
         }
 
-        // > 確保在 p1 和 p2 完全移動回原位前不要縮放
         if (translateX === 0 || delta < 0) {
             handleZoomScroll(evt);
         }
 
-        // > 阻止事件的進一步傳播
         evt.stopPropagation();
         return;
     }
@@ -201,7 +190,35 @@ function scrollEventHandler(evt) {
     }
 }
 
+function scrollWhyChoose(evt) {
+    var delta = evt.wheelDelta || -evt.detail;
+    var thirdBackground = document.querySelector('.why-choose');
+    var translateY0vh = thirdBackground.style.transform === "translateY(0vh)";
 
-// ! 為 window 物件添加滾動事件處理器
+    if (translateY0vh) {
+        if (delta > 0) {
+            thirdBackground.style.transform = "translateY(100vh)";
+        } else {
+            thirdBackground.scrollTop -= evt.deltaY;
+        }
+    } else {
+        thirdBackground.style.transform = "translateY(0vh)";
+    }
+
+    evt.stopPropagation();
+}
+
+
+/* // ! 為 window 物件添加滾動事件處理器
 document.addEventListener('mousewheel', scrollEventHandler, { passive: false });
-document.addEventListener('DOMMouseScroll', scrollEventHandler, { passive: false });
+document.addEventListener('DOMMouseScroll', scrollEventHandler, { passive: false }); */
+var elements = document.querySelectorAll('.background');
+elements.forEach(function (element) {
+    element.addEventListener('mousewheel', scrollEventHandler, { passive: false });
+    element.addEventListener('DOMMouseScroll', scrollEventHandler, { passive: false });
+});
+
+var whyChooseElement = document.querySelector('.why-choose');
+whyChooseElement.addEventListener('mousewheel', scrollWhyChoose, { passive: false });
+whyChooseElement.addEventListener('DOMMouseScroll', scrollWhyChoose, { passive: false });
+

@@ -443,7 +443,7 @@ white-space: nowrap;
 @media (min-width: 577px) and (max-width:1024.98px) {
     #aboutTaiwan02{
         padding: 0;
-        justify-content: center;
+        justify-content: center;title
         background-image: linear-gradient(white 77.8%,var(--main-yellow)77.8%);
     }
 
