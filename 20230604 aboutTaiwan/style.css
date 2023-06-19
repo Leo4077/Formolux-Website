@@ -135,7 +135,7 @@ white-space: nowrap;
     width: 13.5%;
     top: 39.4%;
     left: 16.8%;
-    animation: flower1 11s both ease-in-out;
+    
     animation-name: move1;
     animation-duration: 3s;
     animation-timing-function: ease-in-out;
@@ -276,7 +276,10 @@ white-space: nowrap;
     width: 13.5%;
     top: 39.4%;
     left: 14.5%;
-    animation-name: move1 1s both ease-in-out;
+    animation-name: move1;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards; 
     
 
 }
@@ -292,7 +295,10 @@ white-space: nowrap;
     width: 8%;
     left: 9.8%;
     top:50%;
-    animation-name: move2 1s both ease-in-out;
+    animation-name: move2;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards; 
 
 }
 
@@ -307,7 +313,10 @@ white-space: nowrap;
     width: 16%;
     top:41%;
     right: 12.5%;
-    animation-name: move3 1s both ease-in-out;
+    animation-name: move3;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards; 
 }
 
 
@@ -322,7 +331,10 @@ white-space: nowrap;
     width: 9%;
     bottom:34%;
     right: 13%;
-    animation-name: move4 1s both ease-in-out;
+    animation-name: move4;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards; 
 
 }
 
@@ -336,7 +348,10 @@ white-space: nowrap;
     width: 3.1%;
     bottom:42.5%;
     right: 8%;
-    animation-name: move5 1s both ease-in-out;
+    animation-name: move5;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards; 
 
     
 }
@@ -351,7 +366,10 @@ white-space: nowrap;
     width: 1.6%;
     bottom:38%;
     right: 6%;
-    animation-name: move6 1s both ease-in-out;
+    animation-name: move6;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards; 
 
 }
 
