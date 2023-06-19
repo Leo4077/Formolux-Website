@@ -551,7 +551,7 @@ color: transparent; } */
     /* 初始位置 */
     /* left: 70%; */
     z-index: 2;
-    animation: imgback 0.3s forwards;
+    animation: imgback 0.5s forwards;
     /* 慢速開始 */
     transition-timing-function: ease-in;
 }
@@ -562,7 +562,7 @@ color: transparent; } */
     /* 初始位置 */
     /* left: 75%; */
     z-index: 2;
-    animation: imggo 0.3s forwards;
+    animation: imggo 0.5s forwards;
     /* 慢速開始 */
     transition-timing-function: ease-in;
 }
