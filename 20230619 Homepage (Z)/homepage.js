@@ -114,10 +114,13 @@ function handleZoomScroll(event) {
 function scrollEventHandler(evt) {
     var delta = evt.wheelDelta || -evt.detail;
     var whyChoose = document.querySelector('.why-choose');
-    var isAt100vh = whyChoose.style.top === "100vh";
-    var isAt0vh = whyChoose.style.top === "0vh";
-    var translateY = whyChoose.style.transform === "translateY(100vh)";
 
+    var style = window.getComputedStyle(whyChoose);
+    var top = style.getPropertyValue('top');
+
+    let isAtTop = whyChoose.scrollTop === 0;
+
+    var translateY = whyChoose.style.transform === "translateY(100vh)";
 
     if (currentSlideNumber === 0 && delta > 0) {
         evt.preventDefault();
@@ -135,30 +138,16 @@ function scrollEventHandler(evt) {
             // > 定義最大移動距離
             const maxTranslate = parentWidth;
 
-
             if (delta > 0) {
-
                 console.log('Scrolling up...');
+                console.log(top);
+                console.log('isAtTop', isAtTop);
 
                 // ! 向上滾動
-                let whyChoose = document.querySelector('.why-choose');
                 // > 檢查是否已經滾動到頂部
-                let isAtTop = whyChoose.scrollTop === 0;
 
-                // ?
-                console.log('isAtTop:', isAtTop);  // 將isAtTop的值輸出到控制台
-
-                // > 檢查是否已經移到 top=100vh 的位置
-                let isAt100vh = whyChoose.style.top === "100vh";
-
-                /// ?
-                console.log('isAt100vh:', isAt100vh);  // 將isAt100vh的值輸出到控制台
-
-                let isAt0vh = whyChoose.style.top === "0vh";
-
-
-                // ? 如果滾動到頂部，且物件位於 top=100vh 的位置 
-                if (isAtTop && isAt100vh) {
+                // ? 如果物件位於 top=100vh 的位置 
+                if (parseInt(top, 10) === window.innerHeight) {
                     // ? p1p2 尚未達到最大位移量時
                     if (translateX < maxTranslate) {
                         // > p1p2正常位移
@@ -172,39 +161,34 @@ function scrollEventHandler(evt) {
                         p1.style.transform = `translateX(${translateX}px)`;
                         p2.style.transform = `translateX(${-translateX}px)`;
                     }
-                } else if (isAtTop && isAt0vh) {
-
-                    console.log('This condition is triggered!');
-
-
-                    // ? 滾動到頂部，但尚未移動到 top=100vh 的位置
+                    // ? 如果物件不位於 top=100vh 的位置 且滾動到頂時
+                } else if (isAtTop && parseInt(top, 10) === 0) {
                     // > 將 top 樣式設為 "100"，將物件移動到下面
                     whyChoose.style.top = "100vh";
                     // > 將 position 設為 fixed
                     whyChoose.style.position = "fixed";
-                    // !
                 } else {
-                    // ? 向上滾動，但未滿足以上兩個條件
-                    if (whyChoose.style.top !== "0") {
-                        whyChoose.style.top = "0";
-                    }
                     // > .whyChoose 正常捲動
                     whyChoose.scrollTop -= evt.deltaY;
                 }
+
             } else {
                 // ! 向下滾動
-                // ? p1p2 尚未達到最大位移量時
+                console.log('向下滾動')
+                console.log(top);
+                console.log('isAtTop', isAtTop);
+
                 // -Math.min() 函數用於比較兩個值，並返回其中較小的值
                 // -確保 translateX 不會超過指定的最大位移量，並達到限制元素位移的效果
                 translateX = Math.min(maxTranslate, translateX + translateChange);
-                // > 當滾輪向下滾動（也就是 delta < 0），且 p1p2 還未達到最大位移量時
+                // ? 當滾輪向下滾動（也就是 delta < 0），且 p1p2 還未達到最大位移量時
                 if (delta < 0 && translateX < maxTranslate) {
                     // > 進行 p1p2 的位移
                     translateX = Math.min(maxTranslate, translateX + translateChange);
                     p1.style.transform = `translateX(${translateX}px)`;
                     p2.style.transform = `translateX(${-translateX}px)`;
 
-                    // > 當滾輪向下滾動（也就是 delta < 0），且 p1p2 已達到最大位移量時
+                    // ? 當滾輪向下滾動（也就是 delta < 0），且 p1p2 已達到最大位移量時
                 } else if (delta < 0 && translateX === maxTranslate) {
                     // > 將 top 樣式設為 "0"，將物件移動到頂部
                     whyChoose.style.top = "0";
@@ -244,11 +228,36 @@ function scrollEventHandler(evt) {
 }
 
 
+// > 在這裡處理 why-choose 的滾動事件
+function scrollEventHandler2(evt) {
+    console.log('scrollEventHandler2 called'); 
+    
+    var whyChoose = document.querySelector('.why-choose');
+    var homepageContent = document.querySelector('#homepage-content');
+
+    whyChoose.addEventListener('scroll', function (evt) {
+
+        if (homepageContent.scrollTop === 0) {
+            // > 將 top 樣式設為 "100"，將物件移動到下面
+            whyChoose.style.top = "100vh";
+            // > 將 position 設為 fixed
+            whyChoose.style.position = "fixed";
 
 
-// ! 為 window 物件添加滾動事件處理器
+        } else {
+            // > .whyChoose 正常捲動
+            console.log('正常捲動')
+            whyChoose.scrollTop -= evt.deltaY;
+        }
+    });
+}
+
+
+
+
+
+
+// ! 為 container 物件移除預設的滾動效果
 var bigContainer = document.querySelector('.big-container');
 bigContainer.addEventListener('mousewheel', scrollEventHandler, { passive: false });
 bigContainer.addEventListener('DOMMouseScroll', scrollEventHandler, { passive: false });
-
-

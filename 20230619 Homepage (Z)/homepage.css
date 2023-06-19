@@ -22,7 +22,7 @@ body {
     display: flex;
     position: fixed;
     z-index: 600;
-    transition: top 0.3s ease-in-out;
+    transition: top 0.9s ease-in-out;
 }
 
 .test-1 {
