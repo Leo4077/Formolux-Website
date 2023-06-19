@@ -5,6 +5,7 @@ body {
 /* > 區段一 */
 .aboutus-first-section {
     display: flex;
+    position: relative;
     flex-direction: column;
     align-items: center;
 
@@ -24,11 +25,11 @@ body {
     width: 100%;
     height: 57.5%;
 
-/* TODO */
+    /* TODO */
     object-fit: cover;
     background-size: contain;
     background-position: center;
-    background-repeat:no-repeat;
+    background-repeat: no-repeat;
     background-image: url(../images/Aboutus-title.png);
 }
 
@@ -41,7 +42,7 @@ body {
     background-position: center;
 }
 
-/* > 按鈕區大 */
+/* > 按鈕區大-電腦平板 */
 .aboutus-btn-box {
     display: flex;
     align-items: center;
@@ -51,12 +52,19 @@ body {
     margin-bottom: 55px;
 }
 
-/* > 按鈕區小 */
+/* > 按鈕區小-手機 */
+.aboutus-btn-box-phone {
+    display: none;
+    position: absolute;
+    z-index: -10;
+    top: 60%;
+}
+
+/* > 按鈕區 */
 .aboutus-btn-wrapper {
     position: relative;
     display: flex;
     justify-content: center;
-
 
     padding-right: 45px;
 }
@@ -169,7 +177,6 @@ body {
 
     width: 100%;
     height: 50vh;
-    /*background-color: rgb(188, 188, 188); */
 
     /* -R角 */
     border-top-left-radius: 30px;
@@ -225,9 +232,8 @@ body {
     display: flex;
     justify-content: space-between;
 
-
-    height: 100%;
     width: 80%;
+    height: 100%;
 
     margin-left: 10%;
     margin-right: 10%;
@@ -241,11 +247,7 @@ body {
     width: 39%;
     height: 100%;
 
-    border-radius: 25px 25px 0px 0px;
-
     display: flex;
-
-
     transition: all 0.5s ease-in-out;
 }
 
@@ -1324,6 +1326,146 @@ body {
     }
 }
 
+/* ! RWD 851-1200 (for下方按鈕區) */
+@media (min-width: 851px) and (max-width: 1200.98px) {
+
+    /* > 按鈕字樣 */
+    #aboutus-choosebtn span {
+        font-size: 1.25rem;
+        margin-left: 17%;
+        /* TODO */
+    }
+
+    /* > hover按鈕字樣 */
+    #aboutus-choosebtn:hover span {
+        font-size: 1.25rem;
+        margin-left: 17%;
+    }
+
+    /* > 偽元素hover前 */
+    #aboutus-choosebtn:before {
+        padding-left: 42%;
+        font-size: 1.25rem;
+
+    }
+
+    /* > 偽元素hover後 */
+    #aboutus-choosebtn:hover:before {
+        padding-left: 42%;
+        font-size: 1.25rem;
+    }
+
+    /* > arrow */
+    #aboutus-choosebtn svg {
+        /* -初始位置 */
+        left: 75%;
+        width: 57px;
+        height: 20px;
+    }
+
+    /* > hover arrow */
+    #aboutus-choosebtn:hover svg {
+        position: absolute;
+        /* -初始位置 */
+        left: 75%;
+        width: 57px;
+        height: 20px;
+    }
+
+    /* > 箭頭移動 */
+    @keyframes imggo {
+        0% {
+            transform: translate(0, 0);
+        }
+
+        100% {
+            transform: translate(70%, 0);
+
+        }
+    }
+
+    @keyframes imgback {
+        0% {
+            transform: translate(70%, 0);
+        }
+
+        100% {
+            transform: translate(0, 0);
+
+        }
+    }
+}
+
+/* ! RWD 577-850 (for下方按鈕區) */
+@media (min-width: 577px) and (max-width: 850.98px) {
+
+    /* > 按鈕字樣 */
+    #aboutus-choosebtn span {
+        font-size: 1.25rem;
+        margin-left: 8%;
+    }
+
+    /* > hover按鈕字樣 */
+    #aboutus-choosebtn:hover span {
+        font-size: 1.25rem;
+        margin-left: 8%;
+    }
+
+    /* > 偽元素hover前 */
+    #aboutus-choosebtn:before {
+        padding-left: 35%;
+        font-size: 1.25rem;
+
+    }
+
+    /* > 偽元素hover後 */
+    #aboutus-choosebtn:hover:before {
+        padding-left: 35%;
+        font-size: 1.25rem;
+    }
+
+    /* > arrow */
+    #aboutus-choosebtn svg {
+        /* -初始位置 */
+        left: 80%;
+        width: 57px;
+        height: 20px;
+    }
+
+    /* > hover arrow */
+    #aboutus-choosebtn:hover svg {
+        position: absolute;
+        /* -初始位置 */
+        left: 80%;
+        width: 57px;
+        height: 20px;
+    }
+
+    /* > 箭頭移動 */
+    @keyframes imggo {
+        0% {
+            transform: translate(0, 0);
+        }
+
+        100% {
+            transform: translate(30%, 0);
+
+        }
+    }
+
+    @keyframes imgback {
+        0% {
+            transform: translate(30%, 0);
+        }
+
+        100% {
+            transform: translate(0, 0);
+
+        }
+    }
+}
+
+
 /* ! RWD 577-1200 font-1024*0.63636 */
 @media (min-width: 577px) and (max-width: 1200.98px) {
 
@@ -1424,6 +1566,10 @@ body {
     /* > 區段二 */
     .aboutus-second-section {
         height: 613px;
+
+        /* -R角 */
+        border-top-left-radius: 25px;
+        border-top-right-radius: 25px;
     }
 
     /* > 背景 */
@@ -1781,148 +1927,18 @@ body {
 
 }
 
-/* ! RWD 851-1200 */
-@media (min-width: 851px) and (max-width: 1200.98px) {
-
-    /* > 按鈕字樣 */
-    #aboutus-choosebtn span {
-        font-size: 1.25rem;
-        margin-left: 17%;
-        /* TODO */
-    }
-
-    /* > hover按鈕字樣 */
-    #aboutus-choosebtn:hover span {
-        font-size: 1.25rem;
-        margin-left: 17%;
-    }
-
-    /* > 偽元素hover前 */
-    #aboutus-choosebtn:before {
-        padding-left: 42%;
-        font-size: 1.25rem;
-
-    }
-
-    /* > 偽元素hover後 */
-    #aboutus-choosebtn:hover:before {
-        padding-left: 42%;
-        font-size: 1.25rem;
-    }
-
-    /* > arrow */
-    #aboutus-choosebtn svg {
-        /* -初始位置 */
-        left: 75%;
-        width: 57px;
-        height: 20px;
-    }
-
-    /* > hover arrow */
-    #aboutus-choosebtn:hover svg {
-        position: absolute;
-        /* -初始位置 */
-        left: 75%;
-        width: 57px;
-        height: 20px;
-    }
-
-    /* > 箭頭移動 */
-    @keyframes imggo {
-        0% {
-            transform: translate(0, 0);
-        }
-
-        100% {
-            transform: translate(70%, 0);
-
-        }
-    }
-
-    @keyframes imgback {
-        0% {
-            transform: translate(70%, 0);
-        }
-
-        100% {
-            transform: translate(0, 0);
-
-        }
-    }
-}
-
-/* ! RWD 577-850 */
-@media (min-width: 577px) and (max-width: 850.98px) {
-
-    /* > 按鈕字樣 */
-    #aboutus-choosebtn span {
-        font-size: 1.25rem;
-        margin-left: 8%;
-    }
-
-    /* > hover按鈕字樣 */
-    #aboutus-choosebtn:hover span {
-        font-size: 1.25rem;
-        margin-left: 8%;
-    }
-
-    /* > 偽元素hover前 */
-    #aboutus-choosebtn:before {
-        padding-left: 35%;
-        font-size: 1.25rem;
-
-    }
-
-    /* > 偽元素hover後 */
-    #aboutus-choosebtn:hover:before {
-        padding-left: 35%;
-        font-size: 1.25rem;
-    }
-
-    /* > arrow */
-    #aboutus-choosebtn svg {
-        /* -初始位置 */
-        left: 80%;
-        width: 57px;
-        height: 20px;
-    }
-
-    /* > hover arrow */
-    #aboutus-choosebtn:hover svg {
-        position: absolute;
-        /* -初始位置 */
-        left: 80%;
-        width: 57px;
-        height: 20px;
-    }
-
-    /* > 箭頭移動 */
-    @keyframes imggo {
-        0% {
-            transform: translate(0, 0);
-        }
-
-        100% {
-            transform: translate(30%, 0);
-
-        }
-    }
-
-    @keyframes imgback {
-        0% {
-            transform: translate(30%, 0);
-        }
-
-        100% {
-            transform: translate(0, 0);
-
-        }
-    }
-}
 
 
-/* ! RWD 手機版 待coding */
+/* ! RWD 手機版 (-577) */
 @media (max-width: 576.98px) {
+
+    /* > 區段一 */
+    .aboutus-first-section {
+        height: 41.3vh;
+    }
+
+    /* > 大標區 */
+    /* > 大標 */
     .aboutus-title-box {
         margin-top: 74px;
         margin-bottom: 10px;
@@ -1931,8 +1947,344 @@ body {
 
         width: 70%;
         height: 128px;
-    
+
         background-image: url(../images/Aboutus-title-phone.png);
     }
-                /* TODO */
+
+    /* > 按鈕區大-電腦平板 */
+    .aboutus-btn-box {
+        display: none;
+    }
+
+    /* > 按鈕區小-手機 */
+    .aboutus-btn-box-phone {
+        display: flex;
+        position: absolute;
+        z-index: 90;
+        top: 60%;
+    }
+
+    /* > 按鈕區-手機 */
+    .aboutus-btn-wrapper-phone {
+        position: relative;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+
+    /* TODO */
+    /* > 按鈕外框 */
+    #svg-frame {
+        /*        width: 700px;
+        height: 38px; */
+    }
+
+    .aboutus-btn-wrapper {
+        /*         width: 700px;
+        height: 38px;
+        padding-right: 20.249px; */
+    }
+
+    /* > 按鈕高度 */
+    .aboutus-btn {
+        /*         height: 36.90888px;
+        /* -使按鈕相鄰 */
+        /*         margin-right: -20.248975px; */
+
+    }
+
+    /* > 按鈕文字 */
+    /*     .aboutus-btn-p {
+        margin-top: 1.5px;
+        font-size: 0.75rem;
+        line-height: 0.9rem; 
+}*/
+
+
+
+    /* > 按鈕們 0.846 */
+    #btn1 {
+        /*         width: 138.358px;
+        clip-path: polygon(0.2% 0, 100% 0, 85.3% 100%, 0.2% 100%); */
+        /*     background-color: red; */
+    }
+
+    #btn2 {
+        /*         width: 163.15px;
+        clip-path: polygon(12.4% 0, 100% 0, 87.5% 100%, 0 100%); */
+        /*     background-color: orange; */
+    }
+
+    #btn3 {
+        /*         width: 117.017px;
+        clip-path: polygon(17.1% 0, 100% 0, 82.3% 100%, 0% 100%); */
+        /*     background-color: yellow; */
+    }
+
+
+    #btn4 {
+        /*         width: 134.5685px;
+        clip-path: polygon(15.3% 0, 100% 0, 84.6% 100%, 0% 100%); */
+        /*     background-color: yellowgreen; */
+    }
+
+    #btn5 {
+        /*         width: 115.219px;
+        clip-path: polygon(17.6% 0, 100% 0, 82.3% 100%, 0% 100%); */
+        /*     background-color: green; */
+    }
+
+    #btn6 {
+        /*         width: 131.87px;
+        clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%); */
+        /*     background-color: blue; */
+    }
+
+    /* > 區段二 */
+    .aboutus-second-section {
+        height: 55.7vh;
+
+        /* -R角 */
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+    }
+
+
+    /* TODO */
+
+    /* > 背景 */
+    #aboutus-bg-box {
+        /* TODO */
+        height: 58.72%;
+
+        border-radius: 15px 15px 0px 0px;
+    }
+
+    /* TODO */
+    /* !以下ok */
+
+
+    /* > 大區 */
+    .aboutus-main-content {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: start;
+        margin-left: 8%;
+        margin-right: 8%;
+
+        width: 80%;
+        height: 100%;
+
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    /* > 左內容區(下文字) */
+    .aboutus-content-box {
+        width: 100%;
+        height: auto;
+
+        display: flex;
+        justify-content: center;
+        position: relative;
+        z-index: 3;
+    }
+
+    /* > 左文字區(下文字) */
+    .aboutus-content {
+        width: 100%;
+        height: auto;
+
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        margin-top: 35px;
+        margin-bottom: 6%;
+        margin-left: 0;
+    }
+
+    /* > 標題區 */
+    #title-layer {
+        display: flex;
+        position: relative;
+        width: 100%;
+
+        margin-bottom: 17px;
+    }
+
+    /* > 標題 */
+    .aboutus-content-title {
+        font-size: 2rem;
+        line-height: 1.875rem;
+        white-space: nowrap;
+
+        text-align: center;
+        letter-spacing: 0.02em;
+
+        color: #FFFCEB;
+        width: 100%;
+    }
+
+    /* > 內文 */
+    #content-layer {
+        display: flex;
+        position: relative;
+        width: 100%;
+        margin-top: 0px;
+    }
+
+    /* > 內文 */
+    .aboutus-content-word {
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+
+        display: flex;
+        align-items: center;
+        letter-spacing: 0.06em;
+
+        width: 100%;
+        text-align: center;
+    }
+
+
+    /* > 右花區 */
+    .aboutus-content-flower-box {
+        display: none;
+    }
+
+
+    /* > 右圖片區(上圖片區) */
+    .aboutus-content-img-box {
+        display: flex;
+        position: relative;
+        width: 100%;
+        height: 160px;
+
+        z-index: 1;
+        margin-top: 40px;
+    }
+
+    /* > 左圖 */
+    .aboutus-content-img-box1 {
+        width: 50%;
+        height: 50%;
+
+        box-shadow: 10.1552px 20.3103px 27.0804px 10.1552px rgba(0, 0, 0, 0.35);
+    }
+
+    /* > 右圖 */
+    .aboutus-content-img-box2 {
+        width: 64%;
+        height: 90.6%;
+
+        box-shadow: 10.1552px 20.3103px 23.6954px -10.1552px rgba(0, 0, 0, 0.4);
+    }
+
+    .aboutus-content-img-box2 img {
+        border-radius: 0px 15px 0px 0px;
+    }
+
+    /* > 區段三 */
+    .aboutus-third-section {
+        width: 100%;
+        height: auto;
+    }
+
+    /* > 色塊區 */
+    .aboutus-color-box {
+        width: 100%;
+        height: 3vh;
+    }
+
+    /* > choose區 */
+    .aboutus-choose-box {
+        display: flex;
+        flex-direction: column;
+
+        justify-content: space-evenly;
+        align-items: center;
+        height: auto;
+
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    /* > 主標題 */
+    .aboutus-choose-titlebox {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    /* > 文字區 */
+    .aboutus-choose-wordbox {
+        display: flex;
+        flex-direction: column;
+
+        width: 61%;
+        height: auto;
+        margin-top: 36px;
+        margin-bottom: 25px;
+    }
+
+    /* > 主標題 */
+    .aboutus-choose-title {
+        font-size: 2.1875rem;
+        line-height: 2rem;
+        letter-spacing: 0.02em;
+        white-space: nowrap;
+
+        margin-right: 10px;
+    }
+
+    /* > 副標題 */
+    .aboutus-choose-subtitle {
+        font-size: 1.25rem;
+        line-height: 1.6875rem;
+        letter-spacing: 0.07em;
+        text-align: right;
+
+        color: #000537;
+        margin-left: 0px;
+    }
+
+    .aboutus-choose-titlebox svg {
+        width: 19px;
+        height: 19px;
+    }
+
+    /* > choose按鈕 */
+    #aboutus-choosebtn-box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 84.7%;
+        height: 66px;
+        margin-bottom: 44px;
+    }
+
+    /* > 按鈕樣式 */
+    #aboutus-choosebtn {
+        width: 100%;
+        height: 66px;
+    }
+
+    #aboutus-choosebtn-box a {
+        display: flex;
+
+        align-items: center;
+        text-decoration: none;
+        width: 100%;
+    }
+
+    /* > hover按鈕樣式 */
+    #aboutus-choosebtn:hover {
+        width: 100%;
+        height: 66px;
+    }
 }
