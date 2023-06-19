@@ -26,16 +26,31 @@ parallaxes.forEach(parallax => {
 
 
 // smoove 動畫效果
+
+
+let offset, moveX, moveX_z;
+
+//手機板smoove調整
+if (window.matchMedia("max-width: 576.98px").matches) {
+  offset = '15%'; 
+  moveX = '-10px'; 
+  moveX_z = '10px'; 
+} else {
+  offset = '30%';
+  moveX = '-15px';
+  moveX_z = '15px';
+}
+
 $('.smoove').smoove({
     min_width: 0, /*smoove預設會在裝置768px以下禁用，因此新增此啟用*/ 
-    offset : '30%',
-    moveX  : '-15px',
+    offset: offset,
+    moveX: moveX,
 });
 
 $('.smoove_z').smoove({
     min_width: 0,
-    offset : '30%',
-    moveX  : '15px',     
+    offset: offset,
+    moveX: moveX_z,   
 });
 
 
