@@ -6,7 +6,7 @@ if (window.matchMedia("(min-width: 577px) and (max-width: 1024.98px)").matches) 
 
   parallaxes = document.querySelectorAll('.ipad_taiwanpic');
   scale = 1.2;
-  speed = 1.5;
+  speed = 2;
 } else {
 
   parallaxes = document.querySelectorAll('.taiwanpic');

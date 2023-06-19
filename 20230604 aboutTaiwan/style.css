@@ -272,105 +272,93 @@ white-space: nowrap;
     }
 
 #flower1{
-    position: absolute;
+    
     width: 13.5%;
     top: 39.4%;
-    left: 16.8%;
-    animation: flower1 11s both ease-in-out;
-    animation-name: move1;
-    animation-duration: 3s;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards; 
+    left: 14.5%;
+    animation-name: move1 1s both ease-in-out;
+    
+
 }
 
 @keyframes move1{
-    0%{transform: translateY(0) rotate(55.12deg); opacity:0.25;}
-    100%{transform: translateY(-67.5%) rotate(0deg); opacity:1;}
+    0%{transform: translateY(0) rotate(61.75deg); opacity:0.25;}
+    100%{transform: translateY(-55.5%) rotate(0deg); opacity:1;}
 }
 
 #flower2{
-    position: absolute;
-    width: 6.5%;
-    left: 15%;
-    top:55.5%;
-    animation-name: move2;
-    animation-duration: 3s;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards;
+    
+
+    width: 8%;
+    left: 9.8%;
+    top:50%;
+    animation-name: move2 1s both ease-in-out;
 
 }
 
 @keyframes move2{
-    0%{transform: translateY(0) rotate(64deg); opacity:0.23;}
-    100%{transform: translateY(-85%) rotate(0deg); opacity:1;}
+    0%{transform: translateY(0) rotate(-43.91deg); opacity:0.23;}
+    100%{transform: translateY(-85%) rotate(-103.23deg); opacity:1;}
 }
 
 #flower3{
-    position: absolute;
-    width: 13%;
-    top:38%;
-    right: 22%;
-    animation-name: move3;
-    animation-duration: 3s;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards;
+    
+
+    width: 16%;
+    top:41%;
+    right: 12.5%;
+    animation-name: move3 1s both ease-in-out;
 }
 
+
 @keyframes move3{
-    0%{transform: translateY(0) rotate(-43.58deg); opacity:0.2;}
-    100%{transform: translateY(-70%) rotate(0deg); opacity:0.7;}
+    0%{transform: translateY(0) rotate(68.21deg); opacity:0.2;}
+    100%{transform: translateY(-70%) rotate(18.73deg); opacity:1;}
 }
 
 #flower4{
-    position: absolute;
-    width: 10%;
-    bottom:15%;
-    right: 19.5%;
-    animation-name: move4;
-    animation-duration: 3s;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards;
+    
+
+    width: 9%;
+    bottom:34%;
+    right: 13%;
+    animation-name: move4 1s both ease-in-out;
+
 }
 
 @keyframes move4{
-    0%{transform: translateY(0) rotate(-139.97deg); opacity:0.35;}
-    100%{transform: translateY(-90.5%) rotate(0deg); opacity:0.9;}
+    0%{transform: translateY(0) rotate(154.94deg); opacity:0.35;}
+    100%{transform: translateY(-90.5%) rotate(108.87deg); opacity:0.9;}
 }
 
 #flower5{
-    position: absolute;
-    width: 2.5%;
-    bottom:35%;
-    right: 18%;
-    animation-name: move5;
-    animation-duration: 3s;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards;
+    
+    width: 3.1%;
+    bottom:42.5%;
+    right: 8%;
+    animation-name: move5 1s both ease-in-out;
+
     
 }
 
 @keyframes move5{
-    0%{transform: translateY(0) rotate(-86.97deg); opacity:0.4;}
-    100%{transform: translateY(-350%) rotate(0deg); opacity:0.7;}
+    0%{transform: translateY(0) rotate(-71.75deg); opacity:0.4;}
+    100%{transform: translateY(-350%) rotate(-31.75deg); opacity:0.7;}
 } 
 
 #flower6{
-    position: absolute;
-    width: 1.5%;
-    bottom:28%;
-    right: 15%;
-    animation-name: move6;
-    animation-duration: 3s;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards;
+    
+    width: 1.6%;
+    bottom:38%;
+    right: 6%;
+    animation-name: move6 1s both ease-in-out;
+
 }
 
 @keyframes move6{
-    0%{transform: translateY(0) rotate(-144deg); opacity:0.4;}
-    100%{transform: translateY(-610%) rotate(0deg); opacity:0.7;}
+    0%{transform: translateY(0) rotate(22.85deg); opacity:0.4;}
+    100%{transform: translateY(-610%) rotate(22.85deg); opacity:0.7;}
 }
-
-
 
 }
 
@@ -386,14 +374,15 @@ white-space: nowrap;
     justify-content: center;
     padding-left: 10%;
     padding-right: 10%;
-    background-image: linear-gradient(white 77.8%,var(--main-yellow)77.8%);
+    background-image: linear-gradient(white 76.4%,var(--main-yellow)76.4%);
 }
 
 /*全部的圖片加文字的區域*/
 
 #allContainer{ 
     /* position: relative; */
-    margin-top: 140px;   
+    margin-top: 140px;
+    height: auto;   
     /* background-color: rgb(228, 20, 20); */
 
 }
@@ -403,9 +392,10 @@ white-space: nowrap;
     /* background-color: blue; */
     display: flex;
     align-items: center;
+    height: 35vh;
     /* justify-content: center; */
     /* height: 23.75em; */
-    margin-bottom:160px;
+    margin-bottom:14.8vh;
 
 }
 
@@ -419,8 +409,9 @@ white-space: nowrap;
 .parallaximg{
     /* background-color: aqua; */
     width: 46.5%;
-    height: 380px;
+    height: 100%;
     border-radius: 25px 25px 0px 0px;
+    /* object-fit: cover; */
     overflow: hidden;
     position: relative; /* 為了讓內部圖片可進行絕對定位 */
 }
@@ -506,17 +497,17 @@ white-space: nowrap;
 
 .useful{
     margin-bottom: 0;
-    height: 466px;
+    height: 45.2vh;
 }
 
 #lastbudda{
     display: block;
-    height: 466px;
+    height:100%;
 }
 .taiwanpic.smoove.budda{
     width: 100%;
     /* height: 100%; */
-    height: 466px;
+    height:100%;
 }
 
 /*平板:內文資訊區*/
@@ -525,15 +516,17 @@ white-space: nowrap;
     #aboutTaiwan02{
         padding: 0;
         justify-content: center;
-        background-image: linear-gradient(white 77.8%,var(--main-yellow)77.8%);
+        background-image: linear-gradient(white 82.3%,var(--main-yellow)82.3%);
     }
 
     #allContainer{        
         width: 71%;
+        height: auto;
         margin-top: 50px;
         display: flex;
         flex-direction: column;
         justify-content: center;
+        align-items: center;
     }
 
     .taiwan_item{ 
@@ -546,7 +539,7 @@ white-space: nowrap;
         display: flex;
         flex-direction: column;
         text-align: center;
-        margin-bottom: 100px;
+        margin-bottom:10vh;
         
     }
 
@@ -577,7 +570,7 @@ white-space: nowrap;
     .ipad_parallaximg{
         border-radius: 25px 25px 0px 0px;
         width: 100%;
-        height: 255px;
+        height: 25vh;
         overflow: hidden;
         position: relative; /* 為了讓內部圖片可進行絕對定位 */
     }
@@ -593,9 +586,11 @@ white-space: nowrap;
         left: 0;
     }
 
+    /*內文的區域*/
+
     .ipad_infoarea{
         
-        width: 89.3%;
+        width: 90%;
         margin: 25px auto 0 auto;
     }
     
@@ -606,7 +601,7 @@ white-space: nowrap;
     /* 資訊區最後一個的改變 */
 
     .ipadtxt.smoove_z.usetxt{
-        margin: 20px 0 60px 0;
+        margin: 1.5vh 0 4.7vh 0;
     }
 
 }
@@ -1076,7 +1071,7 @@ white-space: nowrap;
     }
 }
 
-/* 平板按鈕(尚未改) */
+/* 平板:按鈕區域 */
 
 @media (min-width: 577px) and (max-width:1024.98px) {
 
@@ -1115,13 +1110,15 @@ white-space: nowrap;
     /* arrow */
     #about-taiwanbtn-img {
         width: 10%;
-        left: 77%;
+        height: 30%;
+        left: 75%;
     }
 
     /* hover arrow */
     #about-taiwanbtn:hover svg {
         width: 10%;
-        left: 79%;
+        height: 30%;
+        left: 77%;
     }
 
 
@@ -1132,14 +1129,14 @@ white-space: nowrap;
         }
 
         100% {
-            transform: translate(4.2rem, 0);
+            transform: translate(2.2rem, 0);
 
         }
     }
 
     @keyframes imgback {
         0% {
-            transform: translate(4.2rem, 0);
+            transform: translate(2.2rem, 0);
         }
 
         100% {
@@ -1151,15 +1148,17 @@ white-space: nowrap;
     /* 偽元素hover前 OK! Here We GO! */
     #about-taiwanbtn:before {
 
-        font-size: 2.2rem;
-        padding-left: 15rem;
+        font-size: 1.375rem;
+        letter-spacing: 15.5%;
+        padding-left: 10rem;
         margin-right: 1rem;
     }
 
     /* 偽元素hover後OK! Here We GO! */
     #about-taiwanbtn:hover:before {
-        font-size: 2.2rem;
-        padding-left: 15rem;
+        font-size: 1.375rem;
+        letter-spacing: 15.5%;
+        padding-left: 10rem;
     }
 }
 
