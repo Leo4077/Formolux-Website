@@ -26,6 +26,10 @@
     width: 100%;
   }
 
+  #phoneStyle{
+    display: none;
+  }
+
   #ipadImage{
     display: none;
   }
@@ -130,9 +134,67 @@
       .marquee {
         margin-top:2.9vh;
       }
+    }
 
+    /*手機:上半部分變化*/
 
+    @media (max-width:576.98px) {
+      #pageStyle{
+        height: 76.87vh;
+      }
+
+      #styleImage{
+        display: none;
+      }
+
+      #phoneStyle{
+        display: block;
+        z-index: 6;
+        margin-right:0;
+        margin-top: 15%;
+        width: 94.4%;
+      }
   
+      /*標題大小*/
+      .styleFront{
+        min-width: 100%;
+        height: auto;
+        padding-top: 16%;
+        margin:0;
+      }
+  
+      #longImage{
+        display: none;
+      }
+
+      .longbox{
+        width: 100%;
+        height: 53px;
+        transform: translateY(-1.7vh);
+      }
+  
+      #ipadImage{
+        display: block;
+        width: 100%;
+        height: 100%;
+        
+      }
+
+      .marquee li {
+        font-size:  0.765rem;
+      }
+
+      .marquee__line {
+        width: 30.68px;
+        height: 0.1px;
+        margin:0 9px 0 9px;
+    
+      }
+
+      .marquee {
+        margin-top:2.9vh;
+      }
+
     }
 
     /* 第二部分 */
@@ -443,6 +505,124 @@ figcaption p{
     font-weight: 400;
     letter-spacing: -1%;
     line-height: 93%;
+    
+  }
+
+  /*hashtag ##*/
+  .sumtext h3{
+    font-size: 1rem;
+    line-height: 1.56rem;
+    letter-spacing: 0.015em;
+    margin:3.6% 0 3.6% 1.4%;
+    
+  }
+
+  /*段落小字*/
+  .sumtext p{
+    font-size: 0.88rem;
+    line-height: 1.125rem;
+    letter-spacing: 0.02em;
+    color:#FFFFFF;
+    margin-bottom: 4.8%;
+    margin-left: 1.4%;
+
+  }
+
+  /* learn more按鈕樣式 */
+  .more{        
+
+    font-size:  1.05rem;
+    padding:2% 3.5%; /*用padding去撐*/
+  }
+
+  /*左右按鈕鍵*/
+
+  .swiper-custom-nav {
+      /* background-color: aquamarine; */
+      position: absolute;
+      display: flex;
+      margin-left: 65%;
+      margin-bottom: 5vh;
+      cursor: pointer;
+      width: 10%;
+      z-index: 5;
+  }
+  
+  #stylenav-left{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    margin-right: 20px;
+  }
+  #stylenav-right{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    margin-left: 20px;
+  }
+
+
+}
+
+/*手機:下半部分(尚未修改)*/
+@media (max-width:577.98px) {
+  #slider-2{
+    height: 83.21vh;
+    background-image: url(../images/phone_honeymoon_BG.png);
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    
+  }
+
+  .container.wide {
+    width: 100%;
+    margin-bottom: -2vh;
+    
+  }
+  .spaces{
+    display: none;
+  }
+
+  .sumtext{
+    /* background-color: aqua; */
+    display: inline-block;
+    top:121px;
+
+    margin: 0;
+    padding-bottom:5vh;
+    margin-left: 0;
+    width: 76%;
+    display: flex;
+    flex-wrap: wrap;
+
+  }
+  .smallStar{
+    width: 9%;
+    margin-left: 0;
+    
+  }
+
+  /*2 people*/
+
+  .sumtext h4{
+    
+    font-size: 1rem;
+    line-height: 1.15rem;
+    letter-spacing: 7.5%;
+    margin:4% 40% 4% 4.6%;
+    
+  
+  }
+
+  /*honey moon大標題*/  
+  .sumtext h2{
+    
+    font-size: 12.5vw;
+    font-weight: 400;
+    letter-spacing: -1%;
+    line-height: 93%;
+    white-space: nowrap;
     
   }
 

@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     /*設定平板與手機尺寸*/
     var isMobileOrTablet = window.matchMedia("(max-width: 1024px)").matches;
+    
 
     /*桌機板hover效果*/
     if (!isMobileOrTablet) {
@@ -81,28 +82,28 @@ document.addEventListener("DOMContentLoaded", function () {
             menuDiv.style.backgroundImage = "url('../images/ipad_travel_BG.png')";
             menuDiv.style.backgroundPosition = "0 0";
             menuDiv.style.animation = "none";
-            event.stopPropagation(); // 阻止事件冒泡
+            e.stopPropagation(); // 阻止事件冒泡
         });
 
         aboutTaiwan.addEventListener("click", function () {
             menuDiv.style.backgroundImage = "url('../images/ipad_about_BG.png')";
             menuDiv.style.backgroundPosition = "0 0";
             menuDiv.style.animation = "none";
-            event.stopPropagation(); // 阻止事件冒泡
+            e.stopPropagation(); // 阻止事件冒泡
         });
 
         aboutUs.addEventListener("click", function () {
             menuDiv.style.backgroundImage = "url('../images/ipad_us_BG.png')";
             menuDiv.style.backgroundPosition = "0 0";
             menuDiv.style.animation = "none";
-            event.stopPropagation(); // 阻止事件冒泡
+            e.stopPropagation(); // 阻止事件冒泡
         });
 
         contactUs.addEventListener("click", function () {
             menuDiv.style.backgroundImage = "url('../images/ipad_contact_BG.png')";
             menuDiv.style.backgroundPosition = "0 0";
             menuDiv.style.animation = "none";
-            event.stopPropagation(); // 阻止事件冒泡
+            e.stopPropagation(); // 阻止事件冒泡
         });
 
         /*在每次點擊toggler都重新這段動畫*/
