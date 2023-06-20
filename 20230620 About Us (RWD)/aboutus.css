@@ -1462,6 +1462,76 @@ body {
     }
 }
 
+/* TODO */
+/* ! RWD -577 (for下方按鈕區) */
+@media (max-width: 576.98px) {
+
+    /* TODO */
+    /* > 按鈕字樣 */
+    #aboutus-choosebtn span {
+        font-size: 0.875rem;
+        margin-left: 9%;
+    }
+
+    /* > hover按鈕字樣 */
+    #aboutus-choosebtn:hover span {
+        font-size: 0.875rem;
+        margin-left: 9%;
+    }
+
+    /* > 偽元素hover前 */
+    #aboutus-choosebtn:before {
+        font-size: 0.875rem;
+        padding-left: 35%;
+    }
+
+    /* > 偽元素hover後 */
+    #aboutus-choosebtn:hover:before {
+        font-size: 0.875rem;
+        padding-left: 35%;
+    }
+
+    /* > arrow */
+    #aboutus-choosebtn svg {
+        /* -初始位置 */
+        left: 78%;
+        width: 40.79px;
+        height: 14.31px;
+    }
+
+    /* > hover arrow */
+    #aboutus-choosebtn:hover svg {
+        position: absolute;
+        /* -初始位置 */
+        left: 78%;
+        width: 40.79px;
+        height: 14.31px;
+    }
+
+    /* > 箭頭移動 */
+    @keyframes imggo {
+        0% {
+            transform: translate(0, 0);
+        }
+
+        100% {
+            transform: translate(30%, 0);
+
+        }
+    }
+
+    @keyframes imgback {
+        0% {
+            transform: translate(30%, 0);
+        }
+
+        100% {
+            transform: translate(0, 0);
+
+        }
+    }
+}
+
 
 /* ! RWD 577-1200 font-1024*0.63636 */
 @media (min-width: 577px) and (max-width: 1200.98px) {
@@ -1924,8 +1994,6 @@ body {
 
 }
 
-
-
 /* ! RWD 手機版 (-577) */
 @media (max-width: 576.98px) {
 
@@ -1981,7 +2049,6 @@ body {
         /*        justify-content: center; */
         width: 332px;
         height: 46px;
-
     }
 
     .svg-box-1 {
@@ -2047,8 +2114,6 @@ body {
 
     }
 
-
-
     /* > 按鈕們 */
     /* -上區 */
     #btnA {
@@ -2092,9 +2157,22 @@ body {
         /*         background-color: blue; */
     }
 
+    /* > 按鈕文字左右對齊 */
+    #btnA p {
+        margin-right: 10px;
+    }
 
-    /* TODO */
-    /* !以下ok */
+    #btnD p {
+        margin-right: 14px;
+    }
+
+    #btnC p {
+        margin-left: 10px;
+    }
+
+    #btnF p {
+        margin-left: 19px;
+    }
 
     /* > 區段二 */
     .aboutus-second-section {

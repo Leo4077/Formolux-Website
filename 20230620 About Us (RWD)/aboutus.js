@@ -178,15 +178,31 @@ const contents = {
 
 };
 
-window.onload = function () {
+function buttonClicked(id) {
+    const isMobile = window.innerWidth <= 480;
+    var buttons = document.querySelectorAll(isMobile ? '.aboutus-btn-phone' : '.aboutus-btn');
 
+    for (var i = 0; i < buttons.length; i++) {
+        var button = buttons[i];
+        if (button.id === id) {
+            button.style.backgroundColor = '#FFFCEB';
+        } else {
+            button.style.backgroundColor = 'white';
+        }
+    }
+    activeButton = id;
+}
 
-
+function updateButtons() {
     // -檢查螢幕寬度
     const isMobile = window.innerWidth <= 480;
+    console.log('isMobile', isMobile);
 
     // -獲取所有的按鈕元素
-    var buttons = document.querySelectorAll(isMobile ? '.aboutus-btn-phone' : '.aboutus-btn');
+    var buttons = document.querySelectorAll('.aboutus-btn, .aboutus-btn-phone');
+
+    // -設定預設被激活的按鈕ID
+    activeButton = isMobile ? 'btnA' : 'btn1';
 
     // -遍歷所有的按鈕
     for (var i = 0; i < buttons.length; i++) {
@@ -208,14 +224,25 @@ window.onload = function () {
             }
         });
     }
+
+    // 調用 buttonClicked 來應用預設被激活的按鈕狀態
+    buttonClicked(activeButton);
+}
+
+window.onload = function () {
+    // -檢查螢幕寬度
+    const isMobile = window.innerWidth <= 480;
+
     // -當畫面載入時，更新按鈕
     updateButtons();
 
     // -當畫面大小改變時，也更新按鈕
     window.onresize = updateButtons;
+
     // -預設第一個按鈕被點擊
     buttonClicked(isMobile ? 'btnA' : 'btn1');
 };
+
 
 // > 花區
 function adjustFlowerPosition(id) {
