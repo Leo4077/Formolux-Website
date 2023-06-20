@@ -316,21 +316,22 @@ function handleHoverEnter(e) {
 }
 
 function handleHoverLeave(e) {
-    cursorText.style.opacity = '0';
-    // > 縮小自定義滑鼠指標
-    ball.style.opacity = '0';
-    ball.style.height = "0px";
-    ball.style.width = "0px";
-    // > Reset scale when leave
-    ball.style.transform = 'scale(1) translate(-50%, -50%)';
-    cursorText.style.transform = 'scale(1) translate(-50%, -50%)';
+    if (e.relatedTarget !== null && e.relatedTarget !== e.target && !e.target.contains(e.relatedTarget)) {
+        cursorText.style.opacity = '0';
+        // > 縮小自定義滑鼠指標
+        ball.style.opacity = '0';
+        ball.style.height = "0px";
+        ball.style.width = "0px";
+        // > Reset scale when leave
+        ball.style.transform = 'scale(1) translate(-50%, -50%)';
+        cursorText.style.transform = 'scale(1) translate(-50%, -50%)';
 
-    // > 設定 body 的 cursor 為 default
-    document.body.style.cursor = 'default';
+        // > 設定 body 的 cursor 為 default
+        document.body.style.cursor = 'default';
 
-    lastHoveredElement = null;
+        lastHoveredElement = null;
+    }
 }
-
 
 // > 當按下滑鼠時縮小自定義滑鼠指標
 function handleMouseDown(e) {
@@ -348,6 +349,17 @@ function handleMouseUp(e) {
     });
 }
 
+function handleDragStart(e) {
+    // > 設定 body 的 cursor 為 none
+    document.body.style.cursor = 'none';
+}
+
+function handleDragEnd(e) {
+    // > 恢復為預設光標
+    if (e.relatedTarget === null || e.relatedTarget !== e.target && !e.target.contains(e.relatedTarget)) {
+        document.body.style.cursor = 'default';
+    }
+}
 
 document.addEventListener('mousemove', updateCursor);
 document.addEventListener('mousedown', handleMouseDown);
@@ -357,4 +369,5 @@ hoverAreas.forEach(function (elem) {
     elem.addEventListener('mouseenter', handleHoverEnter);
     elem.addEventListener('mouseleave', handleHoverLeave);
     elem.addEventListener('dragstart', handleDragStart);
+    elem.addEventListener('dragend', handleDragEnd);
 });
