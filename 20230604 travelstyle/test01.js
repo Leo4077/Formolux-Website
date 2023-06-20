@@ -16,23 +16,23 @@ new Swiper("#swiper-2", {
 
 /*平板swiper*/
 
-// if (window.matchMedia("(min-width: 577px) and (max-width: 1024px)").matches) {
-//   new Swiper("#swiper-2", {
+if (window.matchMedia("(max-width: 576.98px)").matches) {
+  new Swiper("#swiper-2", {
 
-//     slidesPerView: 3.6,
-//     spaceBetween: 35,
-//     centeredSlides: false,
-//     lazy: true,
-//     loop: true,
-//     keyboard: {
-//       enabled: false,
-//     },
-//     navigation: {
-//       nextEl: "#stylenav-right",
-//       prevEl: "#stylenav-left"
-//     },
-//   });
-// }
+    slidesPerView: 2.4,
+    spaceBetween: 18.24,
+    centeredSlides: false,
+    lazy: true,
+    loop: true,
+    keyboard: {
+      enabled: false,
+    },
+    navigation: {
+      nextEl: "#stylenav-right",
+      prevEl: "#stylenav-left"
+    },
+  });
+}
 
 /*桌機板:點選樣式改變*/
 
