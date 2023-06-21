@@ -11,7 +11,7 @@ body {
     position: relative;
 }
 
-/* > test */
+/* > test (Why-Choose容器) */
 .why-choose {
     width: 100%;
     height: auto;
@@ -308,7 +308,6 @@ body {
     display: flex;
     justify-content: flex-end;
     width: 100%;
-
 }
 
 /* > 標題樣式 */
@@ -691,4 +690,95 @@ body {
 /* > 後來位置 */
 .background.down-scroll+.background:not(.down-scroll) .content-wrapper-F {
     transform: translateY(0vh);
+}
+
+/* ! RWD 577-1200 (平板) */
+@media (min-width: 577px) and (max-width: 1200.98px) {
+
+    /* > 區段一 */
+    .content-title-box {
+        bottom: 15%;
+    }
+
+    /* > 標題樣式 */
+    .content-title {
+        font-size: 9.75rem;
+        line-height: 10rem;
+        letter-spacing: -0.02em;
+    }
+
+    /* > 副標題樣式 */
+    .content-subtitle {
+        font-size: 1rem;
+        line-height: 1.125rem;
+        letter-spacing: 0.25em;
+        text-align: right;
+        white-space: nowrap;
+
+        margin: 0;
+    }
+
+    /* > 背景圖位移 */
+    .background:first-child {
+        /* -讓101在畫面裡 */
+        background-position: -900px 0;
+    }
+
+    /* > 滾動gif Z500 */
+    .content-gif-box {
+        bottom: 60px;
+    }
+
+}
+
+/* ! RWD -577 (手機) */
+@media (max-width: 576.98px) {
+
+    /* > 區段一 */
+    .content-title-box {
+        width: 100%;
+        /* -標題區下距 */
+        bottom: 17.5%;
+        align-items: center;
+        margin-right: 0;
+
+    }
+
+    /* > 標題樣式 */
+    .content-title {
+        font-size: 6.25rem;
+        line-height: 8rem;
+        letter-spacing: -0.02em;
+        text-align: center;
+    }
+
+    .content-title-box-a{
+        justify-content: center;
+    }
+
+    /* > 副標題樣式 */
+    .content-subtitle {
+        font-size: 0.875rem;
+        line-height: 1rem;
+        letter-spacing: 0.25em;
+        text-align: center;
+        white-space: nowrap;
+
+        margin: 0;
+    }
+
+    /* > 背景圖位移 */
+    .background:first-child {
+        /* -讓101在畫面裡 */
+        background-position: -850px 0;
+    }
+
+    /* > 滾動gif Z500 */
+    .content-gif-box {
+        bottom: 60px;
+    }
+
+
+    
+
 }
