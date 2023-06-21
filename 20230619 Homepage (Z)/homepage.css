@@ -396,6 +396,7 @@ body {
     top: 40vh;
 }
 
+/* > 左區 */
 .content-middle-box1 {
     display: flex;
     flex-direction: column;
@@ -407,13 +408,14 @@ body {
     padding-bottom: 40px;
 }
 
+/* > 左字 */
 #content-formosa,
 #content-time {
     font-family: 'Arial';
     font-style: normal;
     font-weight: 400;
-    font-size: 22px;
-    line-height: 25px;
+    font-size: 1.375rem;
+    line-height: 1.5625rem;
     letter-spacing: 0.25em;
 
     color: #FFFCEB;
@@ -423,6 +425,7 @@ body {
     margin-bottom: 10px;
 }
 
+/* > 右區 */
 .content-middle-box2 {
     display: flex;
     flex-direction: column;
@@ -432,14 +435,13 @@ body {
     margin-left: 3%;
 }
 
+/* > 右字 */
 #content-to {
     font-family: 'Tangerine';
     font-style: normal;
     font-weight: 400;
-    font-size: 222px;
-    line-height: 222px;
-    /* -identical to box height */
-
+    font-size: 13.875rem;
+    line-height: 13.875rem;
     letter-spacing: -0.03em;
     vertical-align: text-bottom;
     text-align: left;
@@ -447,7 +449,6 @@ body {
     color: rgba(255, 252, 235, 0.6);
 
 }
-
 
 /* > 前景的山 */
 #foreground-img {
@@ -468,11 +469,6 @@ body {
     transform: translateY(0vh);
     transition: all 1.5s cubic-bezier(0.22, 0.44, 0, 1);
 }
-
-
-
-
-
 
 /* > 滾動gif Z500 */
 .content-gif-box {
@@ -505,9 +501,8 @@ body {
     font-family: 'Arial';
     font-style: normal;
     font-weight: 700;
-    font-size: 14px;
-    line-height: 16px;
-    /* -identical to box height */
+    font-size: 0.875rem;
+    line-height: 1rem;
 
     letter-spacing: 0.065em;
 
@@ -598,6 +593,16 @@ body {
 #svg-flower-right-up {
     top: 34vh;
     right: 18%;
+    position: absolute;
+}
+
+/* > 上左新花 (平板&手機) */
+/* > 上右新花 (平板&手機) */
+/* > 下右新花 (手機) */
+#svg-flower-LU-lp,
+#svg-flower-RU-lp,
+#svg-flower-RL-p {
+    display: none;
     position: absolute;
 }
 
@@ -730,8 +735,6 @@ body {
         bottom: 60px;
     }
 
-    /* TODO */
-
     /* > 區段二 */
     /* > formolux */
     .content-svg-formo {
@@ -765,10 +768,145 @@ body {
         top: 30vh;
     }
 
+    /* > 中間文字區域 */
+    .content-middle-box {
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        width: 100%;
+
+        position: absolute;
+        z-index: 10;
+        top: 41vh;
+    }
+
+    /* > 左區 */
+    .content-middle-box1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+
+        /* -中間空隙 */
+        margin-right: 3%;
+        /* -跟右邊文字對齊等高 */
+        padding-bottom: 0px;
+    }
+
+    /* > 左字 */
+    #content-formosa,
+    #content-time {
+        font-size: 0.75rem;
+        line-height: 1.2rem;
+        letter-spacing: 0.25em;
+        white-space: nowrap;
+
+        text-align: right;
+        margin-top: 0;
+        margin-bottom: 0px;
+    }
+
+    /* > 右字 */
+    #content-to {
+        font-size: 7.25rem;
+        line-height: 4.25rem;
+        letter-spacing: -0.03em;
+        vertical-align: text-bottom;
+        text-align: left;
+
+        color: rgba(255, 252, 235, 0.6);
+    }
+
+    /* > gif的說明文字(同電腦) */
+    .scroll-gif-word {
+        font-size: 0.875rem;
+        line-height: 1rem;
+        letter-spacing: 0.065em;
+    }
 
 
+    /* > 花花區 */
+    /* > 下左左花 */
+    #svg-flower-LL {
+        width: 25px;
+        height: 25px;
 
+        top: 48vh;
+        left: 17%;
+    }
+
+    /* > 下左中花 */
+    #svg-flower-LM {
+        width: 189px;
+        height: 186px;
+
+        top: 50vh;
+        left: -5%;
+    }
+
+    /* > 下右中花 */
+    #svg-flower-RM {
+        width: 40px;
+        height: 40px;
+
+        top: 65vh;
+        right: 25%;
+    }
+
+    /* > 下右右花 */
+    #svg-flower-RR {
+        width: 45px;
+        height: 45px;
+
+        top: 30vh;
+        left: 25%;
+    }
+
+    /* > 下區Z3 */
+    /* > 上左花 */
+    #svg-flower-left-up {
+        width: 86px;
+        height: 86px;
+
+        top: 63vh;
+        left: 78%;
+    }
+
+    /* > 上右花 */
+    #svg-flower-right-up {
+        width: 86px;
+        height: 83px;
+
+        top: 43vh;
+        right: 4%;
+    }
+
+
+    /* > 上左新花 (平板&手機) */
+    #svg-flower-LU-lp {
+        display: flex;
+        position: absolute;
+
+        top: 26vh;
+        left: 15%
+    }
+
+    /* > 上右新花 (平板&手機) */
+    #svg-flower-RU-lp {
+        display: flex;
+        position: absolute;
+
+        top: 11vh;
+        right: 9%;
+    }
+
+    /* > 下右新花 (手機) */
+    #svg-flower-RL-p {
+        display: none;
+    }
 }
+
+
+
 
 /* ! RWD -577 (手機) */
 @media (max-width: 576.98px) {
@@ -817,8 +955,6 @@ body {
         bottom: 60px;
     }
 
-    /* TODO */
-
     /* > 區段二 */
     /* > formolux */
     .content-svg-formo {
@@ -851,6 +987,162 @@ body {
         z-index: 10;
         top: 30vh;
     }
+
+    /* > 中間文字區域 */
+    .content-middle-box {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+
+        position: absolute;
+        z-index: 10;
+        top: 35.5vh;
+    }
+
+    /* > 左區 */
+    .content-middle-box1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+
+        /* -中間空隙 */
+        margin-right: 0%;
+        /* -跟右邊文字對齊等高 */
+        padding-bottom: 0px;
+    }
+
+    /* > 左字 */
+    #content-formosa,
+    #content-time {
+        font-size: 0.75rem;
+        line-height: 1.2rem;
+        letter-spacing: 0.25em;
+        white-space: nowrap;
+
+        text-align: center;
+        margin-top: 0;
+        margin-bottom: 0px;
+    }
+
+    /* > 右區 */
+    .content-middle-box2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+
+        /* -中間空隙 */
+        margin-left: 29%;
+    }
+
+    /* > 右字 */
+    #content-to {
+        font-size: 4.875rem;
+        line-height: 4.25rem;
+        letter-spacing: -0.03em;
+        vertical-align: text-bottom;
+        text-align: right;
+        white-space: nowrap;
+
+        color: rgba(255, 252, 235, 0.6);
+    }
+
+    /* > gif的說明文字(同電腦) */
+    .scroll-gif-word {
+        font-size: 0.65625rem;
+        line-height: 0.75rem;
+        letter-spacing: 0.065em;
+    }
+
+    /* > 花花區 */
+    /* > 下左左花 */
+    #svg-flower-LL {
+        width: 13.5px;
+        height: 13.5px;
+
+        top: 46.5vh;
+        left: 17%;
+    }
+
+    /* > 下左中花 */
+    #svg-flower-LM {
+        width: 115.6px;
+        height: 113.7px;
+
+        top: 47.5vh;
+        left: -10%;
+    }
+
+    /* > 下右中花 */
+    #svg-flower-RM {
+        display: none;
+    }
+
+    /* > 下右右花 */
+    #svg-flower-RR {
+        width: 30px;
+        height: 30px;
+
+        top: 34vh;
+        left: 29%;
+    }
+
+    /* > 下區Z3 */
+    /* > 上左花 */
+    #svg-flower-left-up {
+        width: 57px;
+        height: 57px;
+
+        top: 59vh;
+        left: 79%;
+    }
+
+    /* > 上右花 */
+    #svg-flower-right-up {
+        width: 46px;
+        height: 45px;
+
+        top: 49vh;
+        right: 2%;
+    }
+
+    /* > 上左新花 (平板&手機) */
+    #svg-flower-LU-lp {
+        display: flex;
+        position: absolute;
+
+        width: 42px;
+        height: 42px;
+
+        top: 28vh;
+        left: 12%;
+    }
+
+    /* > 上右新花 (平板&手機) */
+    #svg-flower-RU-lp {
+        display: flex;
+        position: absolute;
+
+        width: 70px;
+        height: 70px;
+
+        top: 64vh;
+        left: 14%;
+    }
+
+    /* > 下右新花 (手機) */
+    #svg-flower-RL-p {
+        display: flex;
+        position: absolute;
+
+        top: 64vh;
+        right: 0%;
+    }
+
+
+
+
 
 
 }

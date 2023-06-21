@@ -88,10 +88,10 @@ function handleZoomScroll(event) {
 
     // > delta 前的數值影響每次滾動縮放的比例
     if (delta > 0) {
-        scale = Math.max(1, scale - 8 * delta);
-    } else if (delta < 0 && scale < 150) {
+        scale = Math.max(1, scale - 15 * delta);
+    } else if (delta < 0 && scale < 250) {
         // > 当放大到指定比例后不再继续放大
-        scale = Math.min(150, scale - 8 * delta);
+        scale = Math.min(250, scale - 15 * delta);
     }
 
     // > 透過設置 transformOrigin調整中心點
@@ -130,7 +130,7 @@ function scrollEventHandler(evt) {
     if (currentSlideNumber === 1 && scale !== 1) {
 
         // > 當縮放到一定程度時，開始滑動 <p> 標籤
-        if (scale >= 120) {
+        if (scale >= 220) {
             // > 每次滾動時，translateX 變化的固定量
             let translatePercentage = 10;
             let parentWidth = p1.parentElement.offsetWidth;

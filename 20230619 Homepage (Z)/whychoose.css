@@ -351,6 +351,8 @@ p {
     position: absolute;
     transform: translate(-50%, -50%);
     pointer-events: none;
+    cursor: none;
+
     z-index: 999;
     transition: width 0.5s ease-in-out, height 0.5s ease-in-out, opacity 0.5s ease-in-out , transform 0.1s ease-in-out;
     opacity: 0;
@@ -362,6 +364,8 @@ p {
     position: absolute;
     transform: translate(-50%, -50%);
     pointer-events: none;
+    cursor: none;
+
     opacity: 0;
     z-index: 999;
     display: grid;
@@ -382,6 +386,7 @@ p {
 #homepage-carousel {
     padding-left: 0;
     padding-right: 0;
+    cursor: none;
 }
 
 #carousel-outer {
