@@ -16,19 +16,46 @@
     margin-bottom: 2.5%;
 }
 
-#contactBanner img {
+.desktopBanner {
     width: 100%;
     height: 100%;
 }
 
+/* 手機板標題隱藏 */
+.phoneBanner{
+    display: none;
+}
+
 /* 平板: banner圖片大小變化 */
 
-@media (min-width: 768px) and (max-width:1024px) {
+@media (min-width: 577px) and (max-width:1024px) {
     .contactBanner {
         height: 17vh;
         margin-top: 12%;
         margin-left: 4.6%;
         margin-bottom: 7%;
+    }
+
+}
+
+/* 手機: banner圖片大小變化 */
+
+@media (max-width:576.98px) {
+    .contactBanner {
+        display: flex;
+        justify-content: center;
+        width: 79.38vw;
+        margin-top: 74px;
+        margin-left: 4.6%;
+        margin-bottom: 2.5%;
+    }
+    .desktopBanner{
+        display: none;
+    }
+    .phoneBanner{
+        display: block;
+        width: 100%;
+        height: auto;
     }
 
 }
@@ -107,7 +134,7 @@
 }
 
 /*平板: 玻璃擬態背景變化*/
-@media (min-width: 768px) and (max-width:1024px) {
+@media (min-width: 577px) and (max-width:1024px) {
     #formpage {
         height: 1854px;
         background-repeat: no-repeat;
@@ -135,6 +162,50 @@
     @keyframes formUp {
         0% {
             bottom: -4%;
+        }
+    
+        100% {
+            bottom: 0%;
+        }
+    }
+
+}
+
+/*手機: 玻璃擬態背景變化*/
+@media (max-width:576.98px) {
+    #formpage {
+        height: 1703px;
+        background-repeat: no-repeat;
+        animation: backUp 2s both ease-in-out;
+        border-radius: 15px 15px 0px 0px;
+    }
+
+    @keyframes backUp{
+        0%{
+            background-position-y: -20px;
+        }
+        100%{
+            background-position-y: 0px;
+        }
+    }
+
+    .blurbox {
+        border-radius: 15px 15px 0px 0px;
+    }
+
+    .blurContainer{
+        height: 1313px;
+        width: 84.73%;
+        border-radius: 15px 15px 0px 0px;
+        transform: translateY(2.6%);
+        display: flex;
+        align-items: flex-start;
+        animation: formUp 2s both ease-in-out
+    }
+
+    @keyframes formUp {
+        0% {
+            bottom: -2%;
         }
     
         100% {
@@ -172,7 +243,7 @@
 
 /*平板: 表單欄位區*/
 
-@media (min-width: 768px) and (max-width:1024px) {
+@media (min-width: 577px) and (max-width:1024px) {
     #message_form {
         width: 61%;
         height: 1396px;
@@ -191,6 +262,30 @@
 
     }
 }
+
+/*手機: 表單欄位區*/
+
+@media (max-width:576.98px) {
+    #message_form {
+        width: 71.1%;
+        height: 1313px;
+        /* background-color: #000537; */
+        /* transform: translateY(-8%); */
+        
+    }
+
+    .form-container {
+        /* background-color: aqua; */
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding-top: 0px;
+        margin-top: -15px;
+
+    }
+}
+
 
 
 .form-field {
@@ -305,6 +400,8 @@ color: transparent; } */
     max-height: 300px;
     overflow: hidden;
     overflow-x: hidden;
+    line-height: 1.5;  
+    padding: 15px 0px;  
 }
 
 
@@ -315,14 +412,6 @@ color: transparent; } */
 }
 
 
-.floating-textarea {
-    min-height: 50px;
-    max-height: 300px;
-    overflow: hidden;
-    overflow-x: hidden;
-    line-height: 1.5;  
-    padding: 15px 0px;  
-}
 
 
 /*改變placeholder的位置*/
@@ -341,7 +430,79 @@ color: transparent; } */
 
 /*平板: 細節處-表單欄位區*/
 
-@media (min-width: 768px) and (max-width:1024px) {
+@media (min-width: 577px) and (max-width:1024px) {
+    .form-field {
+        padding-top: 0px;
+    }
+    .form-field label {
+        font-size: 1.125rem;
+    }
+
+    /*文字輸入框*/
+
+    .form-field select,
+    .form-field input,
+    .form-field textarea { 
+
+        height:29px;
+        border-bottom: 1.23px solid #000537;
+
+    }
+
+    .form-field select{
+        height: 20px;
+    
+    } 
+
+    input, textarea, select{
+        
+        font-size: 1.125rem;
+    }
+
+    .floating-input,
+    .floating-select {
+        font-size: 1.125rem;
+
+    }
+    
+
+
+    .floating-textarea{
+        min-height: 100px;
+        /* max-height: 100px; */
+    }
+
+    .floating-input:focus~label,
+    .floating-input:not(:placeholder-shown)~label {
+        
+        top: -15px;
+        font-size:  1.125rem;
+
+    }
+
+    .floating-select:focus~label,
+    .floating-select:not([value=""]):valid~label {
+        top: -15px;
+        font-size:1.125rem;
+
+    }
+
+    /*讓有required屬性的欄位float*/
+    .floating-label:focus~label,
+    .floating-label:valid~label {
+        top: -15px;
+        font-size: 1.125rem;
+
+    }
+
+    .floating-textarea::placeholder {
+        font-size: 0.75rem;
+    }
+
+}
+
+/*手機: 細節處-表單欄位區*/
+@media (max-width:576.98px) {
     .form-field {
         padding-top: 0px;
     }
@@ -441,10 +602,20 @@ color: transparent; } */
 
 /*平板: 送出按鈕大小變化*/
 
-@media (min-width: 768px) and (max-width:1024px) {
+@media (min-width: 577px) and (max-width:1024px) {
     #taiwan-travelbtn {
         align-self: center;
         width: 130%;
+    }
+}
+
+/*手機: 送出按鈕大小變化*/
+
+@media (max-width:576.98px) {
+    #taiwan-travelbtn {
+        align-self: center;
+        width: 121.7%;
+        height: 70px;
     }
 }
 
@@ -715,7 +886,7 @@ color: transparent; } */
 }
 
 /*平板: 送出按鈕hover後的變化*/
-@media (min-width: 768px) and (max-width:1024px) {
+@media (min-width: 577px) and (max-width:1024px) {
 
     .sendcontainer {
         width: auto;
@@ -763,6 +934,57 @@ color: transparent; } */
         }
     }
 }
+
+/*手機: 送出按鈕hover後的變化*/
+@media (max-width:576.98px) {
+
+    .sendcontainer {
+        width: auto;
+    }
+
+    #taiwan-travelbtn span {
+        transform: translateX(40%); /*send字樣距離改變*/
+        font-size: 1.125rem; }
+
+    #taiwan-travelbtn img {
+        margin-left:30%; /*與send隔的距離*/
+        align-self: center;
+        width: 41%; /*箭頭縮小*/
+    }
+
+    /*按鈕hover後出現的字，往左邊移動的距離*/
+    #taiwan-travelbtn:before {
+        transform: translateX(-7.5%);
+        font-size: 1.25rem;
+
+    }
+
+    #taiwan-travelbtn:hover:before {
+        transform: translateX(-7.5%);
+        font-size: 1.25rem;
+    }
+
+
+    /* hover arrow */
+    #taiwan-travelbtn:hover img {
+        width: 55%;
+        animation: imggo 0.3s forwards;
+
+    }
+
+    /* 箭頭移動 */
+    @keyframes imggo {
+        0% {
+            transform: translate(0, 0);
+        }
+
+        100% {
+            transform: translate(15em, 0);
+
+        }
+    }
+}
+
 
 /* 用戶提交表單後出現的畫面 */
 
@@ -1090,7 +1312,9 @@ color: transparent; } */
     cursor: pointer;
 }
 
-@media (min-width: 768px) and (max-width:1024px) {
+/* 平板:下方按鈕區域 */
+
+@media (min-width: 577px) and (max-width:1024px) {
     .btnBar {
         height: 348px;
         /* height: 40vh; */
@@ -1155,4 +1379,92 @@ color: transparent; } */
 
 }
 
+/* 手機:下方按鈕區域 */
+
+@media (max-width:576.98px) {
+    .btnBar {
+        height: 300px;
+        /* height: 40vh; */
+        flex-direction: column;
+        justify-content:start;
+        align-items: center;
+        
+
+    }
+    .intouch {
+        width: 60.8%;
+        
+        display: flex;
+        flex-direction:column;
+        /* justify-content:space-evenly; */
+        align-items:center;
+        margin: 2vh 0 14px 0;
+        
+
+    }
+
+    .getintouch{
+        display: flex;
+        width: 190px;
+        align-self: center;
+
+    }
+
+    .intouch p{
+        /* position: absolute; */
+        display: block;
+        /* padding: 0 0 1% 27px; */
+        /* width:43%; */
+        height: auto;
+    
+        font-size: 0.81rem;
+        line-height:0.94rem;
+        letter-spacing: 2%;
+        padding-left: 0;
+        text-align: center;
+        margin-bottom: 14px;
+        
+        /* top: 235px;
+        left: 153px; */
+        
+    
+    }
+
+    .flowerbox{
+
+        display: flex;
+        width:84.5%;
+        max-height: 98px;
+        margin-bottom: 53px;
+        padding-left: 0;
+        
+        
+    }
+
+    .flowersvg {
+        width: 100%;
+        height: 98px;
+        /* height: 100%; */
+        /* background-color: #000537; */
+        /* margin-left: 1%; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* overflow: hidden; */
+    
+    }
+
+    .flower-FB {
+        width: 88%;
+    }
+
+    .flower-IG {
+        width: 88%;
+    }
+
+    .flower-Email {
+        width: 88%;
+    }
+
+}
 
