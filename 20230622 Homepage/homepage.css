@@ -380,7 +380,7 @@ body {
 .zoom-svg {
     position: absolute;
     top: 28%;
-    transform-origin: 50% 60%;
+/*     transform-origin: 50% 60%; */
 }
 
 /* > travel */
@@ -742,10 +742,9 @@ body {
         margin: 0;
     }
 
-    /* > 背景圖位移 */
+    /* > 背景圖嵌入 */
     .background:first-child {
-        /* -讓101在畫面裡 */
-        background-position: calc(-800px + (100vw - 768px) * 0.5) 0;
+        background-image: url(../images/home-bg-101-tablet.png);
     }
 
     /* > 滾動gif Z500 */
@@ -770,8 +769,8 @@ body {
         height: 94px;
         position: absolute;
         top: 37%;
-        transform-origin: 50% 60%;
-    }
+/*         transform-origin: 50% 60%;
+ */    }
 
     /* > travel */
     #content-subtitle2 {
@@ -1025,10 +1024,9 @@ body {
         margin: 0;
     }
 
-    /* > 背景圖位移 */
+    /* > 背景圖嵌入 */
     .background:first-child {
-        /* -讓101在畫面裡 */
-    background-position: calc(-850px + (100vw - 393px) * 0.1) 0;
+        background-image: url(../images/home-bg-101-phone.png);
     }
 
     /* > 滾動gif Z500 */
@@ -1054,8 +1052,8 @@ body {
         position: absolute;
 
         top: 39.5%;
-        transform-origin: 50% 60%;
-    }
+/*         transform-origin: 50% 60%;
+ */    }
 
     /* > travel */
     #content-subtitle2 {
@@ -1281,17 +1279,4 @@ body {
     .p2-break {
         display: flex;
     }
-
-
-
-
-}
-
-/* ! RWD -380 (SE) */
-@media (max-width: 380px) {
-        /* > 背景圖位移 */
-        .background:first-child {
-            /* -讓101在畫面裡 */
-        background-position: -600px 0;
-        }
 }

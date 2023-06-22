@@ -85,7 +85,6 @@ function handleZoomScroll(event) {
         return;
     }
 
-
     // > delta 前的數值影響每次滾動縮放的比例
     if (delta > 0) {
         scale = Math.max(1, scale - 15 * delta);
@@ -94,8 +93,18 @@ function handleZoomScroll(event) {
         scale = Math.min(250, scale - 15 * delta);
     }
 
-    // > 透過設置 transformOrigin調整中心點
-    zoomSvg.style.transformOrigin = '58.685% 50%';
+    // > 取得視窗寬度
+    var windowWidth = window.innerWidth;
+    // > 根據視窗寬度設置 transformOrigin
+    if (windowWidth < 577) {
+        zoomSvg.style.transformOrigin = '58.59% 50%';  // -手機
+    } else if (windowWidth < 1200) {
+        zoomSvg.style.transformOrigin = '58.67% 50.3%';  // -平板
+    } else if (windowWidth < 1500) {
+        zoomSvg.style.transformOrigin = '58.71% 50%';  // -平板
+    }else {
+        zoomSvg.style.transformOrigin = '58.685% 50%';  // -電腦
+    }
     zoomSvg.style.transform = `scale(${scale})`;
 
     // > 改變 content-wrapper7 的 z-index 值
@@ -230,8 +239,8 @@ function scrollEventHandler(evt) {
 
 // > 在這裡處理 why-choose 的滾動事件
 function scrollEventHandler2(evt) {
-    console.log('scrollEventHandler2 called'); 
-    
+    console.log('scrollEventHandler2 called');
+
     var whyChoose = document.querySelector('.why-choose');
     var homepageContent = document.querySelector('#homepage-content');
 
