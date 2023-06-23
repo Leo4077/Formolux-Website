@@ -101,7 +101,7 @@ function handleZoomScroll(event) {
     } else if (windowWidth < 1200) {
         zoomSvg.style.transformOrigin = '58.67% 50.3%';  // -平板
     } else if (windowWidth < 1500) {
-        zoomSvg.style.transformOrigin = '58.71% 50%';  // -平板
+        zoomSvg.style.transformOrigin = '58.71% 50%';  // -小電腦
     }else {
         zoomSvg.style.transformOrigin = '58.685% 50%';  // -電腦
     }
@@ -117,6 +117,9 @@ function handleZoomScroll(event) {
         contentWrapper7.style.zIndex = 60;
     }
 }
+
+
+
 
 
 // ! 定義處理滾動事件的函數
@@ -275,14 +278,13 @@ bigContainer.addEventListener('DOMMouseScroll', scrollEventHandler, { passive: f
 
 
 
-
+// ! 手機板
 var touchStartY;
 var touchEndY;
 
 bigContainer.addEventListener('touchstart', function(event) {
     touchStartY = event.changedTouches[0].clientY;
 }, { passive: true });
-
 
 bigContainer.addEventListener('touchmove', function(event) {
     touchEndY = event.changedTouches[0].clientY;
@@ -301,5 +303,6 @@ bigContainer.addEventListener('touchmove', function(event) {
     }
     scrollEventHandler(fakeEvent);
 }, { passive: true });
+
 
 
