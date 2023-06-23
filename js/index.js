@@ -279,6 +279,11 @@ bigContainer.addEventListener('DOMMouseScroll', scrollEventHandler, { passive: f
 var touchStartY;
 var touchEndY;
 
+bigContainer.addEventListener('touchstart', function(event) {
+    touchStartY = event.changedTouches[0].clientY;
+}, { passive: true });
+
+
 bigContainer.addEventListener('touchmove', function(event) {
     touchEndY = event.changedTouches[0].clientY;
     var deltaY = touchStartY - touchEndY;
@@ -296,6 +301,5 @@ bigContainer.addEventListener('touchmove', function(event) {
     }
     scrollEventHandler(fakeEvent);
 }, { passive: true });
-
 
 
