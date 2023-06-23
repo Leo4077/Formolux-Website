@@ -1,3 +1,23 @@
+// > 預先載入
+var imagesToPreload = [
+    './images/travel_bg.jpg',
+    './images/Taiwan_bg.jpg',
+    './images/BG-3.jpg',
+    './images/BG-4.jpg',
+    './images/Hamburger_bg.jpg',
+    './images/ipad_travel_BG.png',
+    './images/ipad_about_BG.png',
+    './images/ipad_us_BG.png',
+    './images/ipad_contact_BG.png',
+    './images/ipad-ham-BG.png'
+];
+
+imagesToPreload.forEach(function(src) {
+    var img = new Image();
+    img.src = src;
+});
+
+
 /*Hamburger選單變化*/ 
 
 document.addEventListener("DOMContentLoaded", function () {
