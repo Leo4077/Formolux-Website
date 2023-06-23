@@ -1,0 +1,692 @@
+/* html{
+  scroll-behavior: smooth;
+}  */
+#pageStyle{
+    height: 100vh;
+    width: auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .styleFront{
+    width: 62%;
+    min-width: 920px;
+    /* height: auto; */
+    display: flex;
+    justify-content: center;
+    padding-top: 4.2%;
+  }
+
+  #styleImage{
+    z-index: 6;
+    margin-right:4%;
+    width: 100%;
+  }
+
+  #phoneStyle{
+    display: none;
+  }
+
+  #ipadImage{
+    display: none;
+  }
+
+  .longbox{
+    width: 100%;
+  }
+
+  #longImage{
+      
+    width:100%;
+    min-height: 80px;
+    margin-top: -50px;
+    position: relative;
+    z-index: 1;
+  }
+
+
+
+    /* 跑馬燈區域 */
+    
+    .marquee {
+      width: 100%;
+      height: 5.5rem;
+      overflow: hidden;
+      margin-top: 1%; 
+      /* margin-bottom: 2vh; */
+      /* padding-bottom: 1.5rem; */
+    }
+    
+    .marquee li {
+      font-size:  1.75rem;
+      font-family: var(--second-font);
+      color: var(--main-darkBlue);
+      font-style: Italic;
+    }
+    
+    .marquee__content {
+      display: flex;
+      /* align-items: center; */
+      width: 100%;
+      animation: scrolling 20s linear infinite;
+    }
+    
+    .marquee__item {
+      flex-shrink: 0; 
+    }
+    
+    @keyframes scrolling {
+      from { transform: translateX(0); }
+      to { transform: translateX(-100%); }
+    }
+    
+    .marquee__line {
+      display: inline-block;
+      width: 70.5px;
+      height: 1px;
+      background-color: black;
+      position: relative;
+      bottom: 25%; /*讓他置中*/
+      margin:0 20px 0 20px;
+  
+    }
+
+    /*平板: 上半部分的變化*/
+
+    @media (min-width: 577px) and (max-width:1024px) {
+      #pageStyle{
+        height: 87.6vh;
+      }
+  
+      /*標題大小*/
+      .styleFront{
+        min-width: 87.5%;
+        padding-top: 16%
+      }
+  
+      #longImage{
+        display: none;
+      }
+
+      .longbox{
+        transform: translateY(-1.7vh);
+      }
+  
+      #ipadImage{
+        display: block;
+        width: 100%;
+        
+      }
+
+      .marquee li {
+        font-size:  1.125rem;
+      }
+
+      .marquee__line {
+        width: 45.12px;
+        height: 0.64px;
+    
+      }
+
+      .marquee {
+        margin-top:2.9vh;
+      }
+    }
+
+    /*手機:上半部分變化*/
+
+    @media (max-width:576.98px) {
+      #pageStyle{
+        height: 76.87vh;
+      }
+
+      #styleImage{
+        display: none;
+      }
+
+      #phoneStyle{
+        display: block;
+        z-index: 6;
+        margin-right:0;
+        margin-top: 15%;
+        width: 94.4%;
+      }
+  
+      /*標題大小*/
+      .styleFront{
+        min-width: 100%;
+        height: auto;
+        padding-top: 16%;
+        margin:0;
+      }
+  
+      #longImage{
+        display: none;
+      }
+
+      .longbox{
+        width: 100%;
+        height: 53px;
+        transform: translateY(-1.7vh);
+      }
+  
+      #ipadImage{
+        display: block;
+        width: 100%;
+        height: 100%;
+        
+      }
+
+      .marquee li {
+        font-size:  0.765rem;
+      }
+
+      .marquee__line {
+        width: 30.68px;
+        height: 0.1px;
+        margin:0 9px 0 9px;
+    
+      }
+
+      .marquee {
+        margin-top:2.9vh;
+      }
+
+    }
+
+    /* 第二部分 */
+    
+    #slider-2{
+      height: 100vh;
+      background-image: url(../images/travelstyle_BG.png);
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+
+    .container.wide {
+    width: 68%;
+    /* min-width: 900px; */
+    /* transform: translateY(20%); */
+    padding: 0;
+    position: relative;
+    margin-bottom:-10%;
+}
+
+
+
+/* Swiper */
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease-in-out;
+}
+
+.swiper-slide figure {
+    position: relative;
+    margin: 0;
+    overflow: hidden;
+}
+
+
+/* .swiper-slide figcaption {
+    position: absolute;
+    bottom: 0;
+    color: var(--main-yellow);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 3.8rem;
+}
+
+figcaption h2{
+  text-align: left;
+  text-transform: uppercase;
+  font-size: 4rem;
+  font-family: var(--second-font);
+  font-weight: 400;
+  letter-spacing: -0.015em;
+  line-height: 92.6%;
+  text-shadow: 0px 4px 14px rgba(0, 0, 0, 0.35);
+  display: inline-block;
+  margin-bottom: 0.8rem;
+}
+figcaption p{
+  text-align: left;
+  font-family: var(--main-font);
+  font-weight: 400;
+  font-size: 0.87rem;
+  letter-spacing: 0.18em;
+  text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.4);
+} */
+
+/* .swiper-slide-active figcaption { 左右滑動時的動作， */
+    /* transform: translate3d(-50%, 0, 0);
+    opacity: 1;
+} */
+
+/* .swiper-slide img {
+    width: auto;
+    height: auto;
+    object-fit: contain;
+} */
+
+.swiper-custom-nav {
+  /* background-color: aquamarine; */
+    position: absolute;
+    display: flex;
+    /* justify-content: space-between; */
+    /* transform: translate(-60%,-330%); */
+    margin-right:5%;
+    margin-bottom: 25%;
+    cursor: pointer;
+    width: 10%;
+}
+
+#stylenav-left{
+  position: relative;
+  width: 50%;
+  height: 100%;
+  margin-right: 20px;
+}
+#stylenav-right{
+  position: relative;
+  width: 50%;
+  height: 100%;
+  margin-left: 20px;
+}
+
+
+
+
+/*響應式*/
+/* @media screen and (max-width: 800px) {
+    .swiper-slide img {
+        height: 20rem;
+        border-radius: 45;
+    }
+
+    .swiper-slide figcaption {
+        left: 0;
+        transform: none;
+        width: 100%;
+        border-radius: 0;
+        background-color: var(--black-90);
+    }
+
+    .swiper-custom-nav {
+        display: none;
+    }
+}  */
+
+    /* 第二部分Travel style卡片區 */
+
+    .sumtext{
+      /* background-color: aqua; */
+
+      margin: 8% 2% 3% 6%;
+      width: 22%;
+      z-index: 1;
+
+    }
+
+    .smallStar{
+      width: 14.5%;
+      margin-left: 1.4%;
+    }
+
+    .smallStar img{
+      width: 100%;
+    }
+
+    /*2 people*/
+    .sumtext h4{
+        font-family: var(--main-font);
+        font-size: max(1.15vw, 1rem);
+        color: var(--main-yellow);
+        font-weight: 700;
+        line-height: 1.56rem;
+        letter-spacing: 0.075em;
+        margin:4.6% 0 2.8% 1.4%;;
+      
+      }
+
+    /*honey moon大標題*/  
+    .sumtext h2{
+        font-family: var(--second-font);
+        font-size:5.9vw;
+        color: var(--main-yellow);
+        font-weight: 400;
+        letter-spacing: -0.01em;
+        line-height: 92.6%;
+        
+      }
+
+      /*hashtag*/
+      .sumtext h3{
+        font-family: var(--main-font);
+        font-weight: 700;
+        font-size: max(1.15vw, 1rem);
+        line-height: 1.56rem;
+        letter-spacing: 0.015em;
+        color:#FFFFFF;
+        margin:3% 0 3% 1.4%;
+        
+      }
+
+      /*段落小字*/
+      .sumtext p{
+        font-family: var(--main-font);
+        font-weight: 400;
+        font-size: max(0.83vw, 0.88rem);
+        line-height: 1.125rem;
+        letter-spacing: 0.02em;
+        color:#FFFFFF;
+        margin-bottom: 4.5%;
+        margin-left: 1.4%;
+    
+      }
+
+      /* learn more按鈕樣式 */
+      .more{        
+        display: inline-block;
+        text-decoration: none;
+        color: #FFFFFF; /*文字顏色*/
+        font-family: var(--main-font);
+        font-weight: 400;
+        font-size:  max(1.4vw, 1.12rem);
+        letter-spacing: 0.075em;
+        /* border: 2px solid var(--main-blue); */
+        padding:3% 8%; /*用padding去撐*/
+        background-color: var(--main-blue);
+        transition: all 0.3s;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+        margin-left: 1.4%;
+      }
+
+      /*設定hover後的按鈕變化*/
+      /*使用偽元素的邏輯*/
+
+      .more::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -2;
+      }
+      .more::before { 
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0%;
+        height: 100%;
+        background-color: var(--main-yellow);
+        transition: all 0.3s ease-in-out;
+        z-index: -1;
+      }
+      .more:hover {
+        color: var(--main-blue); /*文字顏色*/
+      }
+      .more:hover:before {
+        width: 100%;
+      }
+
+
+/*平板: 下半部的變化*/
+
+@media (min-width: 577px) and (max-width:1024px) {
+  #slider-2{
+    height: 71vh;
+    background-image: url(../images/ipad_travelsty_BG.png);
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    
+  }
+
+  .container.wide {
+    width: 100%;
+    margin-bottom: -2vh;
+    
+  }
+  .spaces{
+    display: none;
+  }
+
+  .sumtext{
+    /* background-color: aqua; */
+    display: inline-block;
+
+    margin: 0;
+    padding-bottom:5vh;
+    margin-left: 30%;
+    width: 56.8%;
+    display: flex;
+    flex-wrap: wrap;
+
+    /* transform: translateY(-5vh); */
+
+
+  }
+  .smallStar{
+    width: 8%;
+    margin-left: 0;
+    
+  }
+
+  /*2 people*/
+
+  .sumtext h4{
+    
+    font-size: 1rem;
+    line-height: 1.15rem;
+    letter-spacing: 7.5%;
+    margin:4.6% 60% 4% 4.6%;
+  
+  }
+
+  /*honey moon大標題*/  
+  .sumtext h2{
+    
+    font-size:8.5vw;
+    font-weight: 400;
+    letter-spacing: -1%;
+    line-height: 93%;
+    
+  }
+
+  /*hashtag ##*/
+  .sumtext h3{
+    font-size: 1rem;
+    line-height: 1.56rem;
+    letter-spacing: 0.015em;
+    margin:3.6% 0 3.6% 1.4%;
+    
+  }
+
+  /*段落小字*/
+  .sumtext p{
+    font-size: 0.88rem;
+    line-height: 1.125rem;
+    letter-spacing: 0.02em;
+    color:#FFFFFF;
+    margin-bottom: 4.8%;
+    margin-left: 1.4%;
+
+  }
+
+  /* learn more按鈕樣式 */
+  .more{        
+
+    font-size:  1.05rem;
+    padding:2% 3.5%; /*用padding去撐*/
+  }
+
+  /*左右按鈕鍵*/
+
+  .swiper-custom-nav {
+      /* background-color: aquamarine; */
+      position: absolute;
+      display: flex;
+      margin-left: 65%;
+      margin-bottom: 5vh;
+      cursor: pointer;
+      width: 10%;
+      z-index: 5;
+  }
+  
+  #stylenav-left{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    margin-right: 20px;
+  }
+  #stylenav-right{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    margin-left: 20px;
+  }
+
+
+}
+
+/*手機:下半部分(尚未修改)*/
+@media (max-width:577.98px) {
+  #slider-2{
+    height: 83.21vh;
+    background-image: url(../images/phone_honeymoon_BG.png);
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    
+  }
+
+  .container.wide {
+    width: 100%;
+    margin-bottom: -2vh;
+    
+  }
+  .spaces{
+    display: none;
+  }
+
+  .sumtext{
+    /* background-color: aqua; */
+    display: inline-block;
+    top:121px;
+
+    margin: 0;
+    padding-bottom:5vh;
+    margin-left: 0;
+    width: 76%;
+    display: flex;
+    flex-wrap: wrap;
+
+  }
+  .smallStar{
+    width: 9%;
+    margin-left: 0;
+    
+  }
+
+  /*2 people*/
+
+  .sumtext h4{
+    
+    font-size: 1rem;
+    line-height: 1.15rem;
+    letter-spacing: 7.5%;
+    margin:4% 40% 4% 4.6%;
+    
+  
+  }
+
+  /*honey moon大標題*/  
+  .sumtext h2{
+    
+    font-size: 12.5vw;
+    font-weight: 400;
+    letter-spacing: -1%;
+    line-height: 93%;
+    white-space: nowrap;
+    
+  }
+
+  /*hashtag ##*/
+  .sumtext h3{
+    font-size: 1rem;
+    line-height: 1.56rem;
+    letter-spacing: 0.015em;
+    margin:3.6% 0 3.6% 1.4%;
+    
+  }
+
+  /*段落小字*/
+  .sumtext p{
+    font-size: 0.88rem;
+    line-height: 1.125rem;
+    letter-spacing: 0.02em;
+    color:#FFFFFF;
+    margin-bottom: 4.8%;
+    margin-left: 1.4%;
+
+  }
+
+  /* learn more按鈕樣式 */
+  .more{        
+
+    font-size:  1.05rem;
+    padding:2% 3.5%; /*用padding去撐*/
+  }
+
+  /*左右按鈕鍵*/
+
+  .swiper-custom-nav {
+      /* background-color: aquamarine; */
+      position: absolute;
+      display: flex;
+      margin-left: 65%;
+      margin-bottom: 5vh;
+      cursor: pointer;
+      width: 10%;
+      z-index: 5;
+  }
+  
+  #stylenav-left{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    margin-right: 20px;
+  }
+  #stylenav-right{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    margin-left: 20px;
+  }
+
+
+}
+
+
+
+      
+
+
+
+
+
