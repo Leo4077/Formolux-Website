@@ -1,0 +1,2095 @@
+body {
+    padding: 0px;
+}
+
+p {
+    margin-bottom: 0;
+}
+
+/* > 主要內容 */
+#homepage-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+/*     overflow: scroll; */
+}
+
+/* > 區段一 */
+#homepage-topsection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+    width: 100%;
+    height: 168vh;
+
+    background-color: rgb(255, 255, 255);
+    z-index: 19;
+}
+
+/* > 排序盒子Z20 */
+.desktop-box {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+
+    width: 100%;
+    height: 100vh;
+
+    z-index: 20;
+
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+#homepage-bigimage-desktop {
+    width: auto;
+    height: 70%;
+    /* - 推右側寬度使置中 */
+    padding-right: 8%;
+    margin-top: 12vh;
+
+    opacity: 1;
+}
+
+/* > 排序盒子Z15 */
+.phone-box {
+    display: none;
+    position: absolute;
+
+    width: 100%;
+    height: 0vh;
+    z-index: 15;
+    opacity: 0;
+}
+
+#homepage-bigimage-phone {
+    width: auto;
+    height: 70%;
+    /* - 圖片填滿背景 */
+    object-fit: cover;
+    /* - 縮放圖片依然置中 */
+    background-position: center;
+    opacity: 0;
+}
+
+/* > 圖片區容器 */
+.homepage-introbox {
+    display: flex;
+    /* - 水平置中 */
+    justify-content: center;
+
+    width: 100%;
+    margin-top: 58vh;
+
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+/* > 三張圖 */
+.homepage-introimage {
+    display: flex;
+    position: relative;
+    justify-content: center;
+
+    width: 28%;
+    height: 100vh;
+    /* - 橫向間距 */
+    margin-left: 30px;
+    margin-right: 30px;
+
+    /* - 圖片填滿背景 */
+    background-size: cover;
+    /* - 縮放圖片依然置中 */
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+#homepage-introimage2 {
+    /* - 高度差 */
+    margin-top: 16.66vh;
+}
+
+/* > 圖片背景 */
+.intro-1 {
+    background-image: url(../images/why-1.png);
+}
+
+.intro-2 {
+
+    background-image: url(../images/why-2.png);
+}
+
+.intro-3 {
+    background-image: url(../images/why-3.png);
+}
+
+/* > 圖片區文字內容 */
+.homepage-introimage-content {
+    display: flex;
+    position: absolute;
+    justify-content: flex-end;
+
+    width: 100%;
+    height: 100vh;
+    padding-bottom: 7.5vh;
+
+    z-index: 20;
+    flex-direction: column;
+    align-items: center;
+
+
+    background: linear-gradient(180deg, rgba(0, 5, 55, 0) 39.58%, rgba(0, 5, 55, 0.66) 92.71%);
+    background-blend-mode: darken;
+
+    /* - 初始樣式 */
+    opacity: 0.5;
+    transform: translateY(-100vh);
+}
+
+/* > 文案選擇 */
+.desktop-text {
+    display: block;
+}
+
+.phone-text {
+    display: none;
+}
+
+.homepage-intro-break {
+    display: none;
+}
+
+/* > 關鍵幀動畫 */
+.showIntrocontent {
+    animation: showIntrocontent 1.5s forwards;
+    /* - 動畫的速度變化 */
+    animation-timing-function: ease-out;
+}
+
+.hideIntrocontent {
+    animation: hideIntrocontent 1.5s forwards;
+    /* - 動畫的速度變化 */
+    animation-timing-function: ease-out;
+}
+
+@keyframes showIntrocontent {
+    0% {
+        opacity: 0;
+        transform: translateY(100vh);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0rem);
+    }
+}
+
+@keyframes hideIntrocontent {
+    0% {
+        opacity: 1;
+        transform: translateY(0rem);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(100vh);
+    }
+}
+
+
+/* > 標題 */
+.homepage-introimage-content1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 76%;
+    font-family: Arial;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 900;
+    text-align: center;
+    line-height: 1.8rem;
+    letter-spacing: 0.02em;
+    color: white;
+
+    /* - 底線 */
+    border-bottom: 1px solid white;
+    padding-bottom: 20px;
+
+    margin-bottom: 11.2px;
+}
+
+/* > 內文 */
+.homepage-introimage-content2 {
+    display: flex;
+
+    width: 76%;
+    font-family: Arial;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    text-align: center;
+    line-height: 1.8rem;
+    letter-spacing: 0.02em;
+    color: white;
+
+    margin-top: 9.6px;
+}
+
+/* > 區段二 */
+.homepage-bottomsection {
+    display: flex;
+    /* - 水平置中 */
+    align-items: center;
+    flex-direction: column;
+
+    width: 100%;
+    height: auto;
+    padding-top: 120px;
+
+    background-color: #000537;
+}
+
+/* > 標語 */
+.homepage-slogan {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 2.75rem;
+    color: rgb(255, 255, 255);
+    background-color: #000537;
+
+    width: 100%;
+    height: 185px;
+    /* - 底部間距 */
+    margin-top: 0px;
+    margin-bottom: 32px;
+}
+
+/* > 上層 */
+.homepage-slogan-top {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+/* > 左、右標語 */
+#homepage-slogan-element-1,
+#homepage-slogan-element-3 {
+    font-family: DM Serif Display;
+    font-weight: 400;
+    line-height: 3.75rem;
+    letter-spacing: 0.08em;
+    white-space: nowrap;
+}
+
+#homepage-slogan-element-1 {
+    padding-right: 42px;
+}
+
+#homepage-slogan-element-3 {
+    padding-left: 42px;
+}
+
+/* > 中標語 */
+.homepage-typing,
+#head,
+#sub {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin: 0px;
+}
+
+#head,
+#sub {
+    font-family: Tangerine;
+    font-size: 11.5rem;
+    color: #47BFD9;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 11.5rem;
+    letter-spacing: -0.015em;
+}
+
+.cursor {
+    visibility: hidden;
+}
+
+.cursor.blink {
+    visibility: visible;
+    /* - 光標閃爍速度 */
+    animation: blink 0.5s infinite;
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+
+/* > 左右滑圖片區 */
+/* > DRAG */
+#drag-ball {
+    width: 0px;
+    height: 0px;
+    background: rgba(71, 191, 217, 0.6);
+    border-radius: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    cursor: none;
+
+    z-index: 999;
+    transition: width 0.5s ease-in-out, height 0.5s ease-in-out, opacity 0.5s ease-in-out , transform 0.1s ease-in-out;
+    opacity: 0;
+    transform-origin: 0% 0%;
+}
+
+
+#cursor-text {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    cursor: none;
+
+    opacity: 0;
+    z-index: 999;
+    display: grid;
+    place-items: center;
+    transition: opacity 150ms ease-in-out ,  transform 0.1s ease-in-out;
+    transform-origin: 0% 0%;
+
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+
+    letter-spacing: 0.02em;
+    color: #FFFCEB;
+}
+
+#homepage-carousel {
+    padding-left: 0;
+    padding-right: 0;
+    cursor: none;
+}
+
+#carousel-outer {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+#carousel-inner {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.grid {
+    background: transparent;
+    height: 300px;
+    color: #f3c81e;
+}
+
+/* Carousel */
+.col-carousel {
+    position: relative;
+}
+
+/* Owl Carousel  */
+.owl-prev span,
+.owl-next span {
+    color: #8199A3;
+}
+
+.owl-prev span:hover,
+.owl-next span:hover {
+    color: #8199A3;
+}
+
+.owl-prev,
+.owl-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 75px;
+    height: 75px;
+}
+
+#svg-left,
+#svg-right {
+    width: 75px;
+    height: 75px;
+}
+
+/* > 按鈕左右距 */
+.owl-prev {
+    left: 2.1vw;
+
+}
+
+.owl-next {
+    right: 2.1vw;
+}
+
+/* removing blue outline from buttons */
+button:focus,
+button:active,
+.owl-prev:focus,
+.owl-next:focus,
+.customNextBtn:focus,
+.customPrevBtn:focus {
+    outline: none;
+}
+
+/* > 被點擊時放大 */
+button:active,
+.owl-prev:active,
+.owl-next:active,
+.customNextBtn:active,
+.customPrevBtn:active {
+    transform: translateY(-50%) scale(1.2);
+    transition: transform 0.3s;
+}
+
+.btn {
+    border: none;
+    background: none;
+}
+
+.btn:hover {
+    border: none;
+    background: none;
+}
+
+.customNextBtn,
+.customPrevBtn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 30;
+    border: none;
+    background: none;
+}
+
+.customPrevBtn {
+    left: 40px;
+    /* adjust as needed */
+}
+
+.customNextBtn {
+    right: 40px;
+    /* adjust as needed */
+}
+
+
+
+
+/* > 評論區 */
+.homepage-comment-box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 76%;
+    height: auto;
+    margin-top: 115px;
+    margin-bottom: 115px;
+}
+
+.homepage-comment-box p {
+    margin-bottom: 0;
+}
+
+/* > 評論區左側 */
+.homepage-comment-titlebox {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    width: 288.62px;
+    height: 174px;
+
+}
+
+/* > 逗號 */
+#homepage-comment-icon {
+    position: absolute;
+    top: -18px;
+    left: -8px;
+    z-index: 10;
+}
+
+/* > 文字 */
+#homepage-comment-word {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    border: 2px solid #47BFD9;
+    height: 160px;
+}
+
+/* > Traveler*/
+#homepage-comment-title {
+    color: white;
+    font-family: DM Serif Display;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2.2rem;
+    line-height: 3rem;
+    letter-spacing: 0.02em;
+    text-align: center;
+
+    margin-bottom: 0;
+}
+
+/* > Review */
+#homepage-comment-subtitle {
+    color: white;
+    font-family: DM Serif Display;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 3.625rem;
+    line-height: 3rem;
+    letter-spacing: 0.02em;
+    text-align: center;
+
+    margin-bottom: 10px;
+}
+
+
+
+/* >評論內容區 */
+.homepage-comment-contentbox {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 70%;
+}
+
+.homepage-comment-contentbox-A {
+    margin-right: 3%;
+}
+
+.homepage-comment-contentbox-B {
+    margin-left: 3%;
+    margin-right: 3%;
+}
+
+.homepage-comment-contentbox-C {
+    margin-left: 3%;
+}
+
+.homepage-comment-contentbox-A,
+.homepage-comment-contentbox-B,
+.homepage-comment-contentbox-C {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+
+    margin-top: 11.2px;
+    margin-bottom: 12.8px;
+}
+
+/* > 評論內容上區 */
+.homepage-comment-upbox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    border-bottom: 1.5px solid white;
+    padding-bottom: 9.6px;
+}
+
+/* > 分數星星 */
+#homepage-comment-contentbox0 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+/* > 分數 */
+#homepage-comment-contentbox1 {
+    display: flex;
+    flex-direction: row;
+    font-family: DM Serif Display;
+    font-size: 1.375rem;
+    font-style: normal;
+    font-weight: 400;
+    font-weight: 400;
+    line-height: 1.8rem;
+    letter-spacing: 0.02em;
+    color: white;
+    padding-right: 8px;
+}
+
+/* > 星星 */
+.star-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* > 人物 */
+#homepage-comment-contentbox2 {
+    display: flex;
+    flex-direction: row;
+    font-family: DM Serif Display;
+    font-size: 1.375rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.8rem;
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+    color: white;
+}
+
+
+/* > 評論內容下區 */
+.homepage-comment-comment {
+    padding-top: 0.6rem;
+    font-family: Arial;
+    font-size: 0.8rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1rem;
+    text-align: justify;
+    letter-spacing: 0.065em;
+    color: white;
+}
+
+
+/* > 聯絡按鈕區 */
+#homepage-contactbtn-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: none;
+    width: 100%;
+}
+
+#homepage-contactbtn-box a {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+
+    width: 76%;
+    height: 147px;
+}
+
+/* > 按鈕樣式 */
+#homepage-contactbtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: #47BFD9;
+
+    border: 2px solid #47BFD9;
+    /* - 沒hover時變色回來 */
+    animation: colorChangeback 0.3s ease-in;
+}
+
+/* > hover按鈕樣式 */
+#homepage-contactbtn:hover {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    width: 100%;
+    height: 100%;
+
+    border: 2px solid #47BFD9;
+    background-color: #000537;
+
+    /* - hover時變色 */
+    animation: colorChange 0.3s ease-in;
+    /* - 慢速開始 */
+    transition-timing-function: ease-in;
+}
+
+/* > 按鈕字樣 */
+#homepage-contactbtn span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* - 隨視窗寬度調整 */
+    font-size: clamp(25px, 2.29vw, 50px);
+
+    font-family: DM Serif Display;
+    font-style: normal;
+    font-weight: 400;
+    text-decoration: none;
+
+    line-height: 3.75rem;
+    letter-spacing: 0.155em;
+    color: #ffffff;
+
+    animation: btnin 0.3s;
+    /* - 慢速開始 */
+    transition-timing-function: ease-in;
+}
+
+/* > hover按鈕字樣 */
+#homepage-contactbtn:hover span {
+    /* - 製造殘影效果 */
+    position: absolute;
+    z-index: 2;
+    /* -     display: none; */
+    animation: btnout 0.3s forwards;
+    /* - 慢速開始 */
+    transition-timing-function: ease-in;
+}
+
+/* > 偽元素hover前 */
+#homepage-contactbtn:before {
+    display: flex;
+    position: absolute;
+    z-index: 1;
+
+    content: "OK! Here We GO!";
+    /* - 隨視窗寬度調整 */
+    font-size: clamp(25px, 2.29vw, 50px);
+    font-family: DM Serif Display;
+    font-style: normal;
+    font-weight: 400;
+    text-decoration: none;
+    line-height: 3.75rem;
+    letter-spacing: 0.155em;
+    color: #47BFD9;
+
+    padding-left: 38%;
+
+
+    opacity: 0;
+    animation: btnout 0.3s;
+    /* - 慢速開始 */
+    transition-timing-function: ease-in;
+}
+
+/* > 偽元素hover後 */
+#homepage-contactbtn:hover:before {
+    display: flex;
+    position: absolute;
+    z-index: 2;
+
+    content: "OK! Here We GO!";
+    /* - 隨視窗寬度調整 */
+    font-size: clamp(25px, 2.29vw, 50px);
+    font-family: DM Serif Display;
+    font-style: normal;
+    font-weight: 400;
+    text-decoration: none;
+    line-height: 3.75rem;
+    letter-spacing: 0.155em;
+    color: #47BFD9;
+
+    padding-left: 38%;
+
+    opacity: 1;
+    animation: btnin 0.3s;
+    /* - 慢速開始 */
+    transition-timing-function: ease-in;
+}
+
+/* > arrow */
+#homepage-contactbtn-svg {
+    position: absolute;
+    /* - 初始位置 */
+    left: 75%;
+    z-index: 2;
+
+    animation: svg-back 0.3s forwards;
+    /* - 慢速開始 */
+    transition-timing-function: ease-in;
+}
+
+/* > hover arrow */
+#homepage-contactbtn:hover #homepage-contactbtn-svg {
+    position: absolute;
+    /* - 初始位置 */
+    left: 75%;
+    z-index: 2;
+    /* - PNG強制轉色 */
+    /* -    filter: invert(52%) sepia(100%) saturate(288%) hue-rotate(143deg) brightness(107%) contrast(85%); */
+    animation: svg-go 0.3s forwards;
+    transition-timing-function: ease-in;
+}
+
+#homepage-contactbtn-svg path {
+    animation: svg-white 0.3s forwards;
+    /* - 慢速開始 */
+    transition-timing-function: ease-in;
+}
+
+#homepage-contactbtn:hover #homepage-contactbtn-svg path {
+    animation: svg-blue 0.3s forwards;
+    transition-timing-function: ease-in;
+}
+
+
+/* > 箭頭移動 */
+@keyframes svg-go {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(120%, 0);
+    }
+}
+
+@keyframes svg-back {
+    0% {
+        transform: translate(120%, 0);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+/* > path變色 */
+@keyframes svg-blue {
+    0% {
+        fill: #ffffff;
+    }
+
+    100% {
+        fill: #47BFD9;
+    }
+}
+
+@keyframes svg-white {
+    0% {
+        fill: #47BFD9;
+    }
+
+    100% {
+        fill: #ffffff;
+    }
+}
+
+/* > 淡入淡出 */
+@keyframes btnin {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes btnout {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+/* > 變色動畫 */
+@keyframes colorChange {
+    0% {
+        background-color: #47BFD9;
+        /* - 顏色A */
+    }
+
+    100% {
+        background-color: #000537;
+        /* - 顏色B */
+    }
+}
+
+@keyframes colorChangeback {
+    0% {
+        background-color: #000537;
+        /* - 顏色A */
+    }
+
+    100% {
+        background-color: #47BFD9;
+        /* - 顏色B */
+    }
+}
+
+
+/* > 媒體報導 */
+.homepage-mediabox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    margin-top: 110px;
+    margin-bottom: 50px;
+
+    width: 76%;
+    height: auto;
+}
+
+/* > 媒體標題盒子 */
+.homepage-mediatitle-box {
+    width: 100%;
+    height: auto;
+}
+
+#homepage-mediatitle {
+    color: #ffffff;
+    font-size: 1.375rem;
+    font-family: DM Serif Display;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.875rem;
+    letter-spacing: 0.06em;
+    text-align: center;
+    white-space: nowrap;
+
+    margin-bottom: 32px;
+}
+
+.homepage-mediatitle-break {
+    display: none;
+}
+
+/* > 媒體圖片盒子 */
+.homepage-media {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    position: relative;
+
+}
+
+/* > 電腦&平板 */
+.homepage-media-desktop {
+    display: flex;
+    position: absolute;
+    width: 100%;
+
+    z-index: 3;
+    opacity: 1;
+
+    /* - 圖片填滿背景 */
+    object-fit: cover;
+    /* - 縮放圖片依然置中 */
+    background-position: center;
+}
+
+.homepage-media-desktop img {
+    width: 100%;
+
+}
+
+/* > 手機板 */
+.homepage-media-phone {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 0;
+
+    z-index: 4;
+    opacity: 0;
+
+    /* - 圖片填滿背景 */
+    object-fit: cover;
+    /* - 縮放圖片依然置中 */
+    background-position: center;
+}
+
+.homepage-media-phone img {
+    width: 100%;
+}
+
+
+
+/*! RWD 1401-1700 (size*0.9) */
+@media (min-width: 1401px) and (max-width: 1700.98px) {
+
+    #homepage-contactbtn-box a {
+        width: 76%;
+        height: calc(147px * 0.9);
+    }
+
+    /* > 偽元素hover前 */
+    #homepage-contactbtn:before {
+        padding-left: 35%;
+    }
+
+    /* > 偽元素hover後 */
+    #homepage-contactbtn:hover:before {
+        padding-left: 35%;
+    }
+
+    /* > arrow */
+    #homepage-contactbtn-svg {
+        width: calc(142px * 0.9);
+        height: calc(53px * 0.9);
+        left: 75%;
+    }
+
+    /* > hover arrow */
+    #homepage-contactbtn:hover #homepage-contactbtn-svg {
+        left: 75%;
+    }
+
+    /* > 箭頭移動 */
+    @keyframes svg-go {
+        0% {
+            transform: translate(0, 0);
+        }
+
+        100% {
+            transform: translate(90%, 0);
+        }
+    }
+
+    @keyframes svg-back {
+        0% {
+            transform: translate(90%, 0);
+        }
+
+        100% {
+            transform: translate(0, 0);
+        }
+    }
+}
+
+
+
+/* ! 評論區 */
+/* ! RWD 1201-1600 (for 評論區字距) */
+@media (min-width: 1201px) and (max-width: 1600.98px) {
+    #homepage-comment-contentbox2 {
+        font-size: 1.3rem;
+        letter-spacing: 0.01em;
+    }
+
+    .homepage-comment-comment {
+        font-size: 0.6rem;
+        letter-spacing: 0.02em;
+    }
+}
+
+/* ! RWD 577-1300 (for 評論區-平板) */
+@media (min-width:577px) and (max-width:1300.98px) {
+
+
+    /* > 評論區 */
+    .homepage-comment-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+
+        width: 79.4%;
+        height: auto;
+        margin-top: 52px;
+        margin-bottom: 60px;
+    }
+
+
+    /* > 評論區左側 */
+    .homepage-comment-titlebox {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+
+        justify-content: center;
+
+        width: 100%;
+        height: 63px;
+    }
+
+    /* > 逗號 */
+    #homepage-comment-icon {
+        position: absolute;
+        top: -12px;
+        left: -3px;
+        z-index: 10;
+    }
+
+    #homepage-comment-icon svg {
+        width: calc(52px * 0.48);
+        height: calc(39px * 0.48);
+    }
+
+    /* > 文字 */
+    #homepage-comment-word {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+
+        border: 2px solid #47BFD9;
+        padding-top: 0;
+        padding-bottom: 0;
+        height: 63px;
+    }
+
+    /* > Traveler & Review */
+    #homepage-comment-title,
+    #homepage-comment-subtitle {
+        font-size: 1.43rem;
+        line-height: 2rem;
+        letter-spacing: 0.03em;
+        text-align: center;
+
+    }
+
+    #homepage-comment-title {
+        margin-right: 3.5px;
+        margin-bottom: 0;
+    }
+
+    #homepage-comment-subtitle {
+        margin-left: 3.5px;
+        margin-bottom: 0;
+    }
+
+    /* >評論內容區 */
+    .homepage-comment-contentbox {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+
+        margin-top: 35px;
+    }
+
+    .homepage-comment-contentbox-A {
+        margin-right: 3%;
+    }
+
+    .homepage-comment-contentbox-B {
+        margin-left: 3%;
+        margin-right: 3%;
+    }
+
+    .homepage-comment-contentbox-C {
+        margin-left: 3%;
+    }
+
+    .homepage-comment-contentbox-A,
+    .homepage-comment-contentbox-B,
+    .homepage-comment-contentbox-C {
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+
+        margin-top: 11.2px;
+        margin-bottom: 12.8px;
+    }
+
+    /* > 評論內容上區 */
+    .homepage-comment-upbox {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        border-bottom: 1.5px solid white;
+        padding-bottom: 9.6px;
+    }
+
+    /* > 分數 */
+    #homepage-comment-contentbox1 {
+        display: flex;
+        flex-direction: row;
+        font-family: DM Serif Display;
+        font-size: 1rem;
+
+        line-height: 1.375rem;
+
+        padding-right: 8.17px;
+    }
+
+    /* >星星 */
+    #homepage-comment-contentbox0 svg {
+        width: 11.6px;
+        height: 11.6px;
+    }
+
+    /* > 人物 */
+    #homepage-comment-contentbox2 {
+        font-size: 1rem;
+
+        line-height: 1.375rem;
+        letter-spacing: 0.02em;
+    }
+
+    /* > 評論內容下區 */
+    .homepage-comment-comment {
+        padding-top: 10.52px;
+
+        font-size: 0.75rem;
+        line-height: 1.125rem;
+        letter-spacing: 0.005em;
+    }
+
+}
+
+/* ! RWD -577 (for 評論區-手機) */
+@media (max-width:576.98px) {
+
+
+    /* > 評論區 */
+    .homepage-comment-box {
+        width: 74.8%;
+        height: auto;
+        margin-top: 50px;
+        margin-bottom: 38px;
+
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+
+    /* > 評論區左側 */
+    .homepage-comment-titlebox {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+
+        justify-content: center;
+
+        width: 100%;
+        height: 63px;
+    }
+
+    /* > 逗號 */
+    #homepage-comment-icon {
+        position: absolute;
+        top: -12px;
+        left: -3px;
+        z-index: 10;
+    }
+
+    #homepage-comment-icon svg {
+        width: calc(52px * 0.48);
+        height: calc(39px * 0.48);
+    }
+
+    /* > 文字 */
+    #homepage-comment-word {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+
+        border: 2px solid #47BFD9;
+        padding-top: 0;
+        padding-bottom: 0;
+        height: 63px;
+    }
+
+    /* > Traveler & Review */
+    #homepage-comment-title,
+    #homepage-comment-subtitle {
+        font-size: 1.43rem;
+        line-height: 2rem;
+        letter-spacing: 0.03em;
+        text-align: center;
+
+    }
+
+    #homepage-comment-title {
+        margin-right: 3.5px;
+        margin-bottom: 0;
+    }
+
+    #homepage-comment-subtitle {
+        margin-left: 3.5px;
+        margin-bottom: 0;
+    }
+
+
+    /* >評論內容區 */
+    .homepage-comment-contentbox {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .homepage-comment-contentbox-A {
+        margin-right: 0%;
+    }
+
+    .homepage-comment-contentbox-B {
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+
+    .homepage-comment-contentbox-C {
+        margin-left: 0%;
+    }
+
+    .homepage-comment-contentbox-A,
+    .homepage-comment-contentbox-B,
+    .homepage-comment-contentbox-C {
+        width: 81.3%;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    /* > 評論內容上區 */
+    .homepage-comment-upbox {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        border-bottom: 1.5px solid white;
+        padding-bottom: 9px;
+    }
+
+    /* > 分數 */
+    #homepage-comment-contentbox1 {
+        color: #47BFD9;
+    }
+
+    /* >星星 */
+    #homepage-comment-contentbox0 svg path {
+        fill: #47BFD9;
+    }
+}
+
+
+
+/* ! 媒體區 */
+/* ! RWD 1431-1600 (for 媒體區字距) */
+@media (min-width: 1431px) and (max-width: 1600.98px) {
+    #homepage-mediatitle {
+        font-size: 1.45rem;
+        letter-spacing: 0.01em;
+    }
+}
+
+/* ! RWD 1201-1430 (for 媒體區字距) */
+@media (min-width: 1201px) and (max-width: 1430.98px) {
+    #homepage-mediatitle {
+        font-size: 1.3rem;
+        letter-spacing: 0.005em;
+    }
+}
+
+/* ! RWD 577-940 (for 媒體區-部分平板) */
+/* -媒體區標題換行 */
+@media (min-width: 577px) and (max-width: 940.98px) {
+    .homepage-mediatitle-break {
+        display: block;
+    }
+}
+
+
+
+/* ! 按鈕區 */
+/* ! RWD 1201-1400 (for 按鈕區) */
+@media (min-width: 1201px) and (max-width: 1400.98px) {
+
+    /* > 按鈕區 */
+    #homepage-contactbtn-box a {
+        width: 76%;
+        height: calc(147px * 0.8);
+    }
+
+    /* > 偽元素hover前 */
+    #homepage-contactbtn:before {
+        padding-left: 35%;
+    }
+
+    /* > 偽元素hover後 */
+    #homepage-contactbtn:hover:before {
+        padding-left: 35%;
+    }
+
+    /* > arrow */
+    #homepage-contactbtn-svg {
+        width: calc(142px * 0.8);
+        height: calc(53px * 0.8);
+        left: 75%;
+    }
+
+    /* > hover arrow */
+    #homepage-contactbtn:hover #homepage-contactbtn-svg {
+        left: 75%;
+    }
+
+    /* > 箭頭移動 */
+    @keyframes svg-go {
+        0% {
+            transform: translate(0, 0);
+        }
+
+        100% {
+            transform: translate(90%, 0);
+        }
+    }
+
+    @keyframes svg-back {
+        0% {
+            transform: translate(90%, 0);
+        }
+
+        100% {
+            transform: translate(0, 0);
+        }
+    }
+}
+
+/* ! RWD 900-1100 (for 按鈕區) */
+@media (min-width: 900px) and (max-width: 1200.98px) {
+
+
+    /* > 按鈕區 */
+    #homepage-contactbtn-box a {
+        width: 88.5%;
+        height: 9vw;
+    }
+
+    /* > 按鈕字樣 */
+    #homepage-contactbtn span {
+        padding-right: 8%;
+    }
+
+    /* > hover按鈕字樣 */
+    #homepage-contactbtn:hover span {
+        padding-right: 8%;
+    }
+
+    /* > 偽元素hover前 */
+    #homepage-contactbtn:before {
+        padding-left: 30%;
+    }
+
+    /* > 偽元素hover後 */
+    #homepage-contactbtn:hover:before {
+        padding-left: 30%;
+    }
+
+    /* > arrow */
+    #homepage-contactbtn-svg {
+        width: calc(142px * 0.5);
+        height: calc(53px * 0.5);
+        left: 73%;
+    }
+
+    /* > hover arrow */
+    #homepage-contactbtn:hover #homepage-contactbtn-svg {
+        left: 73%;
+    }
+
+    /* > 箭頭移動 */
+    @keyframes svg-go {
+        0% {
+            transform: translate(0, 0);
+        }
+
+        100% {
+            transform: translate(120%, 0);
+        }
+    }
+
+    @keyframes svg-back {
+        0% {
+            transform: translate(120%, 0);
+        }
+
+        100% {
+            transform: translate(0, 0);
+        }
+    }
+
+}
+
+/* ! RWD 700-900 (for 按鈕區) */
+@media (min-width: 700px) and (max-width: 899.98px) {
+
+    /* > 按鈕區 */
+    #homepage-contactbtn-box a {
+        width: 88.5%;
+        height: 10vw;
+    }
+
+    /* > 按鈕字樣 */
+    #homepage-contactbtn span {
+        padding-right: 12%;
+    }
+
+    /* > hover按鈕字樣 */
+    #homepage-contactbtn:hover span {
+        padding-right: 12%;
+    }
+
+    /* > 偽元素hover前 */
+    #homepage-contactbtn:before {
+        padding-left: 25%;
+    }
+
+    /* > 偽元素hover後 */
+    #homepage-contactbtn:hover:before {
+        padding-left: 25%;
+    }
+
+    /* > arrow */
+    #homepage-contactbtn-svg {
+        width: calc(142px * 0.5);
+        height: calc(53px * 0.5);
+        left: 75%;
+    }
+
+    /* > hover arrow */
+    #homepage-contactbtn:hover #homepage-contactbtn-svg {
+        left: 75%;
+    }
+
+    /* > 箭頭移動 */
+    @keyframes svg-go {
+        0% {
+            transform: translate(0, 0);
+        }
+
+        100% {
+            transform: translate(90%, 0);
+        }
+    }
+
+    @keyframes svg-back {
+        0% {
+            transform: translate(90%, 0);
+        }
+
+        100% {
+            transform: translate(0, 0);
+        }
+    }
+
+}
+
+/* ! RWD -700 (for 按鈕區) */
+@media (max-width: 699.98px) {
+
+    /* > 按鈕區 */
+    #homepage-contactbtn-box a {
+        width: 74.3%;
+        height: 63px;
+    }
+
+    /* > 按鈕字樣 */
+    #homepage-contactbtn span {
+        padding-right: 15%;
+        font-size: 13.5px;
+
+        line-height: 1.1875rem;
+        letter-spacing: 0.15em;
+    }
+
+    /* > hover按鈕字樣 */
+    #homepage-contactbtn:hover span {
+        padding-right: 15%;
+        font-size: 13.5px;
+
+        line-height: 1.1875rem;
+        letter-spacing: 0.15em;
+    }
+
+    /* > 偽元素hover前 */
+    #homepage-contactbtn:before {
+        padding-left: 10%;
+        font-size: 13.5px;
+
+        line-height: 1.1875rem;
+        letter-spacing: 0.15em;
+    }
+
+    /* > 偽元素hover後 */
+    #homepage-contactbtn:hover:before {
+        padding-left: 10%;
+        font-size: 13.5px;
+
+        line-height: 1.1875rem;
+        letter-spacing: 0.15em;
+    }
+
+    /* > arrow */
+    #homepage-contactbtn-svg {
+        width: calc(142px * 0.25);
+        height: calc(53px * 0.25);
+        left: 80%;
+    }
+
+    /* > hover arrow */
+    #homepage-contactbtn:hover #homepage-contactbtn-svg {
+        left: 80%;
+    }
+
+    /* > 箭頭移動 */
+    @keyframes svg-go {
+        0% {
+            transform: translate(0, 0);
+        }
+
+        100% {
+            transform: translate(30%, 0);
+        }
+    }
+
+    @keyframes svg-back {
+        0% {
+            transform: translate(30%, 0);
+        }
+
+        100% {
+            transform: translate(0, 0);
+        }
+    }
+}
+
+
+
+/* ! RWD 577-1200 (平板) */
+@media (min-width: 577px) and (max-width: 1200.98px) {
+
+    /* > 區段一 */
+    #homepage-topsection {
+        height: 78.12vh;
+    }
+
+    /* > 排序盒子Z20 */
+    .desktop-box {
+        display: flex;
+        justify-content: center;
+        position: absolute;
+
+        width: 79.5%;
+        height: auto;
+
+        z-index: 20;
+
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+
+    #homepage-bigimage-desktop {
+        width: 100%;
+        height: auto;
+
+        /* - 推右側寬度使置中 */
+        margin-right: 12%;
+        padding-right: 0%;
+        margin-top: 10vh;
+
+        opacity: 1;
+    }
+
+    /* > 圖片區容器 */
+    .homepage-introbox {
+        display: flex;
+        width: 100%;
+        margin-top: 34.6vh;
+
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    /* > 三張圖 */
+    .homepage-introimage {
+        height: 39.3vh;
+        /* - 橫向間距 */
+        margin-left: 12.5px;
+        margin-right: 12.5px;
+    }
+
+    #homepage-introimage2 {
+        /* - 高度差 */
+        margin-top: 6.7vh;
+    }
+
+
+    /* > 圖片區文字內容 */
+    .homepage-introimage-content {
+        height: 39.3vh;
+        opacity: 1;
+        background: linear-gradient(180deg, rgba(0, 5, 55, 0) 39.58%, rgba(0, 3, 32, 0.66) 92.71%);
+        background-blend-mode: darken;
+
+        padding-bottom: 30px;
+    }
+
+    /* > 標題 */
+    .homepage-introimage-content1 {
+        width: 84.3%;
+
+        font-size: 0.9375rem;
+        line-height: 1.8125rem;
+        letter-spacing: 0.01em;
+        white-space: nowrap;
+
+        height: 29px;
+        padding-bottom: 0px;
+        margin-bottom: 6px;
+    }
+
+    /* > 內文 */
+    .homepage-introimage-content2 {
+        width: 84.3%;
+
+        font-size: 0.75rem;
+        line-height: 1.0625rem;
+        letter-spacing: 0.05em;
+
+        margin-top: 8px;
+    }
+
+
+    /* > 區段二 */
+    .homepage-bottomsection {
+        /* - 區段二上端空白 */
+        padding-top: 56px;
+        height: auto;
+    }
+
+    /* > 標語 */
+    .homepage-slogan {
+        font-size: 1.43rem;
+        color: rgb(255, 255, 255);
+        background-color: #000537;
+
+        height: 95px;
+        /* - 底部間距 */
+        margin-top: 0px;
+        margin-bottom: 36px;
+    }
+
+    /* > 左、右標語 */
+    #homepage-slogan-element-1,
+    #homepage-slogan-element-3 {
+        line-height: 2rem;
+        letter-spacing: 0.08em;
+    }
+
+    #homepage-slogan-element-1 {
+        padding-right: 17px;
+    }
+
+    #homepage-slogan-element-3 {
+        padding-left: 17px;
+    }
+
+    /* > 中標語 */
+    #head,
+    #sub {
+        font-family: Tangerine;
+        font-size: 6rem;
+        line-height: 6rem;
+        letter-spacing: -0.015em;
+    }
+
+    /* > 左右滑圖片區 */
+    .grid {
+        height: 145px;
+    }
+
+    /* >　按鈕尺寸 */
+    .owl-prev,
+    .owl-next {
+        width: 45px;
+        height: 45px;
+    }
+
+    #svg-left,
+    #svg-right {
+        width: 45px;
+        height: 45px;
+    }
+
+
+    /* > 媒體報導 */
+    .homepage-mediabox {
+        margin-top: 62px;
+        margin-bottom: 20px;
+
+        width: 88.5%;
+        height: auto;
+    }
+
+    #homepage-mediatitle {
+        font-size: 1rem;
+        line-height: 1.375rem;
+        white-space: normal;
+
+        margin-bottom: 22px;
+    }
+}
+
+/* ! RWD -577 手機板 */
+@media (max-width: 576.98px) {
+
+    /* > 區段一 */
+    #homepage-topsection {
+        height: auto;
+    }
+
+    /* > 排序盒子Z20 */
+    #homepage-bigimage-desktop {
+        display: none;
+        opacity: 0;
+    }
+
+    /* > 排序盒子Z15 */
+    .phone-box {
+        display: flex;
+        justify-content: center;
+        position: absolute;
+
+        width: 100%;
+        height: 100vh;
+        z-index: 15;
+        opacity: 1;
+    }
+
+    #homepage-bigimage-phone {
+        width: auto;
+        height: 37.9%;
+
+        margin-top: 86px;
+        margin-left: 3%;
+        margin-right: 7%;
+        /* - 圖片填滿背景 */
+        object-fit: cover;
+        /* - 縮放圖片依然置中 */
+        background-position: center;
+        display: flex;
+        opacity: 1;
+    }
+
+
+    /* > 圖片區容器 */
+    .homepage-introbox {
+        flex-direction: column;
+
+        width: 100%;
+        margin-top: 43.54vh;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    /* > 三張圖 */
+    .homepage-introimage {
+        width: 100%;
+        height: 35.8vh;
+        /* - 橫向間距 */
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    #homepage-introimage2 {
+        /* - 高度差 */
+        margin-top: 0vh;
+    }
+
+    .homepage-introimage-content {
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: center;
+
+        height: 35.8vh;
+        padding-bottom: 30px;
+        background: linear-gradient(180deg, rgba(0, 5, 55, 0) 46.73%, rgba(0, 5, 55, 0.66) 82.62%);
+        background-blend-mode: darken;
+
+    }
+
+    /* > 圖片區文字內容 */
+    /* -標題 */
+    .homepage-introimage-content1 {
+        font-size: 1.125rem;
+        line-height: 1.3125rem;
+        letter-spacing: 0.01em;
+        text-align: right;
+
+        width: 27.7%;
+        height: 55px;
+
+        align-items: center;
+        justify-content: flex-end;
+        border-bottom: none;
+
+        padding-bottom: 0px;
+        margin-bottom: 0px;
+        /* -中間間距 */
+        margin-right: 3.8%;
+    }
+
+    /* -內文 */
+    .homepage-introimage-content2 {
+        font-size: 0.875rem;
+        line-height: 1.125rem;
+        letter-spacing: 0.05em;
+        text-align: left;
+
+        width: 42.7%;
+        height: 55px;
+
+        align-items: center;
+        margin-top: 0px;
+        /* -中間間距 */
+        margin-left: 3.8%;
+    }
+
+    .homepage-introimage-content1 p,
+    .homepage-introimage-content2 p {
+        margin-bottom: 0;
+    }
+
+    /* > 文案選擇 */
+    .desktop-text {
+        display: none;
+    }
+
+    .phone-text {
+        display: block;
+    }
+
+    .homepage-intro-break {
+        display: block;
+    }
+
+    /* > 圖片背景 */
+    .intro-1 {
+        background-image: url(../images/why-1-phone.png);
+        /* -下距 */
+        margin-bottom: 30px;
+    }
+
+    .intro-2 {
+        background-image: url(../images/why-2-phone.png);
+        /* -下距 */
+        margin-bottom: 30px;
+    }
+
+    .intro-3 {
+        background-image: url(../images/why-3-phone.png);
+    }
+
+    /* > 區段二 */
+    .homepage-bottomsection {
+        /* - 區段二上端空白 */
+        padding-top: 33px;
+    }
+
+    /* > 標語 */
+    .homepage-slogan {
+        /* - 主軸改垂直 */
+        flex-direction: column;
+
+        font-size: 1.25rem;
+        height: 110px;
+        /* - 底部間距 */
+        margin-top: 0px;
+        margin-bottom: 35px;
+    }
+
+    /* > 左、右標語 */
+    #homepage-slogan-element-1,
+    #homepage-slogan-element-3 {
+        line-height: 27px;
+        letter-spacing: 0.05em;
+    }
+
+    #homepage-slogan-element-1 {
+        padding-right: 8px;
+    }
+
+    #homepage-slogan-element-3 {
+        padding-left: 0;
+    }
+
+    /* > 中標語 */
+    #head,
+    #sub {
+        font-family: Tangerine;
+        font-size: 4.875rem;
+        line-height: 4.875rem;
+        letter-spacing: -0.015em;
+    }
+
+    /* > 左右滑圖片區 */
+    .grid {
+        height: 200px;
+    }
+
+    /* > 媒體報導 */
+    .homepage-mediabox {
+        margin-top: 49px;
+        margin-bottom: 3px;
+
+        width: 80%;
+        height: auto;
+    }
+
+    #homepage-mediatitle {
+        font-size: 1.25rem;
+        line-height: 1.6875rem;
+        white-space: normal;
+        margin-bottom: 26px;
+    }
+
+    /* > 媒體圖片盒子 */
+    .homepage-media {
+        height: 45px;
+    }
+
+    /* > 媒體區highlight */
+    .homepage-mediatitle-highlight {
+        color: #47BFD9
+    }
+
+    /* > 標題引號 */
+    .quotation-marks {
+        display: none;
+    }
+
+    /* > 電腦&平板 */
+    .homepage-media-desktop {
+        display: none;
+        opacity: 0;
+    }
+
+    /* > 手機板 */
+    .homepage-media-phone {
+        height: 45px;
+        display: flex;
+        opacity: 1;
+    }
+}

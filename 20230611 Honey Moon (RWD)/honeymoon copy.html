@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Honey Moon</title>
+    <link rel="stylesheet" href="../mainstyle.css">
+    <link rel="stylesheet" href="../combine/combine.css">
+    <link rel="stylesheet" href="./honeymoon.css">
+    <script src="../combine/combine.js"></script>
+</head>
+
+<body>
+    <!-- > 頁首區 -->
+    <header class="header1">
+        <div class="topbar">
+            <!-- 頁首Logo -->
+            <h1 class="headerLogo">
+                <a href="index.html">
+                    <img src="../images/FORMOLUX TRAVEL.png" alt="formoluxLogo">
+                </a>
+            </h1>
+
+            <!-- 按鈕區 -->
+            <div>
+                <nav class="contactBtn">
+                    <!-- 頁首聯絡按鈕 -->
+                    <ul class="btn-contact">
+                        <li><a href="#" alt="contactUs">CONTACT</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Hamburger menu選單 -->
+                <div class="menu-wrap">
+                    <!-- Hamburger -->
+                    <input type="checkbox" class="toggler">
+                    <div class="hamburger">
+                        <div></div>
+                    </div>
+                    <!-- 選單 -->
+                    <div class="menu">
+                        <div>
+                            <div>
+                                <!-- <div class="menu_logo">
+                                <h1 class="logo_color">FORMOLUX TRAVEL</h1>
+                            </div> -->
+                                <ul>
+                                    <li>
+                                        <a href="#" class="hambtn" id="travelStyle">
+                                            <div class="textboxx">
+                                                <h2 class="fadeText">
+                                                    TRAVEL STYLE
+                                                </h2>
+                                            </div>
+                                            <img src="../images/Vector 1 (Stroke).png" class="line">
+                                            <img src="../images/arrow.png" class="arrow">
+                                            <!-- 平板的line -->
+                                            <img src="../images/ipad_ham_line.svg" alt="" class="ipadline">
+                                            <img src="../images/ipad_ham_arrow.svg" alt="" class="ipadarrow">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="hambtn" id="aboutTaiwan">
+                                            <div class="textboxx">
+                                                <h2 class="fadeText">
+                                                    ABOUT TAIWAN
+                                                </h2>
+                                            </div>
+                                            <img src="../images/Vector 1 (Stroke).png" class="line">
+                                            <img src="../images/arrow.png" class="arrow">
+                                            <img src="../images/ipad_ham_line.svg" alt="" class="ipadline">
+                                            <img src="../images/ipad_ham_arrow.svg" alt="" class="ipadarrow">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="hambtn" id="aboutUs">
+                                            <h2 class="usbtn">
+                                                ABOUT <br>US
+                                            </h2>
+                                            <div class="textboxx">
+                                                <h2 class="ipad_usbtn fadeText">
+                                                    ABOUT US
+                                                </h2>
+                                            </div>
+                                            <img src="../images/Vector 1 (Stroke).png" class="line">
+                                            <img src="../images/arrow.png" class="arrow">
+                                            <img src="../images/ipad_ham_line.svg" alt="" class="ipadline">
+                                            <img src="../images/ipad_ham_arrow.svg" alt="" class="ipadarrow">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="hambtn" id="contactUs">
+                                            <div class="textboxx">
+                                                <h2 class="fadeText">
+                                                    CONTACT US
+                                                </h2>
+                                            </div>
+                                            <img src="../images/Vector 1 (Stroke).png" class="line">
+                                            <img src="../images/arrow.png" class="arrow">
+                                            <img src="../images/ipad_ham_line.svg" alt="" class="ipadline">
+                                            <img src="../images/ipad_ham_arrow.svg" alt="" class="ipadarrow">
+                                        </a>
+                                    </li>
+                                </ul>
+
+                                <!-- 關閉按鈕 -->
+                                <span class="close">CLOSE</span>
+
+
+                                <div class="iconboxer">
+                                    <div class="icon"> <!-- target blank 另開視窗 -->
+                                        <div>
+                                            <a href="https://www.facebook.com/" target="_blank" class="icon-fb">
+                                                <svg width="75" height="75" viewBox="0 0 75 75" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <circle cx="37.5" cy="37.5" r="36.5" fill="#FFFCEB"
+                                                        fill-opacity="0.2" stroke="white" stroke-width="2" />
+                                                    <path
+                                                        d="M26.5996 45V31.0415H36.0164V32.6887H28.4468V37.0115H34.9976V38.6587H28.4468V45H26.5996ZM39.6166 45V31.0415H44.8534C45.9198 31.0415 46.7736 31.1843 47.4147 31.47C48.0622 31.7493 48.5668 32.1841 48.9286 32.7744C49.2968 33.3584 49.4809 33.9709 49.4809 34.6121C49.4809 35.2087 49.319 35.7705 48.9953 36.2974C48.6716 36.8242 48.1828 37.2495 47.529 37.5732C48.3732 37.8208 49.0207 38.2429 49.4714 38.8396C49.9284 39.4363 50.1569 40.1409 50.1569 40.9534C50.1569 41.6072 50.0173 42.2166 49.738 42.7815C49.465 43.3401 49.1254 43.7717 48.7192 44.0764C48.3129 44.3811 47.8019 44.6128 47.1862 44.7715C46.5768 44.9238 45.8278 45 44.9391 45H39.6166ZM41.4638 36.9067H44.4821C45.3009 36.9067 45.8881 36.8528 46.2436 36.7449C46.7133 36.6052 47.0656 36.3735 47.3005 36.0498C47.5417 35.7261 47.6623 35.3198 47.6623 34.8311C47.6623 34.3677 47.5512 33.9614 47.329 33.6123C47.1069 33.2568 46.7895 33.0156 46.3769 32.8887C45.9643 32.7554 45.2565 32.6887 44.2536 32.6887H41.4638V36.9067ZM41.4638 43.3528H44.9391C45.5358 43.3528 45.9548 43.3306 46.196 43.2861C46.6213 43.21 46.9767 43.083 47.2624 42.9053C47.548 42.7275 47.7829 42.4705 47.967 42.134C48.151 41.7913 48.2431 41.3977 48.2431 40.9534C48.2431 40.4329 48.1098 39.9822 47.8432 39.6013C47.5766 39.2141 47.2052 38.9443 46.7292 38.792C46.2594 38.6333 45.5802 38.554 44.6916 38.554H41.4638V43.3528Z"
+                                                        fill="white" />
+                                                </svg>
+
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <a href="https://www.instagram.com/" target="_blank" class="icon-ig">
+                                                <svg width="75" height="75" viewBox="0 0 75 75" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <circle cx="37.5" cy="37.5" r="36.5" fill="#FFFCEB"
+                                                        fill-opacity="0.2" stroke="white" stroke-width="2" />
+                                                    <path
+                                                        d="M28.8186 45V31.0415H30.6658V45H28.8186ZM41.7309 39.5251V37.8875L47.6437 37.8779V43.0576C46.736 43.7812 45.7997 44.3271 44.8349 44.6953C43.87 45.0571 42.8798 45.238 41.8642 45.238C40.4931 45.238 39.2458 44.946 38.1222 44.3621C37.005 43.7717 36.1608 42.9211 35.5895 41.8103C35.0182 40.6995 34.7326 39.4585 34.7326 38.0874C34.7326 36.729 35.0151 35.4626 35.58 34.2883C36.1513 33.1077 36.9701 32.2317 38.0365 31.6604C39.1029 31.0891 40.3312 30.8035 41.7214 30.8035C42.7306 30.8035 43.6415 30.9685 44.454 31.2986C45.2729 31.6223 45.914 32.0762 46.3774 32.6602C46.8407 33.2441 47.193 34.0059 47.4342 34.9453L45.768 35.4023C45.5585 34.6914 45.2983 34.1328 44.9872 33.7266C44.6762 33.3203 44.2319 32.9966 43.6542 32.7554C43.0766 32.5078 42.4355 32.384 41.7309 32.384C40.8866 32.384 40.1567 32.5142 39.5409 32.7744C38.9252 33.0283 38.4269 33.3647 38.0461 33.7837C37.6716 34.2026 37.3796 34.6628 37.1701 35.1643C36.8146 36.0276 36.6369 36.9639 36.6369 37.9731C36.6369 39.2173 36.8495 40.2583 37.2748 41.0962C37.7065 41.9341 38.3317 42.5562 39.1506 42.9624C39.9694 43.3687 40.839 43.5718 41.7594 43.5718C42.5592 43.5718 43.34 43.4194 44.1017 43.1147C44.8634 42.8037 45.4411 42.4736 45.8346 42.1245V39.5251H41.7309Z"
+                                                        fill="white" />
+                                                </svg>
+
+                                            </a>
+                                        </div>
+                                        <div><a href="https://www.gmail.com/" target="_blank" class="icon-email">
+                                                <svg width="75" height="75" viewBox="0 0 75 75" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <circle cx="37.5" cy="37.5" r="36.5" fill="#FFFCEB"
+                                                        fill-opacity="0.2" stroke="white" stroke-width="2" />
+                                                    <g clip-path="url(#clip0_832_1362)">
+                                                        <path
+                                                            d="M20.75 45.9C20.25 45.67 19.83 45.32 19.5 44.85C19.17 44.39 19 43.85 19 43.25V27.15C19 26.79 19.08 26.49 19.23 26.26C19.38 26.02 19.63 25.8 20 25.6L35.25 18L50.15 25.6C50.38 25.73 50.59 25.95 50.77 26.25C50.95 26.55 51.08 26.87 51.15 27.2H49.4L35.25 19.95L20.75 27.2V45.9ZM29.45 53.2C28.51 53.2 27.72 52.88 27.07 52.23C26.42 51.59 26.1 50.8 26.1 49.85V34.2C26.1 33.25 26.42 32.46 27.07 31.82C27.72 31.18 28.51 30.85 29.45 30.85H53.1C54.02 30.85 54.81 31.17 55.47 31.82C56.12 32.46 56.45 33.26 56.45 34.2V49.85C56.45 50.8 56.12 51.59 55.47 52.23C54.82 52.87 54.03 53.2 53.1 53.2H29.45ZM41.3 41.45L27.85 34.55V49.85C27.85 50.32 28 50.7 28.3 51C28.6 51.3 28.98 51.45 29.45 51.45H53.1C53.57 51.45 53.95 51.3 54.25 51C54.55 50.7 54.7 50.32 54.7 49.85V34.55L41.3 41.45ZM41.3 39.45L53.9 32.9C53.77 32.8 53.62 32.72 53.45 32.67C53.28 32.62 53.1 32.6 52.9 32.6H29.65C29.48 32.6 29.31 32.62 29.12 32.67C28.94 32.72 28.78 32.79 28.65 32.9L41.3 39.45ZM54.7 33.6C54.7 33.43 54.64 33.29 54.53 33.17C54.42 33.05 54.27 32.97 54.11 32.9C53.94 32.8 53.75 32.72 53.53 32.67C53.31 32.62 53.11 32.6 52.91 32.6H29.65C29.48 32.6 29.28 32.62 29.05 32.67C28.82 32.72 28.62 32.79 28.45 32.9C28.28 32.97 28.14 33.06 28.03 33.17C27.91 33.28 27.85 33.43 27.85 33.6V32.6H54.7V33.6Z"
+                                                            fill="white" />
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_832_1362">
+                                                            <rect width="37.45" height="35.2" fill="white"
+                                                                transform="translate(19 18)" />
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </header>
+
+    <!-- ! 主內容1 (首圖) -->
+    <div class="honeymoon-section1">
+        <!-- > 桌面端Z10 -->
+        <div class="honeymoon-desktop">
+            <!-- -排序盒子 -->
+            <div class="position-box">
+                <!-- -主標Z9 -->
+                <img id="honeymoon-keyvisual-desktop" src="../images/honeymoon-title.png">
+                <!-- -背景Z8 -->
+                <img id="honeymoon-background-desktop" src="../images/HoneymoonBG.png">
+            </div>
+        </div>
+
+        <!-- > 平板端Z7 -->
+        <div class="honeymoon-tablet">
+            <!-- -排序盒子 -->
+            <div class="position-box">
+                <!-- -主標Z6 -->
+                <img id="honeymoon-keyvisual-tablet" src="../images/Honeymoon-keyvisual-tablet.png" alt="">
+                <!-- -背景Z5 -->
+                <img id="honeymoon-background-tablet" src="../images/HoneymoonBG-Tablet.png" alt="">
+            </div>
+        </div>
+
+        <!-- > 手機端Z4 -->
+        <div class="honeymoon-phone">
+            <!-- -排序盒子 -->
+            <div class="position-box">
+                <!-- -主標Z3 -->
+                <img id="honeymoon-keyvisual-phone" src="../images/Honeymoon-keyvisual-phone.png" alt="">
+                <!-- -背景Z2 -->
+                <img id="honeymoon-background-phone" src="../images/HoneymoonBG-phone.png" alt="">
+            </div>
+        </div>
+
+    </div>
+
+    <!-- ! 主內容2 (內文) -->
+    <div class="honeymoon-section2">
+        <!-- > 左邊圖片區 -->
+        <div class="honeymoon-leftpicture">
+            <!-- -標題區-大 -->
+            <div id="honeymoon-leftpicture-word1">
+                <!-- -標題-上 -->
+                <p class="honeymoon-leftpicture-title1">HONEY</p>
+                <!-- -標題-下 -->
+                <p class="honeymoon-leftpicture-title2">MOON</p>
+            </div>
+            <!-- -標題區-小 -->
+            <div id="honeymoon-leftpicture-word2">
+                <!-- -線段 -->
+                <div class="honeymoon-leftpicture-line"></div>
+                <!-- -小字 -->
+                <div class="honeymoon-leftpicture-title3">one day</div>
+                <!-- -線段 -->
+                <div class="honeymoon-leftpicture-line"></div>
+            </div>
+        </div>
+
+
+
+        <!-- > 右邊內容區 -->
+        <div class="honeymoon-content">
+            <!-- > 內容區塊1 -->
+            <div class="honeymoon-content-box">
+                <!-- -文字區塊 -->
+                <div class="honeymoon-wordbox">
+                    <!-- -主標 -->
+                    <p class="honeymoon-title">Yangmingshan Park</p>
+                    <!-- -副標 -->
+                    <p class="honeymoon-subtitle"></p>
+                </div>
+                <!-- -圖片區塊 -->
+                <div class="honeymoon-content-imagebox">
+                    <!-- -圖 -->
+                    <img class="honeymoon-content-image" src="../images/Honeymoon-image (1).png">
+                    <!-- -數字標示 -->
+                    <p class="honeymoon-content-image-p">01</p>
+                </div>
+                <!-- -介紹文字區塊 -->
+                <div class="honeymoon-content-introbox">
+                    <p class="honeymoon-content-intro">A stunning destination located just outside of the capital city
+                        Taipei. This mountain range offers breathtaking views of the surrounding landscape and is home to
+                        a variety of flora and fauna, including cherry blossoms, hot springs, and hiking trails. Our
+                        tour will take you on a scenic journey through the mountain and learn about the history and
+                        culture of the area.</p>
+                </div>
+            </div>
+
+            <!-- > 內容區線段 -->
+            <div class="honeymoon-content-line"></div>
+
+            <!-- > 內容區塊2 -->
+            <div class="honeymoon-content-box">
+                <!-- -文字區塊 -->
+                <div class="honeymoon-wordbox">
+                    <!-- -主標 -->
+                    <p class="honeymoon-title">Lunch</p>
+                    <!-- -副標 -->
+                    <p class="honeymoon-subtitle">Pine Garden Restaurant</p>
+                </div>
+                <!-- -圖片區塊 -->
+                <div class="honeymoon-content-imagebox">
+                    <!-- -圖 -->
+                    <img class="honeymoon-content-image" src="../images/Honeymoon-image (2).png">
+                    <!-- -數字標示 -->
+                    <p class="honeymoon-content-image-p">02</p>
+                </div>
+                <!-- -介紹文字區塊 -->
+                <div class="honeymoon-content-introbox">
+                    <p class="honeymoon-content-intro">A zen-inspired restaurant located in Yagmingshan Mountain that is
+                        perfect for relaxation and enjoyment of the food. Pine Garden restaurant serves the best
+                        Japanese and Taiwanese cuisine, which has been selected in the Michelin Guide recommended
+                        restaurant list.</p>
+                </div>
+            </div>
+
+            <!-- > 內容區線段 -->
+            <div class="honeymoon-content-line"></div>
+
+            <!-- > 內容區塊3 -->
+            <div class="honeymoon-content-box">
+                <!-- -文字區塊 -->
+                <div class="honeymoon-wordbox">
+                    <!-- -主標 -->
+                    <p class="honeymoon-title">Hot Spring</p>
+                    <!-- -副標 -->
+                    <p class="honeymoon-subtitle"></p>
+                </div>
+                <!-- -圖片區塊 -->
+                <div class="honeymoon-content-imagebox">
+                    <!-- -圖 -->
+                    <img class="honeymoon-content-image" src="../images/Honeymoon-image (3).png">
+                    <!-- -數字標示 -->
+                    <p class="honeymoon-content-image-p">03</p>
+                </div>
+                <!-- -介紹文字區塊 -->
+                <div class="honeymoon-content-introbox">
+                    <p class="honeymoon-content-intro">Step into a blissful retreat in the hot springs of The Gaia
+                        Hotel, nestled among the mountains of Beitou. Indulge your body, mind, and spirit in a private
+                        hot spring room with stunning views of the natural landscape.</p>
+                </div>
+            </div>
+
+            <!-- > 內容區線段 -->
+            <div class="honeymoon-content-line"></div>
+
+            <!-- > 內容區塊4 -->
+            <div class="honeymoon-content-box">
+                <!-- -文字區塊 -->
+                <div class="honeymoon-wordbox">
+                    <!-- -主標 -->
+                    <p class="honeymoon-title">Fly Sky Lantern</p>
+                    <!-- -副標 -->
+                    <p class="honeymoon-subtitle"></p>
+                </div>
+                <!-- -圖片區塊 -->
+                <div class="honeymoon-content-imagebox">
+                    <!-- -圖 -->
+                    <img class="honeymoon-content-image" src="../images/Honeymoon-image (4).png">
+                    <!-- -數字標示 -->
+                    <p class="honeymoon-content-image-p">04</p>
+                </div>
+                <!-- -介紹文字區塊 -->
+                <div class="honeymoon-content-introbox">
+                    <p class="honeymoon-content-intro">Pingxi, a charming small town located in the northeast of Taiwan,
+                        renowned for its annual Sky Lantern Festival, which draws crowds from all over the world.
+                        Formolux travel works with skilled local artisans to design a heart-shaped lantern exclusively
+                        for you and your loved one, allowing you to release your dreams into the sky together.</p>
+                </div>
+            </div>
+
+            <!-- > 內容區線段 -->
+            <div class="honeymoon-content-line"></div>
+
+            <!-- > 內容區塊5 -->
+            <div class="honeymoon-content-box">
+                <!-- -文字區塊 -->
+                <div class="honeymoon-wordbox">
+                    <!-- -主標 -->
+                    <p class="honeymoon-title">Taipei 101 Night View</p>
+                    <!-- -副標 -->
+                    <p class="honeymoon-subtitle"></p>
+                </div>
+                <!-- -圖片區塊 -->
+                <div class="honeymoon-content-imagebox">
+                    <!-- -圖 -->
+                    <img class="honeymoon-content-image" src="../images/Honeymoon-image (5).png">
+                    <!-- -數字標示 -->
+                    <p class="honeymoon-content-image-p">05</p>
+                </div>
+                <!-- -介紹文字區塊 -->
+                <div class="honeymoon-content-introbox">
+                    <p class="honeymoon-content-intro">Taipei 101 is an iconic landmark and one of the tallest buildings
+                        in the world. We will take you to the top of Taipei 101 to enjoy the breathtaking beauty of
+                        Taipei's skyline at night.</p>
+                </div>
+            </div>
+
+            <!-- > 內容區線段 -->
+            <div class="honeymoon-content-line"></div>
+
+            <!-- > 內容區塊6 -->
+            <div class="honeymoon-content-box">
+                <!-- -文字區塊 -->
+                <div class="honeymoon-wordbox">
+                    <!-- -主標 -->
+                    <p class="honeymoon-title">Dinner</p>
+                    <!-- -副標 -->
+                    <p class="honeymoon-subtitle">Sea to Sky seafood & bar</p>
+                </div>
+                <!-- -圖片區塊 -->
+                <div class="honeymoon-content-imagebox">
+                    <!-- -圖 -->
+                    <img class="honeymoon-content-image" src="../images/Honeymoon-image (6).png">
+                    <!-- -數字標示 -->
+                    <p class="honeymoon-content-image-p">06</p>
+                </div>
+                <!-- -介紹文字區塊 -->
+                <div class="honeymoon-content-introbox">
+                    <p class="honeymoon-content-intro">Let’s end the night in the fine dining restaurant “Sea to Sky
+                        seafood & bar.”We've collaborated with the restaurant to offer a special romantic dinner for
+                        you. Indulge in the freshest seafood with a glass of wine while enjoying the stunning views from
+                        the 47th floor.</p>
+                </div>
+            </div>
+
+            <!-- > 內容區線段 -->
+            <div class="honeymoon-content-line"></div>
+
+            <!-- > 內容區塊7 -->
+            <div class="honeymoon-content-box" id="honeymoon-content-box-7">
+                <!-- -文字區塊 -->
+                <div class="honeymoon-wordbox">
+                    <!-- -主標 -->
+                    <p class="honeymoon-title">Hotel</p>
+                    <!-- -副標 -->
+                    <p class="honeymoon-subtitle">Shangri-La Far Eastern</p>
+                </div>
+                <!-- -圖片區塊 -->
+                <div class="honeymoon-content-imagebox">
+                    <!-- -圖 -->
+                    <img class="honeymoon-content-image" src="../images/Honeymoon-image (7).png">
+                    <!-- -數字標示 -->
+                    <p class="honeymoon-content-image-p">07</p>
+                </div>
+                <!-- -介紹文字區塊 -->
+                <div class="honeymoon-content-introbox">
+                    <p class="honeymoon-content-intro">Enjoy your romantic night with panoramic views of the city in our
+                        five-star hotel “Shangri-La Far Eastern”.</p>
+                </div>
+            </div>
+
+            <!-- > 按鈕區 -->
+            <div class="honeymoon-btn-box">
+                <a href="#">
+                    <button id="honeymoon-btn">
+                        <span>See others</span>
+                        <svg width="156" height="58" viewBox="0 0 156 58" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M154.586 27.9763L154.584 27.9761L154.573 27.9748L154.525 27.9687C154.482 27.963 154.415 27.954 154.327 27.941C154.152 27.9151 153.89 27.8734 153.552 27.8114C152.878 27.6872 151.904 27.4815 150.718 27.1569C148.345 26.5072 145.134 25.384 141.781 23.492C135.088 19.7149 127.837 12.8816 125.537 0.583496L124.063 0.859256C126.463 13.6911 134.062 20.8578 141.044 24.7983C143.621 26.2525 146.114 27.2683 148.233 27.9714H0.5V29.4714H148.233C146.114 30.1744 143.621 31.1903 141.044 32.6445C134.062 36.5849 126.463 43.7516 124.063 56.5835L125.537 56.8593C127.837 44.5611 135.088 37.7278 141.781 33.9508C145.134 32.0588 148.345 30.9355 150.718 30.2859C151.904 29.9613 152.878 29.7555 153.552 29.6314C153.89 29.5693 154.152 29.5277 154.327 29.5017C154.415 29.4888 154.482 29.4797 154.525 29.4741L154.573 29.468L154.584 29.4667L154.586 29.4665L154.543 28.7214L154.585 27.9818L154.586 27.9763Z"
+                                fill="#000537" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M125.937 0L126.029 0.491478C128.296 12.6118 135.431 19.3339 142.027 23.0564C145.335 24.9236 148.507 26.0329 150.85 26.6745C152.021 26.995 152.981 27.1976 153.643 27.3195C153.974 27.3805 154.23 27.4212 154.4 27.4463C154.486 27.4588 154.549 27.4675 154.59 27.4728L154.633 27.4783L154.636 27.4787L154.643 27.4794L154.644 27.4796L155.136 27.5378L155.084 28.0228L155.044 28.7214L155.112 29.9071L154.645 29.9629L154.644 29.963L154.636 29.9639L154.633 29.9643L154.59 29.9698C154.567 29.9728 154.536 29.9769 154.498 29.9822C154.47 29.9862 154.437 29.9909 154.4 29.9963C154.23 30.0214 153.974 30.0621 153.643 30.123C152.981 30.2449 152.021 30.4476 150.85 30.768C148.507 31.4097 145.335 32.519 142.027 34.3861C135.431 38.1087 128.296 44.8308 126.029 56.9511L125.937 57.4426L123.479 56.983L123.571 56.4915C126.004 43.4817 133.719 36.2038 140.798 32.2089C142.399 31.3056 143.967 30.5695 145.435 29.9713H0V27.4713H145.435C143.967 26.873 142.399 26.137 140.798 25.2336C133.719 21.2388 126.004 13.9609 123.571 0.951077L123.479 0.459599L125.937 0ZM154.06 29.0367L154.042 28.7213L154.06 28.4058C153.899 28.3803 153.698 28.3465 153.462 28.303C152.775 28.1766 151.787 27.9678 150.586 27.6391C148.184 26.9814 144.932 25.8442 141.535 23.9273C134.836 20.1463 127.573 13.334 125.141 1.16622L124.649 1.25815C127.115 13.6041 134.493 20.5273 141.29 24.3627C143.833 25.7983 146.296 26.8019 148.391 27.4967L151.329 28.4713H1V28.9713H151.329L148.391 29.9458C146.296 30.6407 143.833 31.6442 141.29 33.0798C134.493 36.9153 127.115 43.8384 124.649 56.1844L125.141 56.2763C127.573 44.1085 134.836 37.2962 141.535 33.5152C144.932 31.5983 148.184 30.4612 150.586 29.8035C151.787 29.4747 152.775 29.266 153.462 29.1395C153.698 29.096 153.899 29.0623 154.06 29.0367Z"
+                                fill="#000537" />
+                        </svg>
+                    </button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ! 主內容3 (提示標語) -->
+    <div class="honeymoon-section3">
+        <p>&#10038; Click “CONTACT” below to customize this journey <br class="section3-break">to meet your special needs and desires</p>
+    </div>
+
+    <!-- >頁尾區 -->
+    <footer id="footerBar">
+        <!-- > 頁尾Logo -->
+        <h1 class="footerLogo">
+            <a href="index.html">
+                <img src="../images/footerlogo.png" alt="Logo">
+            </a>
+        </h1>
+        <!-- > 頁尾按鈕 -->
+        <nav>
+            <ul class="footerMenu">
+                <li><a href="#">TRAVEL STYLE</a></li>
+                <li><a href="#">ABOUT TAIWAN</a></li>
+                <li><a href="#">ABOUT US</a></li>
+                <li><a href="#">CONTACT</a></li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+
+</html>
