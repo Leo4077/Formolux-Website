@@ -455,7 +455,7 @@ footer {
 /* 整個按鈕區 */
 
 .menu>div {
-    background-image: url(./images/Hamburger_bg.jpg);
+    background-image: url(../images/Hamburger_bg.jpg);
     /* 圖片填滿背景 */
     background-size: cover;
     /* 縮放圖片依然置中 */
@@ -675,7 +675,7 @@ li:hover .line {
     /*改變背景圖片*/
     .menu>div {
         width: 100%;
-        background-image: url(./images/ipad-ham-BG.png);
+        background-image: url(../images/ipad-ham-BG.png);
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
@@ -919,7 +919,7 @@ li:hover .line {
     .menu>div {
         width: 100%;
         min-height: 100%;
-        background-image: url(./images/ipad-ham-BG.png);
+        background-image: url(../images/ipad-ham-BG.png);
         background-repeat: no-repeat;
         background-size: 135%;
         
