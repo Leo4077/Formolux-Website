@@ -506,8 +506,8 @@ body {
 
 /* > gif本體 */
 #scroll-gif {
-    height: 70px;
-    width: 100%;
+    height: 100px;
+    width: 100px;
     /* -圖片填滿背景 */
     object-fit: cover;
     /* -縮放圖片依然置中 */
@@ -1125,6 +1125,11 @@ body {
         white-space: nowrap;
 
         color: rgba(255, 252, 235, 0.6);
+    }
+
+    #scroll-gif {
+        width: 60px;
+        height: 60px;
     }
 
     /* > gif的說明文字(同電腦) */
