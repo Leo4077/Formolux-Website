@@ -270,3 +270,34 @@ function scrollEventHandler2(evt) {
 var bigContainer = document.querySelector('.big-container');
 bigContainer.addEventListener('mousewheel', scrollEventHandler, { passive: false });
 bigContainer.addEventListener('DOMMouseScroll', scrollEventHandler, { passive: false });
+
+
+var touchStartY;
+var touchEndY;
+
+bigContainer.addEventListener('touchstart', function(event) {
+    touchStartY = event.changedTouches[0].clientY;
+}, { passive: true });
+
+bigContainer.addEventListener('touchmove', function(event) {
+    touchEndY = event.changedTouches[0].clientY;
+    var deltaY = touchStartY - touchEndY;
+    var fakeEvent = { detail: { }, wheelDelta: 0, deltaY: 0 };
+
+    // 觸發偽滾輪事件
+    if(deltaY > 0) {
+        fakeEvent.wheelDelta = -120;
+        fakeEvent.deltaY = 1;
+    } else {
+        fakeEvent.wheelDelta = 120;
+        fakeEvent.deltaY = -1;
+    }
+    scrollEventHandler(fakeEvent);
+}, { passive: true });
+
+bigContainer.addEventListener('touchend', function(event) {
+    // 觸碰結束時重設觸碰點的 Y 坐標
+    touchStartY = 0;
+    touchEndY = 0;
+}, { passive: true });
+
