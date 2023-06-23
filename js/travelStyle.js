@@ -14,7 +14,7 @@ new Swiper("#swiper-2", {
   },
 });
 
-/*平板swiper*/
+/*手機swiper*/
 
 if (window.matchMedia("(max-width: 576.98px)").matches) {
   new Swiper("#swiper-2", {
@@ -34,142 +34,166 @@ if (window.matchMedia("(max-width: 576.98px)").matches) {
   });
 }
 
-/*桌機板:點選樣式改變*/
+/*點選卡牌的樣式變化*/
 
-var cardDetails = {
-  solo: {
+// 全局定義 details 對象
+var cardDetails = { // 桌機板的細節
+  desktop: { 
+    solo: {
     text1: "1 person",
     text2: "SOLO<br>TRAVEL",
     text3: "# spiritual # cultural # fineart",
     text4: "Experience a valuable travel that allows one to explore oneself, and grow.",
-    bg: "url('../images/soloBG.png')"
+    bg: "url('../images/soloBG.png')",
+    link: "../html/soloTravel.html" 
   },
   family: {
     text1: "3-6 people",
     text2: "FAMILY<br>TRAVEL",
     text3: "# hotAirBallon # deerPark #hiking",
     text4: "Sharing joy to strengthen familial bonds, interacting to deepen affections.",
-    bg: "url('../images/familyBG.png')"
+    bg: "url('../images/familyBG.png')",
+    link: "../html/familyTrip.html" 
   },
   besties: {
     text1: "2-4 people",
     text2: "BESTIES<br>TRIP",
     text3: "# spa # relaxing #photoshoot",
     text4: "Enjoying a luxurious trip with my best friend like a privileged lady, relaxing both mind and body.",
-    bg: "url('../images/besties_BG.png')"
+    bg: "url('../images/besties_BG.png')",
+    link: "../html/bestiesTrip.html"
   },
   honeymoonCard: {
     text1: "2 people",
     text2: "HONEY<br>MOON",
     text3: "# romantic # sweet # night view",
     text4: "Experience a luxurious and laid-back honeymoon trip, unwind and create unforgettable memories with your loved one.",
-    bg: "url('../images/travelstyle_BG.png')"
+    bg: "url('../images/travelstyle_BG.png')",
+    link: "../html/honeyMoon.html"
   },
+},  
+
+  tablet: { // 平板裝置的細節
+    solo: {
+      text1: "1 person",
+      text2: "SOLO TRAVEL",
+      text3: "# spiritual # cultural # fineart",
+      text4: "Experience a valuable travel that allows one to explore oneself, and grow.",
+      bg: "url('../images/ipad_solo_BG.png')",
+      link: "../html/soloTravel.html" 
+    },
+    family: {
+      text1: "3-6 people",
+      text2: "FAMILY TRIP",
+      text3: "# nature  # animals  # spring",
+      text4: "Sharing joy to strengthen familial bonds, interacting to deepen affections.",
+      bg: "url('../images/ipad_family_BG.png')",
+      link: "../html/familyTrip.html" 
+    },
+    besties: {
+      text1: "2-4 people",
+      text2: "BESTIES TRIP",
+      text3: "# spa # relaxing # photoshoot",
+      text4: "Enjoying a luxurious trip with my best friend like a privileged lady, relaxing both mind and body.",
+      bg: "url('../images/ipad_besties_BG.png')",
+      link: "../html/bestiesTrip.html"
+    },
+    honeymoonCard: {
+      text1: "2 people",
+      text2: "HONEY MOON",
+      text3: "# romantic # sweet # night view",
+      text4: "Experience a luxurious and laid-back honeymoon trip, unwind and create unforgettable memories with your loved one.",
+      bg: "url('../images/ipad_travelsty_BG.png')",
+      link: "../html/honeyMoon.html"
+    },
+  },   
+
+  mobile: { // 手機裝置的細節
+    solo: {
+      text1: "1 person",
+      text2: "SOLO TRAVEL",
+      text3: "# spiritual # cultural # fineart",
+      text4: "Experience a valuable travel that allows one to explore oneself, and grow.",
+      bg: "url('../images/phone_solo_BG.png')",
+      link: "../html/soloTravel.html" 
+    },
+    family: {
+      text1: "3-6 people",
+      text2: "FAMILY TRIP",
+      text3: "# nature  # animals  # spring",
+      text4: "Sharing joy to strengthen familial bonds, interacting to deepen affections.",
+      bg: "url('../images/phone_family_BG.png')",
+      link: "../html/familyTrip.html" 
+    },
+    besties: {
+      text1: "2-4 people",
+      text2: "BESTIES TRIP",
+      text3: "# spa # relaxing # photoshoot",
+      text4: "Enjoying a luxurious trip with my best friend like a privileged lady, relaxing both mind and body.",
+      bg: "url('../images/phone_besties_BG.png')",
+      link: "../html/bestiesTrip.html"
+    },
+    honeymoonCard: {
+      text1: "2 people",
+      text2: "HONEY MOON",
+      text3: "# romantic # sweet # night view",
+      text4: "Experience a luxurious and laid-back honeymoon trip, unwind and create unforgettable memories with your loved one.",
+      bg: "url('../images/phone_honeymoon_BG.png')",
+      link: "../html/honeyMoon.html"
+    },
+  }    
 };
 
+
+var details = cardDetails.desktop; // 初始化 details 對象為桌機板的細節
+var travelBG = document.querySelector("#slider-2")
+var learnMoreButton = document.querySelector(".more");
+
 document.addEventListener("DOMContentLoaded", function () {
-  var travelBG = document.querySelector("#slider-2");
 
-  // 為每一個 "a" 元素添加點擊事件監聽器
-  document.querySelectorAll("#swiper-2 a").forEach(function (el) {
-    el.addEventListener("click", function (event) {
-      event.preventDefault();
-
-      // 獲取對應的對象
-      var details = cardDetails[this.id];
-      if (!details) {
-        // 如果沒有找到對象，就直接返回
-        return;
-      }
-
-      // 更新背景圖片
-      travelBG.style.backgroundImage = details.bg;
-
-      // 更新其他元素的內容
-      document.getElementById("slider-text-1").textContent = details.text1;
-      document.getElementById("slider-text-2").innerHTML = details.text2;
-      document.getElementById("slider-text-3").textContent = details.text3;
-      document.getElementById("slider-text-4").textContent = details.text4;
-    });
-  });
-
-  /*平板:點選樣式改變*/
-  // 添加平板裝置的事件監聽器
-  function tabletDeviceHandler(event) {
+  function clickHandler(event) {
     event.preventDefault();
 
-    var details;
     var windowWidth = window.innerWidth;
 
-    // 根據裝置寬度選擇對應的卡片細節
-    if (windowWidth >= 577 && windowWidth <= 1024) {
-      // 平板裝置的卡片細節
-      details = {
-        solo: {
-          text1: "1 person",
-          text2: "SOLO TRAVEL",
-          text3: "# spiritual # cultural # fineart",
-          text4: "Experience a valuable travel that allows one to explore oneself, and grow.",
-          bg: "url('../images/ipad_solo_BG.png')"
-        },
-        family: {
-          text1: "3-6 people",
-          text2: "FAMILY TRIP",
-          text3: "# nature  # animals  # spring",
-          text4: "Sharing joy to strengthen familial bonds, interacting to deepen affections.",
-          bg: "url('../images/ipad_family_BG.png')"
-        },
-        besties: {
-          text1: "2-4 people",
-          text2: "BESTIES TRIP",
-          text3: "# spa # relaxing # photoshoot",
-          text4: "Enjoying a luxurious trip with my best friend like a privileged lady, relaxing both mind and body.",
-          bg: "url('../images/ipad_besties_BG.png')"
-        },
-        honeymoonCard: {
-          text1: "2 people",
-          text2: "HONEY MOON",
-          text3: "# romantic # sweet # night view",
-          text4: "Experience a luxurious and laid-back honeymoon trip, unwind and create unforgettable memories with your loved one.",
-          bg: "url('../images/ipad_travelsty_BG.png')"
-        },
-      };
+    // 根據視窗大小決定使用哪個版型的細節
+    if (windowWidth > 1024) {
+      details = cardDetails.desktop;
+    } else if (windowWidth <= 1024 && windowWidth > 576) {
+      details = cardDetails.tablet;
+    } else {
+      details = cardDetails.mobile;
+    }
 
-      // 更新背景圖片
-      travelBG.style.backgroundImage = details[this.id].bg;
-
-      // 更新其他元素的內容
-      document.getElementById("slider-text-1").textContent = details[this.id].text1;
-      document.getElementById("slider-text-2").innerHTML = details[this.id].text2;
-      document.getElementById("slider-text-3").textContent = details[this.id].text3;
-      document.getElementById("slider-text-4").textContent = details[this.id].text4;
+    // 使用對應版型的細節更新內容
+    var currentDetails = details[this.id];
+    if (currentDetails) {
+      travelBG.style.backgroundImage = currentDetails.bg;
+      document.getElementById("slider-text-1").textContent = currentDetails.text1;
+      document.getElementById("slider-text-2").innerHTML = currentDetails.text2;
+      document.getElementById("slider-text-3").textContent = currentDetails.text3;
+      document.getElementById("slider-text-4").textContent = currentDetails.text4;
+      learnMoreButton.href = currentDetails.link;
     }
   }
 
-  // 綁定平板裝置的點擊事件
+  // 為每個連結添加點擊事件監聽器
   document.querySelectorAll("#swiper-2 a").forEach(function (el) {
-    el.addEventListener("click", tabletDeviceHandler);
+    el.addEventListener("click", clickHandler);
   });
 
-  // 添加視窗大小變化時的事件監聽器，以便在平板裝置的寬度範圍內更新內容
+  // 為視窗大小變化添加事件監聽器
   window.addEventListener("resize", function () {
-    var windowWidth = window.innerWidth;
-    if (windowWidth >= 577 && windowWidth <= 1024) {
-      // 觸發平板裝置的點擊事件
-      var activeLink = document.querySelector("#swiper-2 a.active");
-      if (activeLink) {
-        activeLink.dispatchEvent(new Event("click"));
-      }
-    }
-  });
-
-  // 在頁面加載時觸發平板裝置的點擊事件
-  var initialWindowWidth = window.innerWidth;
-  if (initialWindowWidth >= 577 && initialWindowWidth <= 1024) {
     var activeLink = document.querySelector("#swiper-2 a.active");
     if (activeLink) {
       activeLink.dispatchEvent(new Event("click"));
     }
+  });
+
+  // 在頁面加載時觸發一次點擊事件
+  var activeLink = document.querySelector("#swiper-2 a.active");
+  if (activeLink) {
+    activeLink.dispatchEvent(new Event("click"));
   }
 });
 
