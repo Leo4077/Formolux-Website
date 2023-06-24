@@ -2,7 +2,13 @@
 let parallaxes;
 let scale, speed;
 
-if (window.matchMedia("(min-width: 577px) and (max-width: 1024.98px)").matches) {
+
+if (window.matchMedia("(max-width: 576.98px)").matches) {
+
+  parallaxes = document.querySelectorAll('.ipad_taiwanpic');
+  scale = 1.1;
+  speed = 1.3;
+} else if (window.matchMedia("(min-width: 577px) and (max-width: 1024.98px)").matches) {
 
   parallaxes = document.querySelectorAll('.ipad_taiwanpic');
   scale = 1.2;
