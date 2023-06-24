@@ -1,3 +1,47 @@
+//滾動至不同section
+
+
+let isFirstScroll = true;
+let hasVisitedSlider = false;
+let lastScrollY = 0;
+
+window.addEventListener('wheel', function(event) {
+  const scrollY = window.pageYOffset;
+  const slider = document.querySelector('#slider-2');
+  const pageStyle = document.querySelector('#pageStyle');
+
+  // 檢查我們是否在 #pageStyle 區域內
+  const isInPageStyle = scrollY >= pageStyle.offsetTop && scrollY < slider.offsetTop;
+
+  // 檢查滾動方向
+  const isScrollingUp = event.deltaY < 0;
+
+  if ((isFirstScroll && !isScrollingUp) || (isInPageStyle && !isScrollingUp)) {
+    // 不管滾動方向如何，只要滾動滾輪，且滾動方向為向下時，就會跳轉到 #slider-2
+    isFirstScroll = false;
+    hasVisitedSlider = true;
+    window.scrollTo({
+      top: slider.offsetTop,
+      behavior: 'smooth'
+    });
+  } else if (hasVisitedSlider && isScrollingUp && scrollY <= pageStyle.offsetHeight - 5) {
+    // 當用戶向上滾動並且到達 "#pageStyle" 區域的尾端10px處時，跳轉到頁面最頂端
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }
+
+  // 如果用戶已經回到頁面頂部，則重設變數以重新觸發滾動效果
+  if (scrollY === 0) {
+    isFirstScroll = true;
+    hasVisitedSlider = false;
+  }
+
+  // 儲存這次的滾動位置以供下次判斷滾動方向
+  lastScrollY = scrollY;
+});
+
 /*桌機板swiper*/
 new Swiper("#swiper-2", {
   slidesPerView: 3.6,
@@ -199,47 +243,5 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-//滾動至不同section
 
-
-let isFirstScroll = true;
-let hasVisitedSlider = false;
-let lastScrollY = 0;
-
-window.addEventListener('wheel', function(event) {
-  const scrollY = window.pageYOffset;
-  const slider = document.querySelector('#slider-2');
-  const pageStyle = document.querySelector('#pageStyle');
-
-  // 檢查我們是否在 #pageStyle 區域內
-  const isInPageStyle = scrollY >= pageStyle.offsetTop && scrollY < slider.offsetTop;
-
-  // 檢查滾動方向
-  const isScrollingUp = event.deltaY < 0;
-
-  if ((isFirstScroll && !isScrollingUp) || (isInPageStyle && !isScrollingUp)) {
-    // 不管滾動方向如何，只要滾動滾輪，且滾動方向為向下時，就會跳轉到 #slider-2
-    isFirstScroll = false;
-    hasVisitedSlider = true;
-    window.scrollTo({
-      top: slider.offsetTop,
-      behavior: 'smooth'
-    });
-  } else if (hasVisitedSlider && isScrollingUp && scrollY <= pageStyle.offsetHeight - 5) {
-    // 當用戶向上滾動並且到達 "#pageStyle" 區域的尾端10px處時，跳轉到頁面最頂端
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
-  }
-
-  // 如果用戶已經回到頁面頂部，則重設變數以重新觸發滾動效果
-  if (scrollY === 0) {
-    isFirstScroll = true;
-    hasVisitedSlider = false;
-  }
-
-  // 儲存這次的滾動位置以供下次判斷滾動方向
-  lastScrollY = scrollY;
-});
 
