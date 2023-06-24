@@ -162,7 +162,7 @@ document.addEventListener('DOMContentLoaded', function() {
             closeMessageBox();
             // 重置表單
             form.reset();
-        }, 15000);
+        }, 150000);
     });
 
     // 關閉訊息框和遮罩層的函數
