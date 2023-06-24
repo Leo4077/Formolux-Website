@@ -101,7 +101,7 @@ function handleZoomScroll(event) {
     } else if (windowWidth < 1200) {
         zoomSvg.style.transformOrigin = '58.67% 50.3%';  // -平板
     } else if (windowWidth < 1500) {
-        zoomSvg.style.transformOrigin = '58.71% 50%';  // -平板
+        zoomSvg.style.transformOrigin = '58.71% 50%';  // -小電腦
     }else {
         zoomSvg.style.transformOrigin = '58.685% 50%';  // -電腦
     }
@@ -117,6 +117,9 @@ function handleZoomScroll(event) {
         contentWrapper7.style.zIndex = 60;
     }
 }
+
+
+
 
 
 // ! 定義處理滾動事件的函數
@@ -270,3 +273,36 @@ function scrollEventHandler2(evt) {
 var bigContainer = document.querySelector('.big-container');
 bigContainer.addEventListener('mousewheel', scrollEventHandler, { passive: false });
 bigContainer.addEventListener('DOMMouseScroll', scrollEventHandler, { passive: false });
+
+
+
+
+
+// ! 手機板
+var touchStartY;
+var touchEndY;
+
+bigContainer.addEventListener('touchstart', function(event) {
+    touchStartY = event.changedTouches[0].clientY;
+}, { passive: true });
+
+bigContainer.addEventListener('touchmove', function(event) {
+    touchEndY = event.changedTouches[0].clientY;
+    var deltaY = touchStartY - touchEndY;
+    var fakeEvent = { detail: { }, wheelDelta: 0, deltaY: 0 };
+
+    // 觸發偽滾輪事件
+    // 注意我們現在根據 deltaY 的大小來決定滾動的速度，而不僅僅是滾動的方向
+    // 這可能會使滾動看起來更自然
+    if(deltaY > 0) {
+        fakeEvent.wheelDelta = -120 * deltaY;
+        fakeEvent.deltaY = deltaY;
+    } else {
+        fakeEvent.wheelDelta = 120 * Math.abs(deltaY);
+        fakeEvent.deltaY = deltaY;
+    }
+    scrollEventHandler(fakeEvent);
+}, { passive: true });
+
+
+
