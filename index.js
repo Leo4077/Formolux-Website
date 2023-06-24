@@ -144,7 +144,10 @@ function scrollEventHandler(evt) {
         // > 當縮放到一定程度時，開始滑動 <p> 標籤
         if (scale >= 220) {
             // > 每次滾動時，translateX 變化的固定量
+
+            // !
             let translatePercentage = 10;
+            
             let parentWidth = p1.parentElement.offsetWidth;
             const translateChange = (translatePercentage / 100) * parentWidth;
             // > 定義最大移動距離

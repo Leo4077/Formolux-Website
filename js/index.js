@@ -80,34 +80,37 @@ let stage = 'translate';
 
 let startY = 0;
 
-window.addEventListener('touchstart', function(event) {
+window.addEventListener('touchstart', function (event) {
     startY = event.touches[0].clientY;
 }, false);
 
-window.addEventListener('touchend', function(event) {
+window.addEventListener('touchend', function (event) {
     let endY = event.changedTouches[0].clientY;
-    let deltaY = startY - endY;
+    let deltaY = (startY - endY) / 100000;
 
-    handleZoomScroll({delta: deltaY});
+    handleZoomScroll({ delta: deltaY });
 }, false);
 
 // ! 定義處理縮放滾動星星事件的函數
 function handleZoomScroll(event) {
 /*     event.preventDefault();
  */    const delta = event.delta || Math.max(-1, Math.min(1, (event.wheelDelta || -event.detail)));
-    
+
 
     // > 在縮放時，確保 p1 和 p2 完全移動回原位
     if (translateX !== 0 && delta > 0) {
         return;
     }
 
+    // ?设备检测
+    let isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
     // > delta 前的數值影響每次滾動縮放的比例
     if (delta > 0) {
-        scale = Math.max(1, scale - 15 * delta);
+        scale = Math.max(1, scale - (isMobile ? 2 : 15) * delta);
     } else if (delta < 0 && scale < 250) {
         // > 当放大到指定比例后不再继续放大
-        scale = Math.min(250, scale - 15 * delta);
+        scale = Math.min(250, scale - (isMobile ? 2 : 15) * delta);
     }
 
     // > 取得視窗寬度
@@ -119,7 +122,7 @@ function handleZoomScroll(event) {
         zoomSvg.style.transformOrigin = '58.67% 50.3%';  // -平板
     } else if (windowWidth < 1500) {
         zoomSvg.style.transformOrigin = '58.71% 50%';  // -小電腦
-    }else {
+    } else {
         zoomSvg.style.transformOrigin = '58.685% 50%';  // -電腦
     }
     zoomSvg.style.transform = `scale(${scale})`;
@@ -161,7 +164,10 @@ function scrollEventHandler(evt) {
         // > 當縮放到一定程度時，開始滑動 <p> 標籤
         if (scale >= 220) {
             // > 每次滾動時，translateX 變化的固定量
-            let translatePercentage = 10;
+            // ? 设备检测
+            let isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+            // > 定義移動係數
+            let translatePercentage = isMobile ? 3 : 10;
             let parentWidth = p1.parentElement.offsetWidth;
             const translateChange = (translatePercentage / 100) * parentWidth;
             // > 定義最大移動距離
@@ -302,19 +308,19 @@ bigContainer.addEventListener('DOMMouseScroll', scrollEventHandler, { passive: f
 var touchStartY;
 var touchEndY;
 
-bigContainer.addEventListener('touchstart', function(event) {
+bigContainer.addEventListener('touchstart', function (event) {
     touchStartY = event.changedTouches[0].clientY;
 }, { passive: true });
 
-bigContainer.addEventListener('touchmove', function(event) {
+bigContainer.addEventListener('touchmove', function (event) {
     touchEndY = event.changedTouches[0].clientY;
     var deltaY = touchStartY - touchEndY;
-    var fakeEvent = { detail: { }, wheelDelta: 0, deltaY: 0 };
+    var fakeEvent = { detail: {}, wheelDelta: 0, deltaY: 0 };
 
     // 觸發偽滾輪事件
     // 注意我們現在根據 deltaY 的大小來決定滾動的速度，而不僅僅是滾動的方向
     // 這可能會使滾動看起來更自然
-    if(deltaY > 0) {
+    if (deltaY > 0) {
         fakeEvent.wheelDelta = -120 * deltaY;
         fakeEvent.deltaY = deltaY;
     } else {
