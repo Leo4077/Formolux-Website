@@ -168,7 +168,7 @@ function scrollEventHandler(evt) {
             // ? 设备检测
             let isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
             // > 定義移動係數
-            let translatePercentage = isMobile ? 3 : 10;
+            let translatePercentage = isMobile ? 1.5 : 10;
             let parentWidth = p1.parentElement.offsetWidth;
             const translateChange = (translatePercentage / 100) * parentWidth;
             // > 定義最大移動距離
