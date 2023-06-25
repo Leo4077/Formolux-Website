@@ -400,6 +400,31 @@ select {
     position: absolute;
     color: var(--main-darkBlue);
     font-size: 0.9rem;
+    letter-spacing: 0.48px;
+    top: 30px;
+    left: 5px;
+}
+
+ ::-webkit-input-placeholder { /* WebKit browsers */
+    position: absolute;
+    color: var(--main-darkBlue);
+    font-size: 0.9rem;
+    top: 30px;
+    left: 5px;
+}
+
+ ::-moz-placeholder { /* Mozilla Firefox 19+ */
+    position: absolute;
+    color: var(--main-darkBlue);
+    font-size: 0.9rem;
+    top: 30px;
+    left: 5px;
+}
+
+ :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    position: absolute;
+    color: var(--main-darkBlue);
+    font-size: 0.9rem;
     top: 30px;
     left: 5px;
 }
@@ -407,6 +432,7 @@ select {
 .form-field.msgbox label {
     z-index: 3;
 }
+
 
 
 /*平板: 細節處-表單欄位區*/
@@ -480,6 +506,7 @@ select {
 
     .floating-textarea::placeholder {
         font-size: 0.75rem;
+        padding-top: 5px;
     }
 
 }
@@ -554,6 +581,7 @@ select {
 
     .floating-textarea::placeholder {
         font-size: 0.75rem;
+        padding-top: 5px;
     }
 
 }
