@@ -5,7 +5,6 @@
     background-size: cover;
     background-position: center;
     display: flex;
-    /* flex-direction: column; */
     justify-content: center;
     align-items: center;
     position: relative;
@@ -16,14 +15,10 @@
 .bigcontainer {
 
     position: absolute;
-    /* margin: 0 auto; */
     width: 63%;
     height: 100vh;
     display: flex;
-    /* flex-direction: column; */
     justify-content: center;
-    /* gap: 7%; */
-    /* justify-content: center; */
     align-items: center;
     margin-bottom: 7.8%;
     margin-left: -3%;
@@ -34,8 +29,6 @@
     width: 100%;
     position: relative;
     z-index: 5;
-    /* margin-top: -%; */
-    /* transform: translate(1%,15%); */
 }
 
 #titleBanner2,
@@ -43,54 +36,22 @@
     display: none;
 }
 
-
-/* .banner_word{ 
-    background-color: aquamarine;    */
-/* display: block;
-    position: relative;
-    z-index: 5;
-    margin-bottom: 15%;
-    /* width: 70%; */
-/* width: 1214px; */
-/*font-family: var(--main-font);
-    font-weight: 400;
-    font-size: 1.5rem;
-    line-height: 1.75rem;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    letter-spacing: 0.04em;
-    color:var(--main-yellow);
-    /* transform: translate(4%,-63%); */
-/* transform: translateY(-150%);    */
-/* text-shadow: 0px 4px 35px rgba(0, 0, 0, 0.3), 2px 2px 18px rgba(0, 5, 55, 0.4); 
-} */
-
-
-
 /* 滑鼠滾輪gif */
 
 .scroll-downs-container {
     position: relative;
-    /* z-index: 5; */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* margin-top: 3.2%; */
     margin-bottom: -33%;
     width: 6%;
-    /* width: 115px;
-    height: 123px; */
-    /* justify-content: space-between; */
-    /* transform: translateX(-1%); */
+
 }
 
 
 #scroller {
-    /* background-color: #000537; */
-    /* object-fit: cover; */
-    /* height: 90px; */
+
     width: 80%;
     height: 80%;
 
@@ -103,13 +64,11 @@
     font-style: normal;
     font-weight: 700;
     font-size: max(0.8vw, 0.2rem);
-    /* font-size: 0.875rem; */
     line-height: 1rem;
     letter-spacing: 0.065em;
     color: white;
     margin-top: .4rem;
     white-space: nowrap;
-    /* margin-right: 10%; */
 
 }
 
@@ -475,9 +434,7 @@
 @media (max-width:576.98px) {
     #aboutTaiwan01 {
         height: 74.53vh;
-
     }
-
 
     .bigcontainer {
         width: 87.2%;
@@ -504,7 +461,7 @@
         height: 70vh;
     }
 
-    /*手機花花區(尚未用)*/
+    /*手機花花區*/
 
     #flower1 {
 
@@ -675,21 +632,15 @@
 /*全部的圖片加文字的區域*/
 
 #allContainer {
-    /* position: relative; */
     margin-top: 140px;
     height: auto;
-    /* background-color: rgb(228, 20, 20); */
-
 }
 
 /* 資訊欄區域，包含圖片*/
 .taiwan_item {
-    /* background-color: blue; */
     display: flex;
     align-items: center;
     height: 35vh;
-    /* justify-content: center; */
-    /* height: 23.75em; */
     margin-bottom: 14.8vh;
 
 }
@@ -702,11 +653,10 @@
 
 /* 視差圖片 */
 .parallaximg {
-    /* background-color: aqua; */
+
     width: 46.5%;
     height: 100%;
     border-radius: 25px 25px 0px 0px;
-    /* object-fit: cover; */
     overflow: hidden;
     position: relative;
     /* 為了讓內部圖片可進行絕對定位 */
@@ -731,7 +681,6 @@
 
 /*僅不包含視差圖片的資訊區*/
 .textarea {
-    /* background-color: antiquewhite; */
     width: 45%;
     margin-left: 8%;
     display: flex;
@@ -756,7 +705,6 @@
     display: inline-block;
     margin-top: 0.5rem;
     margin-bottom: 1.75rem;
-    /* background-color: rgb(2, 33, 23); */
 
 }
 
@@ -769,9 +717,6 @@
     line-height: 82px;
     letter-spacing: 0.02em;
     color: #000537;
-
-    /* border-left: 3px solid #000537;
-    border-right: 3px solid #000537; */
 
 }
 
@@ -805,7 +750,6 @@
 
 .taiwanpic.smoove.budda {
     width: 100%;
-    /* height: 100%; */
     height: 100%;
 }
 
@@ -1086,7 +1030,6 @@
 
 /* 按鈕字樣 */
 #about-taiwanbtn span {
-    /* background-color: crimson; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1162,11 +1105,9 @@
 
 /* arrow */
 #about-taiwanbtn-img {
-    /*background-color: blue;*/
     position: absolute;
     /* 初始位置 */
     left: 70%;
-    /* margin-left: 5rem; */
     animation: imgback 0.3s forwards;
     /* 慢速開始 */
     transition-timing-function: ease-in;
@@ -1675,11 +1616,11 @@
 
 
 /* ! RWD 頁首玻璃擬態 (-576) */
-.glass-morphism{
+.glass-morphism {
     display: none;
 }
 
-@media (max-width: 576.98px){ 
+@media (max-width: 576.98px) {
     .glass-morphism {
         position: absolute;
         display: flex;
@@ -1690,4 +1631,4 @@
         background: linear-gradient(89deg, rgba(255, 255, 255, 0.30) 8.85%, rgba(255, 255, 255, 0.18) 100%);
         backdrop-filter: blur(3px);
     }
-} 
+}

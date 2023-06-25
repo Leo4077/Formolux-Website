@@ -1,3 +1,25 @@
+// > 預先載入
+var imagesToPreload = [
+  '../images/soloBG.png',
+  '../images/familyBG.png',
+  '../images/besties_BG.png',
+  '../images/travelstyle_BG.png',
+  '../images/ipad_solo_BG.png',
+  '../images/ipad_family_BG.png',
+  '../images/ipad_besties_BG.png',
+  '../images/ipad_travelsty_BG.png',
+  '../images/phone_solo_BG.png',
+  '../images/phone_family_BG.png',
+  '../images/phone_besties_BG.png',
+  '../images/phone_honeymoon_BG.png'
+  
+];
+
+imagesToPreload.forEach(function(src) {
+  var img = new Image();
+  img.src = src;
+});
+
 //滾動至不同section
 
 

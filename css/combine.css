@@ -135,7 +135,7 @@ footer {
 .menu-wrap .hamburger>div {
     position: relative;
     flex: none;
-    width: 100%;
+    width: 80%;
     height: 2px;
     background: #fff;
     display: flex;
@@ -151,7 +151,7 @@ footer {
     content: '';
     position: absolute;
     z-index: 1;
-    top: -10px;
+    top: -12px;
     width: 100%;
     height: 2px;
     background: inherit;
@@ -159,7 +159,7 @@ footer {
 
 /* Moves Line Down */
 .menu-wrap .hamburger>div::after {
-    top: 10px;
+    top: 12px;
 }
 
 /* Toggler Animation */
@@ -206,11 +206,22 @@ footer {
     /* Hamburger Line */
     .menu-wrap .hamburger>div {
         position: relative;
-        width: 60%;
+        width: 40%;
         /*三條線在圓圈中的比例*/
         height: 2px;
     }
 
+    /*改變第一條線離上面的距離*/
+
+    .menu-wrap .hamburger>div::before {
+        top: -8px;
+    }
+
+    /*第三條線*/
+
+    .menu-wrap .hamburger>div::after {
+        top: 8px;
+    }
 
 }
 
@@ -347,24 +358,6 @@ footer {
 }
 
 
-/*Logo字樣*/
-/* .menu-wrap .menu>div>div .menu_logo {
-    position: fixed;
-    top: 55px;
-    left: 60px;
-    /* transform: translateX(-50%); */
-    /* background-color: aqua; */
-/*} */
-
-/* .menu_logo h1 {
-    font-family: 'DM Serif Display';
-    font-style: normal;
-    font-size: 2.25rem;
-    letter-spacing: 0.13em;
-    color: #000537;
-
-} */
-
 /*小筆電: 下拉menu選單上半部樣式*/
 
 @media (min-width: 1025px) and (max-width: 1440px) {
@@ -378,20 +371,6 @@ footer {
         letter-spacing: 0.2em;
     }
 
-    /*Logo字樣*/
-    /* .menu-wrap .menu>div>div .menu_logo { 
-        position: fixed;
-        top: 50px;
-        left: 50px;
-        
-    } */
-
-    /* .menu-wrap .menu>div>div .menu_logo h1 {
-        font-size: 1.8rem;
-        letter-spacing: 0.13em;
-
-    } */
-
 }
 
 /*平板: 下拉menu選單上半部樣式*/
@@ -404,15 +383,6 @@ footer {
         /*隱藏*/
     }
 
-
-
-    /*Logo字樣*/
-    /* .menu_logo h1 {
-
-        font-size: 1.25rem;
-        line-height: 1.68rem;
-        letter-spacing: 0.13em;
-    } */
 }
 
 
@@ -455,9 +425,8 @@ footer {
 /* 整個按鈕區 */
 
 .menu>div {
-    /*transform: translateZ(0); 硬件加速，解決背景閃爍*/
-/*     z-index: 10;
- */    background-image: url(../images/Hamburger_bg.jpg);
+
+    background-image: url(../images/Hamburger_bg.jpg);
     /* 圖片填滿背景 */
     background-size: cover;
     /* 縮放圖片依然置中 */
@@ -483,7 +452,6 @@ footer {
     padding-left: 20px;
     padding-right: 120px;
     /*讓整個框框置中感*/
-    /* background-color: #000537; */
 }
 
 /*整個框框按鈕的區域*/
@@ -601,11 +569,6 @@ li:hover a.hambtn>* {
     }
 }
 
-/* @keyframes hamback{
-    0% { transform: translateY(5%)}
-    100%{transform: translateY(0%)}
-} */
-
 
 .line {
     padding-top: 28px;
@@ -646,7 +609,6 @@ li:hover .line {
 }
 
 
-
 /*玻璃擬態*/
 .menu-wrap .menu>div>div>ul>li:hover {
     background-image: linear-gradient(to bottom, #47BFD9 8.15%, rgba(255, 252, 235, 0.02) 86.87%);
@@ -682,7 +644,7 @@ li:hover .line {
         background-size: cover;
         background-position: center;
 
-        transition: background-image 0.5s;
+        transition: background-image 0.5s ease-in-out;
         /*延長0.5s*/
         /* animation: moveUp 2s 1s both ease-in-out; */
 
@@ -755,7 +717,6 @@ li:hover .line {
     .textboxx .fadeText {
         font-size: 1.75rem;
         position: relative;
-        /* display: block; */
         padding-left: 19%;
         animation: fadeUpIn 1.5s both ease-in-out;
     }
@@ -798,14 +759,12 @@ li:hover .line {
 
     .menu-wrap .menu>div>div>ul>li:hover {
         background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.02) 8.15%, #47BFD9 86.87%);
-        transition: background-image 0.5s;
-        /*延長0.5s*/
+
     }
 
     .menu-wrap .menu>div>div>ul>li:checked {
         background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.02) 8.15%, #47BFD9 86.87%);
-        transition: background-image 0.5s;
-        /*延長0.5s*/
+
     }
 
     /*hover後的文字位置改變*/
@@ -865,7 +824,6 @@ li:hover .line {
 
 
     .icon {
-        /* background-color: #47BFD9; */
 
         display: flex;
         justify-content: space-between;
@@ -925,10 +883,8 @@ li:hover .line {
         background-repeat: no-repeat;
         background-size: 135%;
         
-        
         transition: background-image 0.65s;
-        /*延長0.5s*/
-        /* animation: moveUp 2s 1s both ease-in-out; */
+
 
     }
 
@@ -957,7 +913,7 @@ li:hover .line {
 
         width: 89%;
         height: 58%;
-        /* background-color: bisque; */
+        
         align-items: center;
         justify-content: center;
         flex-direction: column;
@@ -1023,14 +979,12 @@ li:hover .line {
         width: 72.6%;
         display: flex;
         position: relative;
-        /* background-color: #47BFD9; */
 
     }
 
     .textboxx .fadeText {
         font-size: 1rem;
         position: relative;
-        /* display: block; */
         padding-left: 29%;
         animation: fadeUpIn 1.5s both ease-in-out;
     }
@@ -1147,7 +1101,6 @@ li:hover .line {
 
 
     .icon {
-        /* background-color: #47BFD9; */
 
         display: flex;
         justify-content: space-between;
