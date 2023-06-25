@@ -90,9 +90,12 @@ window.addEventListener('touchend', function (event) {
 
 // ! 定義處理縮放滾動星星事件的函數
 function handleZoomScroll(event) {
-    event.preventDefault();
-    const delta = event.delta || Math.max(-1, Math.min(1, (event.wheelDelta || -event.detail)));
+/*     event.preventDefault();
+ */    const delta = event.delta || Math.max(-1, Math.min(1, (event.wheelDelta || -event.detail)));
 
+    if (ticking) {  // 如果頁面滾動動畫正在播放，則不進行星星放大或縮小
+        return;
+    }
 
     // > 在縮放時，確保 p1 和 p2 完全移動回原位
     if (translateX !== 0 && delta > 0) {
@@ -176,6 +179,10 @@ function scrollEventHandler(evt) {
                 console.log(top);
                 console.log('isAtTop', isAtTop);
 
+                translateX = Math.max(0, translateX - translateChange);
+                p1.style.transform = `translateX(${translateX}px)`;
+                p2.style.transform = `translateX(${-translateX}px)`;
+/* 
                 // ! 向上滾動
                 // > 檢查是否已經滾動到頂部
 
@@ -193,9 +200,9 @@ function scrollEventHandler(evt) {
                         translateX = Math.max(0, translateX - translateChange);
                         p1.style.transform = `translateX(${translateX}px)`;
                         p2.style.transform = `translateX(${-translateX}px)`;
-                    }
+                    } */
                     // ? 如果物件不位於 top=100vh 的位置 且滾動到頂時
-                } else if (isAtTop && parseInt(top, 10) === 0) {
+              /*   } else */ if (isAtTop && parseInt(top, 10) === 0) {
                     // > 將 top 樣式設為 "100"，將物件移動到下面
                     whyChoose.style.top = "100vh";
                     // > 將 position 設為 fixed
