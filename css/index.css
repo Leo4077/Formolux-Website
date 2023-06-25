@@ -1288,20 +1288,22 @@ body {
 
 
 
-/* ! RWD 頁首玻璃擬態 (-1050) */
-.glass-morphism{
+
+/* ! RWD 頁首玻璃擬態 (all) */
+.glass-morphism {
+    position: absolute;
     display: none;
+    top: 0px;
+    width: 100%;
+    height: 160px;
+    z-index: -1;
+    background: linear-gradient(89deg, rgba(255, 255, 255, 0.30) 8.85%, rgba(255, 255, 255, 0.18) 100%);
+    backdrop-filter: blur(3px);
 }
 
-@media (max-width: 1024.98px){ 
-    .glass-morphism {
-        position: absolute;
-        display: flex;
-        top: 0px;
-        width: 100%;
+/* ! 平板 577-1024 (頁首) */
+@media (max-width: 1024.98px) {
+    .glass-morphism{
         height: 100px;
-        z-index: -1;
-        background: linear-gradient(89deg, rgba(255, 255, 255, 0.30) 8.85%, rgba(255, 255, 255, 0.18) 100%);
-        backdrop-filter: blur(3px);
     }
-} 
+}

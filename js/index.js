@@ -146,6 +146,7 @@ function handleZoomScroll(event) {
 function scrollEventHandler(evt) {
     var delta = evt.wheelDelta || -evt.detail;
     var whyChoose = document.querySelector('.why-choose');
+    var glassMorphism = document.querySelector('.glass-morphism');
 
     var style = window.getComputedStyle(whyChoose);
     var top = style.getPropertyValue('top');
@@ -233,6 +234,10 @@ function scrollEventHandler(evt) {
 
                     // > .whyChoose 正常捲動
                     whyChoose.scrollTop -= evt.deltaY;
+
+                    // > 玻璃擬態顯示
+                    glassMorphism.style.display = 'flex';
+                    console.log('玻璃擬態顯示')
                 }
                 // > 其他的情況，比如滾輪向上滾動或者 scale < 120
                 // > p1p2正常位移
