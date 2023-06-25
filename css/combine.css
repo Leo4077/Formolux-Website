@@ -456,8 +456,8 @@ footer {
 
 .menu>div {
     /*transform: translateZ(0); 硬件加速，解決背景閃爍*/
-    z-index: 10;
-    background-image: url(../images/Hamburger_bg.jpg);
+/*     z-index: 10;
+ */    background-image: url(../images/Hamburger_bg.jpg);
     /* 圖片填滿背景 */
     background-size: cover;
     /* 縮放圖片依然置中 */
