@@ -74,12 +74,9 @@ let translateX = 0;
 let translateY = 0;
 // > 初始階段設定為位移
 let stage = 'translate';
-
-
-
-
 let startY = 0;
 
+// > 將觸控事件的參數模擬為滾動參數  
 window.addEventListener('touchstart', function (event) {
     startY = event.touches[0].clientY;
 }, false);
@@ -93,8 +90,8 @@ window.addEventListener('touchend', function (event) {
 
 // ! 定義處理縮放滾動星星事件的函數
 function handleZoomScroll(event) {
-/*     event.preventDefault();
- */    const delta = event.delta || Math.max(-1, Math.min(1, (event.wheelDelta || -event.detail)));
+    event.preventDefault();
+    const delta = event.delta || Math.max(-1, Math.min(1, (event.wheelDelta || -event.detail)));
 
 
     // > 在縮放時，確保 p1 和 p2 完全移動回原位
