@@ -15,7 +15,6 @@ html {
 .styleFront {
   width: 62%;
   min-width: 920px;
-  /* height: auto; */
   display: flex;
   justify-content: center;
   padding-top: 4.2%;
@@ -277,7 +276,6 @@ html {
 /* 第二部分Travel style卡片區 */
 
 .sumtext {
-  /* background-color: aqua; */
 
   margin: 8% 2% 3% 6%;
   width: 22%;
@@ -353,7 +351,6 @@ html {
   font-weight: 400;
   font-size: max(1.4vw, 1.12rem);
   letter-spacing: 0.075em;
-  /* border: 2px solid var(--main-blue); */
   padding: 3% 8%;
   /*用padding去撐*/
   background-color: var(--main-blue);
@@ -422,18 +419,14 @@ html {
   }
 
   .sumtext {
-    /* background-color: aqua; */
-    display: inline-block;
 
+    display: inline-block;
     margin: 0;
     padding-bottom: 5vh;
     margin-left: 30%;
     width: 56.8%;
     display: flex;
     flex-wrap: wrap;
-
-    /* transform: translateY(-5vh); */
-
 
   }
 
@@ -495,7 +488,7 @@ html {
   /*左右按鈕鍵*/
 
   .swiper-custom-nav {
-    /* background-color: aquamarine; */
+
     position: absolute;
     display: flex;
     margin-left: 65%;
@@ -619,7 +612,6 @@ html {
   /*左右按鈕鍵*/
 
   .swiper-custom-nav {
-    /* background-color: aquamarine; */
     position: absolute;
     display: flex;
     margin-left: 50%;
@@ -642,6 +634,4 @@ html {
     height: 100%;
     margin-left: 9.5px;
   }
-
-
 }

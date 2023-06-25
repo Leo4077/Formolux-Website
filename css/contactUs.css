@@ -1,12 +1,11 @@
 #contactUs1 {
-    
+
     display: flex;
     justify-content: center;
 
 }
 
 .contactBanner {
-    /* background-color: aqua; */
 
     display: flex;
     justify-content: center;
@@ -22,7 +21,7 @@
 }
 
 /* 手機板標題隱藏 */
-.phoneBanner{
+.phoneBanner {
     display: none;
 }
 
@@ -49,10 +48,12 @@
         margin-left: 4.6%;
         margin-bottom: 2.5%;
     }
-    .desktopBanner{
+
+    .desktopBanner {
         display: none;
     }
-    .phoneBanner{
+
+    .phoneBanner {
         display: block;
         width: 100%;
         height: auto;
@@ -64,11 +65,9 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
     align-items: center;
     width: 100%;
     height: 1651px;
-    /* background-color: rgb(236, 138, 19); */
     background-image: url(../images/contactBG.png);
     background-size: cover;
     background-position: center;
@@ -83,7 +82,6 @@
     align-items: center;
     justify-content: center;
     border-radius: 45px 45px 0px 0px;
-    /* margin-right: 20px; */
     transform: translateY(8%);
     width: 70%;
     height: 1051px;
@@ -141,16 +139,17 @@
         animation: backUp 2s both ease-in-out;
     }
 
-    @keyframes backUp{
-        0%{
+    @keyframes backUp {
+        0% {
             background-position-y: -100px;
         }
-        100%{
+
+        100% {
             background-position-y: 0px;
         }
     }
 
-    .blurContainer{
+    .blurContainer {
         height: 1396px;
         width: 88.5%;
         transform: translateY(2.6%);
@@ -163,7 +162,7 @@
         0% {
             bottom: -4%;
         }
-    
+
         100% {
             bottom: 0%;
         }
@@ -180,11 +179,12 @@
         border-radius: 15px 15px 0px 0px;
     }
 
-    @keyframes backUp{
-        0%{
+    @keyframes backUp {
+        0% {
             background-position-y: -20px;
         }
-        100%{
+
+        100% {
             background-position-y: 0px;
         }
     }
@@ -193,7 +193,7 @@
         border-radius: 15px 15px 0px 0px;
     }
 
-    .blurContainer{
+    .blurContainer {
         height: 1313px;
         width: 84.73%;
         border-radius: 15px 15px 0px 0px;
@@ -207,7 +207,7 @@
         0% {
             bottom: -2%;
         }
-    
+
         100% {
             bottom: 0%;
         }
@@ -217,10 +217,7 @@
 
 /*表單區*/
 #message_form {
-    /* background-color: rgb(0, 13, 255); */
-    
-    /* display: flex;
-    align-items: center; */
+
     width: 73%;
     height: 800px;
     z-index: 8;
@@ -228,17 +225,14 @@
 }
 
 .form-container {
-    /* background-color: rgb(250, 215, 241); */
-    /* display: flex;
-    flex-wrap: wrap; */
+
     display: inline-grid;
-    grid-template-columns: 1fr 1fr; 
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
     row-gap: 0px;
     column-gap: 90px;
-    /* gap: 110px; */
     width: 100%;
-    
+
 }
 
 /*平板: 表單欄位區*/
@@ -247,13 +241,10 @@
     #message_form {
         width: 61%;
         height: 1396px;
-        /* background-color: #000537; */
-        /* transform: translateY(-8%); */
-        
+
     }
 
     .form-container {
-        /* background-color: aqua; */
         height: 100%;
         display: flex;
         flex-direction: column;
@@ -269,13 +260,10 @@
     #message_form {
         width: 71.1%;
         height: 1313px;
-        /* background-color: #000537; */
-        /* transform: translateY(-8%); */
-        
+
     }
 
     .form-container {
-        /* background-color: aqua; */
         height: 100%;
         display: flex;
         flex-direction: column;
@@ -289,26 +277,24 @@
 
 
 .form-field {
-    /* background-color: #666; */
+
     position: relative;
     padding-top: 10px;
-    /* margin-bottom:20px; */
-    /* gap: 110px;  */
+
 }
 
 .form-field label {
     position: absolute;
-    left:5px;
-    top:5px;
+    left: 5px;
+    top: 5px;
     pointer-events: none;
     transition: 0.3s ease all;
-    /* transform: translateY(24px); */
     font-family: var(--main-font);
     font-size: 1.25rem;
     color: var(--main-darkBlue);
-    transition:0.3s ease all; 
-    -moz-transition:0.3s ease all; 
-    -webkit-transition:0.3s ease all;
+    transition: 0.3s ease all;
+    -moz-transition: 0.3s ease all;
+    -webkit-transition: 0.3s ease all;
 }
 
 
@@ -318,32 +304,28 @@
 /*文字輸入框*/
 .form-field select,
 .form-field input,
-.form-field textarea { 
+.form-field textarea {
     height: 39px;
     width: 100%;
     padding: 0px;
     border: none;
     border-bottom: 1.35px solid #000537;
     background: transparent;
-    outline:none;
+    outline: none;
     font-family: var(--main-font);
 }
 
-input, textarea, select{
+input,
+textarea,
+select {
     font-family: var(--main-font);
     font-size: 1.25rem;
 }
-.form-field select{
+
+.form-field select {
     height: 22px;
 
-} 
-
-/*不顯示預設的年/月/日文字*/
-/* input[type="date"]:in-range::-webkit-datetime-edit-year-field, 
-input[type="date"]:in-range::-webkit-datetime-edit-month-field, 
-input[type="date"]:in-range::-webkit-datetime-edit-day-field, 
-input[type="date"]:in-range::-webkit-datetime-edit-text { 	
-color: transparent; } */
+}
 
 
 /*讓有required屬性的欄位float*/
@@ -389,7 +371,7 @@ color: transparent; } */
 .floating-select:not([value=""]):valid~label {
     font-family: var(--main-font);
     top: -10px;
-    font-size:1.25rem;
+    font-size: 1.25rem;
     color: var(--main-darkBlue);
 }
 
@@ -400,15 +382,14 @@ color: transparent; } */
     max-height: 300px;
     overflow: hidden;
     overflow-x: hidden;
-    line-height: 1.5;  
-    padding: 15px 0px;  
+    line-height: 1.5;
+    padding: 15px 0px;
 }
 
 
 .form-field.msgbox {
     grid-column: 1 / span 2;
-    /* background-color: #53ceff; */
-    
+
 }
 
 
@@ -416,15 +397,15 @@ color: transparent; } */
 
 /*改變placeholder的位置*/
 .floating-textarea::placeholder {
-    position: absolute;  
+    position: absolute;
     color: var(--main-darkBlue);
     font-size: 0.9rem;
-    top: 30px;  
+    top: 30px;
     left: 5px;
 }
 
 .form-field.msgbox label {
-    z-index: 3;  
+    z-index: 3;
 }
 
 
@@ -434,6 +415,7 @@ color: transparent; } */
     .form-field {
         padding-top: 0px;
     }
+
     .form-field label {
         font-size: 1.125rem;
     }
@@ -442,20 +424,22 @@ color: transparent; } */
 
     .form-field select,
     .form-field input,
-    .form-field textarea { 
+    .form-field textarea {
 
-        height:29px;
+        height: 29px;
         border-bottom: 1.23px solid #000537;
 
     }
 
-    .form-field select{
+    .form-field select {
         height: 20px;
-    
-    } 
 
-    input, textarea, select{
-        
+    }
+
+    input,
+    textarea,
+    select {
+
         font-size: 1.125rem;
     }
 
@@ -464,26 +448,25 @@ color: transparent; } */
         font-size: 1.125rem;
 
     }
-    
 
 
-    .floating-textarea{
+
+    .floating-textarea {
         min-height: 100px;
-        /* max-height: 100px; */
     }
 
     .floating-input:focus~label,
     .floating-input:not(:placeholder-shown)~label {
-        
+
         top: -15px;
-        font-size:  1.125rem;
+        font-size: 1.125rem;
 
     }
 
     .floating-select:focus~label,
     .floating-select:not([value=""]):valid~label {
         top: -15px;
-        font-size:1.125rem;
+        font-size: 1.125rem;
 
     }
 
@@ -506,6 +489,7 @@ color: transparent; } */
     .form-field {
         padding-top: 0px;
     }
+
     .form-field label {
         font-size: 1.125rem;
     }
@@ -514,20 +498,22 @@ color: transparent; } */
 
     .form-field select,
     .form-field input,
-    .form-field textarea { 
+    .form-field textarea {
 
-        height:29px;
+        height: 29px;
         border-bottom: 1.23px solid #000537;
 
     }
 
-    .form-field select{
+    .form-field select {
         height: 20px;
-    
-    } 
 
-    input, textarea, select{
-        
+    }
+
+    input,
+    textarea,
+    select {
+
         font-size: 1.125rem;
     }
 
@@ -536,26 +522,25 @@ color: transparent; } */
         font-size: 1.125rem;
 
     }
-    
 
 
-    .floating-textarea{
+
+    .floating-textarea {
         min-height: 100px;
-        /* max-height: 100px; */
     }
 
     .floating-input:focus~label,
     .floating-input:not(:placeholder-shown)~label {
-        
+
         top: -15px;
-        font-size:  1.125rem;
+        font-size: 1.125rem;
 
     }
 
     .floating-select:focus~label,
     .floating-select:not([value=""]):valid~label {
         top: -15px;
-        font-size:1.125rem;
+        font-size: 1.125rem;
 
     }
 
@@ -582,22 +567,21 @@ color: transparent; } */
     align-self: end;
     display: flex;
     align-items: center;
-    justify-content: center; 
+    justify-content: center;
     grid-column: 1 / span 2;
     cursor: pointer;
     height: 100px;
     border: none;
     background-color: var(--main-darkBlue);
-    /* border: 2px solid var(--main-darkBlue); */
     /* 沒hover時變色回來 */
     animation: colorChangeback 0.3s ease-in;
 
 }
-.sendcontainer{
-    /* background-color: aquamarine; */
+
+.sendcontainer {
     display: flex;
     justify-content: space-between;
-    width:194.25px;
+    width: 194.25px;
 }
 
 /*平板: 送出按鈕大小變化*/
@@ -623,9 +607,7 @@ color: transparent; } */
 
 /* hover按鈕樣式 */
 #taiwan-travelbtn:hover {
-    /* display: flex;
-    align-items: center;
-    justify-content: center; */
+
     cursor: pointer;
     height: 100px;
     /* border: 2px solid var(--main-blue); */
@@ -790,7 +772,7 @@ color: transparent; } */
     }
 
     100% {
-        background-color:var(--main-blue);
+        background-color: var(--main-blue);
         /* 顏色B */
     }
 }
@@ -839,6 +821,18 @@ color: transparent; } */
 
         }
     }
+
+    @keyframes imgback {
+        0% {
+            transform: translate(27em, 0);
+        }
+
+        100% {
+            transform: translate(0, 0);
+
+        }
+    }
+
 }
 
 /*小筆電(1023-1439): 送出按鈕hover後的變化*/
@@ -849,7 +843,8 @@ color: transparent; } */
     }
 
     #taiwan-travelbtn img {
-        width: 35%; /*箭頭縮小*/
+        width: 35%;
+        /*箭頭縮小*/
     }
 
     /*按鈕hover後出現的字，往左邊移動的距離*/
@@ -867,7 +862,8 @@ color: transparent; } */
 
     /* hover arrow */
     #taiwan-travelbtn:hover img {
-        width: 35%; /*箭頭縮小*/
+        width: 35%;
+        /*箭頭縮小*/
         animation: imggo 0.3s forwards;
 
     }
@@ -883,6 +879,18 @@ color: transparent; } */
 
         }
     }
+
+    @keyframes imgback {
+        0% {
+            transform: translate(23em, 0);
+        }
+
+        100% {
+            transform: translate(0, 0);
+
+        }
+    }
+
 }
 
 /*平板: 送出按鈕hover後的變化*/
@@ -893,13 +901,17 @@ color: transparent; } */
     }
 
     #taiwan-travelbtn span {
-        transform: translateX(40%); /*send字樣距離改變*/
-        font-size: 1.25rem; }
+        transform: translateX(40%);
+        /*send字樣距離改變*/
+        font-size: 1.25rem;
+    }
 
     #taiwan-travelbtn img {
-        margin-left:30%; /*與send隔的距離*/
+        margin-left: 30%;
+        /*與send隔的距離*/
         align-self: center;
-        width: 41%; /*箭頭縮小*/
+        width: 41%;
+        /*箭頭縮小*/
     }
 
     /*按鈕hover後出現的字，往左邊移動的距離*/
@@ -933,6 +945,18 @@ color: transparent; } */
 
         }
     }
+
+    @keyframes imgback {
+        0% {
+            transform: translate(15em, 0);
+        }
+
+        100% {
+            transform: translate(0, 0);
+
+        }
+    }
+
 }
 
 /*手機: 送出按鈕的變化*/
@@ -992,20 +1016,22 @@ color: transparent; } */
 
 /* 用戶提交表單後出現的畫面 */
 
- /* 遮罩層樣式 */
- .overlay { 
+/* 遮罩層樣式 */
+.overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.8); /* 半透明黑色背景 */
+    background-color: rgba(0, 0, 0, 0.8);
+    /* 半透明黑色背景 */
     z-index: 9999;
-    display: none; /* 隱藏 */
-  }
+    display: none;
+    /* 隱藏 */
+}
 
-  /* 彈出框樣式 */
-  .message-box {
+/* 彈出框樣式 */
+.message-box {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1020,10 +1046,11 @@ color: transparent; } */
     background-image: url(../images/sendbox.png);
     padding: 0 2% 2% 4.5%;
     z-index: 10000;
-    display: none; /* 隱藏 */
+    display: none;
+    /* 隱藏 */
 }
 
-.contenter{
+.contenter {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -1035,8 +1062,8 @@ color: transparent; } */
     margin-bottom: -3%;
 }
 
-.message-text h2::before{
-    content:'Got it!';
+.message-text h2::before {
+    content: 'Got it!';
     position: absolute;
     font-family: 'Tangerine';
     color: var(--main-blue);
@@ -1048,10 +1075,11 @@ color: transparent; } */
     left: 5%;
     top: 50px;
     z-index: -1;
-    
+
 }
-.message-text h2{
-    
+
+.message-text h2 {
+
     font-family: var(--second-font);
     font-style: normal;
     font-weight: 400;
@@ -1061,7 +1089,7 @@ color: transparent; } */
 
 }
 
-.message-text p{
+.message-text p {
     font-family: var(--main-font);
     font-style: normal;
     font-weight: 400;
@@ -1076,7 +1104,7 @@ color: transparent; } */
 
 
 /*勾勾SVG*/
-.checkani{
+.checkani {
     /* background-color: brown; */
     margin-bottom: 7%;
 }
@@ -1148,163 +1176,167 @@ color: transparent; } */
 }
 
 @media (min-width: 577px) and (max-width:1024px) {
-     /* 遮罩層樣式 */
- .overlay { 
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8); /* 半透明黑色背景 */
-    z-index: 9999;
-    display: none; /* 隱藏 */
-  }
 
-  /* 彈出框樣式 */
-  .message-box {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width:261px;
-    height: 343px;
-    border-radius: 35px 35px 0 0;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-image: url(../images/tablet_msgboxBG.png);
-    padding: 0;
-    z-index: 10000;
-    display: none; /* 隱藏 */
-}
-
-.contenter{
-    display: flex;
-    flex-direction: column-reverse;
-    justify-content: center;
-    align-items: center;
-    width: 69.3%;
-}
-
-.message-text {
-    color: var(--main-darkBlue);
-    margin-bottom: -3%;
-}
-
-.message-text h2::before{
-    content:'Got it!';
-    position: absolute;
-    font-family: 'Tangerine';
-    color: var(--main-blue);
-    font-style: normal;
-    font-weight: 400;
-    font-size: 6.38rem;
-    line-height: 102px;
-    letter-spacing: -0.005em;
-    left: 5%;
-    top: 50px;
-    z-index: -1;
-    
-}
-.message-text h2{
-    
-    font-family: var(--second-font);
-    font-style: normal;
-    font-weight: 400;
-    font-size: 2.31rem;
-    line-height: 62px;
-    letter-spacing: 0.02em;
-
-}
-
-.message-text p{
-    font-family: var(--main-font);
-    font-style: normal;
-    font-weight: 400;
-    font-size: 0.92rem;
-    line-height: 125.49%;
-    letter-spacing: 0.02em;
-    margin-top: 1%;
-    transform: translateX(1%);
-    z-index: 10002;
-}
-
-
-
-/*勾勾SVG*/
-.checkani{
-    /* background-color: brown; */
-    transform: translateY(-80%);
-
-}
-
-
-@keyframes outline {
-    from {
-        stroke-dasharray: 0, 345.576px;
+    /* 遮罩層樣式 */
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        /* 半透明黑色背景 */
+        z-index: 9999;
+        display: none;
+        /* 隱藏 */
     }
 
-    to {
-        stroke-dasharray: 345.576px, 345.576px;
+    /* 彈出框樣式 */
+    .message-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 261px;
+        height: 343px;
+        border-radius: 35px 35px 0 0;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-image: url(../images/tablet_msgboxBG.png);
+        padding: 0;
+        z-index: 10000;
+        display: none;
+        /* 隱藏 */
     }
-}
 
-#outline {
-    animation: 0.38s ease-in outline;
-    transform: rotate(0deg);
-    transform-origin: center;
-}
-
-@keyframes circle {
-    from {
-        transform: scale(1);
+    .contenter {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        width: 69.3%;
     }
 
-    to {
-        transform: scale(0);
+    .message-text {
+        color: var(--main-darkBlue);
+        margin-bottom: -3%;
     }
-}
 
-#white-circle {
-    animation: 0.35s ease-in 0.35s forwards circle;
-    transform: none;
-    transform-origin: center;
-}
+    .message-text h2::before {
+        content: 'Got it!';
+        position: absolute;
+        font-family: 'Tangerine';
+        color: var(--main-blue);
+        font-style: normal;
+        font-weight: 400;
+        font-size: 6.38rem;
+        line-height: 102px;
+        letter-spacing: -0.005em;
+        left: 5%;
+        top: 50px;
+        z-index: -1;
 
-@keyframes check {
-    from {
+    }
+
+    .message-text h2 {
+
+        font-family: var(--second-font);
+        font-style: normal;
+        font-weight: 400;
+        font-size: 2.31rem;
+        line-height: 62px;
+        letter-spacing: 0.02em;
+
+    }
+
+    .message-text p {
+        font-family: var(--main-font);
+        font-style: normal;
+        font-weight: 400;
+        font-size: 0.92rem;
+        line-height: 125.49%;
+        letter-spacing: 0.02em;
+        margin-top: 1%;
+        transform: translateX(1%);
+        z-index: 10002;
+    }
+
+
+
+    /*勾勾SVG*/
+    .checkani {
+        transform: translateY(-80%);
+
+    }
+
+
+    @keyframes outline {
+        from {
+            stroke-dasharray: 0, 345.576px;
+        }
+
+        to {
+            stroke-dasharray: 345.576px, 345.576px;
+        }
+    }
+
+    #outline {
+        animation: 0.38s ease-in outline;
+        transform: rotate(0deg);
+        transform-origin: center;
+    }
+
+    @keyframes circle {
+        from {
+            transform: scale(1);
+        }
+
+        to {
+            transform: scale(0);
+        }
+    }
+
+    #white-circle {
+        animation: 0.35s ease-in 0.35s forwards circle;
+        transform: none;
+        transform-origin: center;
+    }
+
+    @keyframes check {
+        from {
+            stroke-dasharray: 0, 75px;
+        }
+
+        to {
+            stroke-dasharray: 75px, 75px;
+        }
+    }
+
+    #check {
+        animation: 0.34s cubic-bezier(0.65, 0, 1, 1) 0.8s forwards check;
         stroke-dasharray: 0, 75px;
     }
 
-    to {
-        stroke-dasharray: 75px, 75px;
-    }
-}
+    @keyframes check-group {
+        from {
+            transform: scale(1);
+        }
 
-#check {
-    animation: 0.34s cubic-bezier(0.65, 0, 1, 1) 0.8s forwards check;
-    stroke-dasharray: 0, 75px;
-}
+        50% {
+            transform: scale(1.09);
+        }
 
-@keyframes check-group {
-    from {
-        transform: scale(1);
-    }
-
-    50% {
-        transform: scale(1.09);
+        to {
+            transform: scale(1);
+        }
     }
 
-    to {
-        transform: scale(1);
+    #check-group {
+        animation: 0.32s ease-in-out 1.03s check-group;
+        transform-origin: center;
     }
-}
-
-#check-group {
-    animation: 0.32s ease-in-out 1.03s check-group;
-    transform-origin: center;
-}
 }
 
 /*按鈕區域*/
@@ -1327,17 +1359,17 @@ color: transparent; } */
     height: auto;
     display: flex;
     flex-direction: column;
-    justify-content:center;
+    justify-content: center;
     align-items: flex-end;
     margin: 0 0 2% 2%;
     /* left: 0; */
     /* display: flex;
     flex-direction: column; */
-    
+
 
 }
 
-.getintouch{
+.getintouch {
     align-self: flex-start;
     width: 90%;
 }
@@ -1389,7 +1421,7 @@ color: transparent; } */
 
 
 
-.intouch p{
+.intouch p {
     /* position: absolute; */
     display: block;
     padding-left: 26.5%;
@@ -1405,7 +1437,8 @@ color: transparent; } */
     color: var(--main-darkBlue);
     /* top: 235px;
     left: 153px; */
-    white-space: nowrap; /*不換行*/
+    white-space: nowrap;
+    /*不換行*/
 
 }
 
@@ -1417,16 +1450,17 @@ color: transparent; } */
 .touchText img {
     width: 100%;
 } */
-.flowerbox{
+.flowerbox {
     /* background-color: aqua; */
     display: flex;
-    
+
     /* justify-content: space-evenly; */
-    width:47%;
-   padding-left: 1%;
-    
-    
+    width: 47%;
+    padding-left: 1%;
+
+
 }
+
 .flowersvg {
     width: 100%;
     /* height: 100%; */
@@ -1442,7 +1476,7 @@ color: transparent; } */
 .flower-FB {
     position: relative;
     opacity: .9;
-    width:81%;
+    width: 81%;
     /* height: 15rem; */
     display: block;
     overflow: hidden;
@@ -1472,7 +1506,7 @@ color: transparent; } */
     margin-right: 30px; */
 }
 
-.emailbtn{
+.emailbtn {
     cursor: pointer;
 }
 
@@ -1483,62 +1517,59 @@ color: transparent; } */
         height: 348px;
         /* height: 40vh; */
         flex-direction: column;
-        
+
 
     }
+
     .intouch {
         width: 69%;
         height: auto;
         display: flex;
-        flex-direction:row;
+        flex-direction: row;
         /* justify-content:space-evenly; */
-        align-items:end;
+        align-items: end;
         margin: 0 0 -24px 0;
-        
+
 
     }
 
-    .getintouch{
+    .getintouch {
         display: flex;
         width: 260px;
     }
 
-    .intouch p{
+    .intouch p {
         /* position: absolute; */
         display: block;
         padding: 0 0 1% 27px;
-        width:43%;
+        width: 43%;
         height: auto;
-    
+
         font-size: 0.75rem;
-        line-height:0.94rem;
+        line-height: 0.94rem;
         letter-spacing: 2%;
-        
+
         /* top: 235px;
         left: 153px; */
-        
-    
+
+
     }
 
-    .flowerbox{
+    .flowerbox {
 
         display: flex;
-        width:69%;
+        width: 69%;
         padding-left: 0;
-        
-        
+
+
     }
 
     .flowersvg {
         width: 100%;
-        /* height: 100%; */
-        /* background-color: #000537; */
-        /* margin-left: 1%; */
         display: flex;
         align-items: center;
         justify-content: center;
-        /* overflow: hidden; */
-    
+
     }
 
 }
@@ -1548,74 +1579,63 @@ color: transparent; } */
 @media (max-width:576.98px) {
     .btnBar {
         height: 300px;
-        /* height: 40vh; */
         flex-direction: column;
-        justify-content:start;
+        justify-content: start;
         align-items: center;
-        
+
 
     }
+
     .intouch {
         width: 60.8%;
-        
+
         display: flex;
-        flex-direction:column;
-        /* justify-content:space-evenly; */
-        align-items:center;
+        flex-direction: column;
+        align-items: center;
         margin: 2vh 0 14px 0;
-        
+
 
     }
 
-    .getintouch{
+    .getintouch {
         display: flex;
         width: 190px;
         align-self: center;
 
     }
 
-    .intouch p{
-        /* position: absolute; */
+    .intouch p {
+
         display: block;
-        /* padding: 0 0 1% 27px; */
-        /* width:43%; */
         height: auto;
-    
+
         font-size: 0.81rem;
-        line-height:0.94rem;
+        line-height: 0.94rem;
         letter-spacing: 2%;
         padding-left: 0;
         text-align: center;
         margin-bottom: 14px;
-        
-        /* top: 235px;
-        left: 153px; */
-        
-    
+
     }
 
-    .flowerbox{
+    .flowerbox {
 
         display: flex;
-        width:84.5%;
+        width: 84.5%;
         max-height: 98px;
         margin-bottom: 53px;
         padding-left: 0;
-        
-        
+
+
     }
 
     .flowersvg {
         width: 100%;
         height: 98px;
-        /* height: 100%; */
-        /* background-color: #000537; */
-        /* margin-left: 1%; */
         display: flex;
         align-items: center;
         justify-content: center;
-        /* overflow: hidden; */
-    
+
     }
 
     .flower-FB {
@@ -1632,11 +1652,11 @@ color: transparent; } */
 }
 
 /* ! RWD 頁首玻璃擬態 (-576) */
-.glass-morphism{
+.glass-morphism {
     display: none;
 }
 
-@media (max-width: 576.98px){ 
+@media (max-width: 576.98px) {
     .glass-morphism {
         position: absolute;
         display: flex;
@@ -1647,4 +1667,4 @@ color: transparent; } */
         background: linear-gradient(89deg, rgba(255, 255, 255, 0.30) 8.85%, rgba(255, 255, 255, 0.18) 100%);
         backdrop-filter: blur(3px);
     }
-} 
+}
