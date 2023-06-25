@@ -574,7 +574,7 @@ figcaption p{
 
 }
 
-/*手機:下半部分(尚未修改)*/
+/*手 機:下半部分(尚未修改)*/
 @media (max-width:577.98px) {
   #slider-2{
     height: 83.21vh;
@@ -600,9 +600,9 @@ figcaption p{
     top:121px;
 
     margin: 0;
-    padding-bottom:5vh;
+    padding-bottom:4.5vh;
     margin-left: 0;
-    width: 76%;
+    width: 79.8%;
     display: flex;
     flex-wrap: wrap;
 
@@ -610,6 +610,7 @@ figcaption p{
   .smallStar{
     width: 9%;
     margin-left: 0;
+    margin-top: 2%;
     
   }
 
@@ -620,7 +621,7 @@ figcaption p{
     font-size: 1rem;
     line-height: 1.15rem;
     letter-spacing: 7.5%;
-    margin:4% 40% 4% 4.6%;
+    margin:4% 40% 5% 5.5%;
     
   
   }
@@ -641,17 +642,18 @@ figcaption p{
     font-size: 1rem;
     line-height: 1.56rem;
     letter-spacing: 0.015em;
-    margin:3.6% 0 3.6% 1.4%;
+    margin:3.3% 0 3.3% 1.4%;
     
   }
 
   /*段落小字*/
   .sumtext p{
-    font-size: 0.88rem;
+    width: 100%;
+    font-size: 0.812rem;
     line-height: 1.125rem;
-    letter-spacing: 0.02em;
+    letter-spacing: 0.01625rem;
     color:#FFFFFF;
-    margin-bottom: 4.8%;
+    margin-bottom: 7.9%;
     margin-left: 1.4%;
 
   }
@@ -659,8 +661,8 @@ figcaption p{
   /* learn more按鈕樣式 */
   .more{        
 
-    font-size:  1.05rem;
-    padding:2% 3.5%; /*用padding去撐*/
+    font-size:  1.02rem;
+    padding:3.2% 5.5%; /*用padding去撐*/
   }
 
   /*左右按鈕鍵*/
@@ -669,10 +671,10 @@ figcaption p{
       /* background-color: aquamarine; */
       position: absolute;
       display: flex;
-      margin-left: 65%;
-      margin-bottom: 5vh;
+      margin-left: 50%;
+      margin-bottom: 4.2vh;
       cursor: pointer;
-      width: 10%;
+      width: 19%;
       z-index: 5;
   }
   
@@ -680,13 +682,13 @@ figcaption p{
     position: relative;
     width: 50%;
     height: 100%;
-    margin-right: 20px;
+    margin-right: 9.5px;
   }
   #stylenav-right{
     position: relative;
     width: 50%;
     height: 100%;
-    margin-left: 20px;
+    margin-left: 9.5px;
   }
 
 

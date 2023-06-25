@@ -720,7 +720,7 @@ color: transparent; } */
     /*background-color: blue;*/
     /* position: absolute; */
     /* 初始位置 */
-    /* left: 70%; */
+    /* left: 75%; */
     z-index: 2;
     animation: imgback 0.5s forwards;
     /* 慢速開始 */
@@ -752,7 +752,7 @@ color: transparent; } */
 
 @keyframes imgback {
     0% {
-        transform: translate(100%, 0);
+        transform: translate(30em, 0);
     }
 
     100% {
