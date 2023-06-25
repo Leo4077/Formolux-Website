@@ -455,6 +455,7 @@ footer {
 /* 整個按鈕區 */
 
 .menu>div {
+    transform: translateZ(0); /*硬件加速，解決背景閃爍*/
     background-image: url(../images/Hamburger_bg.jpg);
     /* 圖片填滿背景 */
     background-size: cover;
