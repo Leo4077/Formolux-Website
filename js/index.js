@@ -239,9 +239,7 @@ function scrollEventHandler(evt) {
                     // > .whyChoose 正常捲動
                     whyChoose.scrollTop -= evt.deltaY;
 
-                    // > 玻璃擬態顯示
-                    glassMorphism.style.display = 'flex';
-                    console.log('玻璃擬態顯示')
+                    console.log('whyChoose.scrollTop', whyChoose.scrollTop)
                 }
                 // > 其他的情況，比如滾輪向上滾動或者 scale < 120
                 // > p1p2正常位移
@@ -275,30 +273,33 @@ function scrollEventHandler(evt) {
 
 
 
-// > 在這裡處理 why-choose 的滾動事件
-function scrollEventHandler2(evt) {
-    console.log('scrollEventHandler2 called');
+// 初始化 whyChooseDelta 和 readyToMove
+var whyChooseDelta = 0;
+var readyToMove = false;
 
+// 監聽 wheel 事件來獲取滾動方向
+window.addEventListener('wheel', function (evt) {
     var whyChoose = document.querySelector('.why-choose');
-    var homepageContent = document.querySelector('#homepage-content');
+    var glassMorphism = document.querySelector('.glass-morphism');
 
-    whyChoose.addEventListener('scroll', function (evt) {
+    whyChooseDelta = evt.wheelDelta || -evt.detail;
 
-        if (homepageContent.scrollTop === 0) {
-            // > 將 top 樣式設為 "100"，將物件移動到下面
+    if (window.pageYOffset < 1 && whyChooseDelta > 0) {
+        if (readyToMove) {
+            // 如果 readyToMove 為 true，則移動元素並重置 readyToMove
             whyChoose.style.top = "100vh";
-            // > 將 position 設為 fixed
             whyChoose.style.position = "fixed";
-
-
+            readyToMove = false;
         } else {
-            // > .whyChoose 正常捲動
-            console.log('正常捲動')
-            whyChoose.scrollTop -= evt.deltaY;
+            // 如果 readyToMove 為 false，則設置 readyToMove 為 true
+            readyToMove = true;
         }
-    });
-}
-
+    } else if (window.pageYOffset >= 1) {
+        glassMorphism.style.display = 'flex';
+    } else {
+        glassMorphism.style.display = 'none';
+    }
+});
 
 
 
@@ -326,9 +327,9 @@ bigContainer.addEventListener('touchmove', function (event) {
     var deltaY = touchStartY - touchEndY;
     var fakeEvent = { detail: {}, wheelDelta: 0, deltaY: 0 };
 
-    // 觸發偽滾輪事件
-    // 注意我們現在根據 deltaY 的大小來決定滾動的速度，而不僅僅是滾動的方向
-    // 這可能會使滾動看起來更自然
+    // -觸發偽滾輪事件
+    // -根據 deltaY 的大小來決定滾動的速度，而不僅僅是滾動的方向
+    // -使滾動看起來更自然
     if (deltaY > 0) {
         fakeEvent.wheelDelta = -120 * deltaY;
         fakeEvent.deltaY = deltaY;
