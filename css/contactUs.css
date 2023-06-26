@@ -650,10 +650,10 @@ select {
 /* 按鈕字樣 */
 #taiwan-travelbtn span {
     /* background-color: crimson; */
-    /* display: flex; */
-    /* align-items: center; */
-    /* justify-content: center; */
-    /* padding-right: 3rem; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 2rem;
     font-size: 1.8rem;
     font-family: var(--second-font);
     font-style: normal;
@@ -670,8 +670,9 @@ select {
 /* hover按鈕字樣 */
 #taiwan-travelbtn:hover span {
     /* 製造殘影效果 */
-    transform: translateX(-10px);
+    /* transform: translateX(-10px); */
     position: absolute;
+    text-align: center;
     z-index: 2;
     /*     display: none; */
     animation: btnout 0.3s forwards;
@@ -681,8 +682,8 @@ select {
 
 /* 偽元素hover前 */
 #taiwan-travelbtn:before {
-    /* display: flex; */
-    transform: translateX(-10px);
+    display: flex;
+    /* transform: translateX(-10px); */
     position: absolute;
     z-index: 1;
     content: "An Unforgettable Journey Awaits You!";
@@ -705,8 +706,8 @@ select {
 /* 偽元素hover後 */
 #taiwan-travelbtn:hover:before {
     /* display: flex; */
-    transform: translateX(-10px);
-    position: absolute;
+    /* transform: translateX(-10px); */
+    
     z-index: 2;
     content: "An Unforgettable Journey Awaits You!";
     font-size: 1.8rem;
@@ -728,9 +729,10 @@ select {
 /* arrow */
 #taiwan-travelbtn-img {
     /*background-color: blue;*/
-    /* position: absolute; */
+    position: absolute;
+    align-self: center;
     /* 初始位置 */
-    /* left: 75%; */
+    left: 52%;
     z-index: 2;
     animation: imgback 0.5s forwards;
     /* 慢速開始 */
@@ -739,9 +741,10 @@ select {
 
 /* hover arrow */
 #taiwan-travelbtn:hover img {
-    /* position: absolute; */
+    position: absolute;
+    align-self: center;
     /* 初始位置 */
-    /* left: 75%; */
+    left: 52%;
     z-index: 2;
     animation: imggo 0.5s forwards;
     /* 慢速開始 */
