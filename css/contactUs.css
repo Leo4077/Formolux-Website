@@ -432,6 +432,10 @@ select {
     left: 5px;
 }
 
+.ios .floating-textarea::placeholder{
+    display: none;
+}
+
 .form-field.msgbox label {
     z-index: 3;
 }

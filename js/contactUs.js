@@ -196,3 +196,7 @@ window.addEventListener('scroll', function () {
         console.log('玻璃擬態不顯示');
     }
 });
+
+if (/iPad|iPhone|iPod/.test(navigator.platform) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1)) {
+    document.documentElement.className += " ios";
+}
