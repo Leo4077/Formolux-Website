@@ -295,7 +295,7 @@ function scrollEventHandler2(evt) {
 }
 
 
-
+// > 玻璃擬態 下滾才出現
 window.addEventListener('scroll', function () {
     var header1 = document.querySelector('.header1');
     var whyChoose = document.querySelector('.why-choose');
