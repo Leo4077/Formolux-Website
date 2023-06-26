@@ -270,49 +270,41 @@ function scrollEventHandler(evt) {
 }
 
 
-// > 在這裡處理 why-choose 的滾動事件
-function scrollEventHandler2(evt) {
-    console.log('scrollEventHandler2 called');
 
+
+
+// > 初始化 whyChooseDelta
+var whyChooseDelta = 0;
+
+// > 監聽 wheel 事件來獲取滾動方向
+window.addEventListener('wheel', function (evt) {
+    whyChooseDelta = evt.wheelDelta || -evt.detail;
+});
+
+// > 玻璃擬態 滾動才顯示
+window.addEventListener('scroll', function () {
     var whyChoose = document.querySelector('.why-choose');
-    var homepageContent = document.querySelector('#homepage-content');
+    var glassMorphism = document.querySelector('.glass-morphism');
 
-    whyChoose.addEventListener('scroll', function (evt) {
+    console.log('偵測執行')
+    console.log('whyChoose.scrollTop', whyChoose.scrollTop)
+    console.log('window.pageYOffset', window.pageYOffset)
 
-        if (homepageContent.scrollTop === 0) {
+    if (window.pageYOffset >= 10) {
+        glassMorphism.style.display = 'flex';
+        console.log('玻璃擬態顯示Z')
+    } else {
+        glassMorphism.style.display = 'none';
+        console.log('玻璃擬態不顯示')
+        if (whyChooseDelta > 0) {
+            console.log('whyChooseDelta>0')
             // > 將 top 樣式設為 "100"，將物件移動到下面
             whyChoose.style.top = "100vh";
             // > 將 position 設為 fixed
             whyChoose.style.position = "fixed";
-
-
-        } else {
-            // > .whyChoose 正常捲動
-            console.log('正常捲動')
-            whyChoose.scrollTop -= evt.deltaY;
         }
-    });
-}
-
-
-
-window.addEventListener('scroll', function () {
-    var header1 = document.querySelector('.header1');
-    var whyChoose = document.querySelector('.why-choose');
-    var glassMorphism = document.querySelector('.glass-morphism');
-
-    var headerTop = header1.getBoundingClientRect().top;
-    var whyChooseTop = whyChoose.getBoundingClientRect().top;
-
-    if (headerTop >= whyChooseTop && window.pageYOffset > 0) {
-        glassMorphism.style.display = 'flex';
-        console.log('玻璃擬態顯示');
-    } else {
-        glassMorphism.style.display = 'none';
-        console.log('玻璃擬態不顯示');
     }
 });
-
 
 
 
@@ -322,6 +314,9 @@ window.addEventListener('scroll', function () {
 var bigContainer = document.querySelector('.big-container');
 bigContainer.addEventListener('mousewheel', scrollEventHandler, { passive: false });
 bigContainer.addEventListener('DOMMouseScroll', scrollEventHandler, { passive: false });
+
+
+
 
 
 // ! 手機板
