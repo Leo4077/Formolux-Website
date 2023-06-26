@@ -371,7 +371,7 @@ body {
     position: absolute;
     z-index: 4;
 
-    top: 28%;
+    top: 30%;
     justify-content: center;
     align-items: center;
 }
@@ -379,7 +379,7 @@ body {
 /* > 星星 */
 .zoom-svg {
     position: absolute;
-    top: 28%;
+    top: 30%;
 /*     transform-origin: 50% 60%; */
 }
 
@@ -571,7 +571,7 @@ body {
 /* > 下左中花 */
 #svg-flower-LM {
     top: 50vh;
-    left: 22%;
+    left: 20%;
     position: absolute;
 }
 
@@ -585,7 +585,7 @@ body {
 /* > 下右右花 */
 #svg-flower-RR {
     top: 57vh;
-    right: 16%;
+    right: 11%;
     position: absolute;
 }
 
@@ -609,8 +609,8 @@ body {
 
 /* > 上右花 */
 #svg-flower-right-up {
-    top: 34vh;
-    right: 18%;
+    top: 36vh;
+    right: 14%;
     position: absolute;
 }
 

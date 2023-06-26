@@ -90,10 +90,11 @@ window.addEventListener('touchend', function (event) {
 
 // ! 定義處理縮放滾動星星事件的函數
 function handleZoomScroll(event) {
-/*     event.preventDefault();
- */    const delta = event.delta || Math.max(-1, Math.min(1, (event.wheelDelta || -event.detail)));
-
-    if (ticking) {  // 如果頁面滾動動畫正在播放，則不進行星星放大或縮小
+    /*     event.preventDefault(); */
+    const delta = event.delta || Math.max(-1, Math.min(1, (event.wheelDelta || -event.detail)));
+    
+    // -如果頁面滾動動畫正在播放，則不進行星星放大或縮小
+    if (ticking) {
         return;
     }
 
@@ -295,7 +296,7 @@ function scrollEventHandler2(evt) {
 }
 
 
-
+// > 將觸控參數模擬為滾輪事件
 var startY2, endY2;
 var isTouching = false;
 
@@ -333,12 +334,12 @@ window.addEventListener('scroll', function () {
     if (headerTop >= whyChooseTop && window.pageYOffset > 0) {
         glassMorphism.style.display = 'flex';
         console.log('玻璃擬態顯示');
-        console.log('whyChooseDelta',whyChooseDelta)
+        console.log('whyChooseDelta', whyChooseDelta)
 
     } else {
         glassMorphism.style.display = 'none';
         console.log('玻璃擬態不顯示');
-        console.log('whyChooseDelta',whyChooseDelta)
+        console.log('whyChooseDelta', whyChooseDelta)
 
         if (whyChooseDelta > 0) {
             console.log('whyChooseDelta>0')
