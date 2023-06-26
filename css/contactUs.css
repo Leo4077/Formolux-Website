@@ -1202,9 +1202,7 @@ select {
 
 /* 彈出框樣式 */
 .message-box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
     width: 640px;
     /* width: 33%; */
     height: 320px;
@@ -1213,13 +1211,15 @@ select {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-image: url(../images/sendbox.png);
+    background-image: url(../images/prompt.png);
+    background-position: center;
+    background-size: cover;
     padding: 0 2% 2% 4.5%;
     z-index: 10000;
     display: none;
     /* 隱藏 */
 }
-
+/* 
 .contenter {
     display: flex;
     justify-content: space-between;
@@ -1269,14 +1269,15 @@ select {
     margin-top: 1%;
     transform: translateX(1%);
     z-index: 10002;
-}
+} */
 
 
 
 /*勾勾SVG*/
 .checkani {
-
-    margin-bottom: 7%;
+    position: fixed;
+    top: 17%;
+    right:12%;
 }
 
 @keyframes outline {
@@ -1345,169 +1346,6 @@ select {
     transform-origin: center;
 }
 
-@media (min-width: 577px) and (max-width:1024px) {
-
-    /* 遮罩層樣式 */
-    .overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.8);
-        /* 半透明黑色背景 */
-        z-index: 9999;
-        display: none;
-        /* 隱藏 */
-    }
-
-    /* 彈出框樣式 */
-    .message-box {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 261px;
-        height: 343px;
-        border-radius: 35px 35px 0 0;
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background-image: url(../images/tablet_msgboxBG.png);
-        padding: 0;
-        z-index: 10000;
-        display: none;
-        /* 隱藏 */
-    }
-
-    .contenter {
-        display: flex;
-        flex-direction: column-reverse;
-        justify-content: center;
-        align-items: center;
-        width: 69.3%;
-    }
-
-    .message-text {
-        color: var(--main-darkBlue);
-        margin-bottom: -3%;
-    }
-
-    .message-text h2::before {
-        content: 'Got it!';
-        position: absolute;
-        font-family: 'Tangerine';
-        color: var(--main-blue);
-        font-style: normal;
-        font-weight: 400;
-        font-size: 6.38rem;
-        line-height: 102px;
-        letter-spacing: -0.005em;
-        left: 5%;
-        top: 50px;
-        z-index: -1;
-
-    }
-
-    .message-text h2 {
-
-        font-family: var(--second-font);
-        font-style: normal;
-        font-weight: 400;
-        font-size: 2.31rem;
-        line-height: 62px;
-        letter-spacing: 0.02em;
-
-    }
-
-    .message-text p {
-        font-family: var(--main-font);
-        font-style: normal;
-        font-weight: 400;
-        font-size: 0.92rem;
-        line-height: 125.49%;
-        letter-spacing: 0.02em;
-        margin-top: 1%;
-        transform: translateX(1%);
-        z-index: 10002;
-    }
-
-
-
-    /*勾勾SVG*/
-    .checkani {
-        transform: translateY(-80%);
-
-    }
-
-
-    @keyframes outline {
-        from {
-            stroke-dasharray: 0, 345.576px;
-        }
-
-        to {
-            stroke-dasharray: 345.576px, 345.576px;
-        }
-    }
-
-    #outline {
-        animation: 0.38s ease-in outline;
-        transform: rotate(0deg);
-        transform-origin: center;
-    }
-
-    @keyframes circle {
-        from {
-            transform: scale(1);
-        }
-
-        to {
-            transform: scale(0);
-        }
-    }
-
-    #white-circle {
-        animation: 0.35s ease-in 0.35s forwards circle;
-        transform: none;
-        transform-origin: center;
-    }
-
-    @keyframes check {
-        from {
-            stroke-dasharray: 0, 75px;
-        }
-
-        to {
-            stroke-dasharray: 75px, 75px;
-        }
-    }
-
-    #check {
-        animation: 0.34s cubic-bezier(0.65, 0, 1, 1) 0.8s forwards check;
-        stroke-dasharray: 0, 75px;
-    }
-
-    @keyframes check-group {
-        from {
-            transform: scale(1);
-        }
-
-        50% {
-            transform: scale(1.09);
-        }
-
-        to {
-            transform: scale(1);
-        }
-    }
-
-    #check-group {
-        animation: 0.32s ease-in-out 1.03s check-group;
-        transform-origin: center;
-    }
-}
 
 /*按鈕區域*/
 .btnBar {
