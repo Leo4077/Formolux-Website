@@ -455,3 +455,26 @@ function buttonClicked(id) {
 }
 
 
+
+
+
+
+
+// > 玻璃擬態 下滾才出現
+window.addEventListener('scroll', function () {
+    var header1 = document.querySelector('.header1');
+    var whyChoose = document.querySelector('.why-choose');
+    var glassMorphism = document.querySelector('.glass-morphism');
+
+    var headerTop = header1.getBoundingClientRect().top;
+    var whyChooseTop = whyChoose.getBoundingClientRect().top;
+
+    if (headerTop >= whyChooseTop && window.pageYOffset > 0) {
+        glassMorphism.style.display = 'flex';
+        console.log('玻璃擬態顯示');
+    } else {
+        glassMorphism.style.display = 'none';
+        console.log('玻璃擬態不顯示');
+    }
+});
+

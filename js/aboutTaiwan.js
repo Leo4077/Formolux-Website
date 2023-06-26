@@ -61,3 +61,23 @@ $('.smoove_z').smoove({
 
 
 
+// > 玻璃擬態 下滾才出現
+window.addEventListener('scroll', function () {
+  var header1 = document.querySelector('.header1');
+  var aboutTaiwan01 = document.querySelector('#aboutTaiwan01');
+  var glassMorphism = document.querySelector('.glass-morphism');
+
+  var headerTop = header1.getBoundingClientRect().top;
+  var aboutTaiwan01Top = aboutTaiwan01.getBoundingClientRect().top;
+
+  if (headerTop >= aboutTaiwan01Top && window.pageYOffset > 0) {
+      glassMorphism.style.display = 'flex';
+      console.log('玻璃擬態顯示');
+  } else {
+      glassMorphism.style.display = 'none';
+      console.log('玻璃擬態不顯示');
+  }
+});
+
+
+
