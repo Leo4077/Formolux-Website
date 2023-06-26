@@ -405,7 +405,8 @@ select {
     left: 5px;
 }
 
- ::-webkit-input-placeholder { /* WebKit browsers */
+::-webkit-input-placeholder {
+    /* WebKit browsers */
     position: absolute;
     color: var(--main-darkBlue);
     font-size: 0.9rem;
@@ -413,7 +414,8 @@ select {
     left: 5px;
 }
 
- ::-moz-placeholder { /* Mozilla Firefox 19+ */
+::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
     position: absolute;
     color: var(--main-darkBlue);
     font-size: 0.9rem;
@@ -421,7 +423,8 @@ select {
     left: 5px;
 }
 
- :-ms-input-placeholder { /* Internet Explorer 10-11 */
+:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
     position: absolute;
     color: var(--main-darkBlue);
     font-size: 0.9rem;
@@ -638,7 +641,6 @@ select {
 
     cursor: pointer;
     height: 100px;
-    /* border: 2px solid var(--main-blue); */
     background-color: var(--main-blue);
     /* hover時變色 */
     animation: colorChange 0.3s ease-in;
@@ -649,7 +651,7 @@ select {
 
 /* 按鈕字樣 */
 #taiwan-travelbtn span {
-    /* background-color: crimson; */
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -664,14 +666,12 @@ select {
     animation: btnin 0.3s;
     /* 慢速開始 */
     transition-timing-function: ease-in;
-    /* transform: translateX(-7%); */
 }
 
 /* hover按鈕字樣 */
 #taiwan-travelbtn:hover span {
     /* 製造殘影效果 */
     z-index: 2;
-    /*     display: none; */
     animation: btnout 0.3s forwards;
     /* 慢速開始 */
     transition-timing-function: ease-in;
@@ -698,7 +698,7 @@ select {
 
 /* 偽元素hover後 */
 #taiwan-travelbtn:hover:before {
-    
+
     z-index: 2;
     content: "An Unforgettable Journey Awaits You!";
     font-size: 1.8rem;
@@ -851,14 +851,14 @@ select {
 @media (min-width: 1400px) and (max-width:1599.98px) {
 
     /* 偽元素hover前 */
-#taiwan-travelbtn:before {
-    font-size: 1.6rem;
-}
+    #taiwan-travelbtn:before {
+        font-size: 1.6rem;
+    }
 
-/* 偽元素hover後 */
-#taiwan-travelbtn:hover:before {
-    font-size: 1.6rem;
-}
+    /* 偽元素hover後 */
+    #taiwan-travelbtn:hover:before {
+        font-size: 1.6rem;
+    }
 
 
     /* arrow */
@@ -899,17 +899,17 @@ select {
 @media (min-width: 1024.98px) and (max-width:1399.98px) {
 
     /* 偽元素hover前 */
-#taiwan-travelbtn:before {
+    #taiwan-travelbtn:before {
 
-    font-size: 1.3rem;
-    padding-right: 10%;
-}
+        font-size: 1.3rem;
+        padding-right: 10%;
+    }
 
-/* 偽元素hover後 */
-#taiwan-travelbtn:hover:before {
-    font-size: 1.3rem;
-    padding-right: 10%;
-}
+    /* 偽元素hover後 */
+    #taiwan-travelbtn:hover:before {
+        font-size: 1.3rem;
+        padding-right: 10%;
+    }
 
 
     /* arrow */
@@ -962,18 +962,18 @@ select {
         font-size: 1.25rem;
     }
 
-     /* 偽元素hover前 */
-#taiwan-travelbtn:before {
+    /* 偽元素hover前 */
+    #taiwan-travelbtn:before {
 
-    font-size: 1.25rem;
-    padding-right: 10%;
-}
+        font-size: 1.25rem;
+        padding-right: 10%;
+    }
 
-/* 偽元素hover後 */
-#taiwan-travelbtn:hover:before {
-    font-size: 1.25rem;
-    padding-right: 10%;
-}
+    /* 偽元素hover後 */
+    #taiwan-travelbtn:hover:before {
+        font-size: 1.25rem;
+        padding-right: 10%;
+    }
 
 
     /* arrow */
@@ -1024,18 +1024,18 @@ select {
         font-size: 1.25rem;
     }
 
-     /* 偽元素hover前 */
-#taiwan-travelbtn:before {
+    /* 偽元素hover前 */
+    #taiwan-travelbtn:before {
 
-    font-size: 1.1rem;
-    padding-right: 10%;
-}
+        font-size: 1.1rem;
+        padding-right: 10%;
+    }
 
-/* 偽元素hover後 */
-#taiwan-travelbtn:hover:before {
-    font-size: 1.1rem;
-    padding-right: 10%;
-}
+    /* 偽元素hover後 */
+    #taiwan-travelbtn:hover:before {
+        font-size: 1.1rem;
+        padding-right: 10%;
+    }
 
 
     /* arrow */
@@ -1088,86 +1088,86 @@ select {
         transition-timing-function: none;
     }
 
-     /* hover按鈕樣式 */
-#taiwan-travelbtn:hover {
+    /* hover按鈕樣式 */
+    #taiwan-travelbtn:hover {
 
-    cursor: pointer;
-    height: 70px;
-    background-color: var(--main-darkBlue);
-    animation: none;
-    transition-timing-function: none;
-}
-
-
-/* hover按鈕字樣 */
-#taiwan-travelbtn:hover span {
-
-    animation: none;
-    transition-timing-function: none;
-}
-
-/* 偽元素hover前 */
-#taiwan-travelbtn:before {
-
-    content: "";
-    animation: none;
-    transition-timing-function: none;
-}
-
-/* 偽元素hover後 */
-#taiwan-travelbtn:hover:before {
-
-    content: "";
-    animation: none;
-    transition-timing-function: none;
-}
-
-/* arrow */
-#taiwan-travelbtn-img {
-
-    width: 11%;
-
-    /* 初始位置 */
-    left: 60%;
-
-    animation: none;
-    /* 慢速開始 */
-    transition-timing-function: none;
-}
-
-/* hover arrow */
-#taiwan-travelbtn:hover img {
-    width: 11%;
-    /* 初始位置 */
-    left: 60%;
-    animation: none;
-    transition-timing-function: none;
-}
-
-/* 變色動畫 */
-@keyframes colorChange {
-    0% {
+        cursor: pointer;
+        height: 70px;
         background-color: var(--main-darkBlue);
-        /* 顏色A */
+        animation: none;
+        transition-timing-function: none;
     }
 
-    100% {
-        background-color: var(--main-darkBlue);
-        /* 顏色B */
-    }
-}
 
-@keyframes colorChangeback {
-    0% {
-        background-color: var(--main-darkBlue);
-        /* 顏色A */
+    /* hover按鈕字樣 */
+    #taiwan-travelbtn:hover span {
+
+        animation: none;
+        transition-timing-function: none;
     }
 
-    100% {
-        background-color: var(--main-darkBlue);
-        /* 顏色B */
+    /* 偽元素hover前 */
+    #taiwan-travelbtn:before {
+
+        content: "";
+        animation: none;
+        transition-timing-function: none;
     }
-}
+
+    /* 偽元素hover後 */
+    #taiwan-travelbtn:hover:before {
+
+        content: "";
+        animation: none;
+        transition-timing-function: none;
+    }
+
+    /* arrow */
+    #taiwan-travelbtn-img {
+
+        width: 11%;
+
+        /* 初始位置 */
+        left: 60%;
+
+        animation: none;
+        /* 慢速開始 */
+        transition-timing-function: none;
+    }
+
+    /* hover arrow */
+    #taiwan-travelbtn:hover img {
+        width: 11%;
+        /* 初始位置 */
+        left: 60%;
+        animation: none;
+        transition-timing-function: none;
+    }
+
+    /* 變色動畫 */
+    @keyframes colorChange {
+        0% {
+            background-color: var(--main-darkBlue);
+            /* 顏色A */
+        }
+
+        100% {
+            background-color: var(--main-darkBlue);
+            /* 顏色B */
+        }
+    }
+
+    @keyframes colorChangeback {
+        0% {
+            background-color: var(--main-darkBlue);
+            /* 顏色A */
+        }
+
+        100% {
+            background-color: var(--main-darkBlue);
+            /* 顏色B */
+        }
+    }
 }
 
 
@@ -1191,7 +1191,6 @@ select {
 .message-box {
 
     width: 640px;
-    /* width: 33%; */
     height: 320px;
     border-radius: 35px 35px 0 0;
     position: fixed;
@@ -1210,7 +1209,7 @@ select {
 .checkani {
     position: fixed;
     top: 17%;
-    right:12%;
+    right: 12%;
 }
 
 @keyframes outline {
@@ -1284,16 +1283,15 @@ select {
     .message-box {
 
         width: 261px;
-        /* width: 33%; */
         height: 343.42px;
         border-radius: 35px 35px 0 0;
         background-image: url(../images/tablet_prompt.png);
     }
-    
+
     /*勾勾SVG*/
     .checkani {
         position: absolute;
-        transform: translate(-24%,-90%);
+        transform: translate(-24%, -90%);
     }
 }
 
@@ -1306,11 +1304,11 @@ select {
         border-radius: 35px 35px 0 0;
         background-image: url(../images/tablet_prompt.png);
     }
-    
+
     /*勾勾SVG*/
     .checkani {
         position: absolute;
-        transform: translate(-20%,-90%);
+        transform: translate(-20%, -90%);
     }
 }
 
