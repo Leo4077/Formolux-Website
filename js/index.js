@@ -254,8 +254,8 @@ function scrollEventHandler(evt) {
         }
 
         // > 阻止事件的進一步傳播
-        evt.stopPropagation();
-        return;
+/*         evt.stopPropagation();
+ */        return;
     }
 
     else if (currentSlideNumber === numberOfBackgrounds - 1) {
@@ -295,6 +295,32 @@ function scrollEventHandler2(evt) {
 }
 
 
+
+var startY2, endY2;
+var isTouching = false;
+
+window.addEventListener('touchstart', function (evt) {
+    isTouching = true;
+    startY2 = evt.touches[0].pageY;
+});
+
+window.addEventListener('touchmove', function (evt) {
+    if (!isTouching) return;
+    endY2 = evt.touches[0].pageY;
+    whyChooseDelta = endY2 - startY2;
+});
+
+window.addEventListener('touchend', function (evt) {
+    isTouching = false;
+});
+// > 初始化 whyChooseDelta
+var whyChooseDelta = 0;
+
+// > 監聽 wheel 事件來獲取滾動方向
+window.addEventListener('wheel', function (evt) {
+    whyChooseDelta = evt.wheelDelta || -evt.detail;
+});
+
 // > 玻璃擬態 下滾才出現
 window.addEventListener('scroll', function () {
     var header1 = document.querySelector('.header1');
@@ -307,9 +333,20 @@ window.addEventListener('scroll', function () {
     if (headerTop >= whyChooseTop && window.pageYOffset > 0) {
         glassMorphism.style.display = 'flex';
         console.log('玻璃擬態顯示');
+        console.log('whyChooseDelta',whyChooseDelta)
+
     } else {
         glassMorphism.style.display = 'none';
         console.log('玻璃擬態不顯示');
+        console.log('whyChooseDelta',whyChooseDelta)
+
+        if (whyChooseDelta > 0) {
+            console.log('whyChooseDelta>0')
+            // > 將 top 樣式設為 "100"，將物件移動到下面
+            whyChoose.style.top = "100vh";
+            // > 將 position 設為 fixed
+            whyChoose.style.position = "fixed";
+        }
     }
 });
 
