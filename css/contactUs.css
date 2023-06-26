@@ -1201,64 +1201,10 @@ select {
     background-image: url(../images/prompt.png);
     background-position: center;
     background-size: cover;
-    padding: 0 2% 2% 4.5%;
     z-index: 10000;
     display: none;
-    /* 隱藏 */
+    /* 先隱藏 */
 }
-/* 
-.contenter {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 88%;
-}
-
-.message-text {
-    color: var(--main-darkBlue);
-    margin-bottom: -3%;
-}
-
-.message-text h2::before {
-    content: 'Got it!';
-    position: absolute;
-    font-family: 'Tangerine';
-    color: var(--main-blue);
-    font-style: normal;
-    font-weight: 400;
-    font-size: 6.38rem;
-    line-height: 102px;
-    letter-spacing: -0.005em;
-    left: 5%;
-    top: 50px;
-    z-index: -1;
-
-}
-
-.message-text h2 {
-
-    font-family: var(--second-font);
-    font-style: normal;
-    font-weight: 400;
-    font-size: 2.8rem;
-    line-height: 62px;
-    letter-spacing: 0.02em;
-
-}
-
-.message-text p {
-    font-family: var(--main-font);
-    font-style: normal;
-    font-weight: 400;
-    font-size: 1rem;
-    line-height: 125.49%;
-    letter-spacing: 0.02em;
-    margin-top: 1%;
-    transform: translateX(1%);
-    z-index: 10002;
-} */
-
-
 
 /*勾勾SVG*/
 .checkani {
@@ -1332,6 +1278,42 @@ select {
     animation: 0.32s ease-in-out 1.03s check-group;
     transform-origin: center;
 }
+
+/*平板:彈出視窗樣式*/
+@media (min-width: 577px) and (max-width:1024px) {
+    .message-box {
+
+        width: 261px;
+        /* width: 33%; */
+        height: 343.42px;
+        border-radius: 35px 35px 0 0;
+        background-image: url(../images/tablet_prompt.png);
+    }
+    
+    /*勾勾SVG*/
+    .checkani {
+        position: absolute;
+        transform: translate(-24%,-90%);
+    }
+}
+
+/*手機:彈出視窗樣式*/
+@media (max-width:576.98px) {
+    .message-box {
+
+        width: 245px;
+        height: 323px;
+        border-radius: 35px 35px 0 0;
+        background-image: url(../images/tablet_prompt.png);
+    }
+    
+    /*勾勾SVG*/
+    .checkani {
+        position: absolute;
+        transform: translate(-20%,-90%);
+    }
+}
+
 
 
 /*按鈕區域*/
