@@ -1301,6 +1301,13 @@ body {
     backdrop-filter: blur(3px);
 }
 
+/* ! 小筆電 1025-1440 (頁首+頁尾) */
+@media (min-width: 1025px) and (max-width: 1440px){
+    .glass-morphism{
+        height: 120px;
+    }
+}
+
 /* ! 平板 577-1024 (頁首) */
 @media (max-width: 1024.98px) {
     .glass-morphism{
