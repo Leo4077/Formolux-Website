@@ -228,7 +228,7 @@ function updateButtons() {
     buttonClicked(activeButton);
 }
 
-window.onload = function () {
+/* window.onload = function () {
     // -檢查螢幕寬度
     const isMobile = window.innerWidth <= 480;
 
@@ -240,7 +240,7 @@ window.onload = function () {
 
     // -預設第一個按鈕被點擊
     buttonClicked(isMobile ? 'btnA' : 'btn1');
-};
+}; */
 
 
 // > 花區
