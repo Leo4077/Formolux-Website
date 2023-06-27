@@ -11,7 +11,7 @@ window.onload = function(){
     /*沒點選時返回原狀*/
     messageBox.onblur = function() {
         if(this.value === '') {
-            this.setAttribute('placeholder', 'If you have any question, please don\'t hesitate to let us know. Thanks!');
+            this.setAttribute('placeholder', ' ');
         }
     }
 }
