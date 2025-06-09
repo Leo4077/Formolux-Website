@@ -3,5 +3,7 @@
 
 使用 html / css / js 開發
 
+👉 [點我查看網站](https://leo4077.github.io/Formolux-Website/)
+
 ## Project status
 已完成
